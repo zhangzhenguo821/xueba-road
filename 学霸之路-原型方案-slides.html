@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学霸之路：四年级全科突破平台 — 核心模块产品原型说明书</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #FF6B35;
+    --primary-dark: #E55A25;
+    --secondary: #4ECDC4;
+    --accent: #FFE66D;
+    --danger: #FF6B6B;
+    --math-color: #6C5CE7;
+    --math-light: #A29BFE;
+    --chinese-color: #FF6B35;
+    --chinese-light: #FDCB6E;
+    --english-color: #00B894;
+    --english-light: #55EFC4;
+    --bg-dark: #1A1A2E;
+    --bg-card: #16213E;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0AEC0;
+    --text-dim: #718096;
+  }
+
+  body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .slide-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 80px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .slide.active {
+    display: flex;
+    opacity: 1;
+  }
+
+  /* ====== Slide 1: Cover ====== */
+  .cover-slide {
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover-slide::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(108,92,231,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(78,205,196,0.12) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(255,107,53,0.1) 0%, transparent 50%);
+    animation: bgFloat 15s ease-in-out infinite;
+  }
+
+  @keyframes bgFloat {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(2%, -1%) rotate(1deg); }
+    66% { transform: translate(-1%, 2%) rotate(-1deg); }
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary), var(--danger));
+    color: white;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+  }
+
+  .cover-title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #FFFFFF 0%, #E0E0E0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cover-subtitle {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-subtitle span {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .cover-meta {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .cover-meta-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .cover-meta-item .icon {
+    font-size: 28px;
+  }
+
+  .cover-meta-item .label {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+  }
+
+  .cover-meta-item .value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  /* ====== Slide 2: Problem ====== */
+  .problem-slide {
+    background: linear-gradient(160deg, #1A1A2E 0%, #16213E 100%);
+    align-items: flex-start;
+    padding: 60px 100px;
+  }
+
+  .section-tag {
+    display: inline-block;
+    background: rgba(255,107,53,0.15);
+    color: var(--primary);
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .slide-title {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 50px;
+    line-height: 1.2;
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+  }
+
+  .pain-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 36px 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pain-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,107,53,0.3);
+  }
+
+  .pain-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--danger);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .pain-card:hover::before { opacity: 1; }
+
+  .pain-icon {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  .pain-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--danger);
+  }
+
+  .pain-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* ====== Slide 3: Core Philosophy ====== */
+  .philosophy-slide {
+    background: linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%);
+    text-align: center;
+  }
+
+  .philosophy-cards {
+    display: flex;
+    gap: 36px;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .phil-card {
+    flex: 1;
+    max-width: 360px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 48px 32px 40px;
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phil-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 4px;
+  }
+
+  .phil-card.cut::after { background: linear-gradient(90deg, var(--primary), var(--chinese-light)); }
+  .phil-card.pin::after { background: linear-gradient(90deg, var(--secondary), var(--english-light)); }
+  .phil-card.act::after { background: linear-gradient(90deg, var(--math-color), var(--math-light)); }
+
+  .phil-number {
+    font-size: 72px;
+    font-weight: 900;
+    opacity: 0.08;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .phil-emoji {
+    font-size: 48px;
+    margin-bottom: 24px;
+  }
+
+  .phil-keyword {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .phil-cut .phil-keyword { color: var(--primary); }
+  .phil-pin .phil-keyword { color: var(--secondary); }
+  .phil-act .phil-keyword { color: var(--math-color); }
+
+  .phil-sub {
+    font-size: 16px;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+
+  .phil-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    text-align: left;
+  }
+
+  .phil-example {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .phil-cut .phil-example { background: rgba(255,107,53,0.1); color: var(--chinese-light); }
+  .phil-pin .phil-example { background: rgba(78,205,196,0.1); color: var(--english-light); }
+  .phil-act .phil-example { background: rgba(108,92,231,0.1); color: var(--math-light); }
+
+  /* ====== Slide 4: Math Module ====== */
+  .math-slide {
+    background: linear-gradient(160deg, #1A1A2E 0%, #2D1B69 100%);
+    align-items: flex-start;
+    padding: 50px 80px;
+  }
+
+  .subject-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .subject-tag.math {
+    background: rgba(108,92,231,0.2);
+    color: var(--math-light);
+  }
+
+  .subject-tag.chinese {
+    background: rgba(255,107,53,0.2);
+    color: var(--chinese-light);
+  }
+
+  .subject-tag.english {
+    background: rgba(0,184,148,0.2);
+    color: var(--english-light);
+  }
+
+  .module-title {
+    font-size: 44px;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  .module-subtitle {
+    font-size: 18px;
+    color: var(--text-dim);
+    margin-bottom: 36px;
+  }
+
+  .module-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    width: 100%;
+    flex: 1;
+  }
+
+  .module-panel {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .panel-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .panel-title .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .math-panel .panel-title .dot { background: var(--math-light); }
+
+  .interaction-demo {
+    background: rgba(108,92,231,0.08);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  .demo-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--math-light);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+
+  .demo-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 120px;
+  }
+
+  .math-block {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+
+  .math-block:hover { transform: scale(1.08); }
+
+  .math-block.whole {
+    background: linear-gradient(135deg, var(--math-color), var(--math-light));
+    color: white;
+    box-shadow: 0 4px 15px rgba(108,92,231,0.4);
+  }
+
+  .math-block.part {
+    background: rgba(108,92,231,0.2);
+    border: 2px dashed var(--math-light);
+    color: var(--math-light);
+  }
+
+  .math-block .block-num { font-size: 24px; }
+  .math-block .block-label { font-size: 11px; margin-top: 2px; opacity: 0.8; }
+
+  .whistle-icon {
+    font-size: 40px;
+    animation: whistleBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes whistleBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-8px) rotate(-5deg); }
+    75% { transform: translateY(-4px) rotate(5deg); }
+  }
+
+  .flow-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    background: rgba(108,92,231,0.06);
+    border-radius: 10px;
+    border-left: 3px solid var(--math-color);
+  }
+
+  .flow-step .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--math-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .flow-step .step-text {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .flow-step .step-text strong {
+    color: var(--text-primary);
+  }
+
+  .exam-point {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,230,109,0.12);
+    color: var(--accent);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* ====== Slide 5: Chinese Module ====== */
+  .chinese-slide {
+    background: linear-gradient(160deg, #1A1A2E 0%, #3D1F1F 100%);
+    align-items: flex-start;
+    padding: 50px 80px;
+  }
+
+  .chinese-panel .panel-title .dot { background: var(--chinese-light); }
+
+  .verb-explosion {
+    background: rgba(255,107,53,0.08);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+  }
+
+  .verb-core {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--danger));
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    box-shadow: 0 0 40px rgba(255,107,53,0.4);
+    position: relative;
+    z-index: 2;
+  }
+
+  .verb-orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px dashed rgba(255,107,53,0.2);
+    animation: orbitSpin 20s linear infinite;
+  }
+
+  .verb-orbit.orbit-1 {
+    width: 160px; height: 160px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .verb-orbit.orbit-2 {
+    width: 240px; height: 240px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation-direction: reverse;
+    animation-duration: 30s;
+  }
+
+  .verb-particle {
+    position: absolute;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .verb-particle.subject-p {
+    background: rgba(253,203,110,0.2);
+    color: var(--chinese-light);
+    border: 1px solid rgba(253,203,110,0.3);
+  }
+
+  .verb-particle.object-p {
+    background: rgba(78,205,196,0.2);
+    color: var(--secondary);
+    border: 1px solid rgba(78,205,196,0.3);
+  }
+
+  .verb-particle.adverb-p {
+    background: rgba(108,92,231,0.2);
+    color: var(--math-light);
+    border: 1px solid rgba(108,92,231,0.3);
+  }
+
+  .p1 { top: 10%; left: 15%; }
+  .p2 { top: 5%; right: 20%; }
+  .p3 { bottom: 15%; left: 10%; }
+  .p4 { bottom: 10%; right: 15%; }
+  .p5 { top: 40%; left: 5%; }
+  .p6 { top: 35%; right: 5%; }
+  .p7 { bottom: 35%; left: 25%; }
+  .p8 { bottom: 30%; right: 25%; }
+
+  .chinese-flow .flow-step {
+    border-left-color: var(--primary);
+  }
+
+  .chinese-flow .flow-step .step-num {
+    background: var(--primary);
+  }
+
+  /* ====== Slide 6: English Module ====== */
+  .english-slide {
+    background: linear-gradient(160deg, #1A1A2E 0%, #1B3A2D 100%);
+    align-items: flex-start;
+    padding: 50px 80px;
+  }
+
+  .english-panel .panel-title .dot { background: var(--english-light); }
+
+  .magnet-demo {
+    background: rgba(0,184,148,0.08);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .skeleton-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+  }
+
+  .skeleton-bone {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .skeleton-bone:hover {
+    transform: translateY(-3px);
+  }
+
+  .skeleton-bone.subject-b {
+    background: rgba(0,184,148,0.25);
+    color: var(--english-light);
+    border: 2px solid rgba(0,184,148,0.4);
+  }
+
+  .skeleton-bone.verb-b {
+    background: linear-gradient(135deg, #00B894, #55EFC4);
+    color: var(--bg-dark);
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(0,184,148,0.4);
+  }
+
+  .skeleton-bone.object-b {
+    background: rgba(78,205,196,0.2);
+    color: var(--secondary);
+    border: 2px solid rgba(78,205,196,0.3);
+  }
+
+  .skeleton-bone.modifier-b {
+    background: rgba(255,230,109,0.15);
+    color: var(--accent);
+    border: 2px dashed rgba(255,230,109,0.3);
+  }
+
+  .magnet-arrow {
+    font-size: 20px;
+    color: var(--english-light);
+    animation: magnetPulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes magnetPulse {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  .english-flow .flow-step {
+    border-left-color: var(--english-color);
+  }
+
+  .english-flow .flow-step .step-num {
+    background: var(--english-color);
+  }
+
+  /* ====== Slide 7: Architecture ====== */
+  .arch-slide {
+    background: linear-gradient(160deg, #1A1A2E 0%, #16213E 100%);
+    align-items: flex-start;
+    padding: 50px 80px;
+  }
+
+  .arch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+    margin-top: 36px;
+  }
+
+  .arch-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .arch-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .arch-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .arch-card-title {
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .arch-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .arch-list li {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding-left: 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .arch-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+  }
+
+  /* ====== Slide 8: Sprint Plan ====== */
+  .sprint-slide {
+    background: linear-gradient(160deg, #0F3460 0%, #1A1A2E 100%);
+    text-align: center;
+  }
+
+  .sprint-timeline {
+    display: flex;
+    gap: 28px;
+    margin-top: 48px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .sprint-card {
+    flex: 1;
+    max-width: 340px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 36px 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+    text-align: left;
+    position: relative;
+  }
+
+  .sprint-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .sprint-card:nth-child(1) .sprint-badge {
+    background: rgba(108,92,231,0.2);
+    color: var(--math-light);
+  }
+
+  .sprint-card:nth-child(2) .sprint-badge {
+    background: rgba(255,107,53,0.2);
+    color: var(--primary);
+  }
+
+  .sprint-card:nth-child(3) .sprint-badge {
+    background: rgba(0,184,148,0.2);
+    color: var(--english-light);
+  }
+
+  .sprint-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .sprint-card-sub {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+
+  .sprint-deliverables {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sprint-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .sprint-item .check {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+  }
+
+  .sprint-card:nth-child(1) .check { background: rgba(108,92,231,0.2); color: var(--math-light); }
+  .sprint-card:nth-child(2) .check { background: rgba(255,107,53,0.2); color: var(--primary); }
+  .sprint-card:nth-child(3) .check { background: rgba(0,184,148,0.2); color: var(--english-light); }
+
+  /* ====== Slide 9: CTA ====== */
+  .cta-slide {
+    background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-slide::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,107,53,0.08) 0%, transparent 50%);
+    animation: bgFloat 12s ease-in-out infinite;
+  }
+
+  .cta-emoji {
+    font-size: 72px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-title {
+    font-size: 52px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #FF6B35, #FFE66D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-desc {
+    font-size: 20px;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .cta-desc strong {
+    color: var(--text-primary);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-btn {
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .cta-btn.primary {
+    background: linear-gradient(135deg, var(--primary), var(--danger));
+    color: white;
+    box-shadow: 0 6px 20px rgba(255,107,53,0.4);
+  }
+
+  .cta-btn.secondary {
+    background: rgba(255,255,255,0.08);
+    color: var(--text-primary);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* ====== Navigation ====== */
+  .nav-bar {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(22,33,62,0.9);
+    backdrop-filter: blur(12px);
+    padding: 10px 24px;
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.08);
+    z-index: 100;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: none;
+    color: var(--text-secondary);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+
+  .nav-btn:hover {
+    background: rgba(255,255,255,0.12);
+    color: white;
+  }
+
+  .nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .nav-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .nav-dot.active {
+    background: var(--primary);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  .slide-counter {
+    font-size: 13px;
+    color: var(--text-dim);
+    font-weight: 500;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  /* ====== Responsive ====== */
+  @media (max-width: 1200px) {
+    .slide { padding: 40px 40px; }
+    .cover-title { font-size: 48px; }
+    .pain-grid { grid-template-columns: 1fr; }
+    .philosophy-cards { flex-direction: column; align-items: center; }
+    .module-content { grid-template-columns: 1fr; }
+    .arch-grid { grid-template-columns: 1fr; }
+    .sprint-timeline { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Cover -->
+<div class="slide-container">
+  <div class="slide cover-slide active" data-index="0">
+    <div class="cover-badge">🔥 产品原型说明书 V1.0</div>
+    <h1 class="cover-title">学霸之路<br>四年级全科突破平台</h1>
+    <p class="cover-subtitle">不做复读机，做<span>思维碎骨机</span></p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <span class="icon">📐</span>
+        <span class="value">数学</span>
+        <span class="label">极端假设交互</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="icon">💥</span>
+        <span class="value">语文</span>
+        <span class="label">动词爆炸演示</span>
+      </div>
+      <div class="cover-meta-item">
+        <span class="icon">🧲</span>
+        <span class="value">英语</span>
+        <span class="label">磁吸骨架逻辑</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2: Pain Points -->
+  <div class="slide problem-slide" data-index="1">
+    <div class="section-tag">❌ 现状痛点</div>
+    <h2 class="slide-title">外包团队最怕的需求模糊<br>我们直接消灭它</h2>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">📖</div>
+        <div class="pain-title">废话讲解</div>
+        <div class="pain-desc">外包习惯写长篇大论的文字讲解，孩子根本不看。我们需要的是<strong>动效、拖拽、模型图</strong>，而不是第 N 段"同学们请注意"。</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🕳️</div>
+        <div class="pain-title">考点黑洞</div>
+        <div class="pain-desc">做了一堆花哨功能，却和全国试卷的考点编码<strong>完全脱钩</strong>。孩子玩得开心，考试照样丢分。</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🙈</div>
+        <div class="pain-title">假学会</div>
+        <div class="pain-desc">点一下"下一页"就算学完了？必须强制完成<strong>认知动作</strong>——拖拽积木、推移草坪、拼装骨架——才算过关。</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🧩</div>
+        <div class="pain-title">模块孤岛</div>
+        <div class="pain-desc">数学、语文、英语各做各的，没有统一的认知模型底层。同样的拖拽逻辑重复造轮子，效率低下。</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">📊</div>
+        <div class="pain-title">进度盲盒</div>
+        <div class="pain-desc">家长看不到孩子到底卡在哪一步。没有细粒度的认知动作埋点，就无法精准定位薄弱环节。</div>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🎯</div>
+        <div class="pain-title">交互敷衍</div>
+        <div class="pain-desc">外包说"有交互"，结果就是点一下弹窗。真正的认知交互是<strong>物理隐喻</strong>——推、拉、拼、拆、爆。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Core Philosophy -->
+  <div class="slide philosophy-slide" data-index="2">
+    <div class="section-tag">🎯 核心原则</div>
+    <h2 class="slide-title">三条铁律，贯穿全部模块</h2>
+    <div class="philosophy-cards">
+      <div class="phil-card cut">
+        <div class="phil-number">01</div>
+        <div class="phil-emoji">✂️</div>
+        <div class="phil-keyword">去废话</div>
+        <div class="phil-sub">No More Walls of Text</div>
+        <div class="phil-desc">
+          用<strong>动效代替讲解</strong>，用<strong>拖拽代替阅读</strong>，用<strong>模型图代替段落</strong>。每一帧屏幕都在"做"，不在"说"。
+        </div>
+        <div class="phil-example">
+          💡 反例：300字解释"什么是假设法"<br>
+          ✅ 正例：一个滑块，孩子拖动数值到极端，答案自己蹦出来
+        </div>
+      </div>
+      <div class="phil-card pin">
+        <div class="phil-number">02</div>
+        <div class="phil-emoji">📌</div>
+        <div class="phil-keyword">防漏掉</div>
+        <div class="phil-sub">Exam-Point Anchoring</div>
+        <div class="phil-desc">
+          每一张交互卡片<strong>必须挂载全国试卷考点编码</strong>。无法挂载的卡片，不做。能挂载但漏掉的，补上。
+        </div>
+        <div class="phil-example">
+          💡 每个交互组件的元数据里必须有：<br>
+          examCode: "MATH-4A-07-03"<br>
+          来源：2025人教版课标 / 全国卷考点库
+        </div>
+      </div>
+      <div class="phil-card act">
+        <div class="phil-number">03</div>
+        <div class="phil-emoji">🧠</div>
+        <div class="phil-keyword">学得会</div>
+        <div class="phil-sub">Cognitive Action Required</div>
+        <div class="phil-desc">
+          只有孩子在屏幕上完成了<strong>认知动作</strong>，系统才判定"已学会"。拖拽积木、推移草坪、拼装骨架——没有动作，没有过关。
+        </div>
+        <div class="phil-example">
+          💡 "看懂了" ≠ "学会了"<br>
+          ✅ 判定条件：onDragComplete + onSnapCorrect + onErrorCount < 2
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 4: Math Module -->
+  <div class="slide math-slide" data-index="3">
+    <div class="subject-tag math">📐 模块一 · 数学</div>
+    <h2 class="module-title" style="color: var(--math-light);">极端假设 · 起立吹哨</h2>
+    <p class="module-subtitle">把抽象的"假设法"变成孩子能拖、能推、能看见的物理动作</p>
+    <div class="module-content">
+      <div class="module-panel math-panel">
+        <div class="panel-title"><span class="dot"></span>核心交互：极端假设滑块</div>
+        <div class="interaction-demo">
+          <div class="demo-label">🎮 交互演示</div>
+          <div class="demo-visual">
+            <div class="math-block part">
+              <span class="block-num">？</span>
+              <span class="block-label">鸡的数量</span>
+            </div>
+            <div style="font-size:24px; color:var(--math-light);">+</div>
+            <div class="math-block part">
+              <span class="block-num">？</span>
+              <span class="block-label">兔的数量</span>
+            </div>
+            <div style="font-size:24px; color:var(--math-light);">=</div>
+            <div class="math-block whole">
+              <span class="block-num">35</span>
+              <span class="block-label">总头数</span>
+            </div>
+          </div>
+          <div style="text-align:center; margin-top:16px;">
+            <div class="whistle-icon">📢</div>
+            <div style="font-size:13px; color:var(--text-dim); margin-top:8px;">起立吹哨！全部站起来 → 数腿 → 多出来的腿 = 兔子</div>
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="exam-point">🏷️ MATH-4A-07-03</span>
+          <span class="exam-point">🏷️ 鸡兔同笼</span>
+          <span class="exam-point">🏷️ 假设法</span>
+        </div>
+      </div>
+      <div class="module-panel math-panel">
+        <div class="panel-title"><span class="dot"></span>交互流程</div>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <span class="step-num">1</span>
+            <span class="step-text">孩子<strong>拖动滑块</strong>，把所有动物设为"全是鸡"（极端假设）</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">2</span>
+            <span class="step-text">屏幕上所有动物<strong>站起动画</strong>，腿数自动清零只留2条</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">3</span>
+            <span class="step-text"><strong>吹哨动画 📢</strong>，系统数腿：2×35=70，但实际94条腿</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">4</span>
+            <span class="step-text">多出的24条腿 = 12只动物<strong>需要再加2条腿</strong> → 就是兔子！</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">5</span>
+            <span class="step-text">孩子<strong>手动拖拽"腿"给动物</strong>，每拖2条腿，一只鸡变兔</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 5: Chinese Module -->
+  <div class="slide chinese-slide" data-index="4">
+    <div class="subject-tag chinese">💥 模块二 · 语文</div>
+    <h2 class="module-title" style="color: var(--chinese-light);">动词爆炸 · 动态拆解</h2>
+    <p class="module-subtitle">让每个动词在屏幕上"炸开"，孩子亲手拼装句子骨架</p>
+    <div class="module-content">
+      <div class="module-panel chinese-panel">
+        <div class="panel-title"><span class="dot"></span>核心交互：动词爆炸机</div>
+        <div class="verb-explosion">
+          <div class="demo-label">💥 动态演示</div>
+          <div class="verb-orbit orbit-1"></div>
+          <div class="verb-orbit orbit-2"></div>
+          <div class="verb-core">跑</div>
+          <div class="verb-particle subject-p p1">小明</div>
+          <div class="verb-particle object-p p2">操场</div>
+          <div class="verb-particle adverb-p p3">飞快地</div>
+          <div class="verb-particle subject-p p4">小红</div>
+          <div class="verb-particle object-p p5">教室</div>
+          <div class="verb-particle adverb-p p6">慢慢地</div>
+          <div class="verb-particle object-p p7">向终点</div>
+          <div class="verb-particle adverb-p p8">气喘吁吁地</div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="exam-point">🏷️ CN-4A-05-02</span>
+          <span class="exam-point">🏷️ 动词辨析</span>
+          <span class="exam-point">🏷️ 句子成分</span>
+        </div>
+      </div>
+      <div class="module-panel chinese-panel">
+        <div class="panel-title"><span class="dot"></span>交互流程</div>
+        <div class="flow-steps chinese-flow">
+          <div class="flow-step">
+            <span class="step-num">1</span>
+            <span class="step-text">句子出现，<strong>核心动词高亮脉冲</strong>，吸引孩子注意力</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">2</span>
+            <span class="step-text">孩子<strong>点击动词</strong>，动词"爆炸"💥，拆出主语/宾语/状语粒子</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">3</span>
+            <span class="step-text">粒子<strong>散落在屏幕四周</strong>，孩子拖拽回正确位置拼装</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">4</span>
+            <span class="step-text">拼对了 → 粒子<strong>磁吸扣合</strong>动画 ✅；拼错了 → 粒子<strong>弹飞</strong>动画 ❌</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">5</span>
+            <span class="step-text">连续正确3次 → <strong>升级挑战</strong>：替换动词、换状语、改宾语</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 6: English Module -->
+  <div class="slide english-slide" data-index="5">
+    <div class="subject-tag english">🧲 模块三 · 英语</div>
+    <h2 class="module-title" style="color: var(--english-light);">磁吸骨架 · 句法拼装</h2>
+    <p class="module-subtitle">英语句型不是背出来的，是拼出来的——磁吸骨架让语法有物理感</p>
+    <div class="module-content">
+      <div class="module-panel english-panel">
+        <div class="panel-title"><span class="dot"></span>核心交互：磁吸骨架</div>
+        <div class="magnet-demo">
+          <div class="demo-label">🧲 拼装演示</div>
+          <div class="skeleton-row">
+            <div class="skeleton-bone subject-b">The cat 🐱</div>
+            <span class="magnet-arrow">→</span>
+            <div class="skeleton-bone verb-b">sat</div>
+            <span class="magnet-arrow">→</span>
+            <div class="skeleton-bone modifier-b">quietly</div>
+            <span class="magnet-arrow">→</span>
+            <div class="skeleton-bone object-b">on the mat</div>
+          </div>
+          <div style="margin-top:16px;">
+            <div class="skeleton-row">
+              <div class="skeleton-bone subject-b">She 👧</div>
+              <span class="magnet-arrow">→</span>
+              <div class="skeleton-bone verb-b">is reading</div>
+              <span class="magnet-arrow">→</span>
+              <div class="skeleton-bone object-b">a book</div>
+              <span class="magnet-arrow">→</span>
+              <div class="skeleton-bone modifier-b">now</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="exam-point">🏷️ EN-4A-06-01</span>
+          <span class="exam-point">🏷️ SVO句型</span>
+          <span class="exam-point">🏷️ 时态辨析</span>
+        </div>
+      </div>
+      <div class="module-panel english-panel">
+        <div class="panel-title"><span class="dot"></span>交互流程</div>
+        <div class="flow-steps english-flow">
+          <div class="flow-step">
+            <span class="step-num">1</span>
+            <span class="step-text">屏幕上出现<strong>空骨架</strong>：S + V + O + M 四个磁吸槽位</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">2</span>
+            <span class="step-text">单词卡片<strong>散落在下方</strong>，孩子拖拽到对应槽位</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">3</span>
+            <span class="step-text">拖对了 → <strong>磁吸扣合</strong>🧲，骨架发光；拖错了 → 卡片<strong>弹回</strong>💥</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">4</span>
+            <span class="step-text">拼装完成后，<strong>整句动画演绎</strong>：猫跳上垫子、女孩翻书</span>
+          </div>
+          <div class="flow-step">
+            <span class="step-num">5</span>
+            <span class="step-text"><strong>时态切换挑战</strong>：把 sat 换成 is sitting，骨架自动重构</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 7: Architecture -->
+  <div class="slide arch-slide" data-index="6">
+    <div class="section-tag">🏗️ 技术架构</div>
+    <h2 class="slide-title">统一认知模型底层</h2>
+    <div class="arch-grid">
+      <div class="arch-card">
+        <div class="arch-card-header">
+          <div class="arch-card-icon" style="background:rgba(108,92,231,0.2);">🧩</div>
+          <div class="arch-card-title">交互引擎层</div>
+        </div>
+        <ul class="arch-list">
+          <li>统一拖拽引擎（DragEngine）— 数学/语文/英语共用</li>
+          <li>磁吸扣合模块（SnapModule）— 自动吸附+弹性回弹</li>
+          <li>粒子爆炸模块（BurstModule）— 动词/单词拆解特效</li>
+          <li>动画状态机（AnimFSM）— 管理每个认知动作的状态流转</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <div class="arch-card-header">
+          <div class="arch-card-icon" style="background:rgba(255,107,53,0.2);">📊</div>
+          <div class="arch-card-title">数据埋点层</div>
+        </div>
+        <ul class="arch-list">
+          <li>认知动作埋点：onDrag / onSnap / onError / onComplete</li>
+          <li>考点编码挂载：每张卡片 → examCode 强制字段</li>
+          <li>错误热力图：按考点聚合孩子的错误频率</li>
+          <li>家长报告生成：每日/每周自动推送薄弱考点</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <div class="arch-card-header">
+          <div class="arch-card-icon" style="background:rgba(0,184,148,0.2);">🎯</div>
+          <div class="arch-card-title">教研内容层</div>
+        </div>
+        <ul class="arch-list">
+          <li>考点编码库：对接全国试卷考点标签体系</li>
+          <li>题目模板库：每个考点 ≥ 3种交互题型</li>
+          <li>难度阶梯：同一考点的 A/B/C 三档自动出题</li>
+          <li>教研审核流：内容上线前必须完成考点挂载校验</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <div class="arch-card-header">
+          <div class="arch-card-icon" style="background:rgba(255,230,109,0.2);">⚡</div>
+          <div class="arch-card-title">性能保障层</div>
+        </div>
+        <ul class="arch-list">
+          <li>60fps 动画：所有拖拽/磁吸/爆炸必须丝滑</li>
+          <li>离线缓存：交互组件本地化，断网也能学</li>
+          <li>懒加载：按模块按关卡渐进式加载资源</li>
+          <li>弱网降级：动画自动降级为静态图，保证可用</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <div class="arch-card-header">
+          <div class="arch-card-icon" style="background:rgba(255,107,107,0.2);">🔒</div>
+          <div class="arch-card-title">质量闸门层</div>
+        </div>
+        <ul class="arch-list">
+          <li>考点挂载率 100%：无 examCode 的卡片拒绝上线</li>
+          <li>认知动作覆盖率：每个模块 ≥ 5种认知动作</li>
+          <li>交互响应 < 200ms：拖拽延迟超标自动告警</li>
+          <li>无障碍适配：所有交互支持键盘/触屏双模式</li>
+        </ul>
+      </div>
+      <div class="arch-card">
+        <div class="arch-card-header">
+          <div class="arch-card-icon" style="background:rgba(108,92,231,0.2);">🔄</div>
+          <div class="arch-card-title">持续迭代层</div>
+        </div>
+        <ul class="arch-list">
+          <li>A/B 测试框架：同一考点的不同交互方案对比</li>
+          <li>学情反馈闭环：错误率 > 30% 自动触发教研复审</li>
+          <li>版本管理：交互组件独立版本号，灰度发布</li>
+          <li>数据驱动：每周根据学情数据调整交互难度</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8: Sprint Plan -->
+  <div class="slide sprint-slide" data-index="7">
+    <div class="section-tag">🚀 开发计划</div>
+    <h2 class="slide-title">Sprint 分期交付</h2>
+    <div class="sprint-timeline">
+      <div class="sprint-card">
+        <div class="sprint-badge">Sprint 1 · 第1-3周</div>
+        <div class="sprint-card-title">📐 数学先行</div>
+        <div class="sprint-card-sub">起立吹哨 · 极端假设交互 Demo</div>
+        <div class="sprint-deliverables">
+          <div class="sprint-item"><span class="check">✓</span> 拖拽滑块交互原型</div>
+          <div class="sprint-item"><span class="check">✓</span> 起立动画 + 吹哨动画</div>
+          <div class="sprint-item"><span class="check">✓</span> 鸡兔同笼完整流程</div>
+          <div class="sprint-item"><span class="check">✓</span> DragEngine 核心引擎</div>
+          <div class="sprint-item"><span class="check">✓</span> 认知动作埋点 SDK</div>
+        </div>
+      </div>
+      <div class="sprint-card">
+        <div class="sprint-badge">Sprint 2 · 第4-6周</div>
+        <div class="sprint-card-title">💥 语文跟进</div>
+        <div class="sprint-card-sub">动词爆炸机 · 句子拼装交互</div>
+        <div class="sprint-deliverables">
+          <div class="sprint-item"><span class="check">✓</span> 动词爆炸粒子特效</div>
+          <div class="sprint-item"><span class="check">✓</span> 拖拽拼装 + 磁吸扣合</div>
+          <div class="sprint-item"><span class="check">✓</span> BurstModule 爆炸引擎</div>
+          <div class="sprint-item"><span class="check">✓</span> 动词辨析题型 ≥ 20题</div>
+          <div class="sprint-item"><span class="check">✓</span> 考点挂载校验通过</div>
+        </div>
+      </div>
+      <div class="sprint-card">
+        <div class="sprint-badge">Sprint 3 · 第7-9周</div>
+        <div class="sprint-card-title">🧲 英语收官</div>
+        <div class="sprint-card-sub">磁吸骨架 · 句法拼装交互</div>
+        <div class="sprint-deliverables">
+          <div class="sprint-item"><span class="check">✓</span> 磁吸骨架槽位系统</div>
+          <div class="sprint-item"><span class="check">✓</span> 时态切换动态重构</div>
+          <div class="sprint-item"><span class="check">✓</span> SnapModule 磁吸引擎</div>
+          <div class="sprint-item"><span class="check">✓</span> SVO句型题型 ≥ 20题</div>
+          <div class="sprint-item"><span class="check">✓</span> 三科联调 + 压测通过</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 9: CTA -->
+  <div class="slide cta-slide" data-index="8">
+    <div class="cta-emoji">🔥</div>
+    <h2 class="cta-title">做不出学霸模型感<br>别想拿结款</h2>
+    <p class="cta-desc">
+      一期开发（Sprint 1）就死磕<strong>数学的"起立吹哨"</strong>动态交互 Demo。<br>
+      做不出这种认知动作的物理感，就不是我们要的产品。
+    </p>
+    <div class="cta-buttons">
+      <button class="cta-btn primary" onclick="goToSlide(3)">📐 先跑数学 Demo</button>
+      <button class="cta-btn secondary" onclick="goToSlide(4)">💥 先看语文方案</button>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation Bar -->
+<div class="nav-bar">
+  <button class="nav-btn" id="prevBtn" onclick="prevSlide()">◀</button>
+  <div class="nav-dots" id="navDots"></div>
+  <span class="slide-counter" id="slideCounter">1/9</span>
+  <button class="nav-btn" id="nextBtn" onclick="nextSlide()">▶</button>
+</div>
+
+<script>
+  const totalSlides = 9;
+  let currentSlide = 0;
+
+  function initDots() {
+    const dots = document.getElementById('navDots');
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => goToSlide(i);
+      dots.appendChild(dot);
+    }
+  }
+
+  function updateSlide() {
+    document.querySelectorAll('.slide').forEach((s, i) => {
+      s.classList.toggle('active', i === currentSlide);
+    });
+
+    document.querySelectorAll('.nav-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+    });
+
+    document.getElementById('slideCounter').textContent = `${currentSlide + 1}/${totalSlides}`;
+    document.getElementById('prevBtn').disabled = currentSlide === 0;
+    document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+  }
+
+  function goToSlide(index) {
+    currentSlide = Math.max(0, Math.min(totalSlides - 1, index));
+    updateSlide();
+  }
+
+  function nextSlide() {
+    if (currentSlide < totalSlides - 1) goToSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    if (currentSlide > 0) goToSlide(currentSlide - 1);
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+  });
+
+  // Touch swipe
+  let touchStartX = 0;
+  document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', (e) => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 60) { diff > 0 ? nextSlide() : prevSlide(); }
+  });
+
+  initDots();
+  updateSlide();
+</script>
+
+</body>
+</html>
