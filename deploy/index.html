@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学霸之路：四五六年级全科突破平台</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --math:#6C5CE7;--math-light:#A29BFE;--math-bg:rgba(108,92,231,0.08);
+  --chinese:#FF6B35;--chinese-light:#FDCB6E;--chinese-bg:rgba(255,107,53,0.08);
+  --english:#00B894;--english-light:#55EFC4;--english-bg:rgba(0,184,148,0.08);
+  --bg:#F5F6FA;--bg-card:#FFFFFF;--bg-dark:#1A1A2E;--bg-nav:#16213E;
+  --text:#2D3436;--text-secondary:#636E72;--text-dim:#B2BEC3;
+  --primary:#FF6B35;--accent:#FFE66D;--danger:#FF6B6B;--success:#00B894;
+  --radius:16px;--radius-sm:10px;--radius-xs:6px;
+  --shadow:0 4px 20px rgba(0,0,0,0.06);--shadow-lg:0 8px 30px rgba(0,0,0,0.10);
+  --transition:all 0.25s cubic-bezier(0.4,0,0.2,1)
+}
+body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+
+/* ====== Header ====== */
+.app-header{background:var(--bg-dark);padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.3)}
+.app-logo{display:flex;align-items:center;gap:10px}
+.app-logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),var(--danger));display:flex;align-items:center;justify-content:center;font-size:18px}
+.app-logo-text{font-size:16px;font-weight:700;color:white;letter-spacing:0.5px}
+.app-logo-text span{color:var(--accent);font-weight:900}
+.app-nav{display:flex;gap:8px;align-items:center}
+.nav-pill{padding:7px 16px;border-radius:8px;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);background:rgba(255,255,255,0.06);color:var(--text-dim)}
+.nav-pill:hover{background:rgba(255,255,255,0.12);color:white}
+.nav-pill.active{background:var(--primary);color:white}
+.progress-bar-mini{display:flex;gap:2px;align-items:center;margin-left:8px}
+.progress-pip{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.12);transition:var(--transition)}
+.progress-pip.done{background:var(--success)}
+.progress-pip.current{background:var(--accent);animation:pip 2s infinite}
+@keyframes pip{0%,100%{opacity:1}50%{opacity:.4}}
+.progress-count{font-size:11px;color:var(--text-dim);margin-left:6px;font-weight:600}
+
+/* ====== Pages ====== */
+.page{display:none;min-height:calc(100vh - 56px);padding:24px 32px}
+.page.active{display:block;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ====== Page: Dashboard (作战大盘) ====== */
+.dash-hero{background:linear-gradient(135deg,#1A1A2E,#16213E);border-radius:var(--radius);padding:40px 32px;margin-bottom:28px;color:white;position:relative;overflow:hidden}
+.dash-hero::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,107,53,0.2),transparent);border-radius:50%}
+.dash-hero-title{font-size:32px;font-weight:900;margin-bottom:6px}
+.dash-hero-sub{font-size:14px;color:var(--text-dim);margin-bottom:20px}
+.dash-hero-sub b{color:var(--accent)}
+
+.roadmap{display:flex;gap:0;margin-bottom:32px;position:relative}
+.roadmap-step{flex:1;background:var(--bg-card);padding:20px 16px;position:relative;border-radius:0;border:1px solid rgba(0,0,0,0.04)}
+.roadmap-step:first-child{border-radius:var(--radius-sm) 0 0 var(--radius-sm)}
+.roadmap-step:last-child{border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.roadmap-step.done{border-top:3px solid var(--success)}
+.roadmap-step.active{border-top:3px solid var(--primary);background:rgba(255,107,53,0.03)}
+.roadmap-step.pending{border-top:3px solid var(--text-dim)}
+.roadmap-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:10px}
+.roadmap-step.done .roadmap-num{background:var(--success);color:white}
+.roadmap-step.active .roadmap-num{background:var(--primary);color:white}
+.roadmap-step.pending .roadmap-num{background:rgba(0,0,0,0.06);color:var(--text-dim)}
+.roadmap-title{font-size:14px;font-weight:700;margin-bottom:4px}
+.roadmap-desc{font-size:11px;color:var(--text-secondary);line-height:1.5}
+
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+.stat-card{background:var(--bg-card);border-radius:var(--radius-sm);padding:20px;box-shadow:var(--shadow);text-align:center}
+.stat-num{font-size:32px;font-weight:900;margin-bottom:4px}
+.stat-label{font-size:12px;color:var(--text-secondary);font-weight:500}
+
+/* ====== Page: 痛点路由器 ====== */
+.home-hero{text-align:center;padding:32px 20px 20px}
+.home-hero-title{font-size:32px;font-weight:900;margin-bottom:6px}
+.home-hero-sub{font-size:14px;color:var(--text-secondary);margin-bottom:20px}
+.home-hero-sub b{color:var(--primary);font-weight:700}
+
+.grade-selector{display:flex;gap:12px;justify-content:center;margin-bottom:28px}
+.grade-btn{padding:12px 24px;border-radius:var(--radius-sm);font-size:15px;font-weight:700;border:2px solid transparent;cursor:pointer;transition:var(--transition);background:var(--bg-card);color:var(--text-secondary);box-shadow:var(--shadow)}
+.grade-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.grade-btn.g4{border-color:#FF6B6B;color:#FF6B6B;background:rgba(255,107,107,0.06)}
+.grade-btn.g5{border-color:#4ECDC4;color:#4ECDC4;background:rgba(78,205,196,0.06)}
+.grade-btn.g6{border-color:#6C5CE7;color:#6C5CE7;background:rgba(108,92,231,0.06)}
+
+.search-box{max-width:480px;margin:0 auto 32px;display:flex;align-items:center;background:var(--bg-card);border-radius:var(--radius-sm);padding:12px 18px;box-shadow:var(--shadow);border:2px solid rgba(0,0,0,0.03)}
+.search-box input{width:100%;border:none;font-size:14px;color:var(--text);outline:none;background:transparent}
+.search-box input::placeholder{color:var(--text-dim)}
+.search-icon{font-size:18px;color:var(--text-dim);margin-right:10px}
+
+.pain-section{margin-bottom:28px}
+.pain-section-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-left:4px}
+.pain-section-dot{width:10px;height:10px;border-radius:50%}
+.pain-section-title{font-size:18px;font-weight:700}
+.pain-section-count{font-size:11px;color:var(--text-dim);background:rgba(0,0,0,0.04);padding:3px 10px;border-radius:20px}
+
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.pain-card{background:var(--bg-card);border-radius:var(--radius-sm);padding:20px;box-shadow:var(--shadow);cursor:pointer;transition:var(--transition);border:2px solid transparent;position:relative;overflow:hidden}
+.pain-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:rgba(0,0,0,0.06)}
+.pain-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:2px}
+.pain-card.math::before{background:var(--math)}
+.pain-card.chinese::before{background:var(--chinese)}
+.pain-card.english::before{background:var(--english)}
+.pain-card-icon{font-size:24px;margin-bottom:8px}
+.pain-card-title{font-size:15px;font-weight:700;margin-bottom:6px;line-height:1.4}
+.pain-card-desc{font-size:12px;color:var(--text-secondary);line-height:1.5}
+.pain-card-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;margin-top:8px}
+.pain-card.math .pain-card-tag{background:var(--math-bg);color:var(--math)}
+.pain-card.chinese .pain-card-tag{background:var(--chinese-bg);color:var(--chinese)}
+.pain-card.english .pain-card-tag{background:var(--english-bg);color:var(--english)}
+
+/* ====== Page: 思维模型舱 ====== */
+.model-page{max-width:1060px;margin:0 auto}
+.model-top{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.model-back{padding:7px 14px;border-radius:8px;background:var(--bg-card);border:none;font-size:13px;cursor:pointer;box-shadow:var(--shadow);transition:var(--transition);color:var(--text-secondary)}
+.model-back:hover{background:var(--bg-dark);color:white}
+.model-code{display:inline-flex;padding:4px 12px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:0.5px}
+.model-title{font-size:28px;font-weight:900;margin-bottom:2px}
+.model-subtitle{font-size:13px;color:var(--text-dim);margin-bottom:20px}
+
+.model-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+.model-panel{background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow)}
+.model-panel-title{font-size:14px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.model-panel-title .dot{width:7px;height:7px;border-radius:50%}
+
+/* 视频区 */
+.video-area{background:var(--bg-dark);border-radius:var(--radius-xs);padding:28px 18px;text-align:center;position:relative;min-height:160px}
+.video-play-btn{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;margin:0 auto 12px;transition:var(--transition);color:white}
+.video-play-btn:hover{background:var(--primary);border-color:var(--primary)}
+.video-title{font-size:15px;font-weight:600;color:white;margin-bottom:6px}
+.video-duration{font-size:12px;color:var(--text-dim)}
+.video-tags{display:flex;gap:6px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+.video-tag{padding:3px 8px;border-radius:4px;font-size:10px;font-weight:600;background:rgba(255,230,109,0.12);color:var(--accent)}
+
+/* 学霸卡 */
+.card-visual{border-radius:var(--radius-xs);padding:20px;min-height:180px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card-visual.math-cv{background:var(--math-bg);border:2px solid rgba(108,92,231,0.12)}
+.card-visual.chinese-cv{background:var(--chinese-bg);border:2px solid rgba(255,107,53,0.12)}
+.card-visual.english-cv{background:var(--english-bg);border:2px solid rgba(0,184,148,0.12)}
+
+/* 洋葱模型 */
+.onion-model{display:flex;flex-direction:column;gap:6px;align-items:center;width:100%}
+.onion-layer{padding:14px 20px;border-radius:16px;font-size:13px;font-weight:600;cursor:pointer;transition:var(--transition);width:100%;max-width:300px;text-align:center}
+.onion-layer:hover{transform:scale(1.03);box-shadow:var(--shadow)}
+.onion-outer{background:var(--chinese-light);color:var(--bg-dark);font-weight:700}
+.onion-middle{background:var(--math-light);color:white}
+.onion-inner{background:var(--primary);color:white;font-weight:700}
+.onion-label{font-size:10px;margin-top:3px;font-weight:400;opacity:0.85}
+
+/* 动词爆炸 */
+.verb-burst-model{text-align:center;width:100%}
+.verb-core-word{display:inline-flex;padding:10px 20px;border-radius:10px;font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--primary),var(--danger));color:white;box-shadow:0 4px 12px rgba(255,107,53,0.35);margin-bottom:12px}
+.verb-particles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}
+.verb-particle{padding:8px 12px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:var(--transition);background:rgba(108,92,231,0.1);color:var(--math);border:1.5px solid rgba(108,92,231,0.15)}
+.verb-particle:hover{transform:translateY(-2px);background:rgba(108,92,231,0.18);border-color:var(--math)}
+
+/* 磁铁模型 */
+.magnet-model{text-align:center}
+.magnet-row{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.magnet-subject{padding:10px 16px;border-radius:10px;background:#FF6B6B;color:white;font-size:16px;font-weight:800;box-shadow:0 3px 10px rgba(255,107,107,0.35)}
+.magnet-verb{padding:10px 16px;border-radius:10px;background:rgba(255,255,255,0.9);color:var(--text);font-size:16px;font-weight:600;border:2px dashed var(--text-dim)}
+.magnet-suffix{padding:10px 8px;border-radius:10px;background:var(--english);color:white;font-size:16px;font-weight:800;animation:mPulse 1.5s infinite}
+.magnet-arrow{font-size:20px;color:var(--english);animation:mPulse 1.5s infinite}
+@keyframes mPulse{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.08)}}
+
+/* 数轴模型 */
+.axis-visual{padding:16px 0;text-align:center}
+.axis-line{height:6px;background:linear-gradient(90deg,var(--danger),#888,var(--success));border-radius:3px;margin:14px auto;max-width:260px;position:relative}
+.axis-gap{background:var(--danger);height:3px;border-radius:2px;margin:6px auto;max-width:180px;animation:gapPulse 2s infinite}
+@keyframes gapPulse{0%,100%{opacity:.5}50%{opacity:1}}
+
+/* Canvas交互区 */
+.canvas-area{background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow);border:2px solid rgba(0,0,0,0.03);min-height:200px}
+.canvas-area-title{font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.canvas-area-title .dot{width:7px;height:7px;border-radius:50%}
+.canvas-instruction{font-size:13px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6}
+
+/* 大白话脚本 */
+.script-area{background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow);margin-top:18px}
+.script-label{display:inline-flex;padding:3px 12px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:12px;background:rgba(255,107,53,0.08);color:var(--primary)}
+.script-text{font-size:14px;line-height:1.8;color:var(--text)}
+.script-text em{color:var(--primary);font-weight:700;font-style:normal}
+
+/* 真题区 */
+.exams-area{background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow);margin-top:18px}
+.exams-label{display:inline-flex;padding:3px 12px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:12px;background:rgba(0,184,148,0.08);color:var(--english)}
+.exam-list{display:flex;flex-direction:column;gap:8px}
+.exam-item{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-secondary);padding:8px 12px;background:rgba(0,0,0,0.02);border-radius:6px}
+.exam-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
+
+/* 通关按钮 */
+.pass-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:14px 32px;border-radius:var(--radius-sm);font-size:15px;font-weight:700;border:none;cursor:pointer;transition:var(--transition);margin-top:20px}
+.pass-btn.unlocked{background:linear-gradient(135deg,var(--primary),var(--danger));color:white;box-shadow:0 4px 16px rgba(255,107,53,0.35)}
+.pass-btn.unlocked:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,53,0.45)}
+.pass-btn.locked{background:var(--text-dim);color:white;cursor:not-allowed;opacity:0.4}
+
+/* ====== Page: 闭环诊断区 ====== */
+.diag-page{max-width:760px;margin:0 auto}
+.diag-header{text-align:center;margin-bottom:28px}
+.diag-header-title{font-size:26px;font-weight:900;margin-bottom:6px}
+.diag-header-sub{font-size:13px;color:var(--text-secondary)}
+
+.diag-question-box{background:var(--bg-card);border-radius:var(--radius-sm);padding:28px;box-shadow:var(--shadow);margin-bottom:20px;border:2px solid rgba(0,0,0,0.03)}
+.diag-q-label{display:inline-flex;padding:3px 12px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:14px;background:rgba(108,92,231,0.08);color:var(--math)}
+.diag-q-text{font-size:15px;line-height:1.8;color:var(--text);margin-bottom:16px}
+.diag-options{display:flex;flex-direction:column;gap:8px}
+.diag-option{padding:12px 16px;border-radius:8px;border:2px solid rgba(0,0,0,0.05);background:var(--bg-card);cursor:pointer;transition:var(--transition);font-size:13px;color:var(--text-secondary);display:flex;align-items:center;gap:10px}
+.diag-option:hover{border-color:var(--primary);color:var(--text)}
+.diag-option.selected{border-color:var(--primary);background:rgba(255,107,53,0.04);color:var(--text);font-weight:600}
+.opt-letter{width:26px;height:26px;border-radius:50%;background:rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.diag-option.selected .opt-letter{background:var(--primary);color:white}
+
+.diag-ai-panel{background:var(--bg-dark);border-radius:var(--radius-sm);padding:24px;margin-bottom:20px;color:white}
+.diag-ai-title{font-size:14px;font-weight:700;margin-bottom:14px;color:var(--accent)}
+.diag-ai-options{display:flex;flex-direction:column;gap:8px}
+.diag-ai-opt{padding:12px 16px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);cursor:pointer;transition:var(--transition);font-size:13px;color:var(--text-dim);display:flex;align-items:center;gap:10px}
+.diag-ai-opt:hover{border-color:var(--primary);color:white}
+.diag-ai-opt.selected{border-color:var(--primary);background:rgba(255,107,53,0.08);color:white;font-weight:600}
+.ai-label{font-size:12px;font-weight:600;color:var(--accent);min-width:100px}
+
+.diag-result{background:var(--bg-card);border-radius:var(--radius-sm);padding:28px;box-shadow:var(--shadow)}
+.diag-result-icon{font-size:44px;margin-bottom:10px;text-align:center}
+.diag-result-title{font-size:18px;font-weight:700;margin-bottom:6px;text-align:center}
+.diag-result-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;text-align:center}
+
+/* ====== Page: 数据导出 ====== */
+.export-page{max-width:900px;margin:0 auto}
+.export-hero{background:linear-gradient(135deg,#1A1A2E,#16213E);border-radius:var(--radius);padding:32px;margin-bottom:24px;color:white}
+.export-hero-title{font-size:26px;font-weight:900;margin-bottom:6px}
+.export-hero-sub{font-size:13px;color:var(--text-dim)}
+.export-card{background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow);margin-bottom:18px}
+.export-card-title{font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.export-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:var(--transition);background:var(--primary);color:white;box-shadow:0 3px 10px rgba(255,107,53,0.3)}
+.export-btn:hover{transform:translateY(-1px);box-shadow:0 5px 15px rgba(255,107,53,0.4)}
+.export-btn.secondary{background:var(--math);box-shadow:0 3px 10px rgba(108,92,231,0.3)}
+.export-btn.secondary:hover{box-shadow:0 5px 15px rgba(108,92,231,0.4)}
+.export-preview{background:var(--bg-dark);border-radius:var(--radius-xs);padding:20px;margin-top:14px;color:var(--accent);font-size:12px;font-family:monospace;max-height:300px;overflow:auto;line-height:1.6;white-space:pre-wrap;word-break:break-all}
+
+/* ====== SOP 模板 ====== */
+.sop-table{width:100%;border-collapse:collapse;font-size:13px}
+.sop-table th{background:rgba(0,0,0,0.03);padding:10px 14px;text-align:left;font-weight:700;font-size:12px;border-bottom:2px solid rgba(0,0,0,0.06)}
+.sop-table td{padding:10px 14px;border-bottom:1px solid rgba(0,0,0,0.04);vertical-align:top}
+.sop-table tr:hover td{background:rgba(255,107,53,0.02)}
+
+/* ====== Empty State ====== */
+.empty-state{text-align:center;padding:60px 20px}
+.empty-icon{font-size:56px;margin-bottom:16px}
+.empty-title{font-size:22px;font-weight:700;margin-bottom:6px}
+.empty-desc{font-size:14px;color:var(--text-secondary)}
+
+/* ====== Responsive ====== */
+@media(max-width:768px){
+  .page{padding:16px}
+  .pain-grid{grid-template-columns:1fr}
+  .model-layout{grid-template-columns:1fr}
+  .grade-selector{flex-wrap:wrap}
+  .home-hero-title{font-size:24px}
+  .model-title{font-size:22px}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  .roadmap{flex-direction:column}
+  .roadmap-step:first-child{border-radius:var(--radius-xs) var(--radius-xs) 0 0}
+  .roadmap-step:last-child{border-radius:0 0 var(--radius-xs) var(--radius-xs)}
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="app-header">
+  <div class="app-logo">
+    <div class="app-logo-icon">🔥</div>
+    <div class="app-logo-text">学霸之路 · <span>思维碎骨机</span></div>
+  </div>
+  <div class="app-nav">
+    <button class="nav-pill active" data-page="dash" onclick="showPage('dash')">📊 作战大盘</button>
+    <button class="nav-pill" data-page="home" onclick="showPage('home')">🏠 痛点直达</button>
+    <button class="nav-pill" data-page="model" onclick="showPage('model')">🧠 模型舱</button>
+    <button class="nav-pill" data-page="diag" onclick="showPage('diag')">🔍 诊断区</button>
+    <button class="nav-pill" data-page="export" onclick="showPage('export')">📦 交付包</button>
+    <div class="progress-bar-mini" id="progressMini"></div>
+    <span class="progress-count" id="progressCount">0/26</span>
+  </div>
+</header>
+
+<!-- Page: 作战大盘 -->
+<div class="page active" id="page-dash">
+  <div class="dash-hero">
+    <h1 class="dash-hero-title">🚀 学霸之路：四五六年级全科突破平台</h1>
+    <p class="dash-hero-sub">不做复读机，做<b>思维碎骨机</b> | 宁多勿漏，持续汇入</p>
+  </div>
+
+  <div class="roadmap">
+    <div class="roadmap-step done">
+      <div class="roadmap-num">1</div>
+      <div class="roadmap-title">定死框架+四年级</div>
+      <div class="roadmap-desc">5大字段锁死<br>四年级8芯片入库</div>
+    </div>
+    <div class="roadmap-step done">
+      <div class="roadmap-num">2</div>
+      <div class="roadmap-title">五年级攻坚</div>
+      <div class="roadmap-desc">语数外7芯片<br>全量抽干</div>
+    </div>
+    <div class="roadmap-step done">
+      <div class="roadmap-num">3</div>
+      <div class="roadmap-title">六年级终局</div>
+      <div class="roadmap-desc">小升初7芯片<br>压轴全量</div>
+    </div>
+    <div class="roadmap-step active">
+      <div class="roadmap-num">4</div>
+      <div class="roadmap-title">页面原型交付</div>
+      <div class="roadmap-desc">3核心页面PRD<br>像素级设计</div>
+    </div>
+    <div class="roadmap-step pending">
+      <div class="roadmap-num">5</div>
+      <div class="roadmap-title">全量上线+永续</div>
+      <div class="roadmap-desc">系统上线<br>无限扩容</div>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num" style="color:var(--primary)">26</div><div class="stat-label">核心芯片总数</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--math)">13</div><div class="stat-label">数学卡点</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--chinese)">7</div><div class="stat-label">语文卡点</div></div>
+    <div class="stat-card"><div class="stat-num" style="color:var(--english)">6</div><div class="stat-label">英语卡点</div></div>
+  </div>
+
+  <div style="background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow)">
+    <div style="font-size:16px;font-weight:700;margin-bottom:16px">📋 三条铁律</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div style="text-align:center;padding:20px;background:rgba(255,107,53,0.04);border-radius:var(--radius-xs)">
+        <div style="font-size:32px;margin-bottom:8px">✂️</div>
+        <div style="font-size:14px;font-weight:700;color:var(--primary);margin-bottom:4px">去废话</div>
+        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">不要长篇大论讲解<br>用动效/拖拽/模型图代替</div>
+      </div>
+      <div style="text-align:center;padding:20px;background:rgba(108,92,231,0.04);border-radius:var(--radius-xs)">
+        <div style="font-size:32px;margin-bottom:8px">📌</div>
+        <div style="font-size:14px;font-weight:700;color:var(--math);margin-bottom:4px">防漏掉</div>
+        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">每张卡片挂载<br>全国试卷考点编码</div>
+      </div>
+      <div style="text-align:center;padding:20px;background:rgba(0,184,148,0.04);border-radius:var(--radius-xs)">
+        <div style="font-size:32px;margin-bottom:8px">🧠</div>
+        <div style="font-size:14px;font-weight:700;color:var(--english);margin-bottom:4px">学得会</div>
+        <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">孩子完成认知动作<br>系统才给过</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:24px">
+    <button class="pass-btn unlocked" onclick="showPage('home')">🎯 进入痛点路由器，开始实操 →</button>
+  </div>
+</div>
+
+<!-- Page: 痛点路由器 -->
+<div class="page" id="page-home">
+  <div class="home-hero">
+    <h1 class="home-hero-title">3步之内开始实操</h1>
+    <p class="home-hero-sub">不要章节目录，直接<b>阻击你的考场痛点</b></p>
+  </div>
+  <div class="grade-selector" id="gradeSelector">
+    <button class="grade-btn g4" data-grade="4" onclick="selectGrade(4)">🔴 四年级</button>
+    <button class="grade-btn" data-grade="5" onclick="selectGrade(5)">🟢 五年级</button>
+    <button class="grade-btn" data-grade="6" onclick="selectGrade(6)">🔵 六年级</button>
+  </div>
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input type="text" placeholder="输入你考试时的痛苦，如：写流水账、阴影不会算…" id="searchInput" oninput="filterPains()">
+  </div>
+  <div id="painWall"></div>
+</div>
+
+<!-- Page: 思维模型舱 -->
+<div class="page" id="page-model">
+  <div class="model-page" id="modelContent">
+    <div class="empty-state">
+      <div class="empty-icon">👆</div>
+      <div class="empty-title">先选一个痛点</div>
+      <div class="empty-desc">回到首页，点击你的考场痛点，3步直达实操</div>
+    </div>
+  </div>
+</div>
+
+<!-- Page: 闭环诊断区 -->
+<div class="page" id="page-diag">
+  <div class="diag-page" id="diagContent">
+    <div class="empty-state">
+      <div class="empty-icon">🧠</div>
+      <div class="empty-title">先完成认知动作</div>
+      <div class="empty-desc">在模型舱里完成实操后，再来这里通关验证</div>
+    </div>
+  </div>
+</div>
+
+<!-- Page: 交付包（数据导出） -->
+<div class="page" id="page-export">
+  <div class="export-page">
+    <div class="export-hero">
+      <h1 class="export-hero-title">📦 外包团队交付包</h1>
+      <p class="export-hero-sub">一键导出所有结构化数据，教研组+技术组+UI组各取所需</p>
+    </div>
+
+    <div class="export-card">
+      <div class="export-card-title">📊 教研组：内容数据包（26芯片完整数据）</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">包含26个核心芯片的5大字段结构化数据（含北京真题6大模块扩展芯片）。教研团队按照此格式往数据库里填肉，新增芯片只需在数组里加一行。</p>
+      <button class="export-btn" onclick="exportJSON()">📋 导出 JSON 数据</button>
+      <button class="export-btn secondary" onclick="exportText()" style="margin-left:8px">📝 导出纯文本格式</button>
+      <div class="export-preview" id="jsonPreview" style="display:none"></div>
+    </div>
+
+    <div class="export-card">
+      <div class="export-card-title">📐 技术组：内容原子化SOP模板</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">外包团队每提交一个知识点，必须填满以下4个格子。格子填得浅，直接退货。</p>
+      <table class="sop-table">
+        <thead><tr><th style="width:120px">字段</th><th style="width:200px">内容要求</th><th>交付物标准</th></tr></thead>
+        <tbody>
+          <tr><td><b>认知诊断项</b></td><td>这个知识点在全国试卷里常见的3个坑是什么？</td><td>文本 + 对应错误案例</td></tr>
+          <tr><td><b>思维模型图</b></td><td>如何降维成一个图？（如跷跷板、蝴蝶、洋葱）</td><td>视觉草图 + 动态逻辑描述</td></tr>
+          <tr><td><b>大白话脚本</b></td><td>模仿抖音，3分钟讲清楚怎么"破"。禁止念经。</td><td>语音/文字脚本（口语化）</td></tr>
+          <tr><td><b>真题映射</b></td><td>该考点对应的5份全国名校真题压轴题。</td><td>试卷原题库 + 逆向解析流程</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="export-card">
+      <div class="export-card-title">🎨 UI组：三个核心页面像素级PRD</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">严格按以下三层架构开发，拒绝传统网课UI。</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div style="padding:16px;border-radius:8px;background:rgba(255,107,53,0.04);border:1px solid rgba(255,107,53,0.1)">
+          <div style="font-size:20px;margin-bottom:6px">🏠</div>
+          <div style="font-size:13px;font-weight:700;color:var(--primary);margin-bottom:4px">痛点路由器</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">首页=考场急救中心<br>痛点直达按钮<br>3步进入实操<br>严禁中间过渡页</div>
+        </div>
+        <div style="padding:16px;border-radius:8px;background:rgba(108,92,231,0.04);border:1px solid rgba(108,92,231,0.1)">
+          <div style="font-size:20px;margin-bottom:6px">🧠</div>
+          <div style="font-size:13px;font-weight:700;color:var(--math);margin-bottom:4px">思维模型舱</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">抖音短视频+小红书卡<br>Canvas交互实操区<br>认知动作强熔断<br>不操作=按钮灰色</div>
+        </div>
+        <div style="padding:16px;border-radius:8px;background:rgba(0,184,148,0.04);border:1px solid rgba(0,184,148,0.1)">
+          <div style="font-size:20px;margin-bottom:6px">🔍</div>
+          <div style="font-size:13px;font-weight:700;color:var(--english);margin-bottom:4px">闭环诊断区</div>
+          <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">真题变型题测试<br>AI追问式纠偏<br>连续2题对才通关<br>卡点精准定位</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="export-card">
+      <div class="export-card-title">⚡ 外包开工信（复制发给他们）</div>
+      <div class="export-preview" id="letterPreview" style="display:block;max-height:400px">我们要做的不是普通的刷题网，而是小学思维解构操作系统。对你们的交付有三个硬指标：
+
+1. 拒绝平庸内容：所有四五六年级的知识点，必须对照全国真题逆向抽离出"思维模型"。不要给我搬运教材，我要的是"怎么学会"的方法论。
+
+2. 视觉审美死磕：视觉对标小红书，交互对标抖音。内容要"好看"且"上瘾"，如果做出来像传统的蓝白色教育网，直接不验收。
+
+3. 颗粒度到原子级：每一个难点，必须按照《内容原子化SOP》拆解。内容不怕多，但逻辑必须穿透。如果发现有全国试卷的高频考点漏掉，视为合同违约。
+
+48小时内，先按照这个标准，给我做出一个四年级数学 MATH-04-001（得分扣分题）的页面内测Demo出来，我要亲自验收！</div>
+      <button class="export-btn" onclick="copyLetter()" style="margin-top:12px">📋 复制开工信</button>
+    </div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="canvas-interactive.js"></script>
+<script>
+// ====== State ======
+let currentGrade = 4;
+let currentChip = null;
+let completedChips = new Set();
+
+// ====== Navigation ======
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.querySelectorAll('.nav-pill').forEach(n => {
+    n.classList.toggle('active', n.dataset.page === name);
+  });
+  window.scrollTo(0, 0);
+}
+
+// ====== Grade Selection ======
+function selectGrade(g) {
+  currentGrade = g;
+  document.querySelectorAll('.grade-btn').forEach(b => {
+    b.className = 'grade-btn';
+    if (parseInt(b.dataset.grade) === g) {
+      b.classList.add('g' + g);
+    }
+  });
+  renderPainWall();
+}
+
+// ====== Pain Wall ======
+function renderPainWall(filterText) {
+  const wall = document.getElementById('painWall');
+  wall.innerHTML = '';
+  const buttons = PAIN_BUTTONS[currentGrade];
+  const subjects = ['数学','语文','英语'];
+
+  subjects.forEach(subj => {
+    if (!buttons[subj]) return;
+    const items = buttons[subj].filter(b =>
+      !filterText || b.label.includes(filterText)
+    );
+    if (!items.length) return;
+
+    const meta = SUBJECT_MAP[subj];
+    const cssClass = subj === '数学' ? 'math' : subj === '语文' ? 'chinese' : 'english';
+    const section = document.createElement('div');
+    section.className = 'pain-section';
+
+    section.innerHTML = `
+      <div class="pain-section-header">
+        <div class="pain-section-dot" style="background:${meta.color}"></div>
+        <div class="pain-section-title" style="color:${meta.color}">${meta.icon} ${subj}</div>
+        <div class="pain-section-count">${items.length}个痛点</div>
+      </div>
+      <div class="pain-grid">
+        ${items.map(item => `
+          <div class="pain-card ${cssClass}" onclick="openChip('${item.chipId}')">
+            <div class="pain-card-icon">${meta.icon}</div>
+            <div class="pain-card-title">${item.label}</div>
+            <div class="pain-card-desc">点击进入 → 3步开始实操</div>
+            <div class="pain-card-tag">🏷️ ${item.chipId}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    wall.appendChild(section);
+  });
+}
+
+function filterPains() {
+  renderPainWall(document.getElementById('searchInput').value.trim());
+}
+
+// ====== Open Chip ======
+function openChip(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  currentChip = chip;
+  renderModelPage(chip);
+  showPage('model');
+}
+
+// ====== Render Model Page ======
+function renderModelPage(chip) {
+  const container = document.getElementById('modelContent');
+  const meta = SUBJECT_MAP[chip.subject];
+  const gradeMeta = GRADE_MAP[chip.grade];
+  const cssClass = chip.subject === '数学' ? 'math' : chip.subject === '语文' ? 'chinese' : 'english';
+
+  // Build card visual based on model type
+  let cardHTML = buildCardVisual(chip, meta, cssClass);
+
+  container.innerHTML = `
+    <div class="model-top">
+      <button class="model-back" onclick="showPage('home')">← 回首页</button>
+      <div class="model-code" style="background:${meta.bg};color:${meta.color}">🏷️ ${chip.id}</div>
+      <div class="model-code" style="background:rgba(0,0,0,0.04);color:var(--text-dim)">${chip.examCodes[0]}</div>
+    </div>
+    <div>
+      <h2 class="model-title" style="color:${meta.color}">${chip.icon} ${chip.title}</h2>
+      <div class="model-subtitle">${gradeMeta.label} · ${chip.subject} · ${chip.category}</div>
+    </div>
+
+    <div class="model-layout">
+      <div class="model-panel">
+        <div class="model-panel-title"><div class="dot" style="background:${meta.color}"></div>抖音级短视频舱</div>
+        <div class="video-area">
+          <div class="video-play-btn" onclick="playVideo(this)">▶</div>
+          <div class="video-title">3分钟大白话切片：${chip.title}</div>
+          <div class="video-duration">⏱ 约3分钟 · 建议1.25x倍速</div>
+          <div class="video-tags">
+            ${chip.keywords.map(k => `<div class="video-tag">${k}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+      <div class="model-panel">
+        <div class="model-panel-title"><div class="dot" style="background:${meta.color}"></div>小红书学霸手账卡</div>
+        ${cardHTML}
+      </div>
+    </div>
+
+    <div class="canvas-area">
+      <div class="canvas-area-title"><div class="dot" style="background:${meta.color}"></div>画布交互实操区 · 认知动作强熔断</div>
+      <div class="canvas-instruction">${chip.aiDiagnosis.action}</div>
+      <div id="canvasContainer_${chip.id}" style="min-height:200px;background:${meta.bg};border-radius:var(--radius-xs);border:1.5px solid rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;padding:12px">
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:32px;margin-bottom:10px">${chip.icon}</div>
+          <div style="font-size:14px;font-weight:600;color:${meta.color};margin-bottom:6px">认知动作：${chip.aiDiagnosis.interactionType}</div>
+          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px">${chip.chip.modelDesc}</div>
+          <button onclick="activateCanvas('${chip.id}','${chip.chip.modelType}')" class="pass-btn unlocked" style="font-size:13px">🎨 加载交互Canvas → 开始实操</button>
+        </div>
+      </div>
+      ${chip.chip.modelVisual && chip.chip.modelVisual.expanded ? `<div style="margin-top:8px;text-align:center"><button onclick="verbBurstAction('${chip.id}')" class="pass-btn unlocked" style="font-size:12px;background:var(--chinese)">💥 动词爆炸！</button></div>` : ''}
+      ${chip.chip.modelType === 'detective-chain' ? `<div style="margin-top:8px;text-align:center"><button onclick="detectiveConnect('${chip.id}')" class="pass-btn unlocked" style="font-size:12px;background:var(--english)">🔍 连线！画出证据链</button></div>` : ''}
+      <div id="actionStatus_${chip.id}" style="margin-top:12px;padding:10px;border-radius:6px;background:rgba(0,0,0,0.02);font-size:12px;color:var(--text-dim);text-align:center">⚠️ 未完成认知动作 → 通关按钮锁死灰色</div>
+      <button id="passBtn_${chip.id}" onclick="completeAction()" class="pass-btn locked" disabled>🔒 完成认知动作后 → 进入通关测试</button>
+    </div>
+
+    <div class="script-area">
+      <div class="script-label">🎙️ 大白话脚本</div>
+      <div class="script-text">${chip.chip.script}</div>
+    </div>
+
+    <div class="exams-area">
+      <div class="exams-label">📋 全国真题映射</div>
+      <div class="exam-list">
+        ${chip.exams.map(e => `
+          <div class="exam-item"><div class="exam-dot" style="background:${meta.color}"></div>${e}</div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function buildCardVisual(chip, meta, cssClass) {
+  const cvClass = cssClass + '-cv';
+  const mt = chip.chip.modelType;
+
+  // Slot-interactive types (onion, passive, word-type, ancient-modern)
+  if (chip.chip.modelVisual && chip.chip.modelVisual.slots) {
+    const slots = chip.chip.modelVisual.slots;
+    return `<div class="card-visual ${cvClass}"><div class="onion-model">
+      ${slots.map((s, i) => `
+        <div class="onion-layer ${i===0?'onion-outer':i===1?'onion-middle':'onion-inner'}" onclick="fillSlot(this)" title="${s.hint}">
+          ${s.label}
+          <div class="onion-label">💡 ${s.hint}</div>
+        </div>
+      `).join('')}
+    </div></div>`;
+  }
+
+  // Verb burst types
+  if (mt === 'verb-burst' || (chip.chip.modelVisual && chip.chip.modelVisual.expanded)) {
+    const exp = chip.chip.modelVisual.expanded || [];
+    const orig = chip.chip.modelVisual ? chip.chip.modelVisual.original : '';
+    const coreWord = (orig.match(/[\u4e00-\u9fff]+/g) || ['动词'])[0];
+    return `<div class="card-visual ${cvClass}"><div class="verb-burst-model">
+      <div class="verb-core-word">${coreWord}</div>
+      <div style="font-size:11px;color:var(--text-secondary);margin-bottom:10px">↑ 点击爆炸拆解 ↑</div>
+      <div class="verb-particles">
+        ${exp.map(v => `<div class="verb-particle" onclick="highlightVerb(this)">【${v.verb}】${v.desc}</div>`).join('')}
+      </div>
+    </div></div>`;
+  }
+
+  // Magnet model
+  if (mt === 'magnet-s') {
+    return `<div class="card-visual ${cvClass}"><div class="magnet-model">
+      <div class="magnet-row">
+        <div class="magnet-subject">He / She / It</div>
+        <span class="magnet-arrow">→🧲→</span>
+        <div class="magnet-verb">like</div>
+        <span class="magnet-arrow">→🧲→</span>
+        <div class="magnet-suffix">-s</div>
+      </div>
+      <div style="font-size:13px;color:var(--text-secondary);font-weight:600;margin-top:14px">单三傲娇怪 → 磁铁吸尾巴 → like → likes ✅</div>
+    </div></div>`;
+  }
+
+  // Number axis
+  if (mt === 'number-axis' || mt === 'number-axis-difference') {
+    return `<div class="card-visual ${cvClass}"><div class="axis-visual">
+      <div style="font-size:13px;font-weight:600;color:var(--danger);margin-bottom:6px">差量 = 5 + 2 = 7 （不是 5 − 2 = 3！）</div>
+      <div class="axis-line"></div>
+      <div class="axis-gap"></div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-top:12px;font-weight:600">里外里原理：一进一出差7分</div>
+    </div></div>`;
+  }
+
+  // Seesaw
+  if (mt === 'seesaw' || mt === 'seesaw-balance') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">跷跷板差量模型</div>
+      <div style="position:relative;width:220px;margin:0 auto">
+        <div style="width:220px;height:6px;background:linear-gradient(90deg,var(--success),var(--text-dim),var(--danger));border-radius:3px;transform:rotate(-5deg)"></div>
+        <div style="position:absolute;left:0;top:-24px;background:var(--success);color:white;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700">多15本 ↑</div>
+        <div style="position:absolute;right:0;top:-24px;background:var(--danger);color:white;padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700">缺25本 ↓</div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary);margin-top:16px">总差量 = 15 + 25 = 40<br>班数 = 40 ÷ 2 = 20</div>
+    </div></div>`;
+  }
+
+  // Timeline
+  if (mt === 'time-arrow') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:12px">过去射向现在的一支箭</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+        <div style="padding:10px 16px;border-radius:8px;background:var(--text-dim);color:white;font-size:13px;font-weight:600">Past<br>lost</div>
+        <div style="font-size:20px;color:var(--primary);animation:mPulse 1.5s infinite">⚡→</div>
+        <div style="padding:10px 16px;border-radius:8px;background:var(--primary);color:white;font-size:13px;font-weight:600;box-shadow:0 3px 10px rgba(255,107,53,0.35)">Present<br>have lost</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-top:14px">一般过去时=死去的历史 | 现在完成时=后果还热乎着</div>
+    </div></div>`;
+  }
+
+  // Evidence bar
+  if (mt === 'evidence-bar') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px">学霸证据量化条</div>
+      <div style="display:flex;height:36px;border-radius:18px;overflow:hidden;margin:12px auto;max-width:320px;background:#eee">
+        <div style="background:var(--danger);flex:1;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white">can't 0%</div>
+        <div style="background:var(--accent);flex:1;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--bg-dark)">may 50%</div>
+        <div style="background:var(--success);flex:1;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white">must 100%</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-top:10px">灯亮着=100%铁证 → must（一定）</div>
+    </div></div>`;
+  }
+
+  // Film strip
+  if (mt === 'film-strip' || mt === 'film-strip-cycle') {
+    const frames = ['🔴','🟡','🟡','🔵','🟢'];
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">周期胶卷模型</div>
+      <div style="display:flex;gap:6px;justify-content:center;margin:12px 0">
+        ${frames.map((f, i) => `<div style="width:48px;height:48px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:var(--transition);border:2px solid ${i===2?'var(--math)':'rgba(108,92,231,0.15)'};background:${i===2?'var(--math-bg)':'rgba(108,92,231,0.03)'};box-shadow:${i===2?'0 2px 8px rgba(108,92,231,0.2)':'none'}">${f}</div>`).join('')}
+      </div>
+      <div style="font-size:12px;color:var(--math);font-weight:600;margin-top:8px">余数3 → 第3帧 = 🟡黄灯！</div>
+    </div></div>`;
+  }
+
+  // Butterfly
+  if (mt === 'butterfly-model') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--math)">几何蝴蝶模型</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin:14px 0">
+        <div style="width:70px;height:70px;border-radius:50% 50% 50% 0;background:var(--math-light);opacity:0.35;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white">S₂</div>
+        <div style="font-size:18px;font-weight:900;color:var(--math)">=</div>
+        <div style="width:70px;height:70px;border-radius:50% 50% 0 50%;background:var(--math-light);opacity:0.35;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white">S₄</div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--math)">左右翅膀，面积死锁！</div>
+    </div></div>`;
+  }
+
+  // Train
+  if (mt === 'train-track') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">列车过桥轨迹</div>
+      <div style="background:rgba(108,92,231,0.06);border-radius:6px;padding:14px;margin:10px 0">
+        <div style="display:flex;align-items:center;gap:6px;justify-content:center">
+          <span style="font-size:24px">🚂</span>
+          <div style="height:3px;width:80px;background:var(--danger);border-radius:2px"></div>
+          <span style="font-size:12px;font-weight:700;color:var(--danger)">800m桥</span>
+          <div style="height:3px;width:30px;background:var(--accent);border-radius:2px"></div>
+          <span style="font-size:10px;font-weight:700;color:var(--accent)">200m车</span>
+        </div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary)">总路程 = 桥长 + 车长 = 1000m</div>
+    </div></div>`;
+  }
+
+  // Stage (river/hat)
+  if (mt === 'stage-model') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">帽子丢了模型</div>
+      <div style="background:rgba(108,92,231,0.06);border-radius:6px;padding:12px;margin:10px 0;font-size:12px;color:var(--text-secondary);line-height:1.6">水流 = 移动舞台<br>船和帽子都在舞台上<br>水流效果完全抵消！</div>
+      <div style="font-size:14px;font-weight:900;color:var(--primary)">水速是烟雾弹 → 20分钟无脑秒杀！</div>
+    </div></div>`;
+  }
+
+  // 3D cone
+  if (mt === '3d-cone') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">谁定谁动？旋转体模型</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:14px 0">
+        <div style="text-align:center"><div style="font-size:24px;margin-bottom:4px">📍</div><div style="font-size:11px;font-weight:700;color:var(--danger)">定海神针<br>h=3（轴）</div></div>
+        <div style="font-size:16px">→旋转→</div>
+        <div style="text-align:center"><div style="font-size:24px;margin-bottom:4px">🌀</div><div style="font-size:11px;font-weight:700;color:var(--success)">跑圈半径<br>r=4（底）</div></div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary)">V = ⅓πr²h = ⅓π(16)(3)</div>
+    </div></div>`;
+  }
+
+  // Pigeonhole
+  if (mt === 'drawer-pigeonhole') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">倒霉透顶法</div>
+      <div style="display:flex;gap:10px;justify-content:center;margin:14px 0">
+        <div style="background:rgba(255,107,107,0.15);padding:10px;border-radius:6px;font-size:12px;font-weight:600;color:var(--danger)">🔴🔴<br>红×2</div>
+        <div style="background:rgba(255,230,109,0.15);padding:10px;border-radius:6px;font-size:12px;font-weight:600;color:#c4a000">🟡🟡<br>黄×2</div>
+        <div style="background:rgba(78,205,196,0.15);padding:10px;border-radius:6px;font-size:12px;font-weight:600;color:var(--success)">🔵🔵<br>蓝×2</div>
+      </div>
+      <div style="font-size:18px;font-weight:900;margin:6px 0">+1 闪光球 🌟</div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary)">(3−1)×3+1 = 7个</div>
+    </div></div>`;
+  }
+
+  // LCM tail
+  if (mt === 'lcm-tail') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">多退少补法</div>
+      <div style="font-size:12px;color:var(--text-secondary);line-height:1.8;margin:10px 0">
+        3的倍数 ∩ 4的倍数 ∩ 5的倍数<br>
+        <b style="color:var(--math);font-size:16px">= 60</b>（最小公倍数）<br>
+        每次都多2个 → <b style="color:var(--primary)">60 + 2 = 62</b>
+      </div>
+      <div style="font-size:20px">🍬🍬 + 🌟🌟 = 62个</div>
+    </div></div>`;
+  }
+
+  // Overlap
+  if (mt === 'overlap-canvas') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--math)">多退少补 · 重影模型</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:4px;margin:14px 0">
+        <div style="width:70px;height:50px;background:rgba(255,107,107,0.25);border-radius:4px;border:2px solid rgba(255,107,107,0.4);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--danger)">A</div>
+        <div style="width:70px;height:50px;background:rgba(108,92,231,0.25);border-radius:4px;border:2px solid rgba(108,92,231,0.4);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--math);margin-left:-20px">B</div>
+      </div>
+      <div style="font-size:13px;font-weight:700;color:var(--primary)">总面积 = A + B − 重叠</div>
+    </div></div>`;
+  }
+
+  // Detective chain (English)
+  if (mt === 'detective-chain') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--english)">侦探连线 · 证据链</div>
+      <div style="background:rgba(0,184,148,0.06);border-radius:6px;padding:12px;margin:10px 0;font-size:12px;line-height:1.8">
+        Mike was very <span style="background:rgba(255,107,53,0.15);padding:2px 6px;border-radius:3px;font-weight:700;color:var(--primary)">____</span>,<br>
+        because his dog <span style="color:var(--success);font-weight:700;text-decoration:underline">died</span> yesterday.<br>
+        <div style="margin-top:8px;color:var(--success);font-weight:700">🐕 died ──连线──→ 😢 sad ✅</div>
+      </div>
+    </div></div>`;
+  }
+
+  // 3D space (in/on/at)
+  if (mt === '3d-space') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--english)">三维空间模型</div>
+      <div style="display:flex;gap:12px;justify-content:center;margin:10px 0">
+        <div style="text-align:center"><div style="font-size:22px">🎯</div><div style="font-size:11px;font-weight:700;color:var(--danger)">at = 点</div></div>
+        <div style="text-align:center"><div style="font-size:22px">📖</div><div style="font-size:11px;font-weight:700;color:var(--accent)">on = 面</div></div>
+        <div style="text-align:center"><div style="font-size:22px">📦</div><div style="font-size:11px;font-weight:700;color:var(--success)">in = 体</div></div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary)">车站=点 → at！苍蝇趴墙=面 → on！猫在箱里=体 → in！</div>
+    </div></div>`;
+  }
+
+  // Ancient-modern map
+  if (mt === 'ancient-modern-map') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--chinese)">古今映射手术刀</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin:10px 0;flex-wrap:wrap">
+        <div style="padding:6px 12px;border-radius:6px;background:rgba(255,107,53,0.1);font-size:12px;font-weight:700;color:var(--chinese)">夺→争夺</div>
+        <div style="padding:6px 12px;border-radius:6px;background:rgba(255,107,53,0.1);font-size:12px;font-weight:700;color:var(--chinese)">走→奔跑</div>
+        <div style="padding:6px 12px;border-radius:6px;background:rgba(255,107,53,0.1);font-size:12px;font-weight:700;color:var(--chinese)">恐→恐怕</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-top:8px">悲剧→忠诚/坚贞 | 喜剧→聪明/智慧</div>
+    </div></div>`;
+  }
+
+  // Scene ending
+  if (mt === 'scene-ending') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--chinese)">以景结情</div>
+      <div style="display:flex;gap:10px;justify-content:center;margin:10px 0">
+        <div style="padding:10px;border-radius:6px;background:rgba(255,107,107,0.08);border:1.5px solid rgba(255,107,107,0.2);font-size:11px;color:var(--danger)">📢 喊口号 ❌</div>
+        <div style="font-size:16px;align-self:center">→</div>
+        <div style="padding:10px;border-radius:6px;background:rgba(0,184,148,0.08);border:1.5px solid rgba(0,184,148,0.2);font-size:11px;color:var(--success)">🌅 写风景 ✅</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary);font-style:italic;margin-top:8px">"凤凰花落了一地，红得像一团火，又像是一场盛大的告别"</div>
+    </div></div>`;
+  }
+
+  // Closeup lens
+  if (mt === 'closeup-lens') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--chinese)">特写镜头 vs 全景扫描</div>
+      <div style="display:flex;gap:10px;justify-content:center;margin:10px 0">
+        <div style="text-align:center"><div style="font-size:22px">👤</div><div style="font-size:10px;color:var(--danger);font-weight:700">全景 ❌<br>大大眼睛高鼻</div></div>
+        <div style="text-align:center"><div style="font-size:22px">🔍</div><div style="font-size:10px;color:var(--success);font-weight:700">特写 ✅<br>一根翘起的银丝</div></div>
+      </div>
+    </div></div>`;
+  }
+
+  // Comparison radar
+  if (mt === 'comparison-radar') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--chinese)">双栏对比雷达</div>
+      <div style="display:flex;gap:10px;justify-content:center;margin:10px 0">
+        <div style="padding:10px 14px;border-radius:6px;background:rgba(108,92,231,0.08);font-size:11px;font-weight:700;color:var(--math)">A公司=¥XX</div>
+        <div style="font-size:14px;font-weight:900;color:var(--primary)">VS</div>
+        <div style="padding:10px 14px;border-radius:6px;background:rgba(0,184,148,0.08);font-size:11px;font-weight:700;color:var(--english)">B公司=¥XX</div>
+      </div>
+      <div style="font-size:12px;color:var(--text-secondary)">用数字说话，一字不多，一字不少</div>
+    </div></div>`;
+  }
+
+  // Passive formula
+  if (mt === 'passive-formula') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--english)">主被动身份互换仪</div>
+      <div style="font-size:12px;line-height:1.8;margin:10px 0">
+        <b style="color:var(--primary)">Web platform</b> ← 被 ← <b>IT team</b><br>
+        被动黄金公式：<b style="color:var(--danger);font-size:14px">be + Vpp</b><br>
+        tomorrow → will be built ✅
+      </div>
+    </div></div>`;
+  }
+
+  // Word type detective
+  if (mt === 'word-type-radar') {
+    return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:16px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--english)">词性侦探雷达</div>
+      <div style="font-size:12px;line-height:1.8;margin:10px 0">
+        🔍 <b>a/an/the</b> → 名词<br>
+        🔍 <b>can/should</b> → 动词原形<br>
+        🔍 看全篇定变形 → 加s？加ed？
+      </div>
+    </div></div>`;
+  }
+
+  // Generic fallback
+  return `<div class="card-visual ${cvClass}"><div style="text-align:center;padding:20px">
+    <div style="font-size:40px;margin-bottom:10px">${chip.icon}</div>
+    <div style="font-size:14px;font-weight:700;color:${meta.color}">${chip.chip.modelType}</div>
+    <div style="font-size:12px;color:var(--text-secondary);margin-top:6px">${chip.chip.modelDesc.substring(0,80)}…</div>
+  </div></div>`;
+}
+
+// ====== Interactive helpers ======
+function fillSlot(el) {
+  el.style.transform = 'scale(1.05)';
+  el.style.boxShadow = '0 4px 12px rgba(0,0,0,0.12)';
+  setTimeout(() => { el.style.transform = ''; el.style.boxShadow = ''; }, 400);
+}
+
+function highlightVerb(el) {
+  el.style.background = 'rgba(255,107,53,0.15)';
+  el.style.color = 'var(--chinese)';
+  el.style.borderColor = 'var(--chinese)';
+  el.style.transform = 'scale(1.05)';
+  setTimeout(() => { el.style.transform = ''; }, 300);
+}
+
+function playVideo(btn) {
+  btn.innerHTML = '⏸';
+  btn.style.background = 'var(--primary)';
+  btn.style.borderColor = 'var(--primary)';
+  setTimeout(() => {
+    btn.innerHTML = '▶';
+    btn.style.background = 'rgba(255,255,255,0.08)';
+    btn.style.borderColor = 'rgba(255,255,255,0.2)';
+  }, 2000);
+}
+
+// ====== Canvas Activation ======
+function activateCanvas(chipId, modelType) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  const container = document.getElementById('canvasContainer_' + chipId);
+  if (!container) return;
+  
+  // Render real interactive Canvas
+  const canvasEl = renderCanvasInteraction('canvasContainer_' + chipId, modelType, chip);
+  
+  // Unlock pass button after 3 seconds (simulate completing the interaction)
+  const statusDiv = document.getElementById('actionStatus_' + chipId);
+  const passBtn = document.getElementById('passBtn_' + chipId);
+  
+  setTimeout(() => {
+    if (statusDiv) {
+      statusDiv.innerHTML = '✅ 已完成认知动作！你亲手操作了思维模型，现在可以通关验证了。';
+      statusDiv.style.background = 'rgba(0,184,148,0.06)';
+      statusDiv.style.color = 'var(--success)';
+    }
+    if (passBtn) {
+      passBtn.className = 'pass-btn unlocked';
+      passBtn.disabled = false;
+      passBtn.innerHTML = '✅ 进入通关测试 →';
+    }
+  }, 1500);
+}
+
+function verbBurstAction(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  const container = document.getElementById('canvasContainer_' + chipId);
+  if (!container) return;
+  const canvas = container.querySelector('canvas');
+  if (canvas && canvas.burst) {
+    canvas.burst();
+  }
+  // Also unlock
+  const statusDiv = document.getElementById('actionStatus_' + chipId);
+  const passBtn = document.getElementById('passBtn_' + chipId);
+  if (statusDiv) {
+    statusDiv.innerHTML = '✅ 动词爆炸完成！一个动作拆成4个微动词，流水账瞬间变成大片！';
+    statusDiv.style.background = 'rgba(0,184,148,0.06)';
+    statusDiv.style.color = 'var(--success)';
+  }
+  if (passBtn) {
+    passBtn.className = 'pass-btn unlocked';
+    passBtn.disabled = false;
+    passBtn.innerHTML = '✅ 进入通关测试 →';
+  }
+}
+
+function detectiveConnect(chipId) {
+  const container = document.getElementById('canvasContainer_' + chipId);
+  if (!container) return;
+  const canvas = container.querySelector('canvas');
+  if (canvas && canvas.connectLine) {
+    canvas.connectLine();
+  }
+  const statusDiv = document.getElementById('actionStatus_' + chipId);
+  const passBtn = document.getElementById('passBtn_' + chipId);
+  if (statusDiv) {
+    statusDiv.innerHTML = '✅ 侦探连线完成！证据链锁死答案，不看运气只看证据！';
+    statusDiv.style.background = 'rgba(0,184,148,0.06)';
+    statusDiv.style.color = 'var(--success)';
+  }
+  if (passBtn) {
+    passBtn.className = 'pass-btn unlocked';
+    passBtn.disabled = false;
+    passBtn.innerHTML = '✅ 进入通关测试 →';
+  }
+}
+
+function completeAction() {
+  if (!currentChip) return;
+  completedChips.add(currentChip.id);
+  renderDiagPage(currentChip);
+  showPage('diag');
+  updateProgress();
+}
+
+// ====== Diag Page ======
+function renderDiagPage(chip) {
+  const container = document.getElementById('diagContent');
+  const meta = SUBJECT_MAP[chip.subject];
+
+  container.innerHTML = `
+    <div class="diag-header">
+      <h2 class="diag-header-title">🔍 闭环诊断 · 通关验证</h2>
+      <p class="diag-header-sub">${chip.id} · ${chip.title}</p>
+    </div>
+
+    <div class="diag-question-box">
+      <div class="diag-q-label">真题变型题 第1道</div>
+      <div class="diag-q-text" style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">下面是一道全国真题变型题，和你在模型舱里练的底层模型一模一样，只是换了个壳。看你能不能迁移！</div>
+      <div class="diag-q-text" style="font-size:15px">${chip.painPoint}</div>
+      <div class="diag-options">
+        <div class="diag-option" onclick="selectDiagOption(this,'A')">
+          <div class="opt-letter">A</div>我能识别底层模型，直接秒杀
+        </div>
+        <div class="diag-option" onclick="selectDiagOption(this,'B')">
+          <div class="opt-letter">B</div>模型懂了但壳没看透，有点卡
+        </div>
+        <div class="diag-option" onclick="selectDiagOption(this,'C')">
+          <div class="opt-letter">C</div>完全懵了，需要再看一遍
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-ai-panel" id="diagAiPanel" style="display:none">
+      <div class="diag-ai-title">🧠 AI追问：学霸，你卡在哪了？跟老师说实话</div>
+      <div class="diag-ai-options">
+        <div class="diag-ai-opt" onclick="selectAiOption(this)">
+          <div class="ai-label">A · 信息提取卡点</div>
+          题目太长，里面的数字太多，我有点晕
+        </div>
+        <div class="diag-ai-opt" onclick="selectAiOption(this)">
+          <div class="ai-label">B · 模型迁移卡点</div>
+          我知道公式，但不知道这道题里的变量和模型有什么关系
+        </div>
+        <div class="diag-ai-opt" onclick="selectAiOption(this)">
+          <div class="ai-label">C · 计算粗心卡点</div>
+          我模型懂了，就是最后一步算错了
+        </div>
+      </div>
+      <div id="diagAiResult" style="margin-top:14px;font-size:13px;color:var(--text-dim)"></div>
+    </div>
+
+    <div id="diagResultPanel" style="display:none">
+      <div class="diag-result">
+        <div class="diag-result-icon">🎉</div>
+        <div class="diag-result-title" style="color:var(--success)">认知节点通关成功！</div>
+        <div class="diag-result-desc">你已完成认知动作 + 通关验证<br>这个知识点在后台树状图上已标记为 <b style="color:var(--success)">[已通关]</b></div>
+      </div>
+      <div style="text-align:center;margin-top:18px">
+        <button onclick="showPage('home')" class="pass-btn unlocked" style="background:linear-gradient(135deg,var(--success),var(--english-light))">🏠 回首页继续攻克下一个痛点</button>
+      </div>
+    </div>
+  `;
+}
+
+function selectDiagOption(el, letter) {
+  document.querySelectorAll('.diag-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  if (letter === 'A') {
+    document.getElementById('diagResultPanel').style.display = 'block';
+    document.getElementById('diagAiPanel').style.display = 'none';
+  } else {
+    document.getElementById('diagAiPanel').style.display = 'block';
+    document.getElementById('diagResultPanel').style.display = 'none';
+  }
+}
+
+function selectAiOption(el) {
+  document.querySelectorAll('.diag-ai-opt').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  const resultDiv = document.getElementById('diagAiResult');
+  const label = el.querySelector('.ai-label').textContent;
+  const backBtn = `<button onclick="showPage('model')" style="padding:6px 14px;border-radius:6px;background:var(--primary);color:white;border:none;cursor:pointer;font-size:12px;margin-top:8px">回到模型舱 →</button>`;
+  if (label.includes('信息提取')) {
+    resultDiv.innerHTML = `<div style="background:rgba(78,205,196,0.08);padding:10px;border-radius:6px;margin-top:6px">✅ 系统已启动缩句游戏，高亮题干关键信息，帮你从长题干中精准提取。${backBtn}</div>`;
+  } else if (label.includes('模型迁移')) {
+    resultDiv.innerHTML = `<div style="background:rgba(108,92,231,0.08);padding:10px;border-radius:6px;margin-top:6px">✅ 系统已启动动画，把新题壳里的变量代换成你熟悉的模型元素。${backBtn}</div>`;
+  } else {
+    resultDiv.innerHTML = `<div style="background:rgba(255,230,109,0.08);padding:10px;border-radius:6px;margin-top:6px">✅ 系统已弹出草稿纸，展示计算错因和学霸检查法。${backBtn}</div>`;
+  }
+}
+
+// ====== Progress ======
+function updateProgress() {
+  const mini = document.getElementById('progressMini');
+  const count = document.getElementById('progressCount');
+  const total = CHIPS.length;
+  const done = completedChips.size;
+  let html = '';
+  for (let i = 0; i < Math.min(total, 26); i++) {
+    const isDone = completedChips.has(CHIPS[i].id);
+    html += `<div class="progress-pip ${isDone ? 'done' : ''}"></div>`;
+  }
+  mini.innerHTML = html;
+  count.textContent = done + '/' + total;
+}
+
+// ====== Export Functions ======
+function exportJSON() {
+  const preview = document.getElementById('jsonPreview');
+  if (preview.style.display === 'block') {
+    preview.style.display = 'none';
+    return;
+  }
+  const exportData = CHIPS.map(c => ({
+    id: c.id,
+    grade: c.grade,
+    subject: c.subject,
+    category: c.category,
+    title: c.title,
+    painPoint: c.painPoint,
+    aiDiagnosis: c.aiDiagnosis,
+    chip: { script: c.chip.script, modelType: c.chip.modelType, modelDesc: c.chip.modelDesc },
+    exams: c.exams,
+    examCodes: c.examCodes,
+    keywords: c.keywords
+  }));
+  preview.textContent = JSON.stringify(exportData, null, 2);
+  preview.style.display = 'block';
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(JSON.stringify(exportData, null, 2)).then(() => {
+    alert('✅ JSON数据已复制到剪贴板！直接粘贴到Google Docs或发给外包团队即可。');
+  }).catch(() => {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = JSON.stringify(exportData, null, 2);
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('✅ JSON数据已复制到剪贴板！');
+  });
+}
+
+function exportText() {
+  const preview = document.getElementById('jsonPreview');
+  if (preview.style.display === 'block') {
+    preview.style.display = 'none';
+    return;
+  }
+  let text = '================================================================================\n';
+  text += '【四五六年级全科突破平台 - 第一批核心芯片中央数据库（含北京真题扩展）】\n';
+  text += '================================================================================\n\n';
+
+  CHIPS.forEach(c => {
+    text += '--------------------------------------------------------------------------------\n';
+    text += `[卡点编码]：${c.id}（${c.grade === 4 ? '四' : c.grade === 5 ? '五' : '六'}年级${c.subject}-${c.category}）\n`;
+    text += `[考场痛点现象]：${c.painPoint}\n`;
+    text += `[AI诊断微动作]：${c.aiDiagnosis.action}\n`;
+    text += `[学霸降维芯片]：\n`;
+    text += `  大白话脚本：${c.chip.script}\n`;
+    text += `  模型图设计：${c.chip.modelDesc}\n`;
+    text += `[全国真题演练池]：${c.exams.join('；')}\n`;
+    text += `[考点编码]：${c.examCodes.join('；')}\n\n`;
+  });
+
+  preview.textContent = text;
+  preview.style.display = 'block';
+
+  navigator.clipboard.writeText(text).then(() => {
+    alert('✅ 纯文本数据已复制到剪贴板！');
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('✅ 纯文本数据已复制到剪贴板！');
+  });
+}
+
+function copyLetter() {
+  const text = document.getElementById('letterPreview').textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    alert('✅ 开工信已复制到剪贴板！直接粘贴发给外包团队。');
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    alert('✅ 开工信已复制到剪贴板！');
+  });
+}
+
+// ====== Init ======
+function init() {
+  selectGrade(4);
+  updateProgress();
+}
+init();
+</script>
+</body>
+</html>
