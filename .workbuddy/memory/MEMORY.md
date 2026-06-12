@@ -22,10 +22,10 @@
 - 生产流程：AI生产 → 质量自检 → 打包交付 → 外包导入
 
 ## 部署状态
-- 本地可预览（file://协议）
-- CloudStudio部署失败（404）
-- GitHub需要手动认证（gh auth login）
-- push-to-github.sh脚本已准备
+- GitHub Pages 已成功部署：https://zhangzhenguo821.github.io/xueba-road/
+- GitHub仓库：zhangzhenguo821/xueba-road（main分支，/docs目录）
+- gh CLI已认证（zhangzhenguo821），可直接推送
+- 本地代理对git push间歇性502，需要重试
 
 ## 外包团队协作
 - 外包只负责"容器"（前端框架+后端CMS），不碰内容
