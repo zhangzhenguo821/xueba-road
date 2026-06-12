@@ -1843,6 +1843,10 @@ function viewExamPaper(examId) {
   document.getElementById('examModalOverlay').classList.add('active');
 }
 
+function closeExamPaper() {
+  document.getElementById('examModalOverlay').classList.remove('active');
+}
+
 function toggleAnswers() {
   var ans = document.getElementById('paperAnswers');
   var btn = document.getElementById('toggleAnswerBtn');
