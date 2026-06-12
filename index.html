@@ -598,7 +598,7 @@ function renderModelPage(chip) {
     '<div class="model-top">' +
       '<button class="model-back" onclick="showPage(\'home\')">← 回首页</button>' +
       '<div class="model-code" style="background:' + meta.bg + ';color:' + meta.color + '">🏷️ ' + chip.id + '</div>' +
-      '<div class="model-code" style="background:rgba(0,0,0,0.04);color:var(--text-dim)">' + chip.examCodes[0] + '</div>' +
+      '<div class="model-code" style="background:rgba(0,0,0,0.04);color:var(--text-dim)">' + (chip.examCodes && chip.examCodes.length > 0 ? chip.examCodes[0] : chip.id) + '</div>' +
     '</div>' +
     '<div>' +
       '<h2 class="model-title" style="color:' + meta.color + '">' + chip.icon + ' ' + chip.title + '</h2>' +
