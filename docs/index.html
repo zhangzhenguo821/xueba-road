@@ -99,24 +99,53 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .exam-search{flex:0 0 200px;padding:6px 10px;border:1.5px solid rgba(0,0,0,0.08);border-radius:6px;font-size:12px;outline:none;background:white}
 .exam-search:focus{border-color:var(--accent, #2563eb)}
 .exam-stats{font-size:12px;color:var(--text-dim);margin-bottom:12px}
-.exam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:10px}
-.exam-card{background:white;border:1.5px solid rgba(0,0,0,0.06);border-radius:10px;padding:14px 16px;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:8px}
-.exam-card:hover{border-color:rgba(0,0,0,0.15);box-shadow:0 2px 12px rgba(0,0,0,0.06);transform:translateY(-1px)}
-.exam-card-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.5}
+.exam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.exam-card{background:white;border:2px solid rgba(0,0,0,0.06);border-radius:12px;padding:16px 18px;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:10px;position:relative}
+.exam-card:hover{border-color:#2563eb;box-shadow:0 4px 16px rgba(37,99,235,0.10);transform:translateY(-2px)}
+.exam-card.enriched{border-left:4px solid #00B894}
+.exam-card-title{font-size:14px;font-weight:700;color:var(--text);line-height:1.5}
 .exam-card-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.exam-card-tag{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500}
+.exam-card-tag{padding:3px 10px;border-radius:5px;font-size:11px;font-weight:600}
 .exam-card-tag.exam{background:var(--math-bg);color:var(--math)}
 .exam-card-tag.mid{background:#fef3c7;color:#92400e}
 .exam-card-tag.race{background:#fce7f3;color:#9d174d}
 .exam-card-tag.region{background:rgba(0,0,0,0.04);color:var(--text-secondary)}
 .exam-card-tag.grade{background:var(--chinese-bg);color:var(--chinese)}
-.exam-card-chips{margin-top:4px;font-size:11px;color:var(--text-dim);line-height:1.6;max-height:58px;overflow:hidden}
-.exam-card-chips.expanded{max-height:none}
-.exam-card-chip{display:inline-block;padding:1px 6px;margin:1px 3px 1px 0;border-radius:3px;font-size:10px;background:rgba(0,0,0,0.04);cursor:pointer;transition:background 0.15s}
-.exam-card-chip:hover{background:var(--math-bg);color:var(--math)}
-.exam-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:2px}
-.exam-card-expand{font-size:11px;color:var(--accent, #2563eb);cursor:pointer;user-select:none}
+.exam-card-tag.subject-tag{background:var(--english-bg);color:var(--english)}
+/* Question preview */
+.exam-question-preview{margin-top:2px;background:rgba(0,0,0,0.02);border-radius:8px;padding:10px 14px;font-size:11px;color:var(--text-secondary);line-height:1.7;max-height:72px;overflow:hidden;border:1px dashed rgba(0,0,0,0.06)}
+.exam-card.enriched .exam-question-preview{background:rgba(0,184,148,0.03);border-color:rgba(0,184,148,0.12)}
+.exam-question-preview b{color:var(--primary);font-weight:700}
+.exam-card-chips{margin-top:2px;font-size:11px;color:var(--text-dim);line-height:1.6;display:flex;flex-wrap:wrap;gap:4px}
+.exam-card-chip{display:inline-block;padding:2px 8px;margin:0;border-radius:4px;font-size:10px;background:rgba(0,0,0,0.04);cursor:pointer;transition:all 0.15s;font-weight:500}
+.exam-card-chip:hover{background:var(--math-bg);color:var(--math);transform:scale(1.05)}
+.exam-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:2px;gap:8px}
+.exam-card-expand{font-size:11px;color:#2563eb;cursor:pointer;user-select:none;font-weight:600}
 .exam-card-expand:hover{text-decoration:underline}
+.exam-view-btn{padding:5px 14px;border-radius:6px;border:none;font-size:11px;font-weight:700;cursor:pointer;background:var(--primary);color:white;transition:all 0.2s;white-space:nowrap}
+.exam-view-btn:hover{background:#e55a2b;transform:scale(1.03)}
+/* Exam Paper Modal */
+.exam-modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:999;justify-content:center;align-items:center;padding:20px}
+.exam-modal-overlay.active{display:flex}
+.exam-modal{background:white;border-radius:16px;width:100%;max-width:780px;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.exam-modal-header{background:linear-gradient(135deg,#1A1A2E,#16213E);color:white;padding:24px 28px;border-radius:16px 16px 0 0;position:sticky;top:0;z-index:1}
+.exam-modal-close{position:absolute;top:16px;right:20px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.12);border:none;color:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.exam-modal-close:hover{background:rgba(255,255,255,0.25)}
+.exam-modal-title{font-size:20px;font-weight:900;margin-bottom:4px}
+.exam-modal-meta{font-size:12px;color:rgba(255,255,255,0.7);display:flex;gap:12px;flex-wrap:wrap}
+.exam-modal-body{padding:24px 28px}
+.exam-section-title{font-size:16px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:8px;color:var(--text);border-bottom:2px solid rgba(0,0,0,0.06);padding-bottom:10px}
+.exam-section-title .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.exam-question-list{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.exam-question-item{background:rgba(0,0,0,0.02);border-radius:10px;padding:16px 20px;border:1.5px solid rgba(0,0,0,0.04);transition:all 0.2s}
+.exam-question-item:hover{border-color:rgba(0,184,148,0.2);background:rgba(0,184,148,0.02)}
+.exam-q-number{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--primary);color:white;font-size:12px;font-weight:800;flex-shrink:0}
+.exam-q-main{font-size:13px;line-height:1.7;color:var(--text);flex:1}
+.exam-q-answer{font-size:13px;font-weight:700;color:#00B894;margin-top:6px;padding-left:32px}
+.exam-q-chip{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;background:var(--math-bg);color:var(--math);margin-left:8px;cursor:pointer}
+.exam-modal-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.exam-modal-chip{padding:4px 12px;border-radius:6px;font-size:11px;background:rgba(0,0,0,0.04);cursor:pointer;transition:all 0.15s;font-weight:500}
+.exam-modal-chip:hover{background:var(--math-bg);color:var(--math)}
 .exam-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-dim)}
 .exam-empty-icon{font-size:40px;margin-bottom:12px}
 .exam-empty-title{font-size:14px;margin-bottom:4px}
@@ -497,9 +526,16 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <div class="exam-stats" id="examStats"></div>
     <div class="exam-grid" id="examGrid"></div>
   </div>
+  
+  <!-- 试卷预览弹窗 -->
+  <div class="exam-modal-overlay" id="examModalOverlay" onclick="if(event.target===this)closeExamPaper()">
+    <div class="exam-modal" id="examModal"></div>
+  </div>
 </div>
 
 <script src="data.js?v=202606121200"></script>
+<script src="data/exams/index-data.js?v=202606121700"></script>
+<script src="data/exams/index-enriched-data.js?v=202606121700"></script>
 <script>
 // ====== State ======
 let currentGrade = 4;
@@ -1507,32 +1543,45 @@ function loadVideoWarehouse() {
 }
 
 // ====== Exam Library ======
-var _examData = [];
+// Data loaded via <script> tags (no fetch() needed, works on file://)
+var _examData = (typeof _EXAM_DATA !== 'undefined') ? _EXAM_DATA : [];
+var _examEnriched = {};  // examId -> enriched data
 var _examRegions = [];
 
 function loadExams() {
-  fetch('data/exams/index.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      _examData = data;
-      // 收集所有地区
-      var regionSet = {};
-      data.forEach(function(e) { regionSet[e.region] = true; });
-      _examRegions = Object.keys(regionSet).sort();
-      // 填充地区下拉框
-      var sel = document.getElementById('examRegion');
-      _examRegions.forEach(function(r) {
-        var opt = document.createElement('option');
-        opt.value = r;
-        opt.textContent = r;
-        sel.appendChild(opt);
-      });
-      renderExams();
-    })
-    .catch(function(err) {
-      console.error('加载真题数据失败:', err);
-      document.getElementById('examGrid').innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">📭</div><div class="exam-empty-title">真题数据加载失败</div><div class="exam-empty-desc">请检查 network 连接后刷新页面</div></div>';
+  if (typeof _EXAM_DATA === 'undefined') {
+    document.getElementById('examGrid').innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">📭</div><div class="exam-empty-title">真题数据加载失败</div><div class="exam-empty-desc">请检查 network 连接后刷新页面</div></div>';
+    return;
+  }
+  _examData = _EXAM_DATA;
+  
+  // 收集所有地区
+  var regionSet = {};
+  _examData.forEach(function(e) { regionSet[e.region] = true; });
+  _examRegions = Object.keys(regionSet).sort();
+  // 填充地区下拉框
+  var sel = document.getElementById('examRegion');
+  _examRegions.forEach(function(r) {
+    var opt = document.createElement('option');
+    opt.value = r;
+    opt.textContent = r;
+    sel.appendChild(opt);
+  });
+  
+  // Load enriched data from pre-loaded var
+  loadEnrichedExams();
+}
+
+function loadEnrichedExams() {
+  if (typeof _EXAM_ENRICHED_DATA !== 'undefined' && _EXAM_ENRICHED_DATA.length > 0) {
+    _EXAM_ENRICHED_DATA.forEach(function(e) {
+      _examEnriched[e.id] = e;
     });
+    console.log('✅ 真题数据已加载: ' + _examData.length + ' 张试卷, ' + Object.keys(_examEnriched).length + ' 张含真题内容');
+  } else {
+    console.log('⚠️ 真题内容数据未就绪，仅展示基础试卷信息');
+  }
+  renderExams();
 }
 
 function renderExams() {
@@ -1554,11 +1603,25 @@ function renderExams() {
     return true;
   });
 
-  document.getElementById('examStats').textContent = '共 ' + filtered.length + ' 张试卷，关联 ' + (function(){
-    var s = new Set();
-    filtered.forEach(function(e) { e.chips.forEach(function(c) { s.add(c); }); });
-    return s.size + ' 个芯片';
-  })();
+  var enrichedCount = 0;
+  var totalQuestions = 0;
+  filtered.forEach(function(e) {
+    var enr = _examEnriched[e.id];
+    if (enr && enr.sampleQuestions && enr.sampleQuestions.length > 0) {
+      enrichedCount++;
+      totalQuestions += enr.sampleQuestions.length;
+    }
+  });
+
+  document.getElementById('examStats').innerHTML = 
+    '共 <b>' + filtered.length + '</b> 张试卷' +
+    (enrichedCount > 0 ? ' · <b style="color:#00B894">' + enrichedCount + '</b> 张含真题内容' : '') +
+    (totalQuestions > 0 ? ' · <b>' + totalQuestions + '</b> 道题目' : '') +
+    ' · 关联 <b>' + (function(){
+      var s = new Set();
+      filtered.forEach(function(e) { e.chips.forEach(function(c) { s.add(c); }); });
+      return s.size;
+    })() + '</b> 个芯片';
 
   var grid = document.getElementById('examGrid');
   if (filtered.length === 0) {
@@ -1568,24 +1631,131 @@ function renderExams() {
 
   grid.innerHTML = filtered.map(function(e) {
     var tagClass = e.type === '期末' ? 'exam' : e.type === '期中' ? 'mid' : 'race';
-    var chipsHtml = e.chips.map(function(cid) {
+    var enr = _examEnriched[e.id];
+    var isEnriched = enr && enr.sampleQuestions && enr.sampleQuestions.length > 0;
+    var cardClass = isEnriched ? 'exam-card enriched' : 'exam-card';
+    
+    // Question preview (show up to 2 sample questions)
+    var questionPreview = '';
+    if (isEnriched) {
+      var samples = enr.sampleQuestions.slice(0, 2);
+      questionPreview = '<div class="exam-question-preview">' +
+        samples.map(function(q, i) {
+          return '<div style="margin-bottom:3px"><b>Q' + (i+1) + '.</b> ' + q.question.substring(0, 50) + (q.question.length > 50 ? '…' : '') + '</div>';
+        }).join('') +
+        (enr.sampleQuestions.length > 2 ? '<div style="font-size:10px;color:#00B894;margin-top:2px">+ 还有 ' + (enr.sampleQuestions.length - 2) + ' 道题…</div>' : '') +
+        '</div>';
+    }
+    
+    // Chip badges (show max 6)
+    var chipsHtml = e.chips.slice(0, 6).map(function(cid) {
       return '<span class="exam-card-chip" onclick="event.stopPropagation();openChip(\'' + cid + '\')" title="点击打开芯片">' + cid + '</span>';
     }).join('');
-    return '<div class="exam-card" onclick="this.querySelector(\'.exam-card-chips\').classList.toggle(\'expanded\');var btn=this.querySelector(\'.exam-card-expand\');btn.textContent=btn.textContent.startsWith(\'展开\')?\'收起 ▲\':\'展开 ▼\';event.stopPropagation()">' +
-      '<div class="exam-card-title">' + e.title + '</div>' +
+    if (e.chips.length > 6) {
+      chipsHtml += '<span style="font-size:10px;color:var(--text-dim)">+ ' + (e.chips.length - 6) + '</span>';
+    }
+    
+    return '<div class="' + cardClass + '" onclick="viewExamPaper(\'' + e.id + '\')">' +
+      '<div class="exam-card-title">' +
+        (isEnriched ? '📋 ' : '📄 ') + e.title +
+      '</div>' +
       '<div class="exam-card-meta">' +
         '<span class="exam-card-tag ' + tagClass + '">' + e.type + '</span>' +
         '<span class="exam-card-tag region">📍 ' + e.region + '</span>' +
         '<span class="exam-card-tag grade">G' + e.grade + '</span>' +
-        '<span class="exam-card-tag region">' + e.subject + '</span>' +
+        '<span class="exam-card-tag subject-tag">' + e.subject + '</span>' +
+        (isEnriched ? '<span class="exam-card-tag" style="background:#d4fceb;color:#00B894">✅ ' + enr.sampleQuestions.length + '题可练</span>' : '') +
       '</div>' +
+      questionPreview +
       '<div class="exam-card-chips">' + chipsHtml + '</div>' +
       '<div class="exam-card-foot">' +
         '<span style="font-size:11px;color:var(--text-dim)">关联 ' + e.chipCount + '/' + e.totalChips + ' 个芯片</span>' +
-        '<span class="exam-card-expand">展开 ▼</span>' +
+        '<button class="exam-view-btn" onclick="event.stopPropagation();viewExamPaper(\'' + e.id + '\')">' + (isEnriched ? '📝 查看试卷' : '📋 查看详情') + '</button>' +
       '</div>' +
     '</div>';
   }).join('');
+}
+
+// ====== Exam Paper Modal ======
+function viewExamPaper(examId) {
+  var exam = _examData.find(function(e) { return e.id === examId; });
+  if (!exam) return;
+  
+  var enr = _examEnriched[examId];
+  var isEnriched = enr && enr.sampleQuestions && enr.sampleQuestions.length > 0;
+  
+  var tagClass = exam.type === '期末' ? 'exam' : exam.type === '期中' ? 'mid' : 'race';
+  var color = exam.subject === '数学' ? '#6C5CE7' : exam.subject === '语文' ? '#FF6B35' : '#00B894';
+  
+  // Questions section
+  var questionsHTML = '';
+  if (isEnriched) {
+    questionsHTML = 
+      '<div class="exam-section-title"><div class="dot" style="background:' + color + '"></div>📝 真题内容 (' + enr.sampleQuestions.length + '题)</div>' +
+      '<div class="exam-question-list">' +
+        enr.sampleQuestions.map(function(q, i) {
+          var diffStars = q.difficulty === 1 ? '⭐' : q.difficulty === 2 ? '⭐⭐' : '⭐⭐⭐';
+          return '<div class="exam-question-item">' +
+            '<div style="display:flex;align-items:flex-start;gap:10px">' +
+              '<div class="exam-q-number">' + (i+1) + '</div>' +
+              '<div class="exam-q-main">' +
+                q.question +
+                (q.relatedChip ? '<span class="exam-q-chip" onclick="openChip(\'' + q.relatedChip + '\')">🔗 ' + q.relatedChip + '</span>' : '') +
+              '</div>' +
+            '</div>' +
+            '<div class="exam-q-answer">✅ 答案：' + q.answer + ' <span style="font-size:10px;color:var(--text-dim);font-weight:400">' + diffStars + '</span></div>' +
+          '</div>';
+        }).join('') +
+      '</div>';
+  } else {
+    questionsHTML = 
+      '<div class="exam-section-title"><div class="dot" style="background:' + color + '"></div>📝 真题内容</div>' +
+      '<div style="background:rgba(0,0,0,0.02);border-radius:12px;padding:24px;text-align:center;border:1.5px dashed rgba(0,0,0,0.08);margin-bottom:20px">' +
+        '<div style="font-size:40px;margin-bottom:10px">📭</div>' +
+        '<div style="font-size:14px;font-weight:600;color:var(--text-secondary);margin-bottom:6px">试卷题目数据正在收集中</div>' +
+        '<div style="font-size:12px;color:var(--text-dim);line-height:1.6">该试卷来自全国题库索引<br>具体真题内容将在后续版本中陆续填充<br>当前可查看下方关联的考点芯片</div>' +
+      '</div>';
+  }
+  
+  // Chips section
+  var chipsHTML = 
+    '<div class="exam-section-title"><div class="dot" style="background:' + color + '"></div>🔗 关联考点芯片 (' + exam.chips.length + '个)</div>' +
+    '<div class="exam-modal-chips">' +
+      exam.chips.map(function(cid) {
+        return '<span class="exam-modal-chip" onclick="openChip(\'' + cid + '\')" title="点击查看芯片详情">' + cid + '</span>';
+      }).join('') +
+    '</div>';
+  
+  var modal = document.getElementById('examModal');
+  modal.innerHTML = 
+    '<div class="exam-modal-header">' +
+      '<button class="exam-modal-close" onclick="closeExamPaper()">✕</button>' +
+      '<div class="exam-modal-title">' + exam.title + '</div>' +
+      '<div class="exam-modal-meta">' +
+        '<span>' + exam.region + '</span>' +
+        '<span>·</span>' +
+        '<span>G' + exam.grade + '</span>' +
+        '<span>·</span>' +
+        '<span>' + exam.subject + '</span>' +
+        '<span>·</span>' +
+        '<span>' + exam.type + '</span>' +
+        (exam.term ? '<span>·</span><span>' + (exam.term === '上' ? '上学期' : '下学期') + '</span>' : '') +
+      '</div>' +
+    '</div>' +
+    '<div class="exam-modal-body">' +
+      questionsHTML +
+      chipsHTML +
+      '<div style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.06)">' +
+        '<button onclick="closeExamPaper()" style="padding:8px 24px;border-radius:8px;border:1.5px solid rgba(0,0,0,0.1);background:white;font-size:13px;cursor:pointer;margin-right:8px">关闭</button>' +
+        '<button onclick="window.print()" style="padding:8px 24px;border-radius:8px;border:none;background:' + color + ';color:white;font-size:13px;cursor:pointer;font-weight:600">🖨️ 打印试卷</button>' +
+      '</div>' +
+    '</div>';
+  
+  document.getElementById('examModalOverlay').classList.add('active');
+}
+
+function closeExamPaper() {
+  document.getElementById('examModalOverlay').classList.remove('active');
 }
 
 // ====== Init ======
