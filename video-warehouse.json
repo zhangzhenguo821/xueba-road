@@ -1,0 +1,337 @@
+{
+  "version": "1.0",
+  "description": "学霸之路视频仓库——单一数据源，修改此文件后前端自动同步",
+  "updateInstruction": "1. 在 B 站搜索 searchKeyword 列的关键词 2. 找到讲解清晰、时长 3 分钟左右的视频 3. 复制 BV 号填入 bvid 列 4. 填入时长（如 3:24）5. status 改为「已绑定」",
+  "videos": [
+    {
+      "chipId": "MATH-04-001",
+      "title": "得分扣分题换个壳就不会·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学得分扣分题换个壳就不会讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-002",
+      "title": "周期循环问题余数对应·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学周期循环问题余数对应讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-003",
+      "title": "长方形剪拼与重叠面积·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学长方形剪拼与重叠面积讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-004",
+      "title": "盈亏问题多多少少搞不清·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学盈亏问题多多少少搞不清讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-005",
+      "title": "乘法分配律正向逆向全考·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学乘法分配律正向逆向全考讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-006",
+      "title": "小数加减竖式小数点不对齐·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学小数加减竖式小数点不对齐讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-007",
+      "title": "三角形三边关系内角和总记错·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学三角形三边关系内角和总记错讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-008",
+      "title": "平移格数数对应点不是数间距·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学平移格数数对应点不是数间距讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "CHI-04-001",
+      "title": "词句赏析题只会写'生动形象'·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级语文词句赏析题只会写'生动形象'教学方法",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "CHI-04-002",
+      "title": "写事流水账干巴巴写不长·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级语文写事流水账干巴巴写不长教学方法",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-04-001",
+      "title": "单三后面的s永远漏掉·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语单三后面的s永远漏掉语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-04-002",
+      "title": "介词in/on/at换个场景就瞎猜·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语介词in/on/at换个场景就瞎猜语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-04-003",
+      "title": "完形填空看懂了也选错·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语完形填空看懂了也选错语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-05-001",
+      "title": "梯形对角线阴影面积毫无头绪·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学梯形对角线阴影面积毫无头绪讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-05-002",
+      "title": "列车过桥路程总漏车长·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学列车过桥路程总漏车长讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-05-003",
+      "title": "公因数公倍数分不清该求哪个·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学公因数公倍数分不清该求哪个讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "CHI-05-001",
+      "title": "非连续性文本不会提取对比信息·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级语文非连续性文本不会提取对比信息教学方法",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "CHI-05-002",
+      "title": "写人只会堆砌外貌千人一面·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级语文写人只会堆砌外貌千人一面教学方法",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-05-001",
+      "title": "分不清一般过去时和现在完成时·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语分不清一般过去时和现在完成时语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-05-002",
+      "title": "情态动词must/can/may全凭翻译瞎猜·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语情态动词must/can/may全凭翻译瞎猜语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-06-001",
+      "title": "流水行船帽子丢了模型·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学流水行船帽子丢了模型讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-06-002",
+      "title": "圆柱剪开圆锥旋转空间崩塌·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学圆柱剪开圆锥旋转空间崩塌讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-06-003",
+      "title": "抽屉原理至少保证数数数漏·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学抽屉原理至少保证数数数漏讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "CHI-06-001",
+      "title": "课外文言文一句话都看不懂·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级语文课外文言文一句话都看不懂教学方法",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "CHI-06-002",
+      "title": "结尾只会喊口号空洞煽情·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级语文结尾只会喊口号空洞煽情教学方法",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-06-001",
+      "title": "被动语态永远漏掉be动词·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语被动语态永远漏掉be动词语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "ENG-06-002",
+      "title": "首字母填空全凭语感毫无章法·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级英语首字母填空全凭语感毫无章法语法讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-009",
+      "title": "年龄问题几年后永远搞反·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学年龄问题几年后永远搞反讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-010",
+      "title": "植树问题端点要不要算总搞混·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学植树问题端点要不要算总搞混讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-011",
+      "title": "角的两条边延长角会变大吗·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学角的两条边延长角会变大吗讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-012",
+      "title": "和差问题谁大谁小分不清·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学和差问题谁大谁小分不清讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-013",
+      "title": "归一问题先求什么后求什么搞乱了·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学归一问题先求什么后求什么搞乱了讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    },
+    {
+      "chipId": "MATH-04-014",
+      "title": "平行四边形拉动变成长方形面积到底变不变·3分钟大白话讲解",
+      "bvid": "",
+      "duration": "",
+      "source": "Bilibili",
+      "searchKeyword": "小学四年级数学平行四边形拉动变成长方形面积到底变不变讲解",
+      "status": "待绑定",
+      "note": "去 B 站搜索 searchKeyword，找到合适视频后填入 bvid 和 duration"
+    }
+  ]
+}

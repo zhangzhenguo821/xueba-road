@@ -563,10 +563,10 @@ function renderModelPage(chip) {
     <div class="model-layout">
       <div class="model-panel">
         <div class="model-panel-title"><div class="dot" style="background:${meta.color}"></div>抖音级短视频舱</div>
-        <div class="video-area">
-          <div class="video-play-btn" onclick="playVideo(this)">▶</div>
-          <div class="video-title">3分钟大白话切片：${chip.title}</div>
-          <div class="video-duration">⏱ 约3分钟 · 建议1.25x倍速</div>
+        <div class="video-area" id="videoArea_${chip.id}">
+          <div class="video-play-btn" onclick="playVideo('${chip.id}')">▶</div>
+          <div class="video-title" id="videoTitle_${chip.id}">${chip.video && chip.video.title ? chip.video.title : "3分钟大白话切片：" + chip.title}</div>
+          <div class="video-duration" id="videoDur_${chip.id}">⏱ ${chip.video && chip.video.duration ? chip.video.duration : "约3分钟"} · 建议1.25x倍速</div>
           <div class="video-tags">
             ${chip.keywords.map(k => `<div class="video-tag">${k}</div>`).join('')}
           </div>
@@ -930,15 +930,66 @@ function highlightVerb(el) {
   setTimeout(() => { el.style.transform = ''; }, 300);
 }
 
-function playVideo(btn) {
-  btn.innerHTML = '⏸';
-  btn.style.background = 'var(--primary)';
-  btn.style.borderColor = 'var(--primary)';
-  setTimeout(() => {
-    btn.innerHTML = '▶';
-    btn.style.background = 'rgba(255,255,255,0.08)';
-    btn.style.borderColor = 'rgba(255,255,255,0.2)';
-  }, 2000);
+function playVideo(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  const videoArea = document.getElementById('videoArea_' + chipId);
+  if (!videoArea) return;
+
+  // 如果已经嵌入了 iframe，不再重复操作
+  if (videoArea.querySelector('iframe')) {
+    const iframe = videoArea.querySelector('iframe');
+    iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    return;
+  }
+
+  // 没有 bvid：显示搜索提示
+  if (!chip.video || !chip.video.bvid) {
+    videoArea.innerHTML = `
+      <div style="padding:16px;text-align:center;color:var(--text-dim);font-size:13px">
+        <div style="font-size:32px;margin-bottom:10px">📹</div>
+        <div style="font-weight:600;color:var(--text);margin-bottom:8px">暂未绑定视频</div>
+        <div style="font-size:12px;line-height:1.6">
+          搜索关键词：<b>${chip.video ? chip.video.searchKeyword : chip.title}</b><br>
+          <button onclick="searchVideo('${chipId}')" style="margin-top:8px;padding:6px 16px;border-radius:6px;border:none;background:var(--primary);color:white;cursor:pointer;font-size:12px">
+            去 B 站搜索此关键词
+          </button>
+        </div>
+      </div>`;
+    return;
+  }
+
+  // 有 bvid：嵌入 B 站 iframe
+  const bvid = chip.video.bvid;
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=1&high_quality=1`;
+  iframe.style.width = '100%';
+  iframe.style.height = '220px';
+  iframe.style.borderRadius = '8px';
+  iframe.style.border = 'none';
+  iframe.allow = 'autoplay; encrypted-media';
+  iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+
+  videoArea.innerHTML = '';
+  videoArea.appendChild(iframe);
+
+  // 更新标题为真实视频标题
+  const titleEl = document.getElementById('videoTitle_' + chipId);
+  if (titleEl && chip.video.title) {
+    titleEl.textContent = chip.video.title;
+  }
+  const durEl = document.getElementById('videoDur_' + chipId);
+  if (durEl && chip.video.duration) {
+    durEl.textContent = '⏱ ' + chip.video.duration + ' · 建议1.25x倍速';
+  }
+}
+
+// 去 B 站搜索视频（新标签页）
+function searchVideo(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  const kw = chip.video ? chip.video.searchKeyword : chip.title;
+  window.open('https://search.bilibili.com/all?keyword=' + encodeURIComponent(kw), '_blank');
 }
 
 // ====== Canvas Activation ======
@@ -1214,10 +1265,32 @@ function copyLetter() {
   });
 }
 
+// ====== 加载视频仓库（解耦数据源）======
+function loadVideoWarehouse() {
+  fetch('video-warehouse.json?t=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(warehouse => {
+      if (!warehouse || !warehouse.videos) return;
+      warehouse.videos.forEach(v => {
+        const chip = CHIPS.find(c => c.id === v.chipId);
+        if (chip && chip.video) {
+          // 同步仓库里的真实数据到 chip.video
+          if (v.bvid) chip.video.bvid = v.bvid;
+          if (v.title) chip.video.title = v.title;
+          if (v.duration) chip.video.duration = v.duration;
+          if (v.status) chip.video.status = v.status;
+        }
+      });
+      console.log('✅ 视频仓库已同步，共 ' + warehouse.videos.length + ' 条');
+    })
+    .catch(err => console.warn('视频仓库加载失败（不影响主功能）：', err.message));
+}
+
 // ====== Init ======
 function init() {
   selectGrade(4);
   updateProgress();
+  loadVideoWarehouse();
 }
 init();
 </script>
