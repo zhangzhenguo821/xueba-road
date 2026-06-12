@@ -34,7 +34,17 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-06-006-cmath-1",
+      "question": "一项工作，甲独做要8天才能完成，乙独做要6天才能完成。甲乙合作，每天完成这项工作的几分之几？",
+      "answer": "7/24",
+      "difficulty": 1,
+      "solutionPath": "计算过程：一项工作，甲独做要8天才能完成，乙独做要6天才能完成。甲乙合作，每天完成这项工作的几分之几？\n步骤1步推理\n答案：7/24",
+      "verifyStep": "代入验证：将答案7/24代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学6年级必考点",
     "examTypes": [],
@@ -46,5 +56,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

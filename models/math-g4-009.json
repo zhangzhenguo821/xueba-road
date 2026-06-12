@@ -52,7 +52,53 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-04-009-cmath-1",
+      "question": "某花店里菊花有300朵，是百合花的12倍，百合花有多少朵？",
+      "answer": "25",
+      "difficulty": 1,
+      "solutionPath": "计算过程：某花店里菊花有300朵，是百合花的12倍，百合花有多少朵？\n步骤1步推理\n答案：25",
+      "verifyStep": "代入验证：将答案25代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    },
+    {
+      "id": "v-math-04-009-cmath-2",
+      "question": "把2.01扩大到原数的100倍是多少？",
+      "answer": "201",
+      "difficulty": 1,
+      "solutionPath": "计算过程：把2.01扩大到原数的100倍是多少？\n步骤1步推理\n答案：201",
+      "verifyStep": "代入验证：将答案201代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    },
+    {
+      "id": "v-math-04-009-cmath-3",
+      "question": "某工厂去年生产农具3657件，今年比去年多生产679件，今年生产了多少件农具？",
+      "answer": "4336",
+      "difficulty": 1,
+      "solutionPath": "计算过程：某工厂去年生产农具3657件，今年比去年多生产679件，今年生产了多少件农具？\n步骤1步推理\n答案：4336",
+      "verifyStep": "代入验证：将答案4336代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    },
+    {
+      "id": "v-math-04-009-cmath-4",
+      "question": "把21.06扩大到原数的1000倍是多少？",
+      "answer": "21060",
+      "difficulty": 1,
+      "solutionPath": "计算过程：把21.06扩大到原数的1000倍是多少？\n步骤1步推理\n答案：21060",
+      "verifyStep": "代入验证：将答案21060代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    },
+    {
+      "id": "v-math-04-009-cmath-5",
+      "question": "甲数是100，比乙数的6倍少20，乙数是多少？",
+      "answer": "20",
+      "difficulty": 2,
+      "solutionPath": "计算过程：甲数是100，比乙数的6倍少20，乙数是多少？\n步骤2步推理\n答案：20",
+      "verifyStep": "代入验证：将答案20代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学4年级必考点",
     "examTypes": [],
@@ -64,5 +110,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

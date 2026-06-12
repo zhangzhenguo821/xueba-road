@@ -52,7 +52,17 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-04-011-cmath-1",
+      "question": "有一块占地1公顷的正方形菜地，如果它的边各延长100米。那么菜地的面积增加多少公顷？",
+      "answer": "3",
+      "difficulty": 3,
+      "solutionPath": "计算过程：有一块占地1公顷的正方形菜地，如果它的边各延长100米。那么菜地的面积增加多少公顷？\n步骤4步推理\n答案：3",
+      "verifyStep": "代入验证：将答案3代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学4年级必考点",
     "examTypes": [],
@@ -64,5 +74,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

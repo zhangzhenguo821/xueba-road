@@ -34,7 +34,44 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-05-018-cmath-1",
+      "question": "有11个外形完全相同的羽毛球，其中10个是正品，一个是次品，且次品稍轻一些。如果用天平称，至少称几次就一定能把这个次品找出来？",
+      "answer": "3",
+      "difficulty": 3,
+      "solutionPath": "计算过程：有11个外形完全相同的羽毛球，其中10个是正品，一个是次品，且次品稍轻一些。如果用天平称，至少称几次就一定能把这个次品找出来？\n步骤3步推理\n答案：3",
+      "verifyStep": "代入验证：将答案3代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    },
+    {
+      "id": "v-math-05-018-cmath-2",
+      "question": "一个箱子里有20本书，其中19本质量相同，另有1本质量不足，轻一些。用天平至少称几次能保证找出这本书来？",
+      "answer": "3",
+      "difficulty": 3,
+      "solutionPath": "计算过程：一个箱子里有20本书，其中19本质量相同，另有1本质量不足，轻一些。用天平至少称几次能保证找出这本书来？\n步骤3步推理\n答案：3",
+      "verifyStep": "代入验证：将答案3代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    },
+    {
+      "id": "v-math-05-018-cmath-3",
+      "question": "一箱水果糖有31袋，其中30袋质量相同，另外有一袋质量轻些，用天平至少称几次才能保证找出较轻的一袋？",
+      "answer": "4",
+      "difficulty": 3,
+      "solutionPath": "计算过程：一箱水果糖有31袋，其中30袋质量相同，另外有一袋质量轻些，用天平至少称几次才能保证找出较轻的一袋？\n步骤4步推理\n答案：4",
+      "verifyStep": "代入验证：将答案4代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    },
+    {
+      "id": "v-math-05-018-cmath-4",
+      "question": "有7个钢珠，其中有1个较轻的是次品，用天平称至少称几次，才能保证一定能找出来？",
+      "answer": "2",
+      "difficulty": 3,
+      "solutionPath": "计算过程：有7个钢珠，其中有1个较轻的是次品，用天平称至少称几次，才能保证一定能找出来？\n步骤3步推理\n答案：2",
+      "verifyStep": "代入验证：将答案2代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学5年级必考点",
     "examTypes": [],
@@ -46,5 +83,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

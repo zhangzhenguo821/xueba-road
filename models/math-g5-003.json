@@ -58,7 +58,26 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-05-003-cmath-1",
+      "question": "一个旅游团有10人出去旅行，由于临时改变计划，要紧急通知，如果用打电话的方式，每1分钟通知1人，最少要在几分钟内通知到所有人？",
+      "answer": "4",
+      "difficulty": 3,
+      "solutionPath": "计算过程：一个旅游团有10人出去旅行，由于临时改变计划，要紧急通知，如果用打电话的方式，每1分钟通知1人，最少要在几分钟内通知到所有人？\n步骤4步推理\n答案：4",
+      "verifyStep": "代入验证：将答案4代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    },
+    {
+      "id": "v-math-05-003-cmath-2",
+      "question": "一本书有83000个字，如果每页排25行，每行排24个字，从第1页起，排完这些字最少需要多少张纸？",
+      "answer": "70",
+      "difficulty": 3,
+      "solutionPath": "计算过程：一本书有83000个字，如果每页排25行，每行排24个字，从第1页起，排完这些字最少需要多少张纸？\n步骤3步推理\n答案：70",
+      "verifyStep": "代入验证：将答案70代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学5年级必考点",
     "examTypes": [],
@@ -70,5 +89,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

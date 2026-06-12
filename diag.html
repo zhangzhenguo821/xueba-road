@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chip 点击诊断</title>
+<style>
+body{font-family:system-ui;max-width:900px;margin:40px auto;padding:20px;background:#1a1a2e;color:#eee}
+h1{color:#ff6b35}
+h2{margin-top:30px;color:#feca57}
+.pass{color:#2ecc71}
+.fail{color:#e74c3c;font-weight:bold}
+.warn{color:#f39c12}
+.test-item{padding:8px 12px;margin:4px 0;background:rgba(255,255,255,0.05);border-radius:6px;font-size:13px;font-family:monospace}
+.summary{background:rgba(255,255,255,0.08);padding:16px;border-radius:8px;margin:16px 0}
+.error-block{background:rgba(231,76,60,0.15);border:1px solid #e74c3c;border-radius:8px;padding:12px;margin:8px 0}
+.error-block pre{margin:4px 0;font-size:12px;white-space:pre-wrap;word-break:break-all}
+button{padding:8px 20px;margin:8px;border:none;border-radius:6px;cursor:pointer;font-size:14px}
+.btn-run{background:#ff6b35;color:white}
+.btn-clear{background:#555;color:white}
+#log{max-height:600px;overflow-y:auto;margin-top:12px}
+</style>
+</head>
+<body>
+<h1>🔬 Chip 点击诊断工具</h1>
+<p>逐个模拟 openChip → renderModelPage，捕获所有 JS 错误</p>
+<div class="summary" id="summary">等待测试...</div>
+<button class="btn-run" onclick="runAllTests()">▶ 运行全量诊断</button>
+<button class="btn-clear" onclick="clearLog()">🗑 清空</button>
+<div id="log"></div>
+
+<script src="data.js"></script>
+<script>
+// 手动覆盖可能的全局变量冲突
+var _CHIPS = [];
+try {
+  if (typeof CHIPS !== 'undefined') _CHIPS = CHIPS;
+  else if (typeof window !== 'undefined' && window.CHIPS) _CHIPS = window.CHIPS;
+} catch(e) { log('CHIPS 加载失败: ' + e.message, 'fail'); }
+
+function log(msg, level) {
+  var el = document.getElementById('log');
+  var cls = level || 'pass';
+  el.innerHTML += '<div class="test-item ' + cls + '">' + msg + '</div>';
+  el.scrollTop = el.scrollHeight;
+}
+
+function clearLog() {
+  document.getElementById('log').innerHTML = '';
+}
+
+var testResults = { total: 0, pass: 0, fail: 0, errors: [] };
+
+function runAllTests() {
+  clearLog();
+  testResults = { total: 0, pass: 0, fail: 0, errors: [] };
+
+  log('=== 基础环境检查 ===');
+  log('CHIPS 数量: ' + _CHIPS.length);
+  log('PAIN_BUTTONS 年级: ' + Object.keys(PAIN_BUTTONS || {}).join(', '));
+  log('GRADE_MAP: ' + JSON.stringify(Object.keys(GRADE_MAP || {})));
+  log('SUBJECT_MAP: ' + JSON.stringify(Object.keys(SUBJECT_MAP || {})));
+
+  log('\\n=== 检查 page-model 容器 ===');
+  var modelContent = document.getElementById('modelContent');
+  log('modelContent 元素: ' + (modelContent ? '✅ 存在' : '❌ 不存在'), modelContent ? 'pass' : 'fail');
+  var pageModel = document.getElementById('page-model');
+  log('page-model 元素: ' + (pageModel ? '✅ 存在' : '❌ 不存在'), pageModel ? 'pass' : 'fail');
+
+  if (!_CHIPS.length) {
+    log('❌ CHIPS 数组为空，终止测试', 'fail');
+    return;
+  }
+
+  log('\\n=== 逐个芯片测试 ===');
+  log('（显示 FAIL 的芯片和 PASS 的前3个示例 + 后3个示例）\\n');
+
+  var failCount = 0;
+  var passCount = 0;
+
+  _CHIPS.forEach(function(chip, idx) {
+    testResults.total++;
+    try {
+      // Step 1: openChip 前半段
+      if (!chip.id) throw 'chip.id 缺失';
+      if (!chip.subject) throw 'chip.subject 缺失';
+      if (!chip.grade) throw 'chip.grade 缺失';
+
+      var meta = SUBJECT_MAP[chip.subject];
+      if (!meta) throw 'SUBJECT_MAP[' + chip.subject + '] 不存在';
+
+      var gradeMeta = GRADE_MAP[chip.grade];
+      if (!gradeMeta) throw 'GRADE_MAP[' + chip.grade + '] 不存在';
+
+      var cssClass = chip.subject === '数学' ? 'math' : chip.subject === '语文' ? 'chinese' : 'english';
+
+      // Step 2: renderModelPage 完整模拟
+      // examCodes[0] 检查
+      var examCode0 = chip.examCodes && chip.examCodes.length > 0 ? chip.examCodes[0] : '(无考纲编号)';
+
+      // keywords map 检查
+      if (!Array.isArray(chip.keywords)) throw 'keywords 不是数组';
+      chip.keywords.forEach(function(k, ki) {
+        if (typeof k !== 'string') throw 'keywords[' + ki + '] 不是字符串: ' + typeof k;
+      });
+
+      // video 字段
+      var vTitle = (chip.video && chip.video.title) ? chip.video.title : '3分钟大白话切片：' + chip.title;
+      var vDur = (chip.video && chip.video.duration) ? chip.video.duration : '约3分钟';
+
+      // video2
+      var v2HasBvid = chip.video2 && chip.video2.bvid;
+
+      // chip 子对象
+      if (!chip.chip) throw 'chip.chip 对象缺失';
+      var modelType = chip.chip.modelType || '通用';
+      var modelDesc = (chip.chip.modelDesc || '').substring(0, 60);
+      var script = chip.chip.script || '';
+
+      // buildAccordionVisual 模拟
+      var sentences = script.split(/[。！]/).filter(function(s) { return s.trim().length > 0; });
+      var steps = sentences.slice(0, 3);
+
+      // painPoint 字段
+      var painPoint = chip.painPoint || '(无痛点描述)';
+
+      // 全部通过
+      passCount++;
+      
+      // 只显示边界（前3 + 后3）
+      if (idx < 3 || idx >= _CHIPS.length - 3) {
+        log(chip.id + ' ✅ ' + chip.title.substring(0, 30) + 
+          ' | examCodes=' + (chip.examCodes?.length || 0) + 
+          ' | keywords=' + chip.keywords.length + 
+          ' | video=' + (chip.video?.bvid ? '有' : '无') +
+          ' | video2=' + (v2HasBvid ? '有' : '无'), 'pass');
+      }
+
+    } catch(e) {
+      failCount++;
+      testResults.fail++;
+      testResults.errors.push({ id: chip.id || '?', title: (chip.title || '').substring(0, 40), error: e.message || String(e) });
+      log(chip.id + ' ❌ ' + (chip.title || '').substring(0, 30) + ' → ' + (e.message || String(e)), 'fail');
+    }
+  });
+
+  // Summary
+  document.getElementById('summary').innerHTML = 
+    '<b>总芯片:</b> ' + testResults.total + ' | ' +
+    '<b style="color:#2ecc71">通过:</b> ' + passCount + ' | ' +
+    '<b style="color:#e74c3c">失败:</b> ' + failCount;
+
+  if (failCount > 0) {
+    log('\\n=== ❌ 失败芯片详情 ===');
+    testResults.errors.forEach(function(e) {
+      log(e.id + ': ' + e.error, 'fail');
+    });
+  }
+
+  // 测试实际页面切换
+  log('\\n=== 测试 showPage 切换 ===');
+  try {
+    var pages = ['dash', 'home', 'model', 'diag'];
+    pages.forEach(function(name) {
+      var el = document.getElementById('page-' + name);
+      if (!el) {
+        log('page-' + name + ' ❌ 不存在', 'fail');
+        return;
+      }
+      el.classList.add('active');
+      var display = window.getComputedStyle(el).display;
+      el.classList.remove('active');
+      
+      if (!el.classList.contains('active')) {
+        log('page-' + name + ' ✅ display=' + display, 'pass');
+      }
+    });
+  } catch(e) {
+    log('showPage 测试失败: ' + e.message, 'fail');
+  }
+
+  // 测试特定芯片的完整渲染
+  log('\\n=== 实际渲染测试（前3个芯片） ===');
+  _CHIPS.slice(0, 3).forEach(function(chip) {
+    try {
+      var modelDiv = document.getElementById('modelContent');
+      if (!modelDiv) throw 'modelContent 不存在';
+      
+      // 直接调用 renderModelPage（会在下面定义）
+      var meta = SUBJECT_MAP[chip.subject];
+      var gradeMeta = GRADE_MAP[chip.grade];
+      var cssClass = chip.subject === '数学' ? 'math' : chip.subject === '语文' ? 'chinese' : 'english';
+
+      // 构建手风琴
+      var sentences_inner = (chip.chip.script || '').split(/[。！]/).filter(function(s) { return s.trim().length > 0; });
+      var steps_inner = sentences_inner.slice(0, 3);
+      var modelHTML = 
+        '<div class="accordion ' + cssClass + ' open">' +
+          '<div class="accordion-header"><div class="accordion-arrow">►</div><span>💡 痛点是什么</span></div>' +
+          '<div class="accordion-body">' + (chip.painPoint || '') + '</div>' +
+        '</div>' +
+        '<div class="accordion ' + cssClass + '">' +
+          '<div class="accordion-header"><div class="accordion-arrow">►</div><span>🧠 模型类型：' + (chip.chip.modelType || '通用') + '</span></div>' +
+          '<div class="accordion-body">' + (chip.chip.modelDesc || '') + '</div>' +
+        '</div>' +
+        '<div class="accordion ' + cssClass + '">' +
+          '<div class="accordion-header"><div class="accordion-arrow">►</div><span>🎯 怎么解题（' + steps_inner.length + '步）</span></div>' +
+          '<div class="accordion-body">' +
+            steps_inner.map(function(s, i) { return '<div><b>第' + (i+1) + '步：</b>' + s.trim() + '</div>'; }).join('') +
+          '</div>' +
+        '</div>';
+
+      var html = '<div class="model-top">' +
+        '<button class="model-back" onclick="showPage(\'home\')">← 回首页</button>' +
+        '<div class="model-code" style="background:' + meta.bg + ';color:' + meta.color + '">🏷️ ' + chip.id + '</div>' +
+        '<div class="model-code" style="background:rgba(0,0,0,0.04);color:var(--text-dim)">' + (chip.examCodes?.[0] || '无') + '</div>' +
+        '</div>' +
+        '<div>' +
+        '<h2 class="model-title" style="color:' + meta.color + '">' + chip.icon + ' ' + chip.title + '</h2>' +
+        '<div class="model-subtitle">' + gradeMeta.label + ' · ' + chip.subject + ' · ' + chip.category + '</div>' +
+        '</div>' +
+        '<div class="model-layout">' +
+        '<div class="model-panel">' +
+        '<div class="model-panel-title"><div class="dot" style="background:' + meta.color + '"></div>抖音级短视频舱</div>' +
+        '<div class="video-area" id="videoArea_' + chip.id + '">' +
+        '<div class="video-play-btn">▶</div>' +
+        '<div class="video-title">' + ((chip.video && chip.video.title) ? chip.video.title : '3分钟切片') + '</div>' +
+        '<div class="video-duration">⏱ ' + ((chip.video && chip.video.duration) ? chip.video.duration : '约3分钟') + '</div>' +
+        '</div>' +
+        '</div>' +
+        '<div class="model-panel">' +
+        '<div class="model-panel-title"><div class="dot" style="background:' + meta.color + '"></div>认知模型拆解</div>' +
+        modelHTML +
+        '</div>' +
+        '</div>';
+
+      modelDiv.innerHTML = html;
+      document.getElementById('page-model').classList.add('active');
+      
+      // 检查关键渲染
+      var titleEl = modelDiv.querySelector('.model-title');
+      var videoEl = modelDiv.querySelector('.video-area');
+      
+      log(chip.id + ' 渲染完成: title=' + (titleEl ? '✅' : '❌') + ' video=' + (videoEl ? '✅' : '❌'), 
+        titleEl && videoEl ? 'pass' : 'fail');
+
+      document.getElementById('page-model').classList.remove('active');
+
+    } catch(e) {
+      log(chip.id + ' 渲染异常: ' + (e.message || String(e)), 'fail');
+    }
+  });
+
+  log('\\n=== 诊断完成 ===');
+}
+</script>
+</body>
+</html>

@@ -34,7 +34,26 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-06-015-cmath-1",
+      "question": "在一个比例中，两个外项互为倒数，其中一个内项是5/13，另一个内项是多少?",
+      "answer": "13/5",
+      "difficulty": 1,
+      "solutionPath": "计算过程：在一个比例中，两个外项互为倒数，其中一个内项是5/13，另一个内项是多少?\n步骤1步推理\n答案：13/5",
+      "verifyStep": "代入验证：将答案13/5代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-015-cmath-2",
+      "question": "挖一条水渠，在比例尺是1:300的地图上，量得这条水渠长40厘米。这条水渠实际长多少米？",
+      "answer": "120",
+      "difficulty": 2,
+      "solutionPath": "计算过程：挖一条水渠，在比例尺是1:300的地图上，量得这条水渠长40厘米。这条水渠实际长多少米？\n步骤2步推理\n答案：120",
+      "verifyStep": "代入验证：将答案120代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学6年级必考点",
     "examTypes": [],
@@ -46,5 +65,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

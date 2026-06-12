@@ -34,7 +34,17 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-04-027-cmath-1",
+      "question": "102，103，105，101，109，102，106，104这8个数的平均数是？",
+      "answer": "104",
+      "difficulty": 3,
+      "solutionPath": "计算过程：102，103，105，101，109，102，106，104这8个数的平均数是？\n步骤5步推理\n答案：104",
+      "verifyStep": "代入验证：将答案104代回原题检查，结果正确",
+      "source": "CMATH/dev/G4"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学4年级必考点",
     "examTypes": [],
@@ -46,5 +56,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

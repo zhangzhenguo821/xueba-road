@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Click Test</title>
+<style>
+body{font-family:monospace;background:#0a0a1a;color:#eee;padding:20px;margin:0}
+h1{color:#ff6b35;font-size:18px}
+#status{position:sticky;top:0;background:#12122a;padding:12px;border-bottom:2px solid #333;z-index:100}
+.pass{color:#2ecc71}.fail{color:#e74c3c}.warn{color:#f39c12}
+.result{margin:2px 0;padding:4px 8px;border-radius:4px;font-size:12px}
+.result.pass{background:rgba(46,204,113,0.1)}
+.result.fail{background:rgba(231,76,60,0.15)}
+#log{max-height:80vh;overflow-y:auto}
+button{padding:10px 24px;margin:4px;border:none;border-radius:6px;cursor:pointer;font-size:14px;font-weight:bold}
+.btn-start{background:#ff6b35;color:#fff}
+.btn-stop{background:#e74c3c;color:#fff}
+</style>
+</head>
+<body>
+<div id="status">
+<h1>🔬 自动化芯片点击测试</h1>
+<div>总芯片: <b id="totalChips">-</b> | 通过: <b id="passCount" class="pass">0</b> | 失败: <b id="failCount" class="fail">0</b> | 当前: <b id="currentChip">-</b></div>
+<button class="btn-start" onclick="startTest()">🚀 开始自动点击测试</button>
+<button class="btn-stop" onclick="stopTest()">⏹ 停止</button>
+<div style="margin-top:8px;font-size:11px;color:#888">
+  测试逻辑：对每个芯片调用 openChip() → 检查 page-model 是否变为可见 → 检查 modelContent 是否有内容 → 恢复首页 → 下一个
+</div>
+</div>
+<div id="log"></div>
+
+<!-- 隐藏 iframe，静默加载 index.html 的所有资源 -->
+<iframe id="testFrame" src="index.html" style="width:1px;height:1px;border:none;position:absolute;top:-9999px;left:-9999px" onload="onFrameLoaded()"></iframe>
+
+<script>
+var frameWindow = null;
+var frameDoc = null;
+var testRunning = false;
+var results = {total:0, pass:0, fail:0, errors:[]};
+var chipIds = [];
+var currentIdx = 0;
+
+function log(msg, cls) {
+  var el = document.getElementById('log');
+  el.innerHTML += '<div class="result ' + (cls||'') + '">' + msg + '</div>';
+  el.scrollTop = el.scrollHeight;
+}
+
+function onFrameLoaded() {
+  log('✅ iframe 加载完成', 'pass');
+  try {
+    frameWindow = document.getElementById('testFrame').contentWindow;
+    frameDoc = document.getElementById('testFrame').contentDocument;
+    
+    // Wait for init
+    setTimeout(function() {
+      if (!frameWindow.CHIPS) {
+        log('❌ frame CHIPS 未定义！尝试 window.CHIPS...', 'fail');
+        // Try accessing via eval
+        try {
+          var chipsLen = frameWindow.eval('CHIPS.length');
+          log('  eval(CHIPS.length) = ' + chipsLen, 'warn');
+        } catch(e) {
+          log('  eval 也失败: ' + e.message, 'fail');
+        }
+        return;
+      }
+      
+      chipIds = [];
+      for (var i = 0; i < frameWindow.CHIPS.length; i++) {
+        chipIds.push(frameWindow.CHIPS[i].id);
+      }
+      
+      document.getElementById('totalChips').textContent = chipIds.length;
+      log('✅ CHIPS 可访问: ' + chipIds.length + ' 个芯片', 'pass');
+      
+      // Check page structure
+      var pages = frameDoc.querySelectorAll('.page');
+      log('📄 找到 ' + pages.length + ' 个 page 元素', 'pass');
+      
+      var modelContent = frameDoc.getElementById('modelContent');
+      log('📦 modelContent: ' + (modelContent ? '✅ 存在' : '❌ 不存在'), modelContent ? 'pass' : 'fail');
+      
+      // Check first chip
+      if (chipIds.length > 0) {
+        log('🔍 手动测试第一个芯片: ' + chipIds[0]);
+        try {
+          frameWindow.openChip(chipIds[0]);
+          setTimeout(function() {
+            var active = frameDoc.getElementById('page-model');
+            var isActive = active && active.classList.contains('active');
+            log('  page-model.active = ' + isActive, isActive ? 'pass' : 'fail');
+            
+            var mc = frameDoc.getElementById('modelContent');
+            var hasContent = mc && mc.innerHTML.length > 100;
+            log('  modelContent 有内容: ' + hasContent + ' (' + (mc ? mc.innerHTML.length : 0) + ' 字符)', hasContent ? 'pass' : 'fail');
+            
+            // Go back to home
+            frameWindow.showPage('home');
+          }, 500);
+        } catch(e) {
+          log('  ❌ openChip 抛异常: ' + e.message, 'fail');
+        }
+      }
+      
+    }, 1000);
+  } catch(e) {
+    log('❌ 访问 frame 失败: ' + e.message, 'fail');
+  }
+}
+
+function startTest() {
+  if (testRunning) return;
+  testRunning = true;
+  results = {total:0, pass:0, fail:0, errors:[]};
+  document.getElementById('log').innerHTML = '';
+  
+  if (!frameWindow || !frameWindow.CHIPS) {
+    log('❌ frame 未就绪，请等待 iframe 加载完成', 'fail');
+    testRunning = false;
+    return;
+  }
+  
+  chipIds = [];
+  for (var i = 0; i < frameWindow.CHIPS.length; i++) {
+    chipIds.push(frameWindow.CHIPS[i].id);
+  }
+  
+  currentIdx = 0;
+  log('🚀 开始自动测试 ' + chipIds.length + ' 个芯片...');
+  testNext();
+}
+
+function testNext() {
+  if (!testRunning || currentIdx >= chipIds.length) {
+    if (currentIdx >= chipIds.length) {
+      log('\n=== ✅ 测试完成 ===');
+      log('总计: ' + results.total + ' | 通过: ' + results.pass + ' | 失败: ' + results.fail, results.fail === 0 ? 'pass' : 'fail');
+      if (results.errors.length > 0) {
+        log('\n=== 失败芯片详情 ===');
+        results.errors.forEach(function(e) {
+          log(e.id + ': ' + e.error, 'fail');
+        });
+      }
+    }
+    testRunning = false;
+    return;
+  }
+  
+  var chipId = chipIds[currentIdx];
+  document.getElementById('currentChip').textContent = '#' + (currentIdx+1) + ' ' + chipId;
+  
+  try {
+    // Call openChip
+    frameWindow.openChip(chipId);
+    
+    // Check result after a short delay
+    setTimeout(function() {
+      try {
+        var pageModel = frameDoc.getElementById('page-model');
+        var modelContent = frameDoc.getElementById('modelContent');
+        
+        var isActive = pageModel && pageModel.classList.contains('active');
+        var hasContent = modelContent && modelContent.innerHTML.length > 50;
+        
+        if (isActive && hasContent) {
+          results.pass++;
+          if (currentIdx < 5 || currentIdx >= chipIds.length - 5 || results.fail > 0) {
+            log('✅ #' + (currentIdx+1) + ' ' + chipId + ' — 页面可见且有内容', 'pass');
+          }
+        } else {
+          results.fail++;
+          results.errors.push({
+            id: chipId,
+            error: 'active=' + isActive + ' content=' + hasContent + ' len=' + (modelContent ? modelContent.innerHTML.length : 0)
+          });
+          log('❌ #' + (currentIdx+1) + ' ' + chipId + ' — active=' + isActive + ' content=' + hasContent, 'fail');
+        }
+        
+        results.total++;
+        document.getElementById('passCount').textContent = results.pass;
+        document.getElementById('failCount').textContent = results.fail;
+        
+        // Reset page
+        frameWindow.showPage('home');
+        
+        // Next
+        currentIdx++;
+        setTimeout(testNext, 100);
+      } catch(e) {
+        results.fail++;
+        results.errors.push({id: chipId, error: e.message});
+        log('❌ #' + (currentIdx+1) + ' ' + chipId + ' — 异常: ' + e.message, 'fail');
+        results.total++;
+        document.getElementById('failCount').textContent = results.fail;
+        currentIdx++;
+        setTimeout(testNext, 100);
+      }
+    }, 200);
+  } catch(e) {
+    results.fail++;
+    results.errors.push({id: chipId, error: e.message});
+    log('❌ #' + (currentIdx+1) + ' ' + chipId + ' — openChip 异常: ' + e.message, 'fail');
+    results.total++;
+    document.getElementById('failCount').textContent = results.fail;
+    currentIdx++;
+    setTimeout(testNext, 100);
+  }
+}
+
+function stopTest() {
+  testRunning = false;
+  log('\n⏹ 测试已停止', 'warn');
+}
+</script>
+</body>
+</html>

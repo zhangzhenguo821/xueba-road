@@ -34,7 +34,17 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-06-005-cmath-1",
+      "question": "在1：6000000的地图上，量得甲、乙两地间的距离是6.5cm。一辆货车从甲地到乙地行驶了6.5小时。求这辆车的速度是多少千米每小时。",
+      "answer": "60",
+      "difficulty": 2,
+      "solutionPath": "计算过程：在1：6000000的地图上，量得甲、乙两地间的距离是6.5cm。一辆货车从甲地到乙地行驶了6.5小时。求这辆车的速度是多少千米每小时。\n步骤2步推理\n答案：60",
+      "verifyStep": "代入验证：将答案60代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学6年级必考点",
     "examTypes": [],
@@ -46,5 +56,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

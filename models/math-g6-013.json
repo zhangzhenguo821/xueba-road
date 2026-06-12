@@ -40,7 +40,44 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-06-013-cmath-1",
+      "question": "爸爸买了5000元国债，定期两年，到期时可取回本金和利息共5873元，这种国债的年利率是多少？",
+      "answer": "0.0873",
+      "difficulty": 3,
+      "solutionPath": "计算过程：爸爸买了5000元国债，定期两年，到期时可取回本金和利息共5873元，这种国债的年利率是多少？\n步骤3步推理\n答案：0.0873",
+      "verifyStep": "代入验证：将答案0.0873代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-013-cmath-2",
+      "question": "张老师到银行存款4500元，年利率是2.25％，扣除20％利息税，一年后取回本息多少元?",
+      "answer": "4581",
+      "difficulty": 3,
+      "solutionPath": "计算过程：张老师到银行存款4500元，年利率是2.25％，扣除20％利息税，一年后取回本息多少元?\n步骤5步推理\n答案：4581",
+      "verifyStep": "代入验证：将答案4581代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-013-cmath-3",
+      "question": "爸爸的工资是6500元，扣除3500元个税免征额后的部分需要按3%的税率缴纳个人所得税，爸爸缴税后实际得到的工资是多少元？",
+      "answer": "6410",
+      "difficulty": 3,
+      "solutionPath": "计算过程：爸爸的工资是6500元，扣除3500元个税免征额后的部分需要按3%的税率缴纳个人所得税，爸爸缴税后实际得到的工资是多少元？\n步骤3步推理\n答案：6410",
+      "verifyStep": "代入验证：将答案6410代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-013-cmath-4",
+      "question": "华的妈妈把1000元钱存入银行，定期三年。如果年利率按5.22%计算，到期时可以取回多少元？",
+      "answer": "1156.6",
+      "difficulty": 3,
+      "solutionPath": "计算过程：华的妈妈把1000元钱存入银行，定期三年。如果年利率按5.22%计算，到期时可以取回多少元？\n步骤4步推理\n答案：1156.6",
+      "verifyStep": "代入验证：将答案1156.6代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学6年级必考点",
     "examTypes": [],
@@ -52,5 +89,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

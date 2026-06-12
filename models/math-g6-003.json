@@ -52,7 +52,44 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-06-003-cmath-1",
+      "question": "有黑色、白色、黄色的小棒各8根，混放在一起，从这些小棒之中至少要取出才能保证有4根颜色相同的小棒子？",
+      "answer": "10",
+      "difficulty": 2,
+      "solutionPath": "计算过程：有黑色、白色、黄色的小棒各8根，混放在一起，从这些小棒之中至少要取出才能保证有4根颜色相同的小棒子？\n步骤2步推理\n答案：10",
+      "verifyStep": "代入验证：将答案10代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-003-cmath-2",
+      "question": "贝贝、晶晶、欢欢、迎迎、妮妮五种福娃共10个，至少买多少个福娃才可以保证一定有两个一样的福娃？",
+      "answer": "6",
+      "difficulty": 2,
+      "solutionPath": "计算过程：贝贝、晶晶、欢欢、迎迎、妮妮五种福娃共10个，至少买多少个福娃才可以保证一定有两个一样的福娃？\n步骤2步推理\n答案：6",
+      "verifyStep": "代入验证：将答案6代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-003-cmath-3",
+      "question": "纸箱中有同样的红、黄色圆锥体各5个，至少拿出几个，才能保证一定有2个圆锥体都是红色？",
+      "answer": "3",
+      "difficulty": 2,
+      "solutionPath": "计算过程：纸箱中有同样的红、黄色圆锥体各5个，至少拿出几个，才能保证一定有2个圆锥体都是红色？\n步骤2步推理\n答案：3",
+      "verifyStep": "代入验证：将答案3代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    },
+    {
+      "id": "v-math-06-003-cmath-4",
+      "question": "一个袋子里有红、黄、蓝色的袜子各10只，则最少要拿多少只才能保证其中至少有两双颜色不相同的袜子？",
+      "answer": "13",
+      "difficulty": 2,
+      "solutionPath": "计算过程：一个袋子里有红、黄、蓝色的袜子各10只，则最少要拿多少只才能保证其中至少有两双颜色不相同的袜子？\n步骤2步推理\n答案：13",
+      "verifyStep": "代入验证：将答案13代回原题检查，结果正确",
+      "source": "CMATH/dev/G6"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学6年级必考点",
     "examTypes": [],
@@ -64,5 +101,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }

@@ -34,7 +34,26 @@
       }
     ]
   },
-  "variantTraining": [],
+  "variantTraining": [
+    {
+      "id": "v-math-05-013-cmath-1",
+      "question": "20以内最大的质数与最小的质数的2倍的和是多少？",
+      "answer": "23",
+      "difficulty": 3,
+      "solutionPath": "计算过程：20以内最大的质数与最小的质数的2倍的和是多少？\n步骤4步推理\n答案：23",
+      "verifyStep": "代入验证：将答案23代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    },
+    {
+      "id": "v-math-05-013-cmath-2",
+      "question": "一个两位数，它既有因数2，又有因数3，还有因数5，这个两位数最小是多少？",
+      "answer": "30",
+      "difficulty": 3,
+      "solutionPath": "计算过程：一个两位数，它既有因数2，又有因数3，还有因数5，这个两位数最小是多少？\n步骤3步推理\n答案：30",
+      "verifyStep": "代入验证：将答案30代回原题检查，结果正确",
+      "source": "CMATH/dev/G5"
+    }
+  ],
   "nationalFrequency": {
     "description": "数学5年级必考点",
     "examTypes": [],
@@ -46,5 +65,7 @@
     "prerequisite": [],
     "leadsTo": [],
     "relatedChips": []
-  }
+  },
+  "_updatedAt": "2026-06-12T17:00:00",
+  "_source": "CMATH/inject"
 }
