@@ -7668,7 +7668,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1gr4y1A7YW",
       title: "孩子在计算小数×整数、小数×小数、积的近似数时频繁出…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算小数×整数、小数×小数、积的近"
@@ -7702,7 +7702,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1a84y1D71B",
       title: "孩子在计算加法交换律/结合律、乘法交换律/结合律/分…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算加法交换律/结合律、乘法交换律"
@@ -7736,7 +7736,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Wi4y1G7tE",
       title: "孩子在计算试商技巧与验算时频繁出错，不是看错数字就是…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算试商技巧与验算时频繁出错，不是"
@@ -7770,7 +7770,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1pq4y1p7ge",
       title: "孩子在计算小数读写、大小比较、小数点移动时频繁出错，…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算小数读写、大小比较、小数点移动"
@@ -7804,7 +7804,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1qD421L7fU",
       title: "画沏茶问题与对策论时图形画反、公式记混，空间想象力跟…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 画沏茶问题与对策论时图形画反、公式记混，"
@@ -7838,7 +7838,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1664y1o7KP",
       title: "画量角器使用与角度计算时图形画反、公式记混，空间想象…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 画量角器使用与角度计算时图形画反、公式记"
@@ -7872,7 +7872,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1oh411b7gu",
       title: "孩子在计算竖式对齐与进退位时频繁出错，不是看错数字就…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算竖式对齐与进退位时频繁出错，不"
@@ -7906,7 +7906,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV15h4y1X7QG",
       title: "孩子在计算加减乘除混合运算与括号规则时频繁出错，不是…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算加减乘除混合运算与括号规则时频"
@@ -7940,7 +7940,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1aV4y197so",
       title: "孩子在计算亿以内数的读写与比较时频繁出错，不是看错数…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算亿以内数的读写与比较时频繁出错"
@@ -7974,7 +7974,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1X64y1Z7XG",
       title: "孩子在计算竖式乘法与估算时频繁出错，不是看错数字就是…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算竖式乘法与估算时频繁出错，不是"
@@ -8008,7 +8008,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV17L4y1a7JN",
       title: "画平均数含义与计算、复式条形统计图时图形画反、公式记…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 画平均数含义与计算、复式条形统计图时图形"
@@ -8042,7 +8042,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1JP4y1P7qn",
       title: "画从不同方向观察立体图形时图形画反、公式记混，空间想…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 画从不同方向观察立体图形时图形画反、公式"
@@ -8051,40 +8051,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["MATH-4A-27-27"],
     keywords: ["数学", "4年级", "画从不同方向观察立体"]
-  },
-  {
-    id: "MATH-04-029",
-    grade: 4,
-    subject: "数学",
-    category: "计算与应用思维",
-    title: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
-    icon: "🎯",
-    painPoint: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
-      modelType: "通用",
-      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
-      duration: "约3分钟",
-      searchKeyword: "数学小学4年级 画轴对称与平移时图形画反、公式记混，空间"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["MATH-4A-29-29"],
-    keywords: ["数学", "4年级", "画轴对称与平移时图形"]
   },
   {
     id: "MATH-04-028",
@@ -8110,7 +8076,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zS411w7r3",
       title: "孩子在计算综合实践：数据收集与方案设计时频繁出错，不…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 孩子在计算综合实践：数据收集与方案设计时"
@@ -8144,7 +8110,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Aq4y1n71x",
       title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
       duration: "约3分钟",
       searchKeyword: "数学小学4年级 画数据整理与图表绘制时图形画反、公式记混"
@@ -8178,7 +8144,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1nK4y1P7FU",
       title: "读完文章脑子里一片空白，概括主要内容总是抓不住重点，…",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 读完文章脑子里一片空白，概括主要内容总是"
@@ -8212,7 +8178,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1xg411m7y1",
       title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 看到病句题就发怵，分不清是成分残缺还是搭"
@@ -8246,7 +8212,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zP411q7G9",
       title: "句型转换是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 句型转换是考试必考题型，孩子总是拿不到满"
@@ -8280,7 +8246,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zP411q7G9",
       title: "不但……而且……还是虽然……但是……",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 不但……而且……还是虽然……但是……"
@@ -8314,7 +8280,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1gi4y1n7uk",
       title: "词语辨析是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 词语辨析是考试必考题型，孩子总是拿不到满"
@@ -8348,7 +8314,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Sq4y1P73q",
       title: "观察日记与写作是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 观察日记与写作是考试必考题型，孩子总是拿"
@@ -8382,7 +8348,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1BP4y1p7zw",
       title: "看到古文就头疼，关键实词的意思猜不对，翻译句子总是不通顺",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 看到古文就头疼，关键实词的意思猜不对，翻"
@@ -8391,40 +8357,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["CHI-4A-15-15"],
     keywords: ["语文", "4年级", "看到古文就头疼，关键"]
-  },
-  {
-    id: "CHI-04-016",
-    grade: 4,
-    subject: "语文",
-    category: "阅读与写作",
-    title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
-    icon: "✏️",
-    painPoint: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
-      modelType: "通用",
-      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
-      duration: "约3分钟",
-      searchKeyword: "语文小学4年级 古诗背了又忘，默写总写错别字，诗句意思理"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["CHI-4A-16-16"],
-    keywords: ["语文", "4年级", "古诗背了又忘，默写总"]
   },
   {
     id: "CHI-04-008",
@@ -8450,7 +8382,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Mm4y1o74D",
       title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 比喻和拟人分不清，让分析修辞手法的作用就"
@@ -8484,7 +8416,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1eb4y1L7kZ",
       title: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 引号和书名号乱用，逗号句号不分，作文里标"
@@ -8518,7 +8450,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1ME411j7M2",
       title: "字词基础是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 字词基础是考试必考题型，孩子总是拿不到满"
@@ -8527,40 +8459,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["CHI-4A-09-09"],
     keywords: ["语文", "4年级", "字词基础是考试必考题"]
-  },
-  {
-    id: "CHI-04-003",
-    grade: 4,
-    subject: "语文",
-    category: "阅读与写作",
-    title: "句子排序是考试必考题型，孩子总是拿不到满分",
-    icon: "✏️",
-    painPoint: "句子排序是考试必考题型，孩子总是拿不到满分",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "句子排序是考试必考题型，孩子总是拿不到满分",
-      modelType: "通用",
-      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "句子排序是考试必考题型，孩子总是拿不到满分",
-      duration: "约3分钟",
-      searchKeyword: "语文小学4年级 句子排序是考试必考题型，孩子总是拿不到满"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["CHI-4A-03-03"],
-    keywords: ["语文", "4年级", "句子排序是考试必考题"]
   },
   {
     id: "CHI-04-014",
@@ -8586,7 +8484,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV17S9iBPEXN",
       title: "非连续性文本是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 非连续性文本是考试必考题型，孩子总是拿不"
@@ -8620,7 +8518,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV19S4y1w7jf",
       title: "be动词和doing总是搭配错，一看题就懵",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 be动词和doing总是搭配错，一看题就"
@@ -8654,7 +8552,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1wd4y1v7Xk",
       title: "阅读文章生词太多看不懂，看到长句子就放弃",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 阅读文章生词太多看不懂，看到长句子就放弃"
@@ -8688,7 +8586,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1oT4m1U7VT",
       title: "英语名词复数句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语名词复数句型总是记不住，考试时不知道"
@@ -8722,7 +8620,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Yv411T7vK",
       title: "英语My Friends句型总是记不住，考试时不知道…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语My Friends句型总是记不住，"
@@ -8756,7 +8654,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Yv411T7vK",
       title: "in、on、at到底用哪个",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 in、on、at到底用哪个"
@@ -8790,7 +8688,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV16N4y1a7RW",
       title: "英语My Home句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语My Home句型总是记不住，考试时"
@@ -8824,7 +8722,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1uL4y1z736",
       title: "英语Meet My Family句型总是记不住，考试…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语Meet My Family句型总是"
@@ -8858,7 +8756,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1tP411g73v",
       title: "英语What Time Is It句型总是记不住，考…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语What Time Is It句型总"
@@ -8892,7 +8790,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zb4y1r7td",
       title: "英语Shopping句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语Shopping句型总是记不住，考试"
@@ -8926,7 +8824,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1sV411d7TG",
       title: "英语My Classroom句型总是记不住，考试时不…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语My Classroom句型总是记不"
@@ -8960,7 +8858,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1jD4y12793",
       title: "英语Dinner's Ready句型总是记不住，考试…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语Dinner's Ready句型总是"
@@ -8994,7 +8892,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1ax4y1t7jN",
       title: "英语Weather句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语Weather句型总是记不住，考试时"
@@ -9028,7 +8926,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1T7411d7Pt",
       title: "英语My Clothes句型总是记不住，考试时不知道…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语My Clothes句型总是记不住，"
@@ -9062,7 +8960,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV17i4y1K7HF",
       title: "英语My School句型总是记不住，考试时不知道怎…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语My School句型总是记不住，考"
@@ -9096,7 +8994,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1wi4y1K7GV",
       title: "英语At the Farm句型总是记不住，考试时不知…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语At the Farm句型总是记不住"
@@ -9130,7 +9028,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1eA411v7w9",
       title: "孩子在计算除数是整数/小数的除法、循环小数、用计算器…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算除数是整数/小数的除法、循环小"
@@ -9164,7 +9062,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV11nVB6JEEG",
       title: "孩子在计算倒数的认识、分数除法计算时频繁出错，不是看…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算倒数的认识、分数除法计算时频繁"
@@ -9198,7 +9096,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1a54y1R7CF",
       title: "画平行四边形/三角形/梯形/组合图形面积公式时图形画…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 画平行四边形/三角形/梯形/组合图形面积"
@@ -9232,7 +9130,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1wp4y1b7xs",
       title: "画特征识别、表面积与体积公式时图形画反、公式记混，空…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 画特征识别、表面积与体积公式时图形画反、"
@@ -9266,7 +9164,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV13b411Z74B",
       title: "遇到植树问题的应用题，孩子读完题目完全不知道从哪里下…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 遇到植树问题的应用题，孩子读完题目完全不"
@@ -9300,7 +9198,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1xB4y1c7Bd",
       title: "孩子在计算小数乘整数/小数、积的近似数、运算定律推广…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算小数乘整数/小数、积的近似数、"
@@ -9334,7 +9232,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1xU4y1J76E",
       title: "孩子在计算同分母/异分母加减法、分数加减混合运算时频…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算同分母/异分母加减法、分数加减"
@@ -9368,7 +9266,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1EA411b7d3",
       title: "孩子在计算分数×整数、分数×分数、运算定律时频繁出错…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算分数×整数、分数×分数、运算定"
@@ -9402,7 +9300,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1ka4y1j7jN",
       title: "画圆的认识、周长与面积公式时图形画反、公式记混，空间…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 画圆的认识、周长与面积公式时图形画反、公"
@@ -9436,7 +9334,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV15H4y197Nn",
       title: "孩子在计算分数意义、真分数假分数、分数基本性质时频繁…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算分数意义、真分数假分数、分数基"
@@ -9470,7 +9368,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1YE411G7in",
       title: "孩子在计算因数/倍数概念、2/3/5的倍数特征、质数…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算因数/倍数概念、2/3/5的倍"
@@ -9504,7 +9402,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1kz421D7We",
       title: "孩子在计算比的意义、化简比、按比例分配时频繁出错，不…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算比的意义、化简比、按比例分配时"
@@ -9538,7 +9436,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1H11kYGE7r",
       title: "孩子在计算用天平找次品的最优策略(三分法)时频繁出错…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算用天平找次品的最优策略(三分法"
@@ -9572,7 +9470,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zf4y1w7Nu",
       title: "画三视图初步——从三个方向还原立体时图形画反、公式记…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 画三视图初步——从三个方向还原立体时图形"
@@ -9606,7 +9504,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1R7411p7EM",
       title: "画旋转与旋转作图时图形画反、公式记混，空间想象力跟不…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 画旋转与旋转作图时图形画反、公式记混，空"
@@ -9640,7 +9538,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Bs4y1C7pn",
       title: "孩子在计算事件确定性与不确定性、概率大小判断时频繁出…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算事件确定性与不确定性、概率大小"
@@ -9674,7 +9572,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1BRm1YSEV3",
       title: "孩子在计算数对表示位置(列,行)时频繁出错，不是看错…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算数对表示位置(列,行)时频繁出"
@@ -9708,7 +9606,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1mWEr6kEM8",
       title: "孩子在计算单式/复式折线统计图读图与绘制时频繁出错，…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 孩子在计算单式/复式折线统计图读图与绘制"
@@ -9742,7 +9640,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1eD4y1D7EU",
       title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
       duration: "约3分钟",
       searchKeyword: "数学小学5年级 画数字编码与身份证号码时图形画反、公式记"
@@ -9776,7 +9674,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1US4y127JZ",
       title: "记叙文阅读是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 记叙文阅读是考试必考题型，孩子总是拿不到"
@@ -9810,7 +9708,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1XV411k7fV",
       title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 古诗背了又忘，默写总写错别字，诗句意思理"
@@ -9844,7 +9742,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1SEEX61Eg6",
       title: "段落结构分析是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 段落结构分析是考试必考题型，孩子总是拿不"
@@ -9878,7 +9776,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1ou4y1D7Mr",
       title: "说明文阅读进阶是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 说明文阅读进阶是考试必考题型，孩子总是拿"
@@ -9912,7 +9810,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Ek4y1C7HH",
       title: "词语理解进阶是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 词语理解进阶是考试必考题型，孩子总是拿不"
@@ -9946,7 +9844,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1bh4y1f7Y1",
       title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 看到病句题就发怵，分不清是成分残缺还是搭"
@@ -9980,7 +9878,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1NV411L7Q8",
       title: "名著阅读是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 名著阅读是考试必考题型，孩子总是拿不到满"
@@ -10014,7 +9912,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1RCNiz4Ev4",
       title: "不但……而且……还是虽然……但是……",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 不但……而且……还是虽然……但是……"
@@ -10048,7 +9946,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1gi4y1n7uk",
       title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 比喻和拟人分不清，让分析修辞手法的作用就"
@@ -10082,7 +9980,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Zg4y157zf",
       title: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
       duration: "约3分钟",
       searchKeyword: "语文小学5年级 引号和书名号乱用，逗号句号不分，作文里标"
@@ -10091,40 +9989,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["CHI-5A-07-07"],
     keywords: ["语文", "5年级", "引号和书名号乱用，逗"]
-  },
-  {
-    id: "CHI-05-009",
-    grade: 5,
-    subject: "语文",
-    category: "阅读与写作",
-    title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-    icon: "✏️",
-    painPoint: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-      modelType: "通用",
-      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-      duration: "约3分钟",
-      searchKeyword: "语文小学5年级 口语交际与综合性学习是考试必考题型，孩子"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["CHI-5A-09-09"],
-    keywords: ["语文", "5年级", "口语交际与综合性学习"]
   },
   {
     id: "ENG-05-009",
@@ -10150,7 +10014,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1dt411Z722",
       title: "英语一般将来时句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语一般将来时句型总是记不住，考试时不知"
@@ -10184,7 +10048,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1VubEzcEfx",
       title: "be动词和doing总是搭配错，一看题就懵",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 be动词和doing总是搭配错，一看题就"
@@ -10218,7 +10082,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1dt411Z722",
       title: "阅读文章生词太多看不懂，看到长句子就放弃",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 阅读文章生词太多看不懂，看到长句子就放弃"
@@ -10252,7 +10116,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1dt411Z722",
       title: "什么时候加er、什么时候加more傻傻分不清楚",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 什么时候加er、什么时候加more傻傻分"
@@ -10286,7 +10150,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV19L4y1b794",
       title: "英语There Be句型进阶句型总是记不住，考试时不…",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语There Be句型进阶句型总是记不"
@@ -10320,7 +10184,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zK411V7nb",
       title: "英语冠词用法句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语冠词用法句型总是记不住，考试时不知道"
@@ -10354,7 +10218,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1a34y197yN",
       title: "英语What Can You Do句型总是记不住，考…",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语What Can You Do句型总"
@@ -10388,7 +10252,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1FDEm6JEDm",
       title: "英语My Week句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语My Week句型总是记不住，考试时"
@@ -10422,7 +10286,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1NM4y1G7JC",
       title: "英语What's He Like句型总是记不住，考试…",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语What's He Like句型总是"
@@ -10456,7 +10320,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1HQ4y1Y7Ux",
       title: "英语What Would You Like句型总是记…",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语What Would You Lik"
@@ -10490,7 +10354,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1FDEm6JEDm",
       title: "英语In a Nature Park句型总是记不住，…",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语In a Nature Park句型"
@@ -10524,7 +10388,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1xJ4m1b7WJ",
       title: "孩子在计算分数除以整数/分数、已知一个数的几分之几求…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算分数除以整数/分数、已知一个数"
@@ -10558,7 +10422,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV19z4y1d7vz",
       title: "遇到行程问题的应用题，孩子读完题目完全不知道从哪里下…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 遇到行程问题的应用题，孩子读完题目完全不"
@@ -10592,7 +10456,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV18c411m7No",
       title: "遇到工程问题的应用题，孩子读完题目完全不知道从哪里下…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 遇到工程问题的应用题，孩子读完题目完全不"
@@ -10626,7 +10490,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Pe411Z79q",
       title: "遇到浓度问题的应用题，孩子读完题目完全不知道从哪里下…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 遇到浓度问题的应用题，孩子读完题目完全不"
@@ -10660,7 +10524,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Hu4m1w7q3",
       title: "画圆周长/面积公式推导与应用、环形面积时图形画反、公…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 画圆周长/面积公式推导与应用、环形面积时"
@@ -10694,7 +10558,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV18r4y1T7fK",
       title: "孩子在计算比例意义与性质、正比例/反比例判断时频繁出…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算比例意义与性质、正比例/反比例"
@@ -10728,7 +10592,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV18F411t7j5",
       title: "列方程时找不到等量关系，设未知数就卡住了",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 列方程时找不到等量关系，设未知数就卡住了"
@@ -10762,7 +10626,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1WM4y1c7J3",
       title: "孩子在计算假设法与方程法综合应用时频繁出错，不是看错…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算假设法与方程法综合应用时频繁出"
@@ -10796,7 +10660,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1S94y1v7bt",
       title: "遇到利润问题的应用题，孩子读完题目完全不知道从哪里下…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 遇到利润问题的应用题，孩子读完题目完全不"
@@ -10830,7 +10694,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1FK411B7RG",
       title: "孩子在计算分数乘分数、分数混合运算与简便计算时频繁出…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算分数乘分数、分数混合运算与简便"
@@ -10864,7 +10728,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1MG4ZeNEGA",
       title: "孩子在计算折扣/成数/税率/利率应用题时频繁出错，不…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算折扣/成数/税率/利率应用题时"
@@ -10898,7 +10762,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Fw4m1175z",
       title: "孩子在计算比的基本性质、化简比、按比分配应用题时频繁…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算比的基本性质、化简比、按比分配"
@@ -10932,7 +10796,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1kG4y1r7xb",
       title: "孩子在计算百分数意义、百分数/分数/小数互化时频繁出…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算百分数意义、百分数/分数/小数"
@@ -10966,7 +10830,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Pf4y1x7Fx",
       title: "孩子在计算数与代数/图形与几何/统计与概率/综合应用…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算数与代数/图形与几何/统计与概"
@@ -11000,7 +10864,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Z3bBz8ERZ",
       title: "画数形结合思想、找规律时图形画反、公式记混，空间想象…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 画数形结合思想、找规律时图形画反、公式记"
@@ -11034,7 +10898,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1384y167wh",
       title: "孩子在计算负数认识、数轴与负数比较时频繁出错，不是看…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算负数认识、数轴与负数比较时频繁"
@@ -11068,7 +10932,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1cm4y1d7su",
       title: "画扇形统计图读图与信息提取、选择合适的统计图时图形画…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 画扇形统计图读图与信息提取、选择合适的统"
@@ -11102,7 +10966,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1yjYbehEgU",
       title: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算用方向和距离确定位置时频繁出错"
@@ -11136,7 +11000,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV16K4y1x7sX",
       title: "习作综合是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 习作综合是考试必考题型，孩子总是拿不到满"
@@ -11145,40 +11009,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["CHI-6A-06-06"],
     keywords: ["语文", "6年级", "习作综合是考试必考题"]
-  },
-  {
-    id: "CHI-06-012",
-    grade: 6,
-    subject: "语文",
-    category: "阅读与写作",
-    title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
-    icon: "✏️",
-    painPoint: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
-      modelType: "通用",
-      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
-      duration: "约3分钟",
-      searchKeyword: "语文小学6年级 看到病句题就发怵，分不清是成分残缺还是搭"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["CHI-6A-12-12"],
-    keywords: ["语文", "6年级", "看到病句题就发怵，分"]
   },
   {
     id: "CHI-06-005",
@@ -11204,7 +11034,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zP411q7G9",
       title: "句子综合是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 句子综合是考试必考题型，孩子总是拿不到满"
@@ -11238,7 +11068,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1bh4y1f7Y1",
       title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 古诗背了又忘，默写总写错别字，诗句意思理"
@@ -11272,7 +11102,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Mm4y1o74D",
       title: "小升初语文总复习是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 小升初语文总复习是考试必考题型，孩子总是"
@@ -11306,7 +11136,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1jf421X7RL",
       title: "说明文阅读综合是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 说明文阅读综合是考试必考题型，孩子总是拿"
@@ -11340,7 +11170,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Ek4y1C7HH",
       title: "名著阅读综合是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 名著阅读综合是考试必考题型，孩子总是拿不"
@@ -11374,7 +11204,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1RCNiz4Ev4",
       title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 比喻和拟人分不清，让分析修辞手法的作用就"
@@ -11408,7 +11238,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Zg4y157zf",
       title: "非连续性文本综合是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 非连续性文本综合是考试必考题型，孩子总是"
@@ -11442,7 +11272,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1UNj3ziE4A",
       title: "字词综合是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 字词综合是考试必考题型，孩子总是拿不到满"
@@ -11476,7 +11306,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1Mx42127sE",
       title: "不但……而且……还是虽然……但是……",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 不但……而且……还是虽然……但是……"
@@ -11510,7 +11340,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1gT4y1N7bQ",
       title: "四种时态混在一起考就全乱了，不知道该用哪个",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 四种时态混在一起考就全乱了，不知道该用哪"
@@ -11544,7 +11374,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1u7411h7AS",
       title: "什么时候加er、什么时候加more傻傻分不清楚",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 什么时候加er、什么时候加more傻傻分"
@@ -11578,7 +11408,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV18741167Gf",
       title: "英语小升初英语总复习句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语小升初英语总复习句型总是记不住，考试"
@@ -11612,7 +11442,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1EZ4y1u7rt",
       title: "英语Last Weekend句型总是记不住，考试时不…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语Last Weekend句型总是记不"
@@ -11646,7 +11476,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1E7411j7PV",
       title: "英语情态动词综合句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语情态动词综合句型总是记不住，考试时不"
@@ -11680,7 +11510,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1bi4y1d7Ms",
       title: "英语疑问词综合句型总是记不住，考试时不知道怎么回答",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语疑问词综合句型总是记不住，考试时不知"
@@ -11714,7 +11544,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV17t4y1F7cK",
       title: "英语I Have a Pen Pal句型总是记不住，…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语I Have a Pen Pal句型"
@@ -11748,7 +11578,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1WZ4y1V7vA",
       title: "英语My Weekend Plan句型总是记不住，考…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语My Weekend Plan句型总"
@@ -11782,7 +11612,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1AZ4y1T7ve",
       title: "英语Then and Now句型总是记不住，考试时不…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语Then and Now句型总是记不"
@@ -11816,7 +11646,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1xZ4y1F78o",
       title: "英语Where Did You Go句型总是记不住，…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语Where Did You Go句型"
@@ -11850,7 +11680,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1EE41137Re",
       title: "英语What Does He Do句型总是记不住，考…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语What Does He Do句型总"
@@ -11884,7 +11714,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1zdC3YjEbW",
       title: "英语How Tall Are You句型总是记不住，…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语How Tall Are You句型"
@@ -11918,7 +11748,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1tHLn6CELd",
       title: "英语How Can I Get There句型总是记…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语How Can I Get Ther"
@@ -11952,7 +11782,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1p5411j7ec",
       title: "英语Ways to Go to School句型总是…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语Ways to Go to Scho"
@@ -11961,40 +11791,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["ENG-6A-03-03"],
     keywords: ["英语", "6年级", "英语Ways to "]
-  },
-  {
-    id: "MATH-04-019",
-    grade: 4,
-    subject: "数学",
-    category: "计算与应用思维",
-    title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
-    icon: "🎯",
-    painPoint: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
-      modelType: "通用",
-      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
-      duration: "约3分钟",
-      searchKeyword: "数学小学4年级 画数据整理与图表绘制时图形画反、公式记混"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["MATH-4A-19-19"],
-    keywords: ["数学", "4年级", "画数据整理与图表绘制"]
   },
   {
     id: "CHI-04-012",
@@ -12020,7 +11816,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1YKL86yE3w",
       title: "非连续性文本是考试必考题型，孩子总是拿不到满分",
       duration: "约3分钟",
       searchKeyword: "语文小学4年级 非连续性文本是考试必考题型，孩子总是拿不"
@@ -12054,7 +11850,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1P97B6aExs",
       title: "英语At the Farm句型总是记不住，考试时不知…",
       duration: "约3分钟",
       searchKeyword: "英语小学4年级 英语At the Farm句型总是记不住"
@@ -12063,74 +11859,6 @@ const CHIPS = [
     exams: ["待补充真题"],
     examCodes: ["ENG-4A-15-15"],
     keywords: ["英语", "4年级", "英语At the F"]
-  },
-  {
-    id: "MATH-05-011",
-    grade: 5,
-    subject: "数学",
-    category: "计算与应用思维",
-    title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
-    icon: "🎯",
-    painPoint: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
-      modelType: "通用",
-      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
-      duration: "约3分钟",
-      searchKeyword: "数学小学5年级 画数字编码与身份证号码时图形画反、公式记"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["MATH-5A-11-11"],
-    keywords: ["数学", "5年级", "画数字编码与身份证号"]
-  },
-  {
-    id: "CHI-05-013",
-    grade: 5,
-    subject: "语文",
-    category: "阅读与写作",
-    title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-    icon: "✏️",
-    painPoint: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-    aiDiagnosis: {
-      trigger: "做错时弹出",
-      action: "系统弹出追问引导孩子反思错误原因",
-      interactionType: "dynamic-question"
-    },
-    chip: {
-      script: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-      modelType: "通用",
-      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
-      modelVisual: {
-        type: "accordion",
-        component: "generic"
-      }
-    },
-    video: {
-      source: "Bilibili",
-      bvid: "",
-      title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
-      duration: "约3分钟",
-      searchKeyword: "语文小学5年级 口语交际与综合性学习是考试必考题型，孩子"
-    },
-    video2: {},
-    exams: ["待补充真题"],
-    examCodes: ["CHI-5A-13-13"],
-    keywords: ["语文", "5年级", "口语交际与综合性学习"]
   },
   {
     id: "ENG-05-008",
@@ -12156,7 +11884,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1FDEm6JEDm",
       title: "英语In a Nature Park句型总是记不住，…",
       duration: "约3分钟",
       searchKeyword: "英语小学5年级 英语In a Nature Park句型"
@@ -12190,7 +11918,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV12D4y1R7CT",
       title: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
       duration: "约3分钟",
       searchKeyword: "数学小学6年级 孩子在计算用方向和距离确定位置时频繁出错"
@@ -12224,7 +11952,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1ES4y147PP",
       title: "不但……而且……还是虽然……但是……",
       duration: "约3分钟",
       searchKeyword: "语文小学6年级 不但……而且……还是虽然……但是……"
@@ -12258,7 +11986,7 @@ const CHIPS = [
     },
     video: {
       source: "Bilibili",
-      bvid: "",
+      bvid: "BV1khEE6zEuN",
       title: "英语Ways to Go to School句型总是…",
       duration: "约3分钟",
       searchKeyword: "英语小学6年级 英语Ways to Go to Scho"
@@ -12313,10 +12041,8 @@ const PAIN_BUTTONS = {
       { label: "孩子在计算亿以内数的读写与比较时频繁出错，不是看错数…", chipId: "MATH-04-015" },
       { label: "孩子在计算竖式乘法与估算时频繁出错，不是看错数字就是…", chipId: "MATH-04-017" },
       { label: "画平均数含义与计算、复式条形统计图时图形画反、公式记…", chipId: "MATH-04-027" },
-      { label: "画从不同方向观察立体图形时图形画反、公式记混，空间想…", chipId: "MATH-04-029" },
       { label: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…", chipId: "MATH-04-028" },
       { label: "孩子在计算综合实践：数据收集与方案设计时频繁出错，不…", chipId: "MATH-04-030" },
-      { label: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…", chipId: "MATH-04-019" },
     ],
     "语文": [
       { label: "结合上下文，体会'嫩绿的叶子在风中摇曳'中'摇曳'的意思", chipId: "CHI-04-001" },
@@ -12328,11 +12054,9 @@ const PAIN_BUTTONS = {
       { label: "不但……而且……还是虽然……但是……", chipId: "CHI-04-011" },
       { label: "词语辨析是考试必考题型，孩子总是拿不到满分", chipId: "CHI-04-013" },
       { label: "观察日记与写作是考试必考题型，孩子总是拿不到满分", chipId: "CHI-04-015" },
-      { label: "看到古文就头疼，关键实词的意思猜不对，翻译句子总是不通顺", chipId: "CHI-04-016" },
       { label: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻", chipId: "CHI-04-008" },
       { label: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…", chipId: "CHI-04-007" },
       { label: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆", chipId: "CHI-04-009" },
-      { label: "字词基础是考试必考题型，孩子总是拿不到满分", chipId: "CHI-04-003" },
       { label: "句子排序是考试必考题型，孩子总是拿不到满分", chipId: "CHI-04-014" },
       { label: "非连续性文本是考试必考题型，孩子总是拿不到满分", chipId: "CHI-04-012" },
     ],
@@ -12374,7 +12098,6 @@ const PAIN_BUTTONS = {
       { label: "孩子在计算分数×整数、分数×分数、运算定律时频繁出错…", chipId: "MATH-05-020" },
       { label: "画圆的认识、周长与面积公式时图形画反、公式记混，空间…", chipId: "MATH-05-023" },
       { label: "孩子在计算分数意义、真分数假分数、分数基本性质时频繁…", chipId: "MATH-05-015" },
-      { label: "孩子在计算因数/倍数概念、2/3/5的倍数特征、质数…", chipId: "MATH-05-013" },
       { label: "孩子在计算比的意义、化简比、按比例分配时频繁出错，不…", chipId: "MATH-05-022" },
       { label: "孩子在计算用天平找次品的最优策略(三分法)时频繁出错…", chipId: "MATH-05-018" },
       { label: "画三视图初步——从三个方向还原立体时图形画反、公式记…", chipId: "MATH-05-012" },
@@ -12382,7 +12105,6 @@ const PAIN_BUTTONS = {
       { label: "孩子在计算事件确定性与不确定性、概率大小判断时频繁出…", chipId: "MATH-05-007" },
       { label: "孩子在计算数对表示位置(列,行)时频繁出错，不是看错…", chipId: "MATH-05-005" },
       { label: "孩子在计算单式/复式折线统计图读图与绘制时频繁出错，…", chipId: "MATH-05-017" },
-      { label: "画数字编码与身份证号码时图形画反、公式记混，空间想象…", chipId: "MATH-05-011" },
     ],
     "语文": [
       { label: "给出药品说明书或两家快递公司价格对比图表，问：小明要…", chipId: "CHI-05-001" },
@@ -12397,8 +12119,6 @@ const PAIN_BUTTONS = {
       { label: "名著阅读是考试必考题型，孩子总是拿不到满分", chipId: "CHI-05-014" },
       { label: "不但……而且……还是虽然……但是……", chipId: "CHI-05-011" },
       { label: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…", chipId: "CHI-05-007" },
-      { label: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆", chipId: "CHI-05-009" },
-      { label: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分", chipId: "CHI-05-013" },
     ],
     "英语": [
       { label: "I _____ (lose) my key yest…", chipId: "ENG-05-001" },
@@ -12446,7 +12166,6 @@ const PAIN_BUTTONS = {
       { label: "小升初课外文言文阅读，给出一段墨子或战国策的故事，问…", chipId: "CHI-06-001" },
       { label: "写抒情或成长作文（如《那些年，我们一起走过》），结尾…", chipId: "CHI-06-002" },
       { label: "记叙文阅读综合是考试必考题型，孩子总是拿不到满分", chipId: "CHI-06-006" },
-      { label: "习作综合是考试必考题型，孩子总是拿不到满分", chipId: "CHI-06-012" },
       { label: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…", chipId: "CHI-06-005" },
       { label: "句子综合是考试必考题型，孩子总是拿不到满分", chipId: "CHI-06-004" },
       { label: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻", chipId: "CHI-06-008" },
