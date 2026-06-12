@@ -35,6 +35,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学得分扣分题换个壳就不会讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年北京海淀期末真题《运送玻璃瓶（运好一箱赚10元，打碎一箱赔5元）》",
       "2024年黄冈密卷《考试答题（答对得4分，答错扣1分）》",
@@ -72,6 +80,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学周期循环问题余数对应讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年广州越秀期末真题《按规律排队问题》",
       "小升初预演《数图形周期》",
@@ -109,6 +125,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学长方形剪拼与重叠面积讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年北京海淀期末真题《组合图形面积》",
       "黄冈密卷《重叠与剪拼综合》",
@@ -146,6 +170,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学盈亏问题多多少少搞不清讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年黄冈密卷期末压轴题：分苹果问题",
       "全国统考：租车船问题变形",
@@ -182,6 +214,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学乘法分配律正向逆向全考讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2021-2025年北京海淀期末必考：乘法分配律正向(40+4)×25",
       "2021-2025年北京西城期末必考：乘法分配律逆向37×28+37×72",
@@ -216,6 +256,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学小数加减竖式小数点不对齐讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2021-2025年北京各区期末必考：小数加减竖式",
       "2021-2025年北京海淀期末：小数加减简便运算18.51-9.03-0.97",
@@ -250,6 +298,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学三角形三边关系内角和总记错讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2021-2025年北京各区期末必考：三边关系判断",
       "2021-2025年北京海淀期末：内角和求角度+等腰三角形",
@@ -284,6 +340,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学平移格数数对应点不是数间距讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2021-2025年北京各区期末必考：数平移格数",
       "2021-2025年北京期末：平移求不规则图形周长",
@@ -328,6 +392,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级语文词句赏析题只会写'生动形象'教学方法"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年上海徐汇期末真题阅读《小兵张嘎》第4题：体会嘎子'溜'过去这个动词的妙处",
       "2025年北京海淀期末真题阅读《草地》词句赏析",
@@ -372,6 +444,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级语文写事流水账干巴巴写不长教学方法"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "四年级统考期末作文《记一次游戏》",
       "四年级统考期末作文《我的乐园》",
@@ -411,6 +491,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语单三后面的s永远漏掉语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年广州越秀期末真题连词成句",
       "2024年北京海淀期末看图写话易错题",
@@ -448,6 +536,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语介词in/on/at换个场景就瞎猜语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年上海徐汇期末真题选词填空",
       "小升初语法易错介词专项",
@@ -485,6 +581,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语完形填空看懂了也选错语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "全国近3年四年级期末统考真题完形填空压轴题",
       "2024年北京海淀期末完形填空",
@@ -524,6 +628,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学梯形对角线阴影面积毫无头绪讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年上海徐汇期末压轴几何题",
       "高分奥数几何专项：蝴蝶模型",
@@ -561,6 +673,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学列车过桥路程总漏车长讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年湖北黄冈期末真题行程专项",
       "小升初经典常考题列车过桥",
@@ -598,6 +718,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学公因数公倍数分不清该求哪个讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年北京海淀期末真题数论压轴题",
       "黄冈密卷公因数公倍数综合",
@@ -637,6 +765,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级语文非连续性文本不会提取对比信息教学方法"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年江苏苏系统考期末真题非连续性文本阅读",
       "2024年北京海淀期末说明书阅读",
@@ -681,6 +817,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级语文写人只会堆砌外貌千人一面教学方法"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "五年级必考作文《一个饱含深情的人》",
       "五年级必考作文《我想对您说》高分芯片",
@@ -720,6 +864,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语分不清一般过去时和现在完成时语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年浙江杭州期末语法单选压轴题",
       "小升初时态易错专项",
@@ -757,6 +909,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语情态动词must/can/may全凭翻译瞎猜语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年山东济南期末真题完形填空",
       "小升初情态动词辨析专项",
@@ -796,6 +956,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学流水行船帽子丢了模型讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "全国小升初毕业统考真题行船压轴题",
       "黄冈小升初金卷流水行船专项",
@@ -833,6 +1001,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学圆柱剪开圆锥旋转空间崩塌讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "小升初立体几何专项真题",
       "徐汇区毕业考压轴卷旋转体",
@@ -870,6 +1046,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学抽屉原理至少保证数数数漏讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "北京海淀小升初分班考数论压轴题",
       "2025年上海徐汇毕业考抽屉原理",
@@ -914,6 +1098,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级语文课外文言文一句话都看不懂教学方法"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年全国统考小升初语文大阅读真题文言文专项",
       "2024年北京海淀毕业考课外文言文",
@@ -958,6 +1150,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级语文结尾只会喊口号空洞煽情教学方法"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "小升初满分作文选",
       "六毕业考特等文收录",
@@ -1002,6 +1202,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语被动语态永远漏掉be动词语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年全国外国语学校小升初选拔英语易错专项",
       "2024年北京海淀毕业考语法压轴",
@@ -1044,6 +1252,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级英语首字母填空全凭语感毫无章法语法讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年北京、上海、广州小升初毕业英语试卷原题",
       "2025年全国外国语学校选拔首字母填空",
@@ -1079,6 +1295,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学年龄问题几年后永远搞反讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年北京西城期末真题《爸爸和儿子的年龄倍数问题》",
       "2025年黄冈密卷《年龄差不变的变形题》",
@@ -1113,6 +1337,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学植树问题端点要不要算总搞混讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年北京海淀期末真题《马路两旁植树（两端都种）》",
       "2024年上海期末真题《圆形花坛周围种花》",
@@ -1147,6 +1379,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学角的两条边延长角会变大吗讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年北京朝阳期末真题《判断题：角的两边延长角变大》",
       "2025年武汉期末真题《用三角尺拼角》",
@@ -1181,6 +1421,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学和差问题谁大谁小分不清讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年北京海淀期末真题《两数之和与差求两数》",
       "2024年杭州期末真题《书架上上下两层书》",
@@ -1215,6 +1463,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学归一问题先求什么后求什么搞乱了讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2024年北京东城期末真题《5台织布机8小时织布》",
       "2025年重庆期末真题《工人修路归一问题》",
@@ -1249,6 +1505,14 @@ const CHIPS = [
       duration: "",
       searchKeyword: "小学四年级数学平行四边形拉动变成长方形面积到底变不变讲解"
     },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
   exams: [
       "2025年北京海淀期末真题《长方形拉成平行四边形面积变化》",
       "2024年天津期末真题《判断题：周长不变面积就不变》",

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "学霸之路视频仓库——单一数据源，修改此文件后前端自动同步",
-  "updateInstruction": "1. 在B站搜索searchKeyword列的关键词 2. 找到讲解清晰、时长3分钟左右的视频 3. 复制BV号填入bvid列 4. 填入时长（如3:24）5. status改为「已绑定」",
+  "updateInstruction": "1. 在B站搜索searchKeyword列的关键词 2. 找到讲解清晰、时长3分钟左右的视频 3. 复制BV号填入bvid列 4. bvid2填第二位老师的不同讲解 5. 填入时长（如3:24）6. status改为「已绑定」",
   "videos": [
     {
       "chipId": "MATH-04-001",
@@ -11,7 +11,12 @@
       "source": "Bilibili",
       "searchKeyword": "鸡兔同笼倒扣分问题·两分钟掌握解题方法",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-002",
@@ -21,7 +26,12 @@
       "source": "Bilibili",
       "searchKeyword": "周期循环余数问题·有余数的除法",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-003",
@@ -31,7 +41,12 @@
       "source": "Bilibili",
       "searchKeyword": "重叠问题·长方形剪拼重叠面积",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-004",
@@ -41,7 +56,12 @@
       "source": "Bilibili",
       "searchKeyword": "盈亏问题·四年级奥数精讲",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-005",
@@ -51,7 +71,12 @@
       "source": "Bilibili",
       "searchKeyword": "乘法分配律七大题型·四年级数学",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-006",
@@ -61,7 +86,12 @@
       "source": "Bilibili",
       "searchKeyword": "小数加减法·小数点对齐",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-007",
@@ -71,7 +101,12 @@
       "source": "Bilibili",
       "searchKeyword": "三角形的内角和·说课讲解",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-008",
@@ -81,7 +116,12 @@
       "source": "Bilibili",
       "searchKeyword": "平移格数·对应点移动",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-009",
@@ -91,7 +131,12 @@
       "source": "Bilibili",
       "searchKeyword": "年龄问题·四年级奥数基础",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-010",
@@ -101,7 +146,12 @@
       "source": "Bilibili",
       "searchKeyword": "植树问题完整版·从不会到会",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-011",
@@ -111,7 +161,12 @@
       "source": "Bilibili",
       "searchKeyword": "角的大小与边长无关·小学数学",
       "status": "待绑定",
-      "note": "去B站搜索此关键词，找到合适视频后填入bvid和duration"
+      "note": "去B站搜索此关键词，找到合适视频后填入bvid和duration",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-012",
@@ -121,7 +176,12 @@
       "source": "Bilibili",
       "searchKeyword": "和差问题·三年级奥数第七讲",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-013",
@@ -131,7 +191,12 @@
       "source": "Bilibili",
       "searchKeyword": "归一问题·小学数学必学",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-04-014",
@@ -141,7 +206,12 @@
       "source": "Bilibili",
       "searchKeyword": "长方形拉成平行四边形面积变化",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "CHI-04-001",
@@ -151,7 +221,12 @@
       "source": "Bilibili",
       "searchKeyword": "小学语文阅读理解·10种说明方法",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "CHI-04-002",
@@ -161,7 +236,12 @@
       "source": "Bilibili",
       "searchKeyword": "小学满分作文·通用方法技巧",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-05-001",
@@ -171,7 +251,12 @@
       "source": "Bilibili",
       "searchKeyword": "五年级蝴蝶模型·梯形阴影面积",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-05-002",
@@ -181,7 +266,12 @@
       "source": "Bilibili",
       "searchKeyword": "火车过桥问题·一个视频搞定",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-05-003",
@@ -191,7 +281,12 @@
       "source": "Bilibili",
       "searchKeyword": "公因数与最小公倍数·求解及原理",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "CHI-05-001",
@@ -201,7 +296,12 @@
       "source": "Bilibili",
       "searchKeyword": "非连续性文本核心方法·3步掌握",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "CHI-05-002",
@@ -211,7 +311,12 @@
       "source": "Bilibili",
       "searchKeyword": "作文写人·五官仿写特写",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-06-001",
@@ -221,7 +326,12 @@
       "source": "Bilibili",
       "searchKeyword": "流水行船问题·小升初精讲",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-06-002",
@@ -231,7 +341,12 @@
       "source": "Bilibili",
       "searchKeyword": "旋转体体积计算·半小时搞定",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "MATH-06-003",
@@ -241,7 +356,12 @@
       "source": "Bilibili",
       "searchKeyword": "鸽巢问题·抽屉原理一次讲清楚",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "CHI-06-001",
@@ -251,7 +371,12 @@
       "source": "Bilibili",
       "searchKeyword": "走进小古文·小学文言文阅读理解",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "CHI-06-002",
@@ -261,7 +386,12 @@
       "source": "Bilibili",
       "searchKeyword": "小学作文如何写结尾·以景结情",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-04-001",
@@ -271,7 +401,12 @@
       "source": "Bilibili",
       "searchKeyword": "什么是英语中的三单·动词加s",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-04-002",
@@ -281,7 +416,12 @@
       "source": "Bilibili",
       "searchKeyword": "英语时间介词in/on/at·语法精讲",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-04-003",
@@ -291,7 +431,12 @@
       "source": "Bilibili",
       "searchKeyword": "小学英语完形填空怎么做·得阅读者得天下",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-05-001",
@@ -301,7 +446,12 @@
       "source": "Bilibili",
       "searchKeyword": "区分一般过去和现在完成时·五分钟",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-05-002",
@@ -311,7 +461,12 @@
       "source": "Bilibili",
       "searchKeyword": "小学英语语法·情态动词",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-06-001",
@@ -321,7 +476,12 @@
       "source": "Bilibili",
       "searchKeyword": "英语被动语态·语法讲解",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     },
     {
       "chipId": "ENG-06-002",
@@ -331,7 +491,12 @@
       "source": "Bilibili",
       "searchKeyword": "小学英语首字母填词·做题技巧",
       "status": "已绑定",
-      "note": ""
+      "note": "",
+      "bvid2": "",
+      "title2": "",
+      "duration2": "",
+      "status2": "待绑定",
+      "note2": "去B站搜索同一个考点，找不同老师/不同讲法的视频"
     }
   ]
 }
