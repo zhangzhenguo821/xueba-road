@@ -121,23 +121,14 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .model-panel-title{font-size:14px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .model-panel-title .dot{width:7px;height:7px;border-radius:50%}
 
-/* 视频区 - 真实B站视频嵌入 */
-.video-area{background:#0d0d1a;border-radius:var(--radius-xs);overflow:hidden;min-height:300px;display:flex;flex-direction:column}
-.video-iframe-wrap{width:100%;position:relative;padding-bottom:62.5%;height:0;overflow:hidden;background:#000}
-.video-iframe-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-.video-info-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(255,255,255,0.03);border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap}
-.video-info-title{font-size:13px;font-weight:700;color:#fff;flex:1;min-width:120px}
-.video-info-author{font-size:11px;color:rgba(255,255,255,0.45)}
-.video-info-duration{font-size:11px;color:var(--accent);background:rgba(255,230,109,0.1);padding:2px 7px;border-radius:4px;font-weight:600}
-.video-platform-tag{font-size:10px;color:#fff;background:#FB7299;padding:2px 6px;border-radius:3px;font-weight:700;letter-spacing:0.5px}
-.video-platform-tag.douyin{background:#161823}
-.video-platform-tag.qq{background:#FF6A00}
-.video-tags{display:flex;gap:6px;justify-content:flex-start;padding:8px 14px;flex-wrap:wrap}
+/* 视频区 */
+.video-area{background:var(--bg-dark);border-radius:var(--radius-xs);padding:28px 18px;text-align:center;position:relative;min-height:160px}
+.video-play-btn{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;margin:0 auto 12px;transition:var(--transition);color:white}
+.video-play-btn:hover{background:var(--primary);border-color:var(--primary)}
+.video-title{font-size:15px;font-weight:600;color:white;margin-bottom:6px}
+.video-duration{font-size:12px;color:var(--text-dim)}
+.video-tags{display:flex;gap:6px;justify-content:center;margin-top:10px;flex-wrap:wrap}
 .video-tag{padding:3px 8px;border-radius:4px;font-size:10px;font-weight:600;background:rgba(255,230,109,0.12);color:var(--accent)}
-.video-no-data{padding:40px 20px;text-align:center;color:rgba(255,255,255,0.3);font-size:13px}
-.video-no-data .icon{font-size:40px;margin-bottom:8px;opacity:0.4}
-.video-search-link{display:inline-block;margin-top:8px;color:var(--primary);font-size:12px;text-decoration:none;padding:4px 12px;border:1px solid rgba(108,92,231,0.3);border-radius:4px;transition:var(--transition)}
-.video-search-link:hover{background:var(--primary);color:white}
 
 /* 学霸卡 */
 .card-visual{border-radius:var(--radius-xs);padding:20px;min-height:180px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -231,17 +222,7 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .diag-result-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;text-align:center}
 
 /* ====== Page: 数据导出 ====== */
-.export-page{max-width:900px;margin:0 auto}
-.export-hero{background:linear-gradient(135deg,#1A1A2E,#16213E);border-radius:var(--radius);padding:32px;margin-bottom:24px;color:white}
-.export-hero-title{font-size:26px;font-weight:900;margin-bottom:6px}
-.export-hero-sub{font-size:13px;color:var(--text-dim)}
-.export-card{background:var(--bg-card);border-radius:var(--radius-sm);padding:24px;box-shadow:var(--shadow);margin-bottom:18px}
-.export-card-title{font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.export-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:var(--transition);background:var(--primary);color:white;box-shadow:0 3px 10px rgba(255,107,53,0.3)}
-.export-btn:hover{transform:translateY(-1px);box-shadow:0 5px 15px rgba(255,107,53,0.4)}
-.export-btn.secondary{background:var(--math);box-shadow:0 3px 10px rgba(108,92,231,0.3)}
-.export-btn.secondary:hover{box-shadow:0 5px 15px rgba(108,92,231,0.4)}
-.export-preview{background:var(--bg-dark);border-radius:var(--radius-xs);padding:20px;margin-top:14px;color:var(--accent);font-size:12px;font-family:monospace;max-height:300px;overflow:auto;line-height:1.6;white-space:pre-wrap;word-break:break-all}
+/* 交付包样式已移除 */
 
 /* ====== SOP 模板 ====== */
 .sop-table{width:100%;border-collapse:collapse;font-size:13px}
@@ -283,7 +264,6 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <button class="nav-pill" data-page="home" onclick="showPage('home')">🏠 痛点直达</button>
     <button class="nav-pill" data-page="model" onclick="showPage('model')">🧠 模型舱</button>
     <button class="nav-pill" data-page="diag" onclick="showPage('diag')">🔍 诊断区</button>
-    <button class="nav-pill" data-page="export" onclick="showPage('export')">📦 交付包</button>
     <div class="progress-bar-mini" id="progressMini"></div>
     <span class="progress-count" id="progressCount">0/26</span>
   </div>
@@ -391,82 +371,15 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
   <div class="diag-page" id="diagContent">
     <div class="empty-state">
       <div class="empty-icon">🧠</div>
-      <div class="empty-title">先完成认知动作</div>
-      <div class="empty-desc">在模型舱里完成实操后，再来这里通关验证</div>
+      <div class="empty-title">先观看讲解视频</div>
+      <div class="empty-desc">在模型舱里观看完两位老师的讲解后，再来这里通关验证</div>
     </div>
   </div>
 </div>
 
-<!-- Page: 交付包（数据导出） -->
-<div class="page" id="page-export">
-  <div class="export-page">
-    <div class="export-hero">
-      <h1 class="export-hero-title">📦 外包团队交付包</h1>
-      <p class="export-hero-sub">一键导出所有结构化数据，教研组+技术组+UI组各取所需</p>
-    </div>
-
-    <div class="export-card">
-      <div class="export-card-title">📊 教研组：内容数据包（26芯片完整数据）</div>
-      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">包含26个核心芯片的5大字段结构化数据（含北京真题6大模块扩展芯片）。教研团队按照此格式往数据库里填肉，新增芯片只需在数组里加一行。</p>
-      <button class="export-btn" onclick="exportJSON()">📋 导出 JSON 数据</button>
-      <button class="export-btn secondary" onclick="exportText()" style="margin-left:8px">📝 导出纯文本格式</button>
-      <div class="export-preview" id="jsonPreview" style="display:none"></div>
-    </div>
-
-    <div class="export-card">
-      <div class="export-card-title">📐 技术组：内容原子化SOP模板</div>
-      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">外包团队每提交一个知识点，必须填满以下4个格子。格子填得浅，直接退货。</p>
-      <table class="sop-table">
-        <thead><tr><th style="width:120px">字段</th><th style="width:200px">内容要求</th><th>交付物标准</th></tr></thead>
-        <tbody>
-          <tr><td><b>认知诊断项</b></td><td>这个知识点在全国试卷里常见的3个坑是什么？</td><td>文本 + 对应错误案例</td></tr>
-          <tr><td><b>思维模型图</b></td><td>如何降维成一个图？（如跷跷板、蝴蝶、洋葱）</td><td>视觉草图 + 动态逻辑描述</td></tr>
-          <tr><td><b>大白话脚本</b></td><td>模仿抖音，3分钟讲清楚怎么"破"。禁止念经。</td><td>语音/文字脚本（口语化）</td></tr>
-          <tr><td><b>真题映射</b></td><td>该考点对应的5份全国名校真题压轴题。</td><td>试卷原题库 + 逆向解析流程</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="export-card">
-      <div class="export-card-title">🎨 UI组：三个核心页面像素级PRD</div>
-      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">严格按以下三层架构开发，拒绝传统网课UI。</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
-        <div style="padding:16px;border-radius:8px;background:rgba(255,107,53,0.04);border:1px solid rgba(255,107,53,0.1)">
-          <div style="font-size:20px;margin-bottom:6px">🏠</div>
-          <div style="font-size:13px;font-weight:700;color:var(--primary);margin-bottom:4px">痛点路由器</div>
-          <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">首页=考场急救中心<br>痛点直达按钮<br>3步进入实操<br>严禁中间过渡页</div>
-        </div>
-        <div style="padding:16px;border-radius:8px;background:rgba(108,92,231,0.04);border:1px solid rgba(108,92,231,0.1)">
-          <div style="font-size:20px;margin-bottom:6px">🧠</div>
-          <div style="font-size:13px;font-weight:700;color:var(--math);margin-bottom:4px">思维模型舱</div>
-          <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">抖音短视频+小红书卡<br>Canvas交互实操区<br>认知动作强熔断<br>不操作=按钮灰色</div>
-        </div>
-        <div style="padding:16px;border-radius:8px;background:rgba(0,184,148,0.04);border:1px solid rgba(0,184,148,0.1)">
-          <div style="font-size:20px;margin-bottom:6px">🔍</div>
-          <div style="font-size:13px;font-weight:700;color:var(--english);margin-bottom:4px">闭环诊断区</div>
-          <div style="font-size:11px;color:var(--text-secondary);line-height:1.5">真题变型题测试<br>AI追问式纠偏<br>连续2题对才通关<br>卡点精准定位</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="export-card">
-      <div class="export-card-title">⚡ 外包开工信（复制发给他们）</div>
-      <div class="export-preview" id="letterPreview" style="display:block;max-height:400px">我们要做的不是普通的刷题网，而是小学思维解构操作系统。对你们的交付有三个硬指标：
-
-1. 拒绝平庸内容：所有四五六年级的知识点，必须对照全国真题逆向抽离出"思维模型"。不要给我搬运教材，我要的是"怎么学会"的方法论。
-
-2. 视觉审美死磕：视觉对标小红书，交互对标抖音。内容要"好看"且"上瘾"，如果做出来像传统的蓝白色教育网，直接不验收。
-
-3. 颗粒度到原子级：每一个难点，必须按照《内容原子化SOP》拆解。内容不怕多，但逻辑必须穿透。如果发现有全国试卷的高频考点漏掉，视为合同违约。
-
-48小时内，先按照这个标准，给我做出一个四年级数学 MATH-04-001（得分扣分题）的页面内测Demo出来，我要亲自验收！</div>
-      <button class="export-btn" onclick="copyLetter()" style="margin-top:12px">📋 复制开工信</button>
-    </div>
-  </div>
-</div>
+<!-- 交付包页面已移除 -->
 
 <script src="data.js"></script>
-<script src="canvas-interactive.js"></script>
 <script>
 // ====== State ======
 let currentGrade = 4;
@@ -572,7 +485,14 @@ function renderModelPage(chip) {
     <div class="model-layout">
       <div class="model-panel">
         <div class="model-panel-title"><div class="dot" style="background:${meta.color}"></div>抖音级短视频舱</div>
-        ${buildVideoArea(chip)}
+        <div class="video-area" id="videoArea_${chip.id}">
+          <div class="video-play-btn" onclick="playVideo('${chip.id}')">▶</div>
+          <div class="video-title" id="videoTitle_${chip.id}">${chip.video && chip.video.title ? chip.video.title : "3分钟大白话切片：" + chip.title}</div>
+          <div class="video-duration" id="videoDur_${chip.id}">⏱ ${chip.video && chip.video.duration ? chip.video.duration : "约3分钟"} · 建议1.25x倍速</div>
+          <div class="video-tags">
+            ${chip.keywords.map(k => `<div class="video-tag">${k}</div>`).join('')}
+          </div>
+        </div>
       </div>
       <div class="model-panel">
         <div class="model-panel-title"><div class="dot" style="background:${meta.color}"></div>小红书学霸手账卡</div>
@@ -581,20 +501,31 @@ function renderModelPage(chip) {
     </div>
 
     <div class="canvas-area">
-      <div class="canvas-area-title"><div class="dot" style="background:${meta.color}"></div>画布交互实操区 · 认知动作强熔断</div>
-      <div class="canvas-instruction">${chip.aiDiagnosis.action}</div>
-      <div id="canvasContainer_${chip.id}" style="min-height:200px;background:${meta.bg};border-radius:var(--radius-xs);border:1.5px solid rgba(0,0,0,0.04);display:flex;align-items:center;justify-content:center;padding:12px">
-        <div style="text-align:center;padding:20px">
-          <div style="font-size:32px;margin-bottom:10px">${chip.icon}</div>
-          <div style="font-size:14px;font-weight:600;color:${meta.color};margin-bottom:6px">认知动作：${chip.aiDiagnosis.interactionType}</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px">${chip.chip.modelDesc}</div>
-          <button onclick="activateCanvas('${chip.id}','${chip.chip.modelType}')" class="pass-btn unlocked" style="font-size:13px">🎨 加载交互Canvas → 开始实操</button>
+      <div class="canvas-area-title"><div class="dot" style="background:${meta.color}"></div>双师讲解 · 换个老师再讲一遍</div>
+      <div id="videoArea2_${chip.id}" style="margin-top:8px">
+        ${chip.video2 && chip.video2.bvid ? `
+        <div class="video-area" id="video2Play_${chip.id}" style="margin:0">
+          <div class="video-play-btn" onclick="playVideo2('${chip.id}')">▶</div>
+          <div class="video-title" id="videoTitle2_${chip.id}">${chip.video2.title || '第二位老师讲解：' + chip.title}</div>
+          <div class="video-duration" id="videoDur2_${chip.id}">⏱ ${chip.video2.duration || '约3分钟'} · 换个角度也许就通了</div>
+          <div class="video-tags">
+            <div class="video-tag">👨‍🏫 第二位老师</div>
+            <div class="video-tag">🔄 不同讲法</div>
+          </div>
         </div>
+        ` : `
+        <div style="background:rgba(0,0,0,0.02);border-radius:12px;padding:24px;text-align:center;border:1.5px dashed rgba(0,0,0,0.08)">
+          <div style="font-size:28px;margin-bottom:8px">👨‍🏫</div>
+          <div style="font-size:14px;font-weight:600;color:var(--text-secondary);margin-bottom:6px">第二位老师视频待添加</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:12px">去B站搜索同一个考点<br>找不同老师/不同讲法的视频<br>填入 BV 号即可上线</div>
+          <button onclick="window.open('https://search.bilibili.com/all?keyword=${encodeURIComponent(chip.title)}','_blank')" class="pass-btn unlocked" style="font-size:12px">🔍 去B站搜「${chip.title}」</button>
+        </div>
+        `}
       </div>
-      ${chip.chip.modelVisual && chip.chip.modelVisual.expanded ? `<div style="margin-top:8px;text-align:center"><button onclick="verbBurstAction('${chip.id}')" class="pass-btn unlocked" style="font-size:12px;background:var(--chinese)">💥 动词爆炸！</button></div>` : ''}
-      ${chip.chip.modelType === 'detective-chain' ? `<div style="margin-top:8px;text-align:center"><button onclick="detectiveConnect('${chip.id}')" class="pass-btn unlocked" style="font-size:12px;background:var(--english)">🔍 连线！画出证据链</button></div>` : ''}
-      <div id="actionStatus_${chip.id}" style="margin-top:12px;padding:10px;border-radius:6px;background:rgba(0,0,0,0.02);font-size:12px;color:var(--text-dim);text-align:center">⚠️ 未完成认知动作 → 通关按钮锁死灰色</div>
-      <button id="passBtn_${chip.id}" onclick="completeAction()" class="pass-btn locked" disabled>🔒 完成认知动作后 → 进入通关测试</button>
+    </div>
+
+    <div style="text-align:center;margin-top:12px">
+      <button onclick="goToDiag('${chip.id}')" class="pass-btn unlocked" style="font-size:13px;padding:10px 28px">🔍 进入通关诊断 →</button>
     </div>
 
     <div class="script-area">
@@ -932,123 +863,141 @@ function highlightVerb(el) {
   setTimeout(() => { el.style.transform = ''; }, 300);
 }
 
-// ====== 视频区域构建（真实B站视频嵌入） ======
-function buildVideoArea(chip) {
-  const videoInfo = VIDEO_INDEX[chip.id];
-  if (!videoInfo) {
-    // 没有匹配视频时，显示搜索链接
-    const searchQ = encodeURIComponent(chip.title + ' 小学' + chip.subject);
-    return `<div class="video-area">
-      <div class="video-no-data">
-        <div class="icon">🎬</div>
-        <div>该知识点的视频正在制作中</div>
-        <a class="video-search-link" href="https://search.bilibili.com/all?keyword=${searchQ}" target="_blank">🔍 去B站搜索相关视频</a>
-      </div>
-      <div class="video-tags">
-        ${chip.keywords.map(k => `<div class="video-tag">${k}</div>`).join('')}
-      </div>
-    </div>`;
-  }
-
-  const embedUrl = getBilibiliEmbedUrl(videoInfo.bvid, videoInfo.page);
-  const platformLabel = videoInfo.platform === 'bilibili' ? 'B站' : videoInfo.platform === 'douyin' ? '抖音' : '腾讯';
-  const platformClass = videoInfo.platform === 'bilibili' ? '' : videoInfo.platform === 'douyin' ? ' douyin' : ' qq';
-
-  return `<div class="video-area">
-    <div class="video-iframe-wrap">
-      <iframe src="${embedUrl}" allowfullscreen="true" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups" loading="lazy"></iframe>
-    </div>
-    <div class="video-info-bar">
-      <span class="video-platform-tag${platformClass}">${platformLabel}</span>
-      <span class="video-info-title">${videoInfo.title}</span>
-      <span class="video-info-author">UP: ${videoInfo.author}</span>
-      <span class="video-info-duration">⏱ ${videoInfo.duration}</span>
-    </div>
-    <div class="video-tags">
-      ${chip.keywords.map(k => `<div class="video-tag">${k}</div>`).join('')}
-    </div>
-  </div>`;
-}
-
-// ====== Canvas Activation ======
-function activateCanvas(chipId, modelType) {
+function playVideo(chipId) {
   const chip = CHIPS.find(c => c.id === chipId);
   if (!chip) return;
-  const container = document.getElementById('canvasContainer_' + chipId);
-  if (!container) return;
-  
-  // Render real interactive Canvas
-  const canvasEl = renderCanvasInteraction('canvasContainer_' + chipId, modelType, chip);
-  
-  // Unlock pass button after 3 seconds (simulate completing the interaction)
-  const statusDiv = document.getElementById('actionStatus_' + chipId);
-  const passBtn = document.getElementById('passBtn_' + chipId);
-  
-  setTimeout(() => {
-    if (statusDiv) {
-      statusDiv.innerHTML = '✅ 已完成认知动作！你亲手操作了思维模型，现在可以通关验证了。';
-      statusDiv.style.background = 'rgba(0,184,148,0.06)';
-      statusDiv.style.color = 'var(--success)';
-    }
-    if (passBtn) {
-      passBtn.className = 'pass-btn unlocked';
-      passBtn.disabled = false;
-      passBtn.innerHTML = '✅ 进入通关测试 →';
-    }
-  }, 1500);
+  const videoArea = document.getElementById('videoArea_' + chipId);
+  if (!videoArea) return;
+
+  // 如果已经嵌入了 iframe，不再重复操作
+  if (videoArea.querySelector('iframe')) {
+    const iframe = videoArea.querySelector('iframe');
+    iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    return;
+  }
+
+  // 没有 bvid：显示搜索提示
+  if (!chip.video || !chip.video.bvid) {
+    videoArea.innerHTML = `
+      <div style="padding:16px;text-align:center;color:var(--text-dim);font-size:13px">
+        <div style="font-size:32px;margin-bottom:10px">📹</div>
+        <div style="font-weight:600;color:var(--text);margin-bottom:8px">暂未绑定视频</div>
+        <div style="font-size:12px;line-height:1.6">
+          搜索关键词：<b>${chip.video ? chip.video.searchKeyword : chip.title}</b><br>
+          <button onclick="searchVideo('${chipId}')" style="margin-top:8px;padding:6px 16px;border-radius:6px;border:none;background:var(--primary);color:white;cursor:pointer;font-size:12px">
+            去 B 站搜索此关键词
+          </button>
+        </div>
+      </div>`;
+    return;
+  }
+
+  // 有 bvid：嵌入 B 站 iframe
+  const bvid = chip.video.bvid;
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=1&high_quality=1`;
+  iframe.style.width = '100%';
+  iframe.style.height = '220px';
+  iframe.style.borderRadius = '8px';
+  iframe.style.border = 'none';
+  iframe.allow = 'autoplay; encrypted-media';
+  iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+
+  videoArea.innerHTML = '';
+  videoArea.appendChild(iframe);
+
+  // 更新标题为真实视频标题
+  const titleEl = document.getElementById('videoTitle_' + chipId);
+  if (titleEl && chip.video.title) {
+    titleEl.textContent = chip.video.title;
+  }
+  const durEl = document.getElementById('videoDur_' + chipId);
+  if (durEl && chip.video.duration) {
+    durEl.textContent = '⏱ ' + chip.video.duration + ' · 建议1.25x倍速';
+  }
 }
 
-function verbBurstAction(chipId) {
+// ====== 第二位老师视频播放 ======
+function playVideo2(chipId) {
   const chip = CHIPS.find(c => c.id === chipId);
-  const container = document.getElementById('canvasContainer_' + chipId);
-  if (!container) return;
-  const canvas = container.querySelector('canvas');
-  if (canvas && canvas.burst) {
-    canvas.burst();
+  if (!chip) return;
+  const videoArea = document.getElementById('video2Play_' + chipId);
+  if (!videoArea) return;
+
+  // 如果已经嵌入了 iframe，切换显示
+  if (videoArea.querySelector('iframe')) {
+    const iframe = videoArea.querySelector('iframe');
+    iframe.style.display = iframe.style.display === 'none' ? 'block' : 'none';
+    return;
   }
-  // Also unlock
-  const statusDiv = document.getElementById('actionStatus_' + chipId);
-  const passBtn = document.getElementById('passBtn_' + chipId);
-  if (statusDiv) {
-    statusDiv.innerHTML = '✅ 动词爆炸完成！一个动作拆成4个微动词，流水账瞬间变成大片！';
-    statusDiv.style.background = 'rgba(0,184,148,0.06)';
-    statusDiv.style.color = 'var(--success)';
+
+  // 没有 bvid2：显示搜索提示
+  if (!chip.video2 || !chip.video2.bvid) {
+    const containerEl = document.getElementById('videoArea2_' + chipId);
+    if (containerEl) {
+      containerEl.innerHTML = `
+        <div style="background:rgba(0,0,0,0.02);border-radius:12px;padding:24px;text-align:center;border:1.5px dashed rgba(0,0,0,0.08)">
+          <div style="font-size:28px;margin-bottom:8px">📹</div>
+          <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px">第二位老师视频暂未绑定</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.6;margin-bottom:14px">去B站搜索同一个考点<br>找不同老师/不同讲法的视频</div>
+          <button onclick="searchVideo2('${chipId}')" style="padding:8px 20px;border-radius:8px;border:none;background:var(--primary);color:white;cursor:pointer;font-size:12px;font-weight:600">🔍 去B站搜「${chip.title}」</button>
+        </div>`;
+    }
+    return;
   }
-  if (passBtn) {
-    passBtn.className = 'pass-btn unlocked';
-    passBtn.disabled = false;
-    passBtn.innerHTML = '✅ 进入通关测试 →';
+
+  // 有 bvid2：嵌入 B 站 iframe
+  const bvid = chip.video2.bvid;
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=1&high_quality=1`;
+  iframe.style.width = '100%';
+  iframe.style.height = '220px';
+  iframe.style.borderRadius = '8px';
+  iframe.style.border = 'none';
+  iframe.allow = 'autoplay; encrypted-media';
+  iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+
+  videoArea.innerHTML = '';
+  videoArea.appendChild(iframe);
+
+  // 更新标题
+  const titleEl = document.getElementById('videoTitle2_' + chipId);
+  if (titleEl && chip.video2.title) {
+    titleEl.textContent = chip.video2.title;
+  }
+  const durEl = document.getElementById('videoDur2_' + chipId);
+  if (durEl && chip.video2.duration) {
+    durEl.textContent = '⏱ ' + chip.video2.duration + ' · 换个角度也许就通了';
   }
 }
 
-function detectiveConnect(chipId) {
-  const container = document.getElementById('canvasContainer_' + chipId);
-  if (!container) return;
-  const canvas = container.querySelector('canvas');
-  if (canvas && canvas.connectLine) {
-    canvas.connectLine();
-  }
-  const statusDiv = document.getElementById('actionStatus_' + chipId);
-  const passBtn = document.getElementById('passBtn_' + chipId);
-  if (statusDiv) {
-    statusDiv.innerHTML = '✅ 侦探连线完成！证据链锁死答案，不看运气只看证据！';
-    statusDiv.style.background = 'rgba(0,184,148,0.06)';
-    statusDiv.style.color = 'var(--success)';
-  }
-  if (passBtn) {
-    passBtn.className = 'pass-btn unlocked';
-    passBtn.disabled = false;
-    passBtn.innerHTML = '✅ 进入通关测试 →';
-  }
+// 搜索第二位老师视频
+function searchVideo2(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  window.open('https://search.bilibili.com/all?keyword=' + encodeURIComponent(chip.title + ' 小学数学'), '_blank');
 }
 
-function completeAction() {
-  if (!currentChip) return;
-  completedChips.add(currentChip.id);
-  renderDiagPage(currentChip);
+// 去 B 站搜索视频（新标签页）
+function searchVideo(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  const kw = chip.video ? chip.video.searchKeyword : chip.title;
+  window.open('https://search.bilibili.com/all?keyword=' + encodeURIComponent(kw), '_blank');
+}
+
+// ====== 导航到诊断页 ======
+function goToDiag(chipId) {
+  const chip = CHIPS.find(c => c.id === chipId);
+  if (!chip) return;
+  currentChip = chip;
+  completedChips.add(chip.id);
+  renderDiagPage(chip);
   showPage('diag');
   updateProgress();
 }
+
+/* 画布交互功能已移除，改为双师讲解 */
 
 // ====== Diag Page ======
 function renderDiagPage(chip) {
@@ -1151,102 +1100,42 @@ function updateProgress() {
   mini.innerHTML = html;
   count.textContent = done + '/' + total;
 }
+/* 导出功能已移除 */
 
-// ====== Export Functions ======
-function exportJSON() {
-  const preview = document.getElementById('jsonPreview');
-  if (preview.style.display === 'block') {
-    preview.style.display = 'none';
-    return;
-  }
-  const exportData = CHIPS.map(c => ({
-    id: c.id,
-    grade: c.grade,
-    subject: c.subject,
-    category: c.category,
-    title: c.title,
-    painPoint: c.painPoint,
-    aiDiagnosis: c.aiDiagnosis,
-    chip: { script: c.chip.script, modelType: c.chip.modelType, modelDesc: c.chip.modelDesc },
-    exams: c.exams,
-    examCodes: c.examCodes,
-    keywords: c.keywords
-  }));
-  preview.textContent = JSON.stringify(exportData, null, 2);
-  preview.style.display = 'block';
-
-  // Copy to clipboard
-  navigator.clipboard.writeText(JSON.stringify(exportData, null, 2)).then(() => {
-    alert('✅ JSON数据已复制到剪贴板！直接粘贴到Google Docs或发给外包团队即可。');
-  }).catch(() => {
-    // Fallback
-    const ta = document.createElement('textarea');
-    ta.value = JSON.stringify(exportData, null, 2);
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    alert('✅ JSON数据已复制到剪贴板！');
-  });
-}
-
-function exportText() {
-  const preview = document.getElementById('jsonPreview');
-  if (preview.style.display === 'block') {
-    preview.style.display = 'none';
-    return;
-  }
-  let text = '================================================================================\n';
-  text += '【四五六年级全科突破平台 - 第一批核心芯片中央数据库（含北京真题扩展）】\n';
-  text += '================================================================================\n\n';
-
-  CHIPS.forEach(c => {
-    text += '--------------------------------------------------------------------------------\n';
-    text += `[卡点编码]：${c.id}（${c.grade === 4 ? '四' : c.grade === 5 ? '五' : '六'}年级${c.subject}-${c.category}）\n`;
-    text += `[考场痛点现象]：${c.painPoint}\n`;
-    text += `[AI诊断微动作]：${c.aiDiagnosis.action}\n`;
-    text += `[学霸降维芯片]：\n`;
-    text += `  大白话脚本：${c.chip.script}\n`;
-    text += `  模型图设计：${c.chip.modelDesc}\n`;
-    text += `[全国真题演练池]：${c.exams.join('；')}\n`;
-    text += `[考点编码]：${c.examCodes.join('；')}\n\n`;
-  });
-
-  preview.textContent = text;
-  preview.style.display = 'block';
-
-  navigator.clipboard.writeText(text).then(() => {
-    alert('✅ 纯文本数据已复制到剪贴板！');
-  }).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    alert('✅ 纯文本数据已复制到剪贴板！');
-  });
-}
-
-function copyLetter() {
-  const text = document.getElementById('letterPreview').textContent;
-  navigator.clipboard.writeText(text).then(() => {
-    alert('✅ 开工信已复制到剪贴板！直接粘贴发给外包团队。');
-  }).catch(() => {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    alert('✅ 开工信已复制到剪贴板！');
-  });
+// ====== 加载视频仓库（解耦数据源）======
+function loadVideoWarehouse() {
+  fetch('video-warehouse.json?t=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(warehouse => {
+      if (!warehouse || !warehouse.videos) return;
+      warehouse.videos.forEach(v => {
+        const chip = CHIPS.find(c => c.id === v.chipId);
+        if (chip && chip.video) {
+          // 同步仓库里的真实数据到 chip.video
+          if (v.bvid) chip.video.bvid = v.bvid;
+          if (v.title) chip.video.title = v.title;
+          if (v.duration) chip.video.duration = v.duration;
+          if (v.status) chip.video.status = v.status;
+        }
+        // 同步第二位老师视频到 chip.video2
+        if (chip && !chip.video2) chip.video2 = {};
+        if (chip && chip.video2) {
+          if (v.bvid2) chip.video2.bvid = v.bvid2;
+          if (v.title2) chip.video2.title = v.title2;
+          if (v.duration2) chip.video2.duration = v.duration2;
+          if (v.status2) chip.video2.status = v.status2;
+        }
+      });
+      console.log('✅ 视频仓库已同步，共 ' + warehouse.videos.length + ' 条（含双师数据）');
+    })
+    .catch(err => console.warn('视频仓库加载失败（不影响主功能）：', err.message));
 }
 
 // ====== Init ======
 function init() {
   selectGrade(4);
   updateProgress();
+  loadVideoWarehouse();
 }
 init();
 </script>

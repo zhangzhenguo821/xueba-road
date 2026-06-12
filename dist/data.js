@@ -11,7 +11,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "得分扣分题换个壳就不会",
+    title: "鸡兔同笼倒扣分问题·两分钟掌握解题方法",
     icon: "🎯",
     painPoint: "投篮比赛，投中一球得5分，投错一球扣2分，共投10球得36分。问投中几球？孩子总是把差量算成 5−2=3，导致满盘皆输。",
     aiDiagnosis: {
@@ -28,7 +28,22 @@ const CHIPS = [
         component: "number-axis-difference"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学得分扣分题换个壳就不会讲解」后取 BV 号
+      title: "得分扣分题换个壳就不会·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学得分扣分题换个壳就不会讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年北京海淀期末真题《运送玻璃瓶（运好一箱赚10元，打碎一箱赔5元）》",
       "2024年黄冈密卷《考试答题（答对得4分，答错扣1分）》",
       "小升初预演《得分扣分变形综合题》"
@@ -41,7 +56,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "数论与巧算思维",
-    title: "周期循环问题余数对应",
+    title: "周期循环余数问题·有余数的除法",
     icon: "🔄",
     painPoint: "一串彩灯按红、黄、黄、蓝、绿的顺序排列，第128盏灯是什么颜色？孩子算出了余数，但数数的时候数错，或者余数是0的时候不知道是谁。",
     aiDiagnosis: {
@@ -58,7 +73,22 @@ const CHIPS = [
         component: "film-strip-cycle"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学周期循环问题余数对应讲解」后取 BV 号
+      title: "周期循环问题余数对应·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学周期循环问题余数对应讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年广州越秀期末真题《按规律排队问题》",
       "小升初预演《数图形周期》",
       "2025年武汉期末真题《彩灯排列周期》"
@@ -71,7 +101,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "几何与空间思维",
-    title: "长方形剪拼与重叠面积",
+    title: "重叠问题·长方形剪拼重叠面积",
     icon: "📐",
     painPoint: "两个长方形重叠在一起，已知重叠部分是个正方形，求组合后的总面积。孩子找不到不重叠部分的各自长宽，卡死。",
     aiDiagnosis: {
@@ -88,7 +118,22 @@ const CHIPS = [
         component: "overlap-area"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学长方形剪拼与重叠面积讲解」后取 BV 号
+      title: "长方形剪拼与重叠面积·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学长方形剪拼与重叠面积讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年北京海淀期末真题《组合图形面积》",
       "黄冈密卷《重叠与剪拼综合》",
       "小升初几何专项《面积计算变形》"
@@ -101,7 +146,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "盈亏问题",
-    title: "盈亏问题多多少少搞不清",
+    title: "盈亏问题·四年级奥数精讲",
     icon: "⚖️",
     painPoint: "学校买来一批图书，如果每班分8本则多出15本；如果每班分10本则少25本。问有多少个班？孩子不知道什么时候该加，什么时候该减。",
     aiDiagnosis: {
@@ -118,7 +163,22 @@ const CHIPS = [
         component: "seesaw-balance"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学盈亏问题多多少少搞不清讲解」后取 BV 号
+      title: "盈亏问题多多少少搞不清·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学盈亏问题多多少少搞不清讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年黄冈密卷期末压轴题：分苹果问题",
       "全国统考：租车船问题变形",
       "2025年北京海淀期末：盈亏综合应用"
@@ -133,7 +193,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "运算定律",
-    title: "乘法分配律正向逆向全考",
+    title: "乘法分配律七大题型·四年级数学",
     icon: "✖️",
     painPoint: "用简便方法计算：(40+4)×25，孩子只乘第一个数40×25+4，忘记4也要乘25！常见错误：只乘第一项漏乘第二项。",
     aiDiagnosis: {
@@ -147,7 +207,22 @@ const CHIPS = [
       modelDesc: "分配律拆分可视化：(40+4)×25 → 40×25 + 4×25，每个分支必须完整。逆向：37×(28+72)，提取37后28+72=100。",
       modelVisual: { type: "canvas-interactive", component: "distributive-law" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学乘法分配律正向逆向全考讲解」后取 BV 号
+      title: "乘法分配律正向逆向全考·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学乘法分配律正向逆向全考讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2021-2025年北京海淀期末必考：乘法分配律正向(40+4)×25",
       "2021-2025年北京西城期末必考：乘法分配律逆向37×28+37×72",
       "2021-2025年北京朝阳期末：125×88特殊数凑整"
@@ -160,7 +235,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "小数运算",
-    title: "小数加减竖式小数点不对齐",
+    title: "小数加减法·小数点对齐",
     icon: "🔢",
     painPoint: "列竖式计算15.62+7.8，孩子末尾对齐而不是小数点对齐，导致错误。20-5.46忘记给整数补0变成20.00。",
     aiDiagnosis: {
@@ -174,7 +249,22 @@ const CHIPS = [
       modelDesc: "竖式对齐演示：小数点用红色竖线标注，位数不够的补0显示。两数对齐后逐位计算。",
       modelVisual: { type: "canvas-interactive", component: "decimal-align" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学小数加减竖式小数点不对齐讲解」后取 BV 号
+      title: "小数加减竖式小数点不对齐·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学小数加减竖式小数点不对齐讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2021-2025年北京各区期末必考：小数加减竖式",
       "2021-2025年北京海淀期末：小数加减简便运算18.51-9.03-0.97",
       "北京统考：小数点移动与单位换算"
@@ -187,7 +277,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "三角形几何",
-    title: "三角形三边关系内角和总记错",
+    title: "三角形的内角和·说课讲解",
     icon: "🔺",
     painPoint: "判断能否围成三角形：2,3,5不能！孩子以为两边之和等于第三边就行。内角和记成360°（那是四边形）。等腰三角形底角忘记除以2。",
     aiDiagnosis: {
@@ -201,7 +291,22 @@ const CHIPS = [
       modelDesc: "三边关系可视化：短+短>长，用颜色标注最短两边和最长边。内角和180°标注在三角形内部。",
       modelVisual: { type: "canvas-interactive", component: "triangle-rules" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学三角形三边关系内角和总记错讲解」后取 BV 号
+      title: "三角形三边关系内角和总记错·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学三角形三边关系内角和总记错讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2021-2025年北京各区期末必考：三边关系判断",
       "2021-2025年北京海淀期末：内角和求角度+等腰三角形",
       "北京统考：三角形分类与三边范围"
@@ -214,7 +319,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "图形运动",
-    title: "平移格数数对应点不是数间距",
+    title: "平移格数·对应点移动",
     icon: "↗️",
     painPoint: "图形A向右平移5格再向下平移3格得到图形B，孩子数两个图形中间的空格数而不是对应点移动的格数。",
     aiDiagnosis: {
@@ -228,7 +333,22 @@ const CHIPS = [
       modelDesc: "网格图上一个三角形，标记关键点A和A'，红色箭头画出A→A'的移动路径和格数。",
       modelVisual: { type: "canvas-interactive", component: "translation-grid" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学平移格数数对应点不是数间距讲解」后取 BV 号
+      title: "平移格数数对应点不是数间距·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学平移格数数对应点不是数间距讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2021-2025年北京各区期末必考：数平移格数",
       "2021-2025年北京期末：平移求不规则图形周长",
       "北京统考：轴对称图形判断与对称轴数量"
@@ -243,7 +363,7 @@ const CHIPS = [
     grade: 4,
     subject: "语文",
     category: "阅读理解",
-    title: "词句赏析题只会写'生动形象'",
+    title: "小学语文阅读理解·10种说明方法",
     icon: "📖",
     painPoint: "结合上下文，体会'嫩绿的叶子在风中摇曳'中'摇曳'的意思。孩子只会写'生动形象'，拿不到阅卷老师的采分点。",
     aiDiagnosis: {
@@ -265,7 +385,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文词句赏析题只会写'生动形象'教学方法」后取 BV 号
+      title: "词句赏析题只会写'生动形象'·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级语文词句赏析题只会写'生动形象'教学方法"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年上海徐汇期末真题阅读《小兵张嘎》第4题：体会嘎子'溜'过去这个动词的妙处",
       "2025年北京海淀期末真题阅读《草地》词句赏析",
       "全国统考期末《现代文阅读词句理解》"
@@ -278,7 +413,7 @@ const CHIPS = [
     grade: 4,
     subject: "语文",
     category: "考场作文",
-    title: "写事流水账干巴巴写不长",
+    title: "小学满分作文·通用方法技巧",
     icon: "✍️",
     painPoint: "写《记一次游戏》，孩子写：他跑过来一脚把球踢进了球门，我很开心。全是流水账，没有细节。",
     aiDiagnosis: {
@@ -302,7 +437,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文写事流水账干巴巴写不长教学方法」后取 BV 号
+      title: "写事流水账干巴巴写不长·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级语文写事流水账干巴巴写不长教学方法"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "四年级统考期末作文《记一次游戏》",
       "四年级统考期末作文《我的乐园》",
       "高分平替数据库：写事类作文微动作素材"
@@ -317,7 +467,7 @@ const CHIPS = [
     grade: 4,
     subject: "英语",
     category: "时态与动词变形",
-    title: "单三后面的s永远漏掉",
+    title: "什么是英语中的三单·动词加s",
     icon: "🧲",
     painPoint: "He like_____ playing football. 孩子永远写 like，不知道 She goes 为什么要加 es。",
     aiDiagnosis: {
@@ -334,7 +484,22 @@ const CHIPS = [
         component: "magnet-suffix"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语单三后面的s永远漏掉语法讲解」后取 BV 号
+      title: "单三后面的s永远漏掉·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语单三后面的s永远漏掉语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年广州越秀期末真题连词成句",
       "2024年北京海淀期末看图写话易错题",
       "小升初语法易错单三专项"
@@ -347,7 +512,7 @@ const CHIPS = [
     grade: 4,
     subject: "英语",
     category: "介词与空间思维",
-    title: "介词in/on/at换个场景就瞎猜",
+    title: "英语时间介词in/on/at·语法精讲",
     icon: "📍",
     painPoint: "My mom is waiting for me _____ the bus stop. 孩子分不清到底是在'里面'、'在上面'还是'在哪个点'。",
     aiDiagnosis: {
@@ -364,7 +529,22 @@ const CHIPS = [
         component: "space-preposition"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语介词in/on/at换个场景就瞎猜语法讲解」后取 BV 号
+      title: "介词in/on/at换个场景就瞎猜·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语介词in/on/at换个场景就瞎猜语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年上海徐汇期末真题选词填空",
       "小升初语法易错介词专项",
       "2025年广州越秀期末真题介词辨析"
@@ -377,7 +557,7 @@ const CHIPS = [
     grade: 4,
     subject: "英语",
     category: "完形填空与逻辑思维",
-    title: "完形填空看懂了也选错",
+    title: "小学英语完形填空怎么做·得阅读者得天下",
     icon: "🔍",
     painPoint: "Mike was very ______, because his dog died yesterday. 选项：A.happy B.sad C.tired。孩子全凭翻译瞎猜。",
     aiDiagnosis: {
@@ -394,7 +574,22 @@ const CHIPS = [
         component: "detective-highlight"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语完形填空看懂了也选错语法讲解」后取 BV 号
+      title: "完形填空看懂了也选错·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语完形填空看懂了也选错语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "全国近3年四年级期末统考真题完形填空压轴题",
       "2024年北京海淀期末完形填空",
       "2025年浙江杭州期末选词填空"
@@ -409,7 +604,7 @@ const CHIPS = [
     grade: 5,
     subject: "数学",
     category: "几何思维",
-    title: "梯形对角线阴影面积毫无头绪",
+    title: "五年级蝴蝶模型·梯形阴影面积",
     icon: "🦋",
     painPoint: "已知梯形面积，对角线交于点O，求左右两个小三角形的面积关系。孩子习惯了死套 S=½ah，找不到高就直接放弃。",
     aiDiagnosis: {
@@ -426,7 +621,22 @@ const CHIPS = [
         component: "butterfly-geometry"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学梯形对角线阴影面积毫无头绪讲解」后取 BV 号
+      title: "梯形对角线阴影面积毫无头绪·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学梯形对角线阴影面积毫无头绪讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年上海徐汇期末压轴几何题",
       "高分奥数几何专项：蝴蝶模型",
       "2024年黄冈密卷梯形阴影面积"
@@ -439,7 +649,7 @@ const CHIPS = [
     grade: 5,
     subject: "数学",
     category: "应用题思维",
-    title: "列车过桥路程总漏车长",
+    title: "火车过桥问题·一个视频搞定",
     icon: "🚂",
     painPoint: "一列火车长200米，以每秒20米的速度通过一座长800米的桥，求完全过桥需要多少秒？孩子往往直接拿桥长800除以速度，漏掉车长。",
     aiDiagnosis: {
@@ -456,7 +666,22 @@ const CHIPS = [
         component: "train-bridge"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学列车过桥路程总漏车长讲解」后取 BV 号
+      title: "列车过桥路程总漏车长·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学列车过桥路程总漏车长讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年湖北黄冈期末真题行程专项",
       "小升初经典常考题列车过桥",
       "2025年北京海淀期末行程应用题"
@@ -469,7 +694,7 @@ const CHIPS = [
     grade: 5,
     subject: "数学",
     category: "数论思维",
-    title: "公因数公倍数分不清该求哪个",
+    title: "公因数与最小公倍数·求解及原理",
     icon: "🍬",
     painPoint: "有一些糖果，3个一堆剩2个，4个一堆剩2个，5个一堆剩2个，求最少有多少个？孩子看到数字就盲目通分或乱乘。",
     aiDiagnosis: {
@@ -486,7 +711,22 @@ const CHIPS = [
         component: "lcm-remainder"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学公因数公倍数分不清该求哪个讲解」后取 BV 号
+      title: "公因数公倍数分不清该求哪个·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学公因数公倍数分不清该求哪个讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年北京海淀期末真题数论压轴题",
       "黄冈密卷公因数公倍数综合",
       "小升初数论专项：余数问题"
@@ -501,7 +741,7 @@ const CHIPS = [
     grade: 5,
     subject: "语文",
     category: "阅读理解",
-    title: "非连续性文本不会提取对比信息",
+    title: "非连续性文本核心方法·3步掌握",
     icon: "📊",
     painPoint: "给出药品说明书或两家快递公司价格对比图表，问：小明要寄5公斤行李选哪家划算？孩子长篇大论写废话，却拿不到对比分。",
     aiDiagnosis: {
@@ -518,7 +758,22 @@ const CHIPS = [
         component: "comparison-chart"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文非连续性文本不会提取对比信息教学方法」后取 BV 号
+      title: "非连续性文本不会提取对比信息·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级语文非连续性文本不会提取对比信息教学方法"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年江苏苏系统考期末真题非连续性文本阅读",
       "2024年北京海淀期末说明书阅读",
       "全国统考非连续文本专项"
@@ -531,7 +786,7 @@ const CHIPS = [
     grade: 5,
     subject: "语文",
     category: "考场作文",
-    title: "写人只会堆砌外貌千人一面",
+    title: "作文写人·五官仿写特写",
     icon: "📸",
     painPoint: "写《一个XX的人》或《我想对您说》，描写妈妈只会写：妈妈很辛苦，头上有了白发……阅卷老师直接判为三类文。",
     aiDiagnosis: {
@@ -555,7 +810,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文写人只会堆砌外貌千人一面教学方法」后取 BV 号
+      title: "写人只会堆砌外貌千人一面·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级语文写人只会堆砌外貌千人一面教学方法"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "五年级必考作文《一个饱含深情的人》",
       "五年级必考作文《我想对您说》高分芯片",
       "全国统考写人作文特写素材库"
@@ -570,7 +840,7 @@ const CHIPS = [
     grade: 5,
     subject: "英语",
     category: "时态逻辑",
-    title: "分不清一般过去时和现在完成时",
+    title: "区分一般过去和现在完成时·五分钟",
     icon: "⚡",
     painPoint: "I _____ (lose) my key yesterday vs I _____ (lose) my key. I can't get into the room now. 孩子全填 lost，完全不知道区别。",
     aiDiagnosis: {
@@ -587,7 +857,22 @@ const CHIPS = [
         component: "past-vs-perfect"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语分不清一般过去时和现在完成时语法讲解」后取 BV 号
+      title: "分不清一般过去时和现在完成时·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语分不清一般过去时和现在完成时语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年浙江杭州期末语法单选压轴题",
       "小升初时态易错专项",
       "2024年北京海淀期末时态辨析"
@@ -600,7 +885,7 @@ const CHIPS = [
     grade: 5,
     subject: "英语",
     category: "情态动词",
-    title: "情态动词must/can/may全凭翻译瞎猜",
+    title: "小学英语语法·情态动词",
     icon: "💡",
     painPoint: "The light is on. He _____ be at home. 选项：must/can/may。孩子觉得填'可能'、'必须'都说得通，随便盲选。",
     aiDiagnosis: {
@@ -617,7 +902,22 @@ const CHIPS = [
         component: "evidence-meter"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语情态动词must/can/may全凭翻译瞎猜语法讲解」后取 BV 号
+      title: "情态动词must/can/may全凭翻译瞎猜·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语情态动词must/can/may全凭翻译瞎猜语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年山东济南期末真题完形填空",
       "小升初情态动词辨析专项",
       "2025年全国统考语法选择题"
@@ -632,7 +932,7 @@ const CHIPS = [
     grade: 6,
     subject: "数学",
     category: "小升初经典行程",
-    title: "流水行船帽子丢了模型",
+    title: "流水行船问题·小升初精讲",
     icon: "🚢",
     painPoint: "甲乙两船在河中相向而行，甲顺水乙逆水，擦身而过时帽子从甲船掉入水中。20分钟后甲船掉头追帽子，问追上需要多少分钟？孩子把所有速度列出来设未知数，算到天荒地老。",
     aiDiagnosis: {
@@ -649,7 +949,22 @@ const CHIPS = [
         component: "river-stage"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学流水行船帽子丢了模型讲解」后取 BV 号
+      title: "流水行船帽子丢了模型·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学流水行船帽子丢了模型讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "全国小升初毕业统考真题行船压轴题",
       "黄冈小升初金卷流水行船专项",
       "2025年北京海淀小升初分班考行程题"
@@ -662,7 +977,7 @@ const CHIPS = [
     grade: 6,
     subject: "数学",
     category: "小升初立体几何",
-    title: "圆柱剪开圆锥旋转空间崩塌",
+    title: "旋转体体积计算·半小时搞定",
     icon: "🌀",
     painPoint: "一个直角三角形，直角边分别为3厘米和4厘米，以3厘米的边为轴旋转一周，求得到的立体图形体积。孩子分不清底面半径是3还是4。",
     aiDiagnosis: {
@@ -679,7 +994,22 @@ const CHIPS = [
         component: "cone-rotation"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学圆柱剪开圆锥旋转空间崩塌讲解」后取 BV 号
+      title: "圆柱剪开圆锥旋转空间崩塌·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学圆柱剪开圆锥旋转空间崩塌讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "小升初立体几何专项真题",
       "徐汇区毕业考压轴卷旋转体",
       "2024年黄冈密卷圆柱圆锥综合"
@@ -692,7 +1022,7 @@ const CHIPS = [
     grade: 6,
     subject: "数学",
     category: "小升初抽屉原理",
-    title: "抽屉原理至少保证数数数漏",
+    title: "鸽巢问题·抽屉原理一次讲清楚",
     icon: "🎁",
     painPoint: "口袋里有红、黄、蓝三种颜色的球各10个，闭着眼睛往外拿，至少摸出多少个球才能保证有3个球颜色一样？孩子全凭感觉猜4个、7个。",
     aiDiagnosis: {
@@ -709,7 +1039,22 @@ const CHIPS = [
         component: "pigeonhole-drawer"
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学抽屉原理至少保证数数数漏讲解」后取 BV 号
+      title: "抽屉原理至少保证数数数漏·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学抽屉原理至少保证数数数漏讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "北京海淀小升初分班考数论压轴题",
       "2025年上海徐汇毕业考抽屉原理",
       "黄冈密卷鸽巢问题专项"
@@ -724,7 +1069,7 @@ const CHIPS = [
     grade: 6,
     subject: "语文",
     category: "文言文突破",
-    title: "课外文言文一句话都看不懂",
+    title: "走进小古文·小学文言文阅读理解",
     icon: "📜",
     painPoint: "小升初课外文言文阅读，给出一段墨子或战国策的故事，问主人公什么品质。孩子连字面意思都翻译不出来。",
     aiDiagnosis: {
@@ -746,7 +1091,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文课外文言文一句话都看不懂教学方法」后取 BV 号
+      title: "课外文言文一句话都看不懂·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级语文课外文言文一句话都看不懂教学方法"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年全国统考小升初语文大阅读真题文言文专项",
       "2024年北京海淀毕业考课外文言文",
       "黄冈密卷文言文阅读压轴"
@@ -759,7 +1119,7 @@ const CHIPS = [
     grade: 6,
     subject: "语文",
     category: "满分作文",
-    title: "结尾只会喊口号空洞煽情",
+    title: "小学作文如何写结尾·以景结情",
     icon: "🌅",
     painPoint: "写抒情或成长作文（如《那些年，我们一起走过》），结尾只会写：我们要好好学习，不辜负老师的期望，啊！明天真美好！阅卷老师直接扣分。",
     aiDiagnosis: {
@@ -783,7 +1143,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文结尾只会喊口号空洞煽情教学方法」后取 BV 号
+      title: "结尾只会喊口号空洞煽情·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级语文结尾只会喊口号空洞煽情教学方法"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "小升初满分作文选",
       "六毕业考特等文收录",
       "全国统考抒情作文以景结情专项"
@@ -798,7 +1173,7 @@ const CHIPS = [
     grade: 6,
     subject: "英语",
     category: "被动语态核心",
-    title: "被动语态永远漏掉be动词",
+    title: "英语被动语态·语法讲解",
     icon: "🔄",
     painPoint: "The web platform ______ (build) by the IT team tomorrow. 孩子看到 tomorrow 习惯性盲填 will build 导致全错。",
     aiDiagnosis: {
@@ -820,7 +1195,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语被动语态永远漏掉be动词语法讲解」后取 BV 号
+      title: "被动语态永远漏掉be动词·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语被动语态永远漏掉be动词语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年全国外国语学校小升初选拔英语易错专项",
       "2024年北京海淀毕业考语法压轴",
       "小升初被动语态辨析专项"
@@ -833,7 +1223,7 @@ const CHIPS = [
     grade: 6,
     subject: "英语",
     category: "终极短文填空",
-    title: "首字母填空全凭语感毫无章法",
+    title: "小学英语首字母填词·做题技巧",
     icon: "🔎",
     painPoint: "小升初压轴题：一段长短文挖出10个空只给首字母，要求填入正确形式。孩子全凭语感猜词。",
     aiDiagnosis: {
@@ -855,7 +1245,22 @@ const CHIPS = [
         ]
       }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语首字母填空全凭语感毫无章法语法讲解」后取 BV 号
+      title: "首字母填空全凭语感毫无章法·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级英语首字母填空全凭语感毫无章法语法讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年北京、上海、广州小升初毕业英语试卷原题",
       "2025年全国外国语学校选拔首字母填空",
       "黄冈密卷小升初英语压轴综合"
@@ -869,7 +1274,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "年龄问题几年后永远搞反",
+    title: "年龄问题·四年级奥数基础",
     icon: "🎂",
     painPoint: "小明今年8岁，妈妈今年36岁，几年后妈妈的年龄是小明的3倍？孩子总是直接拿 36÷3=12，然后说4年后，完全忘了妈妈也在变老！",
     aiDiagnosis: {
@@ -883,7 +1288,22 @@ const CHIPS = [
       modelDesc: "画一个跷跷板，左边坐着妈妈（标注36+X岁），右边坐着3个小明叠在一起（每个标注8+X岁）。跷跷板平衡时，36+X = 3×(8+X)。X用滑块可以拖动，拖到X=6时跷跷板平衡。",
       modelVisual: { type: "canvas-interactive", component: "seesaw-balance" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学年龄问题几年后永远搞反讲解」后取 BV 号
+      title: "年龄问题几年后永远搞反·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学年龄问题几年后永远搞反讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年北京西城期末真题《爸爸和儿子的年龄倍数问题》",
       "2025年黄冈密卷《年龄差不变的变形题》",
       "2024年南京期末真题《祖孙三代的年龄推算》"
@@ -896,7 +1316,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "数论与巧算思维",
-    title: "植树问题端点要不要算总搞混",
+    title: "植树问题完整版·从不会到会",
     icon: "🌳",
     painPoint: "一条100米长的路一边种树，每隔5米种一棵，两头都种，一共种多少棵？孩子直接 100÷5=20，忘了两头都要种！或者路是环形的，孩子还是+1！",
     aiDiagnosis: {
@@ -910,7 +1330,22 @@ const CHIPS = [
       modelDesc: "画一条直线路上种树，每隔5米一棵。用胶卷式交互：点击播放，树木逐棵出现，旁边实时显示间隔数和树的数量。可以切换'两端都种/只种一头/环形'三种模式，对比数量变化。",
       modelVisual: { type: "canvas-interactive", component: "film-strip-period" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学植树问题端点要不要算总搞混讲解」后取 BV 号
+      title: "植树问题端点要不要算总搞混·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学植树问题端点要不要算总搞混讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年北京海淀期末真题《马路两旁植树（两端都种）》",
       "2024年上海期末真题《圆形花坛周围种花》",
       "2025年广州天河期末真题《楼梯台阶问题》"
@@ -923,7 +1358,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "几何与空间思维",
-    title: "角的两条边延长角会变大吗",
+    title: "角的大小与边长无关·小学数学",
     icon: "📐",
     painPoint: "老师问：一个角的两条边延长后，角的大小变不变？孩子回答'变大了'，因为两条边看起来更长了！但角的大小跟边长没关系啊！",
     aiDiagnosis: {
@@ -937,7 +1372,22 @@ const CHIPS = [
       modelDesc: "画一个角，两条边可以拖动延长或缩短。中间用扇形填充颜色表示角的大小。拖动边长时，扇形面积不变，用动画直观展示'边变长、角不变'的效果。",
       modelVisual: { type: "canvas-interactive", component: "angle-stretch" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学角的两条边延长角会变大吗讲解」后取 BV 号
+      title: "角的两条边延长角会变大吗·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学角的两条边延长角会变大吗讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年北京朝阳期末真题《判断题：角的两边延长角变大》",
       "2025年武汉期末真题《用三角尺拼角》",
       "2024年深圳期末真题《比较角的大小》"
@@ -950,7 +1400,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "和差问题谁大谁小分不清",
+    title: "和差问题·三年级奥数第七讲",
     icon: "⚖️",
     painPoint: "两个数的和是48，差是12，求这两个数。孩子看到'差'就慌了，不知道是大的减小的还是小的减大的，列算式更是乱七八糟。",
     aiDiagnosis: {
@@ -964,7 +1414,22 @@ const CHIPS = [
       modelDesc: "画一个数轴，标出小数和大数的位置。小数在左，大数在右。用红线标注'差'（两数之间的距离），用蓝线标注'和'（从0到两数之和的距离）。拖动滑块调整和与差，数轴实时更新。",
       modelVisual: { type: "canvas-interactive", component: "number-axis-sum-diff" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学和差问题谁大谁小分不清讲解」后取 BV 号
+      title: "和差问题谁大谁小分不清·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学和差问题谁大谁小分不清讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年北京海淀期末真题《两数之和与差求两数》",
       "2024年杭州期末真题《书架上上下两层书》",
       "2025年成都期末真题《两筐苹果的重量问题》"
@@ -977,7 +1442,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "归一问题先求什么后求什么搞乱了",
+    title: "归一问题·小学数学必学",
     icon: "🔑",
     painPoint: "3台拖拉机5天耕地120亩，4台拖拉机7天耕地多少亩？孩子不知道先算1台1天耕多少，直接 120÷3÷4÷7 乱除一通，结果完全不对。",
     aiDiagnosis: {
@@ -991,7 +1456,22 @@ const CHIPS = [
       modelDesc: "画一个跷跷板模型：左边放3台拖拉机和5天的图标，右边放120亩。先点击'归一'按钮，跷跷板缩放为1台1天=8亩。然后再点击'扩展'按钮，换为4台7天，跷跷板自动算出224亩。",
       modelVisual: { type: "canvas-interactive", component: "seesaw-unit" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学归一问题先求什么后求什么搞乱了讲解」后取 BV 号
+      title: "归一问题先求什么后求什么搞乱了·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学归一问题先求什么后求什么搞乱了讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2024年北京东城期末真题《5台织布机8小时织布》",
       "2025年重庆期末真题《工人修路归一问题》",
       "2024年长沙期末真题《汽车运货归一扩展》"
@@ -1004,7 +1484,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "几何与空间思维",
-    title: "平行四边形拉动变成长方形面积到底变不变",
+    title: "长方形拉成平行四边形面积变化",
     icon: "🔄",
     painPoint: "一个长方形框架，拉成平行四边形后，面积变了吗？孩子说'没变，还是那根框子'，但面积明明变小了！因为底没变但高变了啊！",
     aiDiagnosis: {
@@ -1018,7 +1498,22 @@ const CHIPS = [
       modelDesc: "画一个长方形，可以拖动顶点使其变为平行四边形。底边固定不变，高用虚线标注。拖动时高会缩短，面积颜色从绿色变红色表示减小。右侧实时显示底、高、面积数值变化。",
       modelVisual: { type: "canvas-interactive", component: "parallelogram-stretch" }
     },
-    exams: [
+      video: {
+      source: "Bilibili",
+      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学平行四边形拉动变成长方形面积到底变不变讲解」后取 BV 号
+      title: "平行四边形拉动变成长方形面积到底变不变·3分钟大白话讲解",
+      duration: "",
+      searchKeyword: "小学四年级数学平行四边形拉动变成长方形面积到底变不变讲解"
+    },
+      video2: {
+        bvid: "",
+        title: "",
+        duration: "",
+        status: "待绑定",
+        searchKeyword: "",
+        note: "第二位老师视频（待填BV号）"
+      },
+  exams: [
       "2025年北京海淀期末真题《长方形拉成平行四边形面积变化》",
       "2024年天津期末真题《判断题：周长不变面积就不变》",
       "2025年南京期末真题《平行四边形与长方形面积比较》"
