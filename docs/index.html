@@ -376,6 +376,7 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <button class="nav-pill" data-page="diag" onclick="showPage('diag')">🔍 诊断区</button>
     <div class="progress-bar-mini" id="progressMini"></div>
     <span class="progress-count" id="progressCount">0/161</span>
+    <button class="nav-pill" onclick="_testAllClicks()" style="background:#333;color:#0f0;font-size:10px">🐛调试</button>
   </div>
 </header>
 
@@ -432,8 +433,21 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
   </div>
 </div>
 
+<!-- DEBUG PANEL -->
+<div id="debugPanel" style="position:fixed;bottom:0;left:0;right:0;max-height:200px;overflow-y:auto;background:rgba(0,0,0,0.9);color:#0f0;font-family:monospace;font-size:11px;padding:8px 12px;z-index:9999;display:block;border-top:2px solid #0f0"></div>
+<style>.debug-line{padding:2px 0;border-bottom:1px solid rgba(0,255,0,0.1)}</style>
+
 <script src="data.js?v=202606121200"></script>
 <script>
+// ====== 全局错误捕获 ======
+window.onerror = function(msg, url, line, col, error) {
+  _debugError('全局JS错误: ' + msg + ' (line ' + line + ')');
+  return false;
+};
+window.addEventListener('unhandledrejection', function(e) {
+  _debugError('未处理的Promise拒绝: ' + (e.reason && e.reason.message || e.reason));
+});
+
 // ====== State ======
 let currentGrade = 4;
 let currentChip = null;
@@ -488,7 +502,7 @@ function renderPainWall(filterText) {
       </div>
       <div class="pain-grid">
         ${items.map(item => `
-          <div class="pain-card ${cssClass}" onclick="openChip('${item.chipId}')">
+          <div class="pain-card ${cssClass}" data-chip-id="${item.chipId}">
             <div class="pain-card-icon">${meta.icon}</div>
             <div class="pain-card-title">${item.label}</div>
             <div class="pain-card-desc">点击进入 → 3步开始实操</div>
@@ -499,6 +513,20 @@ function renderPainWall(filterText) {
     `;
     wall.appendChild(section);
   });
+
+  // 使用事件委托 + addEventListener 绑定点击（替代 inline onclick）
+  var boundCount = 0;
+  wall.querySelectorAll('.pain-card').forEach(function(card) {
+    var chipId = card.getAttribute('data-chip-id');
+    if (chipId) {
+      card.addEventListener('click', function(e) {
+        e.stopPropagation();
+        openChip(chipId);
+      });
+      boundCount++;
+    }
+  });
+  _debugLog('  painCards 绑定了 ' + boundCount + ' 个事件监听器');
 }
 
 function filterPains() {
@@ -512,18 +540,48 @@ var MODEL_MAP = {
 
 // ====== Open Chip ======
 function openChip(chipId) {
-  var chip = CHIPS.find(function(c) { return c.id === chipId; });
-  if (!chip) return;
-  currentChip = chip;
-  
-  // 检查是否有对应的认知模型 JSON
-  var modelId = MODEL_MAP[chipId];
-  if (modelId) {
-    renderModelDetail(chip, modelId);
-  } else {
-    renderModelPage(chip);
+  try {
+    _debugLog('openChip 被调用: ' + chipId);
+    var chip = CHIPS.find(function(c) { return c.id === chipId; });
+    if (!chip) {
+      _debugError('CHIPS 中未找到 chipId=' + chipId);
+      return;
+    }
+    _debugLog('  找到芯片: ' + chip.title.substring(0, 30) + '...');
+    currentChip = chip;
+    
+    var modelId = MODEL_MAP[chipId];
+    _debugLog('  MODEL_MAP[' + chipId + '] = ' + (modelId || 'undefined'));
+    if (modelId) {
+      renderModelDetail(chip, modelId);
+    } else {
+      renderModelPage(chip);
+    }
+    _debugLog('  切换到 model 页');
+    showPage('model');
+  } catch(e) {
+    _debugError('openChip 异常: ' + e.message);
+    console.error(e);
   }
-  showPage('model');
+}
+
+// 调试面板
+var _debugLines = [];
+function _debugLog(msg) {
+  _debugLines.push(msg);
+  console.log('[DEBUG]', msg);
+  _updateDebugPanel();
+}
+function _debugError(msg) {
+  _debugLines.push('❌ ' + msg);
+  console.error('[DEBUG]', msg);
+  _updateDebugPanel();
+}
+function _updateDebugPanel() {
+  var panel = document.getElementById('debugPanel');
+  if (panel) {
+    panel.innerHTML = _debugLines.slice(-20).map(function(l) { return '<div class="debug-line">' + l + '</div>'; }).join('');
+  }
 }
 
 // ====== Render Model Page ======
@@ -1205,11 +1263,13 @@ function renderTree(filterText) {
       subjChips[s].forEach(function(chip) {
         var chipEl = document.createElement('div');
         chipEl.className = 'tree-chip ' + meta.cls;
+        chipEl.setAttribute('data-chip-id', chip.id);
         chipEl.innerHTML = '<span class="tree-chip-id">' + chip.id + '</span>' +
           '<span class="tree-chip-text" title="' + chip.title.replace(/"/g, '&quot;') + '">' + chip.title + '</span>';
-        (function(c) {
-          chipEl.onclick = function() { openChip(c.id); };
-        })(chip);
+        chipEl.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openChip(chip.id);
+        });
         chipsDiv.appendChild(chipEl);
       });
 
@@ -1257,11 +1317,44 @@ function loadVideoWarehouse() {
 
 // ====== Init ======
 function init() {
+  _debugLog('🚀 init() 开始');
+  _debugLog('  CHIPS 长度: ' + (typeof CHIPS !== 'undefined' ? CHIPS.length : 'UNDEFINED!'));
+  _debugLog('  PAIN_BUTTONS: ' + (typeof PAIN_BUTTONS !== 'undefined' ? 'defined' : 'UNDEFINED!'));
   renderTree();
   selectGrade(4);
   updateProgress();
   loadVideoWarehouse();
+  _debugLog('✅ init() 完成');
 }
+
+// 调试：测试所有痛点的点击
+function _testAllClicks() {
+  _debugLines = [];
+  _debugLog('=== 🐛 开始全量点击测试 ===');
+  var buttons = PAIN_BUTTONS[currentGrade];
+  if (!buttons) { _debugError('PAIN_BUTTONS[' + currentGrade + '] 不存在'); return; }
+  var total = 0, pass = 0, fail = 0;
+  var failList = [];
+  ['数学','语文','英语'].forEach(function(subj) {
+    if (!buttons[subj]) return;
+    buttons[subj].forEach(function(item, idx) {
+      total++;
+      var chip = CHIPS.find(function(c) { return c.id === item.chipId; });
+      if (!chip) {
+        fail++;
+        failList.push(subj + '[' + idx + '] ' + item.chipId + ' - CHIPS未找到');
+      } else {
+        pass++;
+      }
+    });
+  });
+  _debugLog('总测试: ' + total + ' | ✅通过: ' + pass + ' | ❌失败: ' + fail);
+  if (failList.length > 0) {
+    failList.slice(0, 30).forEach(function(f) { _debugError(f); });
+  }
+  _debugLog('=== 🐛 测试完成 ===');
+}
+
 init();
 </script>
 </body>
