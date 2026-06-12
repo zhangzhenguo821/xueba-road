@@ -1,0 +1,242 @@
+{
+  "version": "1.0",
+  "description": "全国小学四五六年级知识拓扑 —— 基于人教版/部编版课程标准 + 高频考点 + 易错题型",
+  "generated": "2026-06-12",
+  "design_principle": "每个知识点标注认知层级(Bloom)、考试频率(1-10)、全国平均错误率(%)、前序依赖知识",
+
+  "grades": {
+    "4": {
+      "math": {
+        "semester_1": [
+          { "id": "MATH-04-001", "topic": "大数的认识", "subtopic": "亿以内数的读写与比较", "bloom": "记忆+理解", "examFreq": 9, "errorRate": 22, "prereq": ["MATH-03-place-value"], "examType": "高频考点" },
+          { "id": "MATH-04-002", "topic": "公顷和平方千米", "subtopic": "大面积单位换算与估算", "bloom": "应用", "examFreq": 7, "errorRate": 35, "prereq": ["MATH-03-area"], "examType": "易错题型" },
+          { "id": "MATH-04-003", "topic": "角的度量", "subtopic": "量角器使用与角度计算", "bloom": "应用", "examFreq": 8, "errorRate": 28, "prereq": ["MATH-03-angle-intro"], "examType": "易错题型" },
+          { "id": "MATH-04-004", "topic": "三位数乘两位数", "subtopic": "竖式乘法与估算", "bloom": "应用", "examFreq": 10, "errorRate": 18, "prereq": ["MATH-03-multiplication"], "examType": "高频考点" },
+          { "id": "MATH-04-005", "topic": "平行四边形和梯形", "subtopic": "图形特征与高的画法", "bloom": "理解+应用", "examFreq": 7, "errorRate": 30, "prereq": ["MATH-03-quadrilateral"], "examType": "易错题型" },
+          { "id": "MATH-04-006", "topic": "除数是两位数的除法", "subtopic": "试商技巧与验算", "bloom": "应用", "examFreq": 10, "errorRate": 25, "prereq": ["MATH-03-division"], "examType": "高频考点" },
+          { "id": "MATH-04-007", "topic": "条形统计图", "subtopic": "数据整理与图表绘制", "bloom": "应用+分析", "examFreq": 5, "errorRate": 15, "prereq": [], "examType": "基础题型" },
+          { "id": "MATH-04-008", "topic": "数学广角——优化", "subtopic": "沏茶问题与对策论", "bloom": "分析+创造", "examFreq": 6, "errorRate": 40, "prereq": [], "examType": "易错题型" }
+        ],
+        "semester_2": [
+          { "id": "MATH-04-009", "topic": "四则运算", "subtopic": "加减乘除混合运算与括号规则", "bloom": "应用", "examFreq": 10, "errorRate": 20, "prereq": ["MATH-04-004", "MATH-04-006"], "examType": "高频考点" },
+          { "id": "MATH-04-010", "topic": "运算定律", "subtopic": "加法交换律/结合律、乘法交换律/结合律/分配律", "bloom": "应用+分析", "examFreq": 10, "errorRate": 32, "prereq": ["MATH-04-004"], "examType": "高频考点+易错" },
+          { "id": "MATH-04-011", "topic": "小数的意义和性质", "subtopic": "小数读写、大小比较、小数点移动", "bloom": "理解+应用", "examFreq": 9, "errorRate": 27, "prereq": ["MATH-03-fraction-intro"], "examType": "高频考点" },
+          { "id": "MATH-04-012", "topic": "小数的加减法", "subtopic": "竖式对齐与进退位", "bloom": "应用", "examFreq": 9, "errorRate": 24, "prereq": ["MATH-04-011"], "examType": "易错题型" },
+          { "id": "MATH-04-013", "topic": "三角形", "subtopic": "分类（按角/按边）、内角和、三边关系", "bloom": "理解+应用", "examFreq": 8, "errorRate": 28, "prereq": ["MATH-04-005"], "examType": "高频考点" },
+          { "id": "MATH-04-014", "topic": "小数乘法", "subtopic": "小数×整数、小数×小数、积的近似数", "bloom": "应用", "examFreq": 9, "errorRate": 38, "prereq": ["MATH-04-004", "MATH-04-011"], "examType": "高频考点+易错" },
+          { "id": "MATH-04-015", "topic": "小数除法", "subtopic": "除数是整数/小数的除法、循环小数", "bloom": "应用", "examFreq": 9, "errorRate": 42, "prereq": ["MATH-04-006", "MATH-04-011"], "examType": "高频考点+易错" },
+          { "id": "MATH-04-016", "topic": "平均数与条形统计图", "subtopic": "平均数含义与计算、复式条形统计图", "bloom": "应用+分析", "examFreq": 6, "errorRate": 20, "prereq": ["MATH-04-007"], "examType": "基础题型" },
+          { "id": "MATH-04-017", "topic": "数学广角——鸡兔同笼", "subtopic": "假设法解鸡兔同笼及其变式", "bloom": "分析+创造", "examFreq": 8, "errorRate": 45, "prereq": ["MATH-04-009"], "examType": "高频考点+易错" },
+          { "id": "MATH-04-018", "topic": "图形的运动(二)", "subtopic": "轴对称与平移", "bloom": "理解+应用", "examFreq": 5, "errorRate": 18, "prereq": [], "examType": "基础题型" },
+          { "id": "MATH-04-019", "topic": "观察物体(二)", "subtopic": "从不同方向观察立体图形", "bloom": "分析", "examFreq": 4, "errorRate": 25, "prereq": [], "examType": "空间想象" },
+          { "id": "MATH-04-020", "topic": "营养午餐", "subtopic": "综合实践：数据收集与方案设计", "bloom": "综合+评价", "examFreq": 3, "errorRate": 30, "prereq": ["MATH-04-016"], "examType": "综合应用" }
+        ]
+      },
+      "chinese": {
+        "semester_1": [
+          { "id": "CHI-04-001", "topic": "字词基础", "subtopic": "多音字辨析、近反义词、成语积累", "bloom": "记忆+理解", "examFreq": 10, "errorRate": 18, "prereq": [], "examType": "高频考点" },
+          { "id": "CHI-04-002", "topic": "句型转换", "subtopic": "把字句/被字句、反问句/陈述句、扩句缩句", "bloom": "应用", "examFreq": 9, "errorRate": 25, "prereq": [], "examType": "高频考点+易错" },
+          { "id": "CHI-04-003", "topic": "修改病句", "subtopic": "成分残缺/搭配不当/重复啰嗦/前后矛盾", "bloom": "分析+评价", "examFreq": 9, "errorRate": 32, "prereq": [], "examType": "易错题型" },
+          { "id": "CHI-04-004", "topic": "阅读理解", "subtopic": "概括段意、理解关键句、体会思想感情", "bloom": "理解+分析", "examFreq": 10, "errorRate": 30, "prereq": [], "examType": "高频考点" },
+          { "id": "CHI-04-005", "topic": "修辞手法", "subtopic": "比喻、拟人、排比、夸张的识别与仿写", "bloom": "理解+应用", "examFreq": 9, "errorRate": 22, "prereq": [], "examType": "高频考点" },
+          { "id": "CHI-04-006", "topic": "古诗文", "subtopic": "四年级必背古诗理解与默写", "bloom": "记忆+理解", "examFreq": 10, "errorRate": 20, "prereq": [], "examType": "高频考点" },
+          { "id": "CHI-04-007", "topic": "标点符号", "subtopic": "引号/省略号/破折号的用法", "bloom": "应用", "examFreq": 7, "errorRate": 28, "prereq": [], "examType": "基础题型" },
+          { "id": "CHI-04-008", "topic": "习作", "subtopic": "写人记事作文结构（开头/经过/结尾）", "bloom": "综合+创造", "examFreq": 10, "errorRate": 35, "prereq": ["CHI-04-001","CHI-04-005"], "examType": "综合应用" },
+          { "id": "CHI-04-009", "topic": "关联词语", "subtopic": "因果/转折/条件/假设/递进/并列", "bloom": "应用", "examFreq": 8, "errorRate": 28, "prereq": [], "examType": "易错题型" },
+          { "id": "CHI-04-010", "topic": "非连续性文本", "subtopic": "图表/说明书/广告信息提取", "bloom": "分析", "examFreq": 6, "errorRate": 25, "prereq": ["CHI-04-004"], "examType": "新题型" }
+        ],
+        "semester_2": [
+          { "id": "CHI-04-011", "topic": "词语辨析", "subtopic": "同音字/形近字/一词多义", "bloom": "理解+应用", "examFreq": 9, "errorRate": 24, "prereq": ["CHI-04-001"], "examType": "易错题型" },
+          { "id": "CHI-04-012", "topic": "句子排序", "subtopic": "按逻辑顺序排列句子", "bloom": "分析", "examFreq": 7, "errorRate": 22, "prereq": [], "examType": "逻辑思维" },
+          { "id": "CHI-04-013", "topic": "说明文阅读", "subtopic": "说明方法识别(举例子/列数字/打比方)", "bloom": "理解+分析", "examFreq": 8, "errorRate": 28, "prereq": ["CHI-04-004"], "examType": "高频考点" },
+          { "id": "CHI-04-014", "topic": "观察日记与写作", "subtopic": "连续观察、细节描写", "bloom": "综合+创造", "examFreq": 7, "errorRate": 30, "prereq": ["CHI-04-008"], "examType": "综合应用" },
+          { "id": "CHI-04-015", "topic": "文言文入门", "subtopic": "短小文言文理解与关键词解释", "bloom": "理解", "examFreq": 6, "errorRate": 35, "prereq": ["CHI-04-006"], "examType": "新题型" }
+        ]
+      },
+      "english": {
+        "semester_1": [
+          { "id": "ENG-04-001", "topic": "My Classroom", "subtopic": "教室物品词汇与There be句型", "bloom": "记忆+应用", "examFreq": 8, "errorRate": 20, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-04-002", "topic": "My Schoolbag", "subtopic": "学习用品词汇与What's in...问答", "bloom": "记忆+应用", "examFreq": 8, "errorRate": 18, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-04-003", "topic": "My Friends", "subtopic": "外貌/性格描述词汇与He/She has...", "bloom": "应用", "examFreq": 9, "errorRate": 25, "prereq": [], "examType": "高频考点" },
+          { "id": "ENG-04-004", "topic": "My Home", "subtopic": "房间词汇与Where is/are...问答", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-04-005", "topic": "Dinner's Ready", "subtopic": "食物词汇与Would you like...句型", "bloom": "应用", "examFreq": 8, "errorRate": 20, "prereq": [], "examType": "情景对话" },
+          { "id": "ENG-04-006", "topic": "Meet My Family", "subtopic": "家庭成员词汇与职业介绍", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": [], "examType": "情景对话" },
+          { "id": "ENG-04-007", "topic": "一般现在时", "subtopic": "第三人称单数动词变化规则", "bloom": "应用", "examFreq": 9, "errorRate": 38, "prereq": [], "examType": "高频考点+易错" },
+          { "id": "ENG-04-008", "topic": "现在进行时", "subtopic": "be+doing结构与时间标志词", "bloom": "应用", "examFreq": 9, "errorRate": 35, "prereq": [], "examType": "高频考点+易错" },
+          { "id": "ENG-04-009", "topic": "名词复数", "subtopic": "规则变化与常见不规则变化", "bloom": "记忆+应用", "examFreq": 9, "errorRate": 28, "prereq": [], "examType": "易错题型" },
+          { "id": "ENG-04-010", "topic": "代词体系", "subtopic": "人称代词/物主代词(主格宾格形容词性)", "bloom": "记忆+应用", "examFreq": 10, "errorRate": 32, "prereq": [], "examType": "高频考点+易错" }
+        ],
+        "semester_2": [
+          { "id": "ENG-04-011", "topic": "My School", "subtopic": "学校场所词汇与楼层表达", "bloom": "记忆+应用", "examFreq": 7, "errorRate": 18, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-04-012", "topic": "What Time Is It", "subtopic": "时间表达与日常活动描述", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": [], "examType": "情景对话" },
+          { "id": "ENG-04-013", "topic": "Weather", "subtopic": "天气词汇与What's the weather like...", "bloom": "应用", "examFreq": 8, "errorRate": 18, "prereq": [], "examType": "情景对话" },
+          { "id": "ENG-04-014", "topic": "At the Farm", "subtopic": "动物/蔬菜词汇与These/Those are...", "bloom": "应用", "examFreq": 7, "errorRate": 16, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-04-015", "topic": "My Clothes", "subtopic": "服装词汇与Whose...is/are问答", "bloom": "应用", "examFreq": 7, "errorRate": 20, "prereq": ["ENG-04-010"], "examType": "易错题型" },
+          { "id": "ENG-04-016", "topic": "Shopping", "subtopic": "购物对话与How much...问答", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": [], "examType": "情景对话" },
+          { "id": "ENG-04-017", "topic": "阅读理解入门", "subtopic": "短篇阅读理解与信息提取", "bloom": "理解+分析", "examFreq": 9, "errorRate": 30, "prereq": [], "examType": "高频考点+易错" },
+          { "id": "ENG-04-018", "topic": "介词用法", "subtopic": "in/on/at/under/behind/between等", "bloom": "应用", "examFreq": 8, "errorRate": 28, "prereq": [], "examType": "易错题型" }
+        ]
+      }
+    },
+
+    "5": {
+      "math": {
+        "semester_1": [
+          { "id": "MATH-05-001", "topic": "小数乘法", "subtopic": "小数乘整数/小数、积的近似数、运算定律推广", "bloom": "应用+分析", "examFreq": 10, "errorRate": 32, "prereq": ["MATH-04-014"], "examType": "高频考点" },
+          { "id": "MATH-05-002", "topic": "位置", "subtopic": "数对表示位置(列,行)", "bloom": "理解+应用", "examFreq": 5, "errorRate": 15, "prereq": [], "examType": "基础题型" },
+          { "id": "MATH-05-003", "topic": "小数除法", "subtopic": "除数是整数/小数的除法、循环小数、用计算器探索规律", "bloom": "应用+分析", "examFreq": 10, "errorRate": 38, "prereq": ["MATH-04-015"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-004", "topic": "可能性", "subtopic": "事件确定性与不确定性、概率大小判断", "bloom": "理解+分析", "examFreq": 5, "errorRate": 18, "prereq": [], "examType": "基础题型" },
+          { "id": "MATH-05-005", "topic": "简易方程", "subtopic": "用字母表示数、方程定义、解简易方程", "bloom": "应用+分析", "examFreq": 10, "errorRate": 40, "prereq": ["MATH-04-009"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-006", "topic": "多边形面积", "subtopic": "平行四边形/三角形/梯形/组合图形面积公式", "bloom": "应用+分析", "examFreq": 10, "errorRate": 35, "prereq": ["MATH-04-005","MATH-04-013"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-007", "topic": "植树问题", "subtopic": "两端都种/只种一端/两端不种/环形", "bloom": "分析+应用", "examFreq": 8, "errorRate": 42, "prereq": [], "examType": "易错题型" },
+          { "id": "MATH-05-008", "topic": "数学广角——编码", "subtopic": "数字编码与身份证号码", "bloom": "理解", "examFreq": 3, "errorRate": 15, "prereq": [], "examType": "拓展题型" }
+        ],
+        "semester_2": [
+          { "id": "MATH-05-009", "topic": "观察物体(三)", "subtopic": "三视图初步——从三个方向还原立体", "bloom": "分析", "examFreq": 6, "errorRate": 30, "prereq": ["MATH-04-019"], "examType": "空间想象" },
+          { "id": "MATH-05-010", "topic": "因数和倍数", "subtopic": "因数/倍数概念、2/3/5的倍数特征、质数合数", "bloom": "理解+应用", "examFreq": 10, "errorRate": 28, "prereq": ["MATH-04-006"], "examType": "高频考点" },
+          { "id": "MATH-05-011", "topic": "长方体和正方体", "subtopic": "特征识别、表面积与体积公式", "bloom": "应用+分析", "examFreq": 10, "errorRate": 35, "prereq": ["MATH-04-005"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-012", "topic": "分数的意义和性质", "subtopic": "分数意义、真分数假分数、分数基本性质", "bloom": "理解+应用", "examFreq": 10, "errorRate": 30, "prereq": ["MATH-04-011"], "examType": "高频考点" },
+          { "id": "MATH-05-013", "topic": "分数的加减法", "subtopic": "同分母/异分母加减法、分数加减混合运算", "bloom": "应用", "examFreq": 10, "errorRate": 32, "prereq": ["MATH-05-012"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-014", "topic": "折线统计图", "subtopic": "单式/复式折线统计图读图与绘制", "bloom": "应用+分析", "examFreq": 5, "errorRate": 15, "prereq": ["MATH-04-016"], "examType": "基础题型" },
+          { "id": "MATH-05-015", "topic": "找次品", "subtopic": "用天平找次品的最优策略(三分法)", "bloom": "分析+创造", "examFreq": 6, "errorRate": 38, "prereq": [], "examType": "易错题型" },
+          { "id": "MATH-05-016", "topic": "图形的运动(三)", "subtopic": "旋转与旋转作图", "bloom": "应用", "examFreq": 5, "errorRate": 22, "prereq": ["MATH-04-018"], "examType": "基础题型" },
+          { "id": "MATH-05-017", "topic": "分数乘法", "subtopic": "分数×整数、分数×分数、运算定律", "bloom": "应用", "examFreq": 9, "errorRate": 35, "prereq": ["MATH-05-012", "MATH-04-014"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-018", "topic": "分数除法", "subtopic": "倒数的认识、分数除法计算", "bloom": "应用", "examFreq": 9, "errorRate": 40, "prereq": ["MATH-05-017", "MATH-04-015"], "examType": "高频考点+易错" },
+          { "id": "MATH-05-019", "topic": "比", "subtopic": "比的意义、化简比、按比例分配", "bloom": "理解+应用", "examFreq": 9, "errorRate": 28, "prereq": ["MATH-05-018"], "examType": "高频考点" },
+          { "id": "MATH-05-020", "topic": "圆", "subtopic": "圆的认识、周长与面积公式", "bloom": "理解+应用", "examFreq": 9, "errorRate": 35, "prereq": ["MATH-05-006"], "examType": "高频考点+易错" }
+        ]
+      },
+      "chinese": {
+        "semester_1": [
+          { "id": "CHI-05-001", "topic": "词语理解进阶", "subtopic": "联系上下文理解词语、感情色彩辨析", "bloom": "理解+分析", "examFreq": 10, "errorRate": 25, "prereq": ["CHI-04-001"], "examType": "高频考点" },
+          { "id": "CHI-05-002", "topic": "段落结构分析", "subtopic": "总分/分总/总分总、过渡句作用", "bloom": "分析", "examFreq": 9, "errorRate": 30, "prereq": ["CHI-04-004"], "examType": "高频考点" },
+          { "id": "CHI-05-003", "topic": "说明文阅读进阶", "subtopic": "说明顺序(时间/空间/逻辑)、说明语言准确性", "bloom": "分析+评价", "examFreq": 9, "errorRate": 28, "prereq": ["CHI-04-013"], "examType": "高频考点" },
+          { "id": "CHI-05-004", "topic": "记叙文阅读", "subtopic": "六要素提取、人物描写方法、环境描写作用", "bloom": "分析+评价", "examFreq": 10, "errorRate": 32, "prereq": ["CHI-04-004"], "examType": "高频考点+易错" },
+          { "id": "CHI-05-005", "topic": "修辞手法进阶", "subtopic": "设问/反问/对偶/反复的识别与作用", "bloom": "分析+应用", "examFreq": 8, "errorRate": 25, "prereq": ["CHI-04-005"], "examType": "高频考点" },
+          { "id": "CHI-05-006", "topic": "古诗文进阶", "subtopic": "五年级必背古诗+文言文理解与翻译", "bloom": "记忆+理解+分析", "examFreq": 10, "errorRate": 28, "prereq": ["CHI-04-006","CHI-04-015"], "examType": "高频考点" },
+          { "id": "CHI-05-007", "topic": "标点符号进阶", "subtopic": "分号/书名号用法、标点综合辨析", "bloom": "应用", "examFreq": 7, "errorRate": 22, "prereq": ["CHI-04-007"], "examType": "基础题型" },
+          { "id": "CHI-05-008", "topic": "修改病句进阶", "subtopic": "指代不明/语序不当/不合逻辑", "bloom": "分析+评价", "examFreq": 8, "errorRate": 30, "prereq": ["CHI-04-003"], "examType": "易错题型" },
+          { "id": "CHI-05-009", "topic": "关联词语进阶", "subtopic": "选择关系/取舍关系、多重复句", "bloom": "应用+分析", "examFreq": 8, "errorRate": 28, "prereq": ["CHI-04-009"], "examType": "易错题型" },
+          { "id": "CHI-05-010", "topic": "习作进阶", "subtopic": "写景/状物作文、读后感、缩写故事", "bloom": "综合+创造", "examFreq": 10, "errorRate": 35, "prereq": ["CHI-04-008","CHI-04-014"], "examType": "综合应用" },
+          { "id": "CHI-05-011", "topic": "口语交际与综合性学习", "subtopic": "辩论/演讲/调查报告", "bloom": "综合", "examFreq": 4, "errorRate": 25, "prereq": [], "examType": "拓展题型" },
+          { "id": "CHI-05-012", "topic": "名著阅读", "subtopic": "四大名著节选阅读、人物形象分析", "bloom": "分析+评价", "examFreq": 8, "errorRate": 30, "prereq": ["CHI-05-004"], "examType": "高频考点" }
+        ]
+      },
+      "english": {
+        "semester_1": [
+          { "id": "ENG-05-001", "topic": "What's He Like", "subtopic": "性格/外貌描述词汇与句型", "bloom": "应用", "examFreq": 8, "errorRate": 18, "prereq": ["ENG-04-003"], "examType": "基础句型" },
+          { "id": "ENG-05-002", "topic": "My Week", "subtopic": "星期词汇与课程表达、频度副词", "bloom": "应用", "examFreq": 8, "errorRate": 20, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-05-003", "topic": "What Would You Like", "subtopic": "食物/饮料词汇与点餐对话", "bloom": "应用", "examFreq": 8, "errorRate": 18, "prereq": ["ENG-04-005"], "examType": "情景对话" },
+          { "id": "ENG-05-004", "topic": "What Can You Do", "subtopic": "能力表达(can/can't)与动词短语", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": [], "examType": "基础句型" },
+          { "id": "ENG-05-005", "topic": "There Be句型进阶", "subtopic": "There be就近原则与各种句式转换", "bloom": "应用", "examFreq": 9, "errorRate": 30, "prereq": ["ENG-04-001"], "examType": "易错题型" },
+          { "id": "ENG-05-006", "topic": "In a Nature Park", "subtopic": "自然景观词汇与Is there...问答", "bloom": "应用", "examFreq": 7, "errorRate": 18, "prereq": ["ENG-05-005"], "examType": "情景对话" },
+          { "id": "ENG-05-007", "topic": "一般现在时进阶", "subtopic": "三单变化规则、一般疑问句/否定句", "bloom": "应用", "examFreq": 10, "errorRate": 35, "prereq": ["ENG-04-007"], "examType": "高频考点+易错" },
+          { "id": "ENG-05-008", "topic": "现在进行时进阶", "subtopic": "现在分词变化规则、句型转换", "bloom": "应用", "examFreq": 10, "errorRate": 32, "prereq": ["ENG-04-008"], "examType": "高频考点+易错" },
+          { "id": "ENG-05-009", "topic": "一般将来时", "subtopic": "will/be going to用法与区别", "bloom": "应用", "examFreq": 9, "errorRate": 38, "prereq": ["ENG-05-007"], "examType": "高频考点+易错" },
+          { "id": "ENG-05-010", "topic": "阅读理解进阶", "subtopic": "中篇阅读+推理判断题", "bloom": "理解+分析", "examFreq": 10, "errorRate": 32, "prereq": ["ENG-04-017"], "examType": "高频考点+易错" },
+          { "id": "ENG-05-011", "topic": "冠词用法", "subtopic": "a/an/the用法与零冠词", "bloom": "应用", "examFreq": 8, "errorRate": 30, "prereq": [], "examType": "易错题型" },
+          { "id": "ENG-05-012", "topic": "形容词比较级", "subtopic": "规则变化与-er/more than句型", "bloom": "应用", "examFreq": 9, "errorRate": 35, "prereq": [], "examType": "高频考点+易错" }
+        ]
+      }
+    },
+
+    "6": {
+      "math": {
+        "semester_1": [
+          { "id": "MATH-06-001", "topic": "分数乘法", "subtopic": "分数乘分数、分数混合运算与简便计算", "bloom": "应用+分析", "examFreq": 10, "errorRate": 30, "prereq": ["MATH-05-017"], "examType": "高频考点" },
+          { "id": "MATH-06-002", "topic": "位置与方向(二)", "subtopic": "用方向和距离确定位置", "bloom": "应用", "examFreq": 5, "errorRate": 18, "prereq": ["MATH-05-002"], "examType": "基础题型" },
+          { "id": "MATH-06-003", "topic": "分数除法", "subtopic": "分数除以整数/分数、已知一个数的几分之几求这个数", "bloom": "应用+分析", "examFreq": 10, "errorRate": 38, "prereq": ["MATH-05-018","MATH-06-001"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-004", "topic": "比", "subtopic": "比的基本性质、化简比、按比分配应用题", "bloom": "应用+分析", "examFreq": 10, "errorRate": 28, "prereq": ["MATH-06-003"], "examType": "高频考点" },
+          { "id": "MATH-06-005", "topic": "圆", "subtopic": "圆周长/面积公式推导与应用、环形面积", "bloom": "应用+分析", "examFreq": 10, "errorRate": 35, "prereq": ["MATH-05-020"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-006", "topic": "百分数(一)", "subtopic": "百分数意义、百分数/分数/小数互化", "bloom": "理解+应用", "examFreq": 10, "errorRate": 25, "prereq": ["MATH-05-012"], "examType": "高频考点" },
+          { "id": "MATH-06-007", "topic": "扇形统计图", "subtopic": "扇形统计图读图与信息提取、选择合适的统计图", "bloom": "应用+分析", "examFreq": 6, "errorRate": 18, "prereq": ["MATH-05-014"], "examType": "基础题型" },
+          { "id": "MATH-06-008", "topic": "数学广角——数与形", "subtopic": "数形结合思想、找规律", "bloom": "分析+创造", "examFreq": 7, "errorRate": 35, "prereq": [], "examType": "易错题型" },
+          { "id": "MATH-06-009", "topic": "负数", "subtopic": "负数认识、数轴与负数比较", "bloom": "理解+应用", "examFreq": 7, "errorRate": 20, "prereq": [], "examType": "基础题型" },
+          { "id": "MATH-06-010", "topic": "百分数(二)", "subtopic": "折扣/成数/税率/利率应用题", "bloom": "应用+分析", "examFreq": 10, "errorRate": 30, "prereq": ["MATH-06-006"], "examType": "高频考点" },
+          { "id": "MATH-06-011", "topic": "圆柱与圆锥", "subtopic": "圆柱表面积/体积、圆锥体积公式及应用", "bloom": "应用+分析", "examFreq": 10, "errorRate": 40, "prereq": ["MATH-05-011","MATH-06-005"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-012", "topic": "比例", "subtopic": "比例意义与性质、正比例/反比例判断", "bloom": "理解+应用+分析", "examFreq": 10, "errorRate": 35, "prereq": ["MATH-06-004"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-013", "topic": "鸽巢原理", "subtopic": "抽屉原理初步应用", "bloom": "分析+创造", "examFreq": 6, "errorRate": 32, "prereq": [], "examType": "拓展题型" },
+          { "id": "MATH-06-014", "topic": "总复习", "subtopic": "数与代数/图形与几何/统计与概率/综合应用", "bloom": "综合+评价", "examFreq": 10, "errorRate": 25, "prereq": ["*"], "examType": "小升初核心" },
+          { "id": "MATH-06-015", "topic": "工程问题", "subtopic": "工作效率/工作时间/工作总量关系", "bloom": "应用+分析", "examFreq": 9, "errorRate": 40, "prereq": ["MATH-06-003"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-016", "topic": "行程问题", "subtopic": "相遇问题/追及问题/环形跑道", "bloom": "应用+分析", "examFreq": 9, "errorRate": 42, "prereq": ["MATH-06-012"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-017", "topic": "浓度问题", "subtopic": "浓度公式、稀释与浓缩", "bloom": "应用+分析", "examFreq": 8, "errorRate": 45, "prereq": ["MATH-06-010"], "examType": "易错题型" },
+          { "id": "MATH-06-018", "topic": "利润问题", "subtopic": "成本/售价/利润/利润率关系", "bloom": "应用+分析", "examFreq": 8, "errorRate": 38, "prereq": ["MATH-06-010"], "examType": "高频考点" },
+          { "id": "MATH-06-019", "topic": "列方程解应用题", "subtopic": "设未知数、找等量关系、列方程", "bloom": "分析+综合", "examFreq": 10, "errorRate": 35, "prereq": ["MATH-05-005"], "examType": "高频考点+易错" },
+          { "id": "MATH-06-020", "topic": "鸡兔同笼进阶", "subtopic": "假设法与方程法综合应用", "bloom": "分析+创造", "examFreq": 8, "errorRate": 40, "prereq": ["MATH-04-017","MATH-06-019"], "examType": "高频考点+易错" }
+        ]
+      },
+      "chinese": {
+        "semester_1": [
+          { "id": "CHI-06-001", "topic": "字词综合", "subtopic": "易错字辨析、成语/谚语/歇后语积累", "bloom": "记忆+理解+应用", "examFreq": 10, "errorRate": 22, "prereq": ["CHI-05-001"], "examType": "高频考点" },
+          { "id": "CHI-06-002", "topic": "句子综合", "subtopic": "句型转换(含双重否定)、仿写句子", "bloom": "应用+分析", "examFreq": 10, "errorRate": 28, "prereq": ["CHI-04-002"], "examType": "高频考点" },
+          { "id": "CHI-06-003", "topic": "修改病句综合", "subtopic": "八种病句类型综合辨析与修改", "bloom": "分析+评价", "examFreq": 10, "errorRate": 30, "prereq": ["CHI-05-008"], "examType": "高频考点+易错" },
+          { "id": "CHI-06-004", "topic": "记叙文阅读综合", "subtopic": "概括主要内容/领会中心思想/分析写作手法", "bloom": "分析+评价", "examFreq": 10, "errorRate": 35, "prereq": ["CHI-05-004"], "examType": "高频考点+易错" },
+          { "id": "CHI-06-005", "topic": "说明文阅读综合", "subtopic": "辨析说明方法作用、评价说明语言", "bloom": "分析+评价", "examFreq": 9, "errorRate": 30, "prereq": ["CHI-05-003"], "examType": "高频考点" },
+          { "id": "CHI-06-006", "topic": "古诗文综合", "subtopic": "六年级必背+小学段总复习、文言文翻译技巧", "bloom": "记忆+理解+分析", "examFreq": 10, "errorRate": 28, "prereq": ["CHI-05-006"], "examType": "高频考点" },
+          { "id": "CHI-06-007", "topic": "修辞手法综合", "subtopic": "八种修辞手法综合辨析与作用分析", "bloom": "分析+评价", "examFreq": 9, "errorRate": 25, "prereq": ["CHI-05-005"], "examType": "高频考点" },
+          { "id": "CHI-06-008", "topic": "关联词综合", "subtopic": "八种关系综合辨析、选择填空", "bloom": "应用+分析", "examFreq": 8, "errorRate": 25, "prereq": ["CHI-05-009"], "examType": "易错题型" },
+          { "id": "CHI-06-009", "topic": "非连续性文本综合", "subtopic": "多材料综合阅读与信息整合", "bloom": "分析+评价", "examFreq": 8, "errorRate": 28, "prereq": ["CHI-04-010"], "examType": "新题型" },
+          { "id": "CHI-06-010", "topic": "习作综合", "subtopic": "命题作文/半命题作文/话题作文/想象作文", "bloom": "综合+创造", "examFreq": 10, "errorRate": 35, "prereq": ["CHI-05-010"], "examType": "综合应用" },
+          { "id": "CHI-06-011", "topic": "名著阅读综合", "subtopic": "中外名著阅读方法与人物分析", "bloom": "分析+评价", "examFreq": 8, "errorRate": 30, "prereq": ["CHI-05-012"], "examType": "高频考点" },
+          { "id": "CHI-06-012", "topic": "小升初语文总复习", "subtopic": "基础知识/阅读理解/作文三大板块综合", "bloom": "综合+评价", "examFreq": 10, "errorRate": 28, "prereq": ["*"], "examType": "小升初核心" }
+        ]
+      },
+      "english": {
+        "semester_1": [
+          { "id": "ENG-06-001", "topic": "How Can I Get There", "subtopic": "问路指路词汇与句型", "bloom": "应用", "examFreq": 8, "errorRate": 20, "prereq": ["ENG-04-018"], "examType": "情景对话" },
+          { "id": "ENG-06-002", "topic": "Ways to Go to School", "subtopic": "交通方式词汇与How do you come...", "bloom": "应用", "examFreq": 8, "errorRate": 18, "prereq": [], "examType": "情景对话" },
+          { "id": "ENG-06-003", "topic": "My Weekend Plan", "subtopic": "将来时be going to+动词短语", "bloom": "应用", "examFreq": 9, "errorRate": 28, "prereq": ["ENG-05-009"], "examType": "高频考点" },
+          { "id": "ENG-06-004", "topic": "I Have a Pen Pal", "subtopic": "兴趣爱好词汇与第三人称单数一般现在时", "bloom": "应用", "examFreq": 9, "errorRate": 30, "prereq": ["ENG-05-007"], "examType": "高频考点+易错" },
+          { "id": "ENG-06-005", "topic": "What Does He Do", "subtopic": "职业词汇与第三人称单数问答", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": ["ENG-06-004"], "examType": "基础句型" },
+          { "id": "ENG-06-006", "topic": "一般过去时", "subtopic": "动词过去式规则/不规则变化、时间状语", "bloom": "应用", "examFreq": 10, "errorRate": 42, "prereq": ["ENG-05-007"], "examType": "高频考点+易错" },
+          { "id": "ENG-06-007", "topic": "比较级与最高级", "subtopic": "形容词/副词比较级和最高级综合", "bloom": "应用+分析", "examFreq": 10, "errorRate": 38, "prereq": ["ENG-05-012"], "examType": "高频考点+易错" },
+          { "id": "ENG-06-008", "topic": "时态综合辨析", "subtopic": "四种时态(一般现在/现在进行/一般将来/一般过去)综合判断", "bloom": "分析+评价", "examFreq": 10, "errorRate": 40, "prereq": ["ENG-06-006","ENG-06-003"], "examType": "高频考点+易错" },
+          { "id": "ENG-06-009", "topic": "How Tall Are You", "subtopic": "身高体重/比较级句型应用", "bloom": "应用", "examFreq": 8, "errorRate": 22, "prereq": ["ENG-06-007"], "examType": "基础句型" },
+          { "id": "ENG-06-010", "topic": "Last Weekend", "subtopic": "过去时综合应用与叙述", "bloom": "应用+综合", "examFreq": 9, "errorRate": 32, "prereq": ["ENG-06-006"], "examType": "高频考点" },
+          { "id": "ENG-06-011", "topic": "Where Did You Go", "subtopic": "假期活动词汇与过去时问答", "bloom": "应用", "examFreq": 8, "errorRate": 25, "prereq": ["ENG-06-006"], "examType": "情景对话" },
+          { "id": "ENG-06-012", "topic": "Then and Now", "subtopic": "过去与现在的对比表达", "bloom": "应用+分析", "examFreq": 8, "errorRate": 28, "prereq": ["ENG-06-006","ENG-06-007"], "examType": "高频考点" },
+          { "id": "ENG-06-013", "topic": "阅读理解综合", "subtopic": "长篇阅读+主旨/细节/推理/词义猜测", "bloom": "理解+分析+评价", "examFreq": 10, "errorRate": 35, "prereq": ["ENG-05-010"], "examType": "高频考点+易错" },
+          { "id": "ENG-06-014", "topic": "小升初英语总复习", "subtopic": "词汇/语法/阅读/写作四大板块综合", "bloom": "综合+评价", "examFreq": 10, "errorRate": 30, "prereq": ["*"], "examType": "小升初核心" },
+          { "id": "ENG-06-015", "topic": "情态动词综合", "subtopic": "can/must/should/may/will用法辨析", "bloom": "应用+分析", "examFreq": 9, "errorRate": 32, "prereq": ["ENG-05-004"], "examType": "高频考点+易错" },
+          { "id": "ENG-06-016", "topic": "疑问词综合", "subtopic": "Wh-疑问词(what/when/where/why/who/how)综合辨析", "bloom": "应用+分析", "examFreq": 10, "errorRate": 28, "prereq": [], "examType": "高频考点" }
+        ]
+      }
+    }
+  },
+
+  "national_exam_patterns": {
+    "description": "全国各省市期末/小升初真题中高频出现且错误率>30%的题型",
+    "math_hotspots": [
+      { "topic": "分数应用题(分数乘除法)", "grades": [5, 6], "frequency": 10, "errorRate": 42, "topExamRegions": ["北京", "上海", "江苏", "浙江", "广东", "湖北"] },
+      { "topic": "百分数应用题(折扣/税率/利率)", "grades": [6], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "圆柱与圆锥体积", "grades": [6], "frequency": 10, "errorRate": 40, "topExamRegions": ["全国"] },
+      { "topic": "简易方程/列方程解应用题", "grades": [5, 6], "frequency": 10, "errorRate": 38, "topExamRegions": ["全国"] },
+      { "topic": "多边形面积(组合图形)", "grades": [5], "frequency": 10, "errorRate": 36, "topExamRegions": ["全国"] },
+      { "topic": "比例与正反比例判断", "grades": [6], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "行程问题(相遇/追及)", "grades": [6], "frequency": 9, "errorRate": 42, "topExamRegions": ["江苏", "浙江", "广东", "湖北"] },
+      { "topic": "工程问题", "grades": [6], "frequency": 9, "errorRate": 40, "topExamRegions": ["江苏", "浙江", "湖北"] },
+      { "topic": "小数乘除法运算", "grades": [4, 5], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "植树问题", "grades": [5], "frequency": 8, "errorRate": 42, "topExamRegions": ["北京", "上海", "广东"] },
+      { "topic": "鸡兔同笼变式", "grades": [4, 6], "frequency": 8, "errorRate": 43, "topExamRegions": ["江苏", "浙江", "山东"] },
+      { "topic": "找次品(三分法)", "grades": [5], "frequency": 6, "errorRate": 38, "topExamRegions": ["北京", "上海"] }
+    ],
+    "chinese_hotspots": [
+      { "topic": "修改病句(八种类型综合)", "grades": [4, 5, 6], "frequency": 10, "errorRate": 32, "topExamRegions": ["全国"] },
+      { "topic": "阅读理解·概括与中心思想", "grades": [5, 6], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "说明文阅读·说明方法辨析", "grades": [4, 5, 6], "frequency": 9, "errorRate": 30, "topExamRegions": ["全国"] },
+      { "topic": "文言文翻译与关键词理解", "grades": [5, 6], "frequency": 9, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "修辞手法综合辨析与作用", "grades": [5, 6], "frequency": 10, "errorRate": 28, "topExamRegions": ["全国"] },
+      { "topic": "关联词选填", "grades": [4, 5, 6], "frequency": 9, "errorRate": 28, "topExamRegions": ["全国"] },
+      { "topic": "作文·审题与结构", "grades": [4, 5, 6], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] }
+    ],
+    "english_hotspots": [
+      { "topic": "一般过去时(不规则动词)", "grades": [6], "frequency": 10, "errorRate": 42, "topExamRegions": ["全国"] },
+      { "topic": "比较级与最高级", "grades": [5, 6], "frequency": 10, "errorRate": 38, "topExamRegions": ["全国"] },
+      { "topic": "时态综合辨析", "grades": [6], "frequency": 10, "errorRate": 40, "topExamRegions": ["全国"] },
+      { "topic": "一般现在时(三单变化)", "grades": [4, 5, 6], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "阅读理解·推理判断", "grades": [5, 6], "frequency": 10, "errorRate": 35, "topExamRegions": ["全国"] },
+      { "topic": "代词体系(人称/物主)", "grades": [4, 5, 6], "frequency": 10, "errorRate": 32, "topExamRegions": ["全国"] },
+      { "topic": "介词用法(in/on/at/under等)", "grades": [4, 5, 6], "frequency": 9, "errorRate": 30, "topExamRegions": ["全国"] }
+    ]
+  }
+}
