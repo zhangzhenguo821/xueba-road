@@ -534,6 +534,8 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 </div>
 
 <script src="data.js?v=202606121200"></script>
+<script src="data/exams/index-data.js?v=202606121700"></script>
+<script src="data/exams/index-enriched-data.js?v=202606121700"></script>
 <script>
 // ====== State ======
 let currentGrade = 4;
@@ -1541,51 +1543,45 @@ function loadVideoWarehouse() {
 }
 
 // ====== Exam Library ======
-var _examData = [];
+// Data loaded via <script> tags (no fetch() needed, works on file://)
+var _examData = (typeof _EXAM_DATA !== 'undefined') ? _EXAM_DATA : [];
 var _examEnriched = {};  // examId -> enriched data
 var _examRegions = [];
 
 function loadExams() {
-  fetch('data/exams/index.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      _examData = data;
-      // 收集所有地区
-      var regionSet = {};
-      data.forEach(function(e) { regionSet[e.region] = true; });
-      _examRegions = Object.keys(regionSet).sort();
-      // 填充地区下拉框
-      var sel = document.getElementById('examRegion');
-      _examRegions.forEach(function(r) {
-        var opt = document.createElement('option');
-        opt.value = r;
-        opt.textContent = r;
-        sel.appendChild(opt);
-      });
-      
-      // Try to load enriched data with sample questions
-      loadEnrichedExams();
-    })
-    .catch(function(err) {
-      console.error('加载真题数据失败:', err);
-      document.getElementById('examGrid').innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">📭</div><div class="exam-empty-title">真题数据加载失败</div><div class="exam-empty-desc">请检查 network 连接后刷新页面</div></div>';
-    });
+  if (typeof _EXAM_DATA === 'undefined') {
+    document.getElementById('examGrid').innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">📭</div><div class="exam-empty-title">真题数据加载失败</div><div class="exam-empty-desc">请检查 network 连接后刷新页面</div></div>';
+    return;
+  }
+  _examData = _EXAM_DATA;
+  
+  // 收集所有地区
+  var regionSet = {};
+  _examData.forEach(function(e) { regionSet[e.region] = true; });
+  _examRegions = Object.keys(regionSet).sort();
+  // 填充地区下拉框
+  var sel = document.getElementById('examRegion');
+  _examRegions.forEach(function(r) {
+    var opt = document.createElement('option');
+    opt.value = r;
+    opt.textContent = r;
+    sel.appendChild(opt);
+  });
+  
+  // Load enriched data from pre-loaded var
+  loadEnrichedExams();
 }
 
 function loadEnrichedExams() {
-  fetch('data/exams/index-enriched.json')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      data.forEach(function(e) {
-        _examEnriched[e.id] = e;
-      });
-      console.log('Loaded enriched exam data:', Object.keys(_examEnriched).length, 'exams');
-      renderExams();
-    })
-    .catch(function() {
-      console.log('Enriched data not available, using basic exam data');
-      renderExams();
+  if (typeof _EXAM_ENRICHED_DATA !== 'undefined' && _EXAM_ENRICHED_DATA.length > 0) {
+    _EXAM_ENRICHED_DATA.forEach(function(e) {
+      _examEnriched[e.id] = e;
     });
+    console.log('✅ 真题数据已加载: ' + _examData.length + ' 张试卷, ' + Object.keys(_examEnriched).length + ' 张含真题内容');
+  } else {
+    console.log('⚠️ 真题内容数据未就绪，仅展示基础试卷信息');
+  }
+  renderExams();
 }
 
 function renderExams() {
