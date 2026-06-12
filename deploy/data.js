@@ -30,16 +30,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学得分扣分题换个壳就不会讲解」后取 BV 号
-      title: "得分扣分题换个壳就不会·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1zK4y1G7Ys",
+        title: "鸡兔同笼系列的倒扣分问题，两分钟教你掌握解题方法",
+        duration: "3:5",
       searchKeyword: "小学四年级数学得分扣分题换个壳就不会讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1Yr4y137mh",
+        title: "三年级数学培优：鸡兔同笼拓展题，得分扣分你能正确理解吗",
+        duration: "4:9",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -75,16 +75,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学周期循环问题余数对应讲解」后取 BV 号
-      title: "周期循环问题余数对应·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1EE411T7eQ",
+        title: "用余数解决周期性问题",
+        duration: "23:22",
       searchKeyword: "小学四年级数学周期循环问题余数对应讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1yGAfzFELV",
+        title: "最新特等奖！二年级下册数学《有余数的除法》公开课【小学数学新课标任务群】有余数的除法优质课配套视频课件教案逐字稿有余数除法，有余数的除法二年级，周期问题",
+        duration: "41:41",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -120,16 +120,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学长方形剪拼与重叠面积讲解」后取 BV 号
-      title: "长方形剪拼与重叠面积·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1RYdPBrEoD",
+        title: "小学面积重难点：长方形正方形重叠面积差",
+        duration: "1:9",
       searchKeyword: "小学四年级数学长方形剪拼与重叠面积讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV16Q4y197fq",
+        title: "三年级周长进阶题！ 注意两个长方形有重叠的部分哦！",
+        duration: "1:59",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -165,16 +165,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学盈亏问题多多少少搞不清讲解」后取 BV 号
-      title: "盈亏问题多多少少搞不清·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1tx411V7oB",
+        title: "小学奥数三年级  基本盈亏问题",
+        duration: "1:28",
       searchKeyword: "小学四年级数学盈亏问题多多少少搞不清讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV11NtAe5Ese",
+        title: "L3-16盈亏问题",
+        duration: "28:23",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -209,16 +209,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学乘法分配律正向逆向全考讲解」后取 BV 号
-      title: "乘法分配律正向逆向全考·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1qt4y1X7Bq",
+        title: "【教师招聘】小学数学《乘法分配律》示范课",
+        duration: "9:4",
       searchKeyword: "小学四年级数学乘法分配律正向逆向全考讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV13V411Y7xy",
+        title: "三招打败乘法分配律",
+        duration: "10:20",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -251,16 +251,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学小数加减竖式小数点不对齐讲解」后取 BV 号
-      title: "小数加减竖式小数点不对齐·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1CvcwzcEyM",
+        title: "为什么小数点要对齐？90% 孩子只背规则不懂原理",
+        duration: "2:6",
       searchKeyword: "小学四年级数学小数加减竖式小数点不对齐讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1rp42117ZM",
+        title: "第六单元圆柱与圆锥~05-小数加减法中的看错算错问题#四年级下#~看动画~学数学#小学数学（人教版）",
+        duration: "5:55",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -293,16 +293,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学三角形三边关系内角和总记错讲解」后取 BV 号
-      title: "三角形三边关系内角和总记错·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1ow411776m",
+        title: "一下就记住了三角形内角和是180",
+        duration: "0:13",
       searchKeyword: "小学四年级数学三角形三边关系内角和总记错讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1584y1b7M4",
+        title: "三角形的内角和（人教四下P67）",
+        duration: "8:14",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -335,16 +335,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学平移格数数对应点不是数间距讲解」后取 BV 号
-      title: "平移格数数对应点不是数间距·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV19y421a7gC",
+        title: "小学数学四年级下册 2023最新人教版  第7单元 轴对称平移 动画教学课件【全集】",
+        duration: "35:14",
       searchKeyword: "小学四年级数学平移格数数对应点不是数间距讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1xjG1zpEBw",
+        title: "平移法VS标向法四年级求周长",
+        duration: "1:13",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -387,16 +387,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文词句赏析题只会写'生动形象'教学方法」后取 BV 号
-      title: "词句赏析题只会写'生动形象'·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV15u4y1S7VC",
+        title: "【明明白白17】说明文题目不会做？记不住说明方法？分析不出说明方法的作用？这个词语能不能删掉？一次性解决说明文阅读写作所有问题！（小学初中使用）",
+        duration: "36:59",
       searchKeyword: "小学四年级语文词句赏析题只会写'生动形象'教学方法"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1eh411u7ZA",
+        title: "小学语文阅读理解高频常考题型-说明方法、说明文语言",
+        duration: "7:57",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -439,16 +439,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文写事流水账干巴巴写不长教学方法」后取 BV 号
-      title: "写事流水账干巴巴写不长·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1zCYPzLESu",
+        title: "【全18集】B站最全 小学满分作文，满分作文小学通用方法技巧语文作文技，讲写人基础外貌写活四大方法",
+        duration: "662:19",
       searchKeyword: "小学四年级语文写事流水账干巴巴写不长教学方法"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1MvaVzUE3w",
+        title: "豆神大语文【万能作文课】从零开始拯救所有学渣！3-9年级必入满分作文，满分作文通用方法技巧，紧扣中考大纲不愁写不出好作文！！！",
+        duration: "369:13",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -486,16 +486,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语单三后面的s永远漏掉语法讲解」后取 BV 号
-      title: "单三后面的s永远漏掉·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1B94y1Q7x4",
+        title: "什么是英语中的三单？第三人称单数，动词啥时候加s",
+        duration: "10:17",
       searchKeyword: "小学四年级英语单三后面的s永远漏掉语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1WT411t7JW",
+        title: "英语基础知识——动词第三人称单数（如何加s）",
+        duration: "4:55",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -531,16 +531,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语介词in/on/at换个场景就瞎猜语法讲解」后取 BV 号
-      title: "介词in/on/at换个场景就瞎猜·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1TTZKY1EwU",
+        title: "【雪梨老师】最全！时间介词天花板教学！一条视频教你搞定in/on/at!【建议收藏】",
+        duration: "0:28",
       searchKeyword: "小学四年级英语介词in/on/at换个场景就瞎猜语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1TwzaYgED1",
+        title: "【雪梨老师】英语中最难的时间介词 in on at 如何区分？一个口诀教会你！英语零基础跟我学，真的很轻松～【建议收藏】",
+        duration: "0:27",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -576,16 +576,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语完形填空看懂了也选错语法讲解」后取 BV 号
-      title: "完形填空看懂了也选错·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1xZ421a7Eu",
+        title: "英语时文新课！快捷英语七年级英语时文阅读26期 第二周周五：完形填空 为贫困儿童提供免费教育  | 做题技巧 单词积累",
+        duration: "19:5",
       searchKeyword: "小学四年级英语完形填空看懂了也选错语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV166RQBEE6r",
+        title: "【全100集】初中英语语法合集 中考阅读理解 答题技巧  附高清完整版视频+资料 一个视频带你学完初中英语完形填空!",
+        duration: "414:57",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -623,16 +623,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学梯形对角线阴影面积毫无头绪讲解」后取 BV 号
-      title: "梯形对角线阴影面积毫无头绪·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1s2421Z7tR",
+        title: "拉窗帘＋蝴蝶定理，求阴影面积#五年级",
+        duration: "0:54",
       searchKeyword: "小学四年级数学梯形对角线阴影面积毫无头绪讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1i7kVBqEyr",
+        title: "五年级几何求面积，蝴蝶模型应用",
+        duration: "3:41",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -668,16 +668,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学列车过桥路程总漏车长讲解」后取 BV 号
-      title: "列车过桥路程总漏车长·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1E14y1977f",
+        title: "一个视频搞定火车过桥问题。学奥数原来很简单",
+        duration: "11:44",
       searchKeyword: "小学四年级数学列车过桥路程总漏车长讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1YsqfYHEBJ",
+        title: "火车过桥问题可视化",
+        duration: "0:59",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -713,16 +713,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学公因数公倍数分不清该求哪个讲解」后取 BV 号
-      title: "公因数公倍数分不清该求哪个·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1sY4y147FJ",
+        title: "一道典型题弄懂最小公倍数和最大公因数。",
+        duration: "1:26",
       searchKeyword: "小学四年级数学公因数公倍数分不清该求哪个讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1tY41147MH",
+        title: "五年级数学最大公因数与最小公倍数求解及原理",
+        duration: "10:26",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -760,16 +760,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文非连续性文本不会提取对比信息教学方法」后取 BV 号
-      title: "非连续性文本不会提取对比信息·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1Rc411K7Fo",
+        title: "小学4——6年级非连续性文本阅读高分技巧+解题讲解",
+        duration: "14:2",
       searchKeyword: "小学四年级语文非连续性文本不会提取对比信息教学方法"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1mB4y1b7Nc",
+        title: "非连续性文本阅读总复习 小学语文六年级下册 统编版",
+        duration: "25:59",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -812,16 +812,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文写人只会堆砌外貌千人一面教学方法」后取 BV 号
-      title: "写人只会堆砌外貌千人一面·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1H3LyzUEq9",
+        title: "全118集【金波四季美文精读】精读。仿写，不会写作文的看过来，提升阅读能力 字词积累 句子仿写，视频+PDF",
+        duration: "512:3",
       searchKeyword: "小学四年级语文写人只会堆砌外貌千人一面教学方法"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1Amm4YkEVF",
+        title: "全239集《名著仿写课堂》精选240部名著，涉及180位作家，514个著名素材片段包含:4个结构、9种写作顺序、8大句式、11大修辞、11种手法",
+        duration: "562:18",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -859,16 +859,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语分不清一般过去时和现在完成时语法讲解」后取 BV 号
-      title: "分不清一般过去时和现在完成时·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV19C4y1E7bx",
+        title: "一般过去时是有啥说啥，现在完成时是话中有话！",
+        duration: "1:16",
       searchKeyword: "小学四年级英语分不清一般过去时和现在完成时语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1AM411X7cy",
+        title: "一般过去时和现在完成时的区别-可能是全网说的最清楚的一个视频",
+        duration: "3:46",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -904,16 +904,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语情态动词must/can/may全凭翻译瞎猜语法讲解」后取 BV 号
-      title: "情态动词must/can/may全凭翻译瞎猜·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1xC4y1377v",
+        title: "秒懂「情态动词」：表达“怀疑”、“命令”、“建议”就靠它！",
+        duration: "1:38",
       searchKeyword: "小学四年级英语情态动词must/can/may全凭翻译瞎猜语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1hJ41197vf",
+        title: "小学英语语法总结",
+        duration: "9:43",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -951,16 +951,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学流水行船帽子丢了模型讲解」后取 BV 号
-      title: "流水行船帽子丢了模型·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1S64y1Y7AL",
+        title: "《小升初精讲》第36讲 流水行船问题",
+        duration: "17:1",
       searchKeyword: "小学四年级数学流水行船帽子丢了模型讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1rMKEzHE9b",
+        title: "许盛老师教你小升初必考流水行船问题！",
+        duration: "0:43",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -996,16 +996,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学圆柱剪开圆锥旋转空间崩塌讲解」后取 BV 号
-      title: "圆柱剪开圆锥旋转空间崩塌·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1oe411m7Y6",
+        title: "抛物线旋转体里头放个正方体，求正方体体积？",
+        duration: "4:34",
       searchKeyword: "小学四年级数学圆柱剪开圆锥旋转空间崩塌讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1GuwSz7Eov",
+        title: "35、六年级数学培优：长方形旋转形成圆柱体体积之比计算",
+        duration: "3:21",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1041,16 +1041,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学抽屉原理至少保证数数数漏讲解」后取 BV 号
-      title: "抽屉原理至少保证数数数漏·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1rK4y1b7x4",
+        title: "六年级数学(人教版)《鸽巢问题（抽屉原理）例3》",
+        duration: "30:1",
       searchKeyword: "小学四年级数学抽屉原理至少保证数数数漏讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1sM4y1b7aZ",
+        title: "六年级数学《鸽巢问题》（抽屉原理）",
+        duration: "13:22",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1093,16 +1093,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文课外文言文一句话都看不懂教学方法」后取 BV 号
-      title: "课外文言文一句话都看不懂·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1xTopYdEdV",
+        title: "小灯塔文言文基础｜84集动画精讲〈揠苗助长〉〈精卫填海〉等经典文言",
+        duration: "354:31",
       searchKeyword: "小学四年级语文课外文言文一句话都看不懂教学方法"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1iU4y1Q7Xq",
+        title: "【小古文100课】第1课-放风筝（阿紫老师）",
+        duration: "7:29",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1145,16 +1145,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级语文结尾只会喊口号空洞煽情教学方法」后取 BV 号
-      title: "结尾只会喊口号空洞煽情·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV17w411a7k2",
+        title: "写作不开窍？急也没用《 小学作文写作技巧指导动画：写景物描写低段 中段 高段》42集全",
+        duration: "31:54",
       searchKeyword: "小学四年级语文结尾只会喊口号空洞煽情教学方法"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1N2KnzPE61",
+        title: "全32集【小学语文满分作文】写作技巧方法课 讲写人基础外貌、写景生动诀窍、开头结尾处理方法  （配套讲义习作PDF）",
+        duration: "198:52",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1197,16 +1197,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语被动语态永远漏掉be动词语法讲解」后取 BV 号
-      title: "被动语态永远漏掉be动词·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1dr4y1K7uv",
+        title: "英语语法: 被动语态(被动句)",
+        duration: "9:17",
       searchKeyword: "小学四年级英语被动语态永远漏掉be动词语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1hBege4EcY",
+        title: "一个视频讲清楚be和get引导的被动结构的区别！（冷知识+1",
+        duration: "2:28",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1247,16 +1247,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级英语首字母填空全凭语感毫无章法语法讲解」后取 BV 号
-      title: "首字母填空全凭语感毫无章法·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1osbFeoERY",
+        title: "中考英语拓展眼界 提升答题技巧 九年级英语刷题训练营 | 语法填空 完形填空 阅读理解 首字母填空 方框选词 七选五 技巧及刷题 各版本通用",
+        duration: "164:16",
       searchKeyword: "小学四年级英语首字母填空全凭语感毫无章法语法讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1kM5PzeEbw",
+        title: "一口气带你学懂首字母填空！做题逻辑答题技巧40分钟轻松拿捏!",
+        duration: "40:39",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1290,16 +1290,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学年龄问题几年后永远搞反讲解」后取 BV 号
-      title: "年龄问题几年后永远搞反·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1sr4y1s7D2",
+        title: "【张擎原老师】小学奥数必刷题 高思竞赛数学导引 四年级超越篇第9讲：还原问题与年龄问题",
+        duration: "92:11",
       searchKeyword: "小学四年级数学年龄问题几年后永远搞反讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1w84te3EEr",
+        title: "L4-第32讲-年龄问题（提高）",
+        duration: "25:43",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1332,16 +1332,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学植树问题端点要不要算总搞混讲解」后取 BV 号
-      title: "植树问题端点要不要算总搞混·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1XS421d7Yw",
+        title: "看动画学奥数，小学奥数动画 数学启蒙动画 轻轻松松考高分 ~ 勇敢的植物守护者—植树问题一",
+        duration: "34:20",
       searchKeyword: "小学四年级数学植树问题端点要不要算总搞混讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1yC4y187QH",
+        title: "小学数学五年级上册第七章第1课：植树问题（一）",
+        duration: "20:39",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1374,16 +1374,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学角的两条边延长角会变大吗讲解」后取 BV 号
-      title: "角的两条边延长角会变大吗·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1Fb411y7jx",
+        title: "初中经典数学题：仅仅知道三条边长，如何求角的度数呢",
+        duration: "4:22",
       searchKeyword: "小学四年级数学角的两条边延长角会变大吗讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1Va411s7SQ",
+        title: "大小正方形面积相差32平方厘米，边长和为16厘米，面积各是多少",
+        duration: "5:7",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1416,16 +1416,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学和差问题谁大谁小分不清讲解」后取 BV 号
-      title: "和差问题谁大谁小分不清·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1Px41177gE",
+        title: "小学奥数三年级 差倍问题",
+        duration: "2:15",
       searchKeyword: "小学四年级数学和差问题谁大谁小分不清讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1Bx411E7sC",
+        title: "小学奥数三年级  和差问题",
+        duration: "1:33",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1458,16 +1458,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学归一问题先求什么后求什么搞乱了讲解」后取 BV 号
-      title: "归一问题先求什么后求什么搞乱了·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1TJ4m1u7UQ",
+        title: "小学易错归一问题",
+        duration: "1:7",
       searchKeyword: "小学四年级数学归一问题先求什么后求什么搞乱了讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1gB4y1B7g6",
+        title: "小学数学必学的重点解决问题之一——“归一问题”&amp;三年级上册重点类型",
+        duration: "11:37",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
@@ -1500,16 +1500,16 @@ const CHIPS = [
     },
       video: {
       source: "Bilibili",
-      bvid: "",  // 待填：在 bilibili 搜索「小学四年级数学平行四边形拉动变成长方形面积到底变不变讲解」后取 BV 号
-      title: "平行四边形拉动变成长方形面积到底变不变·3分钟大白话讲解",
-      duration: "",
+        bvid: "BV1vJ411b7Qq",
+        title: "［图形］串讲小学数学的周长，面积，体积的推导过程，长方形平行四边形，三角形，梯形，圆，长方体，圆柱，圆锥。熟练的童鞋忽略视频就好，需要串一下知识点来看看，挺快～",
+        duration: "10:57",
       searchKeyword: "小学四年级数学平行四边形拉动变成长方形面积到底变不变讲解"
     },
       video2: {
-        bvid: "",
-        title: "",
-        duration: "",
-        status: "待绑定",
+        bvid: "BV1wZ4y157et",
+        title: "几何画板验证将长方形拉成平行四边形，面积减少",
+        duration: "0:21",
+        status: "已绑定",
         searchKeyword: "",
         note: "第二位老师视频（待填BV号）"
       },
