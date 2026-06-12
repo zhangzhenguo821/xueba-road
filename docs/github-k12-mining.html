@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub优质K12教育开源项目 — 学霸之路矿藏地图</title>
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--text:#e2e8f0;--dim:#94a3b8;--accent:#38bdf8;--gold:#f59e0b;--green:#22c55e;--red:#ef4444;--purple:#a78bfa}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;padding:24px;max-width:1100px;margin:0 auto}
+h1{font-size:28px;margin-bottom:8px;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.subtitle{color:var(--dim);margin-bottom:32px;font-size:14px}
+.stat-row{display:flex;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.stat-card{flex:1;min-width:120px;background:var(--card);border-radius:12px;padding:16px;text-align:center}
+.stat-num{font-size:32px;font-weight:800}
+.stat-label{font-size:12px;color:var(--dim);margin-top:4px}
+.section-title{font-size:20px;font-weight:700;margin:36px 0 16px;padding-bottom:8px;border-bottom:2px solid rgba(255,255,255,0.08)}
+.project-card{background:var(--card);border-radius:12px;padding:20px;margin-bottom:14px;border-left:4px solid var(--accent);transition:transform .15s}
+.project-card:hover{transform:translateX(4px)}
+.project-card.tier1{border-left-color:var(--gold)}
+.project-card.tier2{border-left-color:var(--accent)}
+.project-card.tier3{border-left-color:var(--purple)}
+.project-card.tool{border-left-color:var(--green)}
+.card-header{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.card-title{font-size:17px;font-weight:700}
+.card-stars{display:inline-flex;align-items:center;gap:4px;font-size:14px;color:var(--gold);font-weight:600}
+.card-license{font-size:11px;padding:2px 8px;border-radius:20px;background:rgba(255,255,255,0.06);color:var(--dim)}
+.card-desc{color:var(--dim);font-size:14px;margin-bottom:10px;line-height:1.6}
+.card-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--dim)}
+.card-meta span{display:inline-flex;align-items:center;gap:4px}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.tag{font-size:11px;padding:3px 10px;border-radius:12px;background:rgba(56,189,248,0.12);color:var(--accent)}
+.tag.math{background:rgba(34,197,94,0.12);color:var(--green)}
+.tag.cn{background:rgba(245,158,11,0.12);color:var(--gold)}
+.tag.en{background:rgba(167,139,250,0.12);color:var(--purple)}
+.tag.sci{background:rgba(239,68,68,0.12);color:var(--red)}
+.tag.all{background:rgba(148,163,184,0.12);color:var(--dim)}
+.action-box{background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(56,189,248,0.08));border-radius:12px;padding:20px;margin-top:32px;border:1px solid rgba(245,158,11,0.2)}
+.action-box h3{color:var(--gold);margin-bottom:12px}
+.action-box ul{padding-left:20px;color:var(--dim);font-size:14px;line-height:2}
+.action-box code{background:rgba(255,255,255,0.06);padding:2px 8px;border-radius:4px;font-size:13px}
+.gap-notice{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:16px;margin:24px 0}
+.gap-notice strong{color:var(--red)}
+@media(max-width:600px){body{padding:16px}.stat-card{padding:12px}.stat-num{font-size:24px}}
+</style>
+</head>
+<body>
+
+<h1>⛏️ GitHub 优质 K12 教育开源项目矿藏地图</h1>
+<p class="subtitle">为「学霸之路」项目筛选的各科优质开源仓库 — 2026年6月12日</p>
+
+<div class="stat-row">
+  <div class="stat-card"><div class="stat-num" style="color:var(--gold)">9</div><div class="stat-label">候选项目</div></div>
+  <div class="stat-card"><div class="stat-num" style="color:var(--accent)">4</div><div class="stat-label">Tier 1 推荐</div></div>
+  <div class="stat-card"><div class="stat-num" style="color:var(--purple)">2</div><div class="stat-label">Tier 2 可用</div></div>
+  <div class="stat-card"><div class="stat-num" style="color:var(--green)">3</div><div class="stat-label">工具/辅助</div></div>
+  <div class="stat-card"><div class="stat-num" style="color:var(--red)">1</div><div class="stat-label">学科缺口</div></div>
+</div>
+
+
+<!-- ====================== TIER 1: 直接可用 ====================== -->
+<h2 class="section-title">🥇 Tier 1 — 可直接注入「学霸之路」</h2>
+
+<!-- chinese-poetry -->
+<div class="project-card tier1">
+  <div class="card-header">
+    <span class="card-title">chinese-poetry/chinese-poetry</span>
+    <span class="card-stars">⭐ 51,825</span>
+    <span class="card-license">MIT</span>
+  </div>
+  <div class="card-desc">
+    全球最全的中文古诗词数据库。收录<strong>近1.4万诗人</strong>的<strong>5.5万首唐诗 + 26万首宋诗 + 2.1万首宋词</strong>，全部以标准 JSON 格式开放。覆盖从先秦到清代的完整诗词谱系。
+  </div>
+  <div class="card-meta">
+    <span>📦 JSON结构化</span>
+    <span>📝 含作者/标题/正文/标签</span>
+    <span>🔓 MIT 许可证</span>
+  </div>
+  <div class="card-tags">
+    <span class="tag cn">语文</span>
+    <span class="tag cn">古诗词</span>
+    <span class="tag cn">文言文</span>
+    <span class="tag">可注入</span>
+  </div>
+</div>
+
+<!-- chinese-xinhua -->
+<div class="project-card tier1">
+  <div class="card-header">
+    <span class="card-title">pwxcoo/chinese-xinhua</span>
+    <span class="card-stars">⭐ 11,572</span>
+    <span class="card-license">MIT</span>
+  </div>
+  <div class="card-desc">
+    中华新华字典数据库。收录<strong>16,142个汉字</strong>（含拼音/释义/笔画/部首）、<strong>31,648个成语</strong>（含出处/例句）、<strong>14,032条歇后语</strong>、<strong>264,434个词语</strong>。提供 RESTful API 接口。
+  </div>
+  <div class="card-meta">
+    <span>📦 JSON结构化</span>
+    <span>🔌 含API接口</span>
+    <span>🔓 MIT 许可证</span>
+  </div>
+  <div class="card-tags">
+    <span class="tag cn">语文</span>
+    <span class="tag cn">字词</span>
+    <span class="tag cn">成语</span>
+    <span class="tag cn">歇后语</span>
+    <span class="tag">可注入</span>
+  </div>
+</div>
+
+<!-- english-wordlists -->
+<div class="project-card tier1">
+  <div class="card-header">
+    <span class="card-title">mahavivo/english-wordlists</span>
+    <span class="card-stars">⭐ 2,376</span>
+    <span class="card-license">⚠️ 无许可声明</span>
+  </div>
+  <div class="card-desc">
+    覆盖小学→大学全阶段的英语词汇表合集。包含<strong>小学英语大纲词汇</strong>、中考、高考、四六级、托福、GRE 等。含 <strong>COCA 2万词频表</strong>（带中文释义），覆盖听读写全场景。
+  </div>
+  <div class="card-meta">
+    <span>📦 TXT/CSV/Excel</span>
+    <span>📊 COCA词频+中文释义</span>
+    <span>⚠️ 使用前确认许可</span>
+  </div>
+  <div class="card-tags">
+    <span class="tag en">英语</span>
+    <span class="tag en">词汇</span>
+    <span class="tag en">PEP人教版</span>
+    <span class="tag">可注入</span>
+  </div>
+</div>
+
+<!-- ChinaTextbookStudyFree -->
+<div class="project-card tier1">
+  <div class="card-header">
+    <span class="card-title">wuwangzhang1216/ChinaTextbookStudyFree</span>
+    <span class="card-stars">⭐ 26</span>
+    <span class="card-license">MIT</span>
+  </div>
+  <div class="card-desc">
+    面向小学生的<strong>全科AI学习平台</strong>。覆盖语/数/英/科四科（1-6年级），含<strong>教材知识点大纲</strong>、<strong>AI生成单元题库</strong>、<strong>779篇课文听读</strong>、<strong>284篇分级课外故事+阅读理解</strong>。知识点按教材章节组织，可直接提取为芯片数据源。
+  </div>
+  <div class="card-meta">
+    <span>📦 JSON 知识点大纲</span>
+    <span>📦 JSON 单元题库</span>
+    <span>🔊 TTS音频 (71k+)</span>
+    <span>🔓 MIT 许可证</span>
+  </div>
+  <div class="card-tags">
+    <span class="tag all">全科</span>
+    <span class="tag cn">语文</span>
+    <span class="tag math">数学</span>
+    <span class="tag en">英语</span>
+    <span class="tag sci">科学</span>
+    <span class="tag">可注入</span>
+  </div>
+</div>
+
+
+<!-- ====================== TIER 2: 条件可用 ====================== -->
+<h2 class="section-title">🥈 Tier 2 — 条件可用 / 需额外处理</h2>
+
+<!-- question-bank -->
+<div class="project-card tier2">
+  <div class="card-header">
+    <span class="card-title">thl529/question-bank</span>
+    <span class="card-stars">⭐ 0</span>
+    <span class="card-license">⚠️ 仅供学习参考</span>
+  </div>
+  <div class="card-desc">
+    小学1-6年级<strong>语数英选择题题库</strong>（JSON），约<strong>1,290道题</strong>。结构规范：题干+ABCD选项+答案+解析+知识点标签。按年级/学期/科目分36个JSON文件。附带抓取脚本可扩展。
+  </div>
+  <div class="card-meta">
+    <span>📦 JSON (36个文件)</span>
+    <span>📝 1290道选择题</span>
+    <span>🛠 含抓取脚本</span>
+    <span>⚠️ 无活跃维护</span>
+  </div>
+  <div class="card-tags">
+    <span class="tag cn">语文</span>
+    <span class="tag math">数学</span>
+    <span class="tag en">英语</span>
+    <span class="tag">可参考</span>
+  </div>
+</div>
+
+<!-- Math23K -->
+<div class="project-card tier2">
+  <div class="card-header">
+    <span class="card-title">Math23K (腾讯AI Lab)</span>
+    <span class="card-stars">— 数据集</span>
+    <span class="card-license">学术用途</span>
+  </div>
+  <div class="card-desc">
+    腾讯AI Lab发布的<strong>23,164道中文小学数学应用题</strong>数据集。每道题含原始文本、分词文本、数学方程式、答案。主要用于NLP数学推理研究，已被近千篇论文引用。比 cmmath 更大更全。
+  </div>
+  <div class="card-meta">
+    <span>📦 结构化文本</span>
+    <span>📝 23,164道题</span>
+    <span>🔬 学术级质量</span>
+    <span>🔗 base.ustc.edu.cn</span>
+  </div>
+  <div class="card-tags">
+    <span class="tag math">数学</span>
+    <span class="tag math">应用题</span>
+    <span class="tag">参考</span>
+  </div>
+</div>
+
+
+<!-- ====================== TIER 3: 工具/辅助 ====================== -->
+<h2 class="section-title">🛠 工具类 — 增强现有功能</h2>
+
+<div class="project-card tool">
+  <div class="card-header">
+    <span class="card-title">theajack/cnchar</span>
+    <span class="card-stars">⭐ 3,045</span>
+    <span class="card-license">MIT</span>
+  </div>
+  <div class="card-desc">
+    功能全面的<strong>汉字工具JS库</strong>。支持拼音转换、笔画顺序、偏旁部首查询、成语接龙等20+功能。可用于语文芯片的"拆字学字""笔顺动画"等交互功能。
+  </div>
+  <div class="card-tags">
+    <span class="tag cn">语文</span>
+    <span class="tag">JS库</span>
+    <span class="tag">交互增强</span>
+  </div>
+</div>
+
+<div class="project-card tool">
+  <div class="card-header">
+    <span class="card-title">chanind/hanzi-writer</span>
+    <span class="card-stars">⭐ 4,819</span>
+    <span class="card-license">MIT</span>
+  </div>
+  <div class="card-desc">
+    汉字<strong>笔画顺序动画</strong>和<strong>书写练习</strong>JavaScript库。支持简体/繁体，可嵌入网页展示正确笔顺。直接用于"生字书写"芯片的可视化教学。
+  </div>
+  <div class="card-tags">
+    <span class="tag cn">语文</span>
+    <span class="tag">JS库</span>
+    <span class="tag">可视化</span>
+  </div>
+</div>
+
+<div class="project-card tool">
+  <div class="card-header">
+    <span class="card-title">TapXWorld/ChinaTextbook</span>
+    <span class="card-stars">⭐ 74,089</span>
+    <span class="card-license">⚠️ 无许可</span>
+  </div>
+  <div class="card-desc">
+    全国小初高大学<strong>PDF教材</strong>合集。目前仅有数学科目实际数据，其他学科标注了目录但数据未上传。PDF不可机读，需OCR处理。可作为教材权威参考，但不适合直接注入。
+  </div>
+  <div class="card-tags">
+    <span class="tag">PDF教材</span>
+    <span class="tag">参考</span>
+    <span class="tag">⚠️ 版权敏感</span>
+  </div>
+</div>
+
+
+<!-- ====================== 缺口 ====================== -->
+<div class="gap-notice">
+  <strong>⚠️ 学科缺口：小学科学</strong><br>
+  目前未找到高质量的开源小学科学（教科版）题库/知识点项目。现有选项：
+  <ul style="margin-top:8px;padding-left:20px;color:var(--dim)">
+    <li>ChinaTextbookStudyFree 的 <code>output/science/outlines/</code> 有AI生成的知识大纲和单元题（可用但需审核质量）</li>
+    <li>商业数据集（2000万K12题库）覆盖科学科目，但不开源且收费</li>
+    <li>建议：先用 ChinaTextbookStudyFree 的科学大纲建立芯片框架，后续再补充</li>
+  </ul>
+</div>
+
+
+<!-- ====================== 行动计划 ====================== -->
+<div class="action-box">
+  <h3>🎯 建议下一步行动</h3>
+  <ul>
+    <li><strong>语文芯片扩建</strong>：注入 <code>chinese-poetry</code> 古诗词 + <code>chinese-xinhua</code> 字词/成语/歇后语 → 预计新增 40+ 语文芯片</li>
+    <li><strong>英语芯片建立</strong>：注入 <code>english-wordlists</code> 词汇表 + <code>ChinaTextbookStudyFree</code> 英语知识点大纲 → 预计新增 30+ 英语芯片</li>
+    <li><strong>科学芯片起步</strong>：提取 <code>ChinaTextbookStudyFree</code> 科学大纲 → 建立 15-20 个科学芯片框架</li>
+    <li><strong>数学增强</strong>：考虑注入 Math23K (23k道应用题) 补充 variantTraining 训练数据</li>
+    <li><strong>交互升级</strong>：集成 <code>cnchar</code> 或 <code>hanzi-writer</code> 实现语文芯片的笔画动画</li>
+  </ul>
+</div>
+
+</body>
+</html>
