@@ -7641,6 +7641,4633 @@ const CHIPS = [
               "拓展题型"
         ]
   }
+,
+
+  // ============== 自动生成的 fallback 条目 (136条，待完善视频BV号) ==============
+  {
+    id: "MATH-04-026",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算小数×整数、小数×小数、积的近似数时频繁出…",
+    icon: "🎯",
+    painPoint: "孩子在计算小数×整数、小数×小数、积的近似数时频繁出…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算小数×整数、小数×小数、积的近似数时频繁出…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算小数×整数、小数×小数、积的近似数时频繁出…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算小数×整数、小数×小数、积的近"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-26-26"],
+    keywords: ["数学", "4年级", "孩子在计算小数×整数"]
+  },
+  {
+    id: "MATH-04-025",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算加法交换律·结合律、乘法交换律·结合律·分…",
+    icon: "🎯",
+    painPoint: "孩子在计算加法交换律/结合律、乘法交换律/结合律/分…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算加法交换律/结合律、乘法交换律/结合律/分…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算加法交换律/结合律、乘法交换律/结合律/分…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算加法交换律/结合律、乘法交换律"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-25-25"],
+    keywords: ["数学", "4年级", "孩子在计算加法交换律"]
+  },
+  {
+    id: "MATH-04-022",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算试商技巧与验算时频繁出错，不是看错数字就是…",
+    icon: "🎯",
+    painPoint: "孩子在计算试商技巧与验算时频繁出错，不是看错数字就是…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算试商技巧与验算时频繁出错，不是看错数字就是…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算试商技巧与验算时频繁出错，不是看错数字就是…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算试商技巧与验算时频繁出错，不是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-22-22"],
+    keywords: ["数学", "4年级", "孩子在计算试商技巧与"]
+  },
+  {
+    id: "MATH-04-018",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算小数读写、大小比较、小数点移动时频繁出错，…",
+    icon: "🎯",
+    painPoint: "孩子在计算小数读写、大小比较、小数点移动时频繁出错，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算小数读写、大小比较、小数点移动时频繁出错，…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算小数读写、大小比较、小数点移动时频繁出错，…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算小数读写、大小比较、小数点移动"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-18-18"],
+    keywords: ["数学", "4年级", "孩子在计算小数读写、"]
+  },
+  {
+    id: "MATH-04-023",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画沏茶问题与对策论时图形画反、公式记混，空间想象力跟…",
+    icon: "🎯",
+    painPoint: "画沏茶问题与对策论时图形画反、公式记混，空间想象力跟…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画沏茶问题与对策论时图形画反、公式记混，空间想象力跟…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画沏茶问题与对策论时图形画反、公式记混，空间想象力跟…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画沏茶问题与对策论时图形画反、公式记混，"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-23-23"],
+    keywords: ["数学", "4年级", "画沏茶问题与对策论时"]
+  },
+  {
+    id: "MATH-04-020",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画量角器使用与角度计算时图形画反、公式记混，空间想象…",
+    icon: "🎯",
+    painPoint: "画量角器使用与角度计算时图形画反、公式记混，空间想象…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画量角器使用与角度计算时图形画反、公式记混，空间想象…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画量角器使用与角度计算时图形画反、公式记混，空间想象…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画量角器使用与角度计算时图形画反、公式记"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-20-20"],
+    keywords: ["数学", "4年级", "画量角器使用与角度计"]
+  },
+  {
+    id: "MATH-04-016",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算竖式对齐与进退位时频繁出错，不是看错数字就…",
+    icon: "🎯",
+    painPoint: "孩子在计算竖式对齐与进退位时频繁出错，不是看错数字就…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算竖式对齐与进退位时频繁出错，不是看错数字就…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算竖式对齐与进退位时频繁出错，不是看错数字就…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算竖式对齐与进退位时频繁出错，不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-16-16"],
+    keywords: ["数学", "4年级", "孩子在计算竖式对齐与"]
+  },
+  {
+    id: "MATH-04-024",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算加减乘除混合运算与括号规则时频繁出错，不是…",
+    icon: "🎯",
+    painPoint: "孩子在计算加减乘除混合运算与括号规则时频繁出错，不是…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算加减乘除混合运算与括号规则时频繁出错，不是…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算加减乘除混合运算与括号规则时频繁出错，不是…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算加减乘除混合运算与括号规则时频"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-24-24"],
+    keywords: ["数学", "4年级", "孩子在计算加减乘除混"]
+  },
+  {
+    id: "MATH-04-021",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算亿以内数的读写与比较时频繁出错，不是看错数…",
+    icon: "🎯",
+    painPoint: "孩子在计算亿以内数的读写与比较时频繁出错，不是看错数…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算亿以内数的读写与比较时频繁出错，不是看错数…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算亿以内数的读写与比较时频繁出错，不是看错数…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算亿以内数的读写与比较时频繁出错"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-21-21"],
+    keywords: ["数学", "4年级", "孩子在计算亿以内数的"]
+  },
+  {
+    id: "MATH-04-015",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算竖式乘法与估算时频繁出错，不是看错数字就是…",
+    icon: "🎯",
+    painPoint: "孩子在计算竖式乘法与估算时频繁出错，不是看错数字就是…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算竖式乘法与估算时频繁出错，不是看错数字就是…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算竖式乘法与估算时频繁出错，不是看错数字就是…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算竖式乘法与估算时频繁出错，不是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-15-15"],
+    keywords: ["数学", "4年级", "孩子在计算竖式乘法与"]
+  },
+  {
+    id: "MATH-04-017",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画平均数含义与计算、复式条形统计图时图形画反、公式记…",
+    icon: "🎯",
+    painPoint: "画平均数含义与计算、复式条形统计图时图形画反、公式记…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画平均数含义与计算、复式条形统计图时图形画反、公式记…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画平均数含义与计算、复式条形统计图时图形画反、公式记…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画平均数含义与计算、复式条形统计图时图形"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-17-17"],
+    keywords: ["数学", "4年级", "画平均数含义与计算、"]
+  },
+  {
+    id: "MATH-04-027",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画从不同方向观察立体图形时图形画反、公式记混，空间想…",
+    icon: "🎯",
+    painPoint: "画从不同方向观察立体图形时图形画反、公式记混，空间想…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画从不同方向观察立体图形时图形画反、公式记混，空间想…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画从不同方向观察立体图形时图形画反、公式记混，空间想…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画从不同方向观察立体图形时图形画反、公式"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-27-27"],
+    keywords: ["数学", "4年级", "画从不同方向观察立体"]
+  },
+  {
+    id: "MATH-04-029",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
+    icon: "🎯",
+    painPoint: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画轴对称与平移时图形画反、公式记混，空间想象力跟不上…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画轴对称与平移时图形画反、公式记混，空间"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-29-29"],
+    keywords: ["数学", "4年级", "画轴对称与平移时图形"]
+  },
+  {
+    id: "MATH-04-028",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算综合实践：数据收集与方案设计时频繁出错，不…",
+    icon: "🎯",
+    painPoint: "孩子在计算综合实践：数据收集与方案设计时频繁出错，不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算综合实践：数据收集与方案设计时频繁出错，不…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算综合实践：数据收集与方案设计时频繁出错，不…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 孩子在计算综合实践：数据收集与方案设计时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-28-28"],
+    keywords: ["数学", "4年级", "孩子在计算综合实践："]
+  },
+  {
+    id: "MATH-04-030",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+    icon: "🎯",
+    painPoint: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画数据整理与图表绘制时图形画反、公式记混"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-30-30"],
+    keywords: ["数学", "4年级", "画数据整理与图表绘制"]
+  },
+  {
+    id: "CHI-04-010",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "读完文章脑子里一片空白，概括主要内容总是抓不住重点，…",
+    icon: "✏️",
+    painPoint: "读完文章脑子里一片空白，概括主要内容总是抓不住重点，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "读完文章脑子里一片空白，概括主要内容总是抓不住重点，…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "读完文章脑子里一片空白，概括主要内容总是抓不住重点，…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 读完文章脑子里一片空白，概括主要内容总是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-10-10"],
+    keywords: ["语文", "4年级", "读完文章脑子里一片空"]
+  },
+  {
+    id: "CHI-04-006",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+    icon: "✏️",
+    painPoint: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 看到病句题就发怵，分不清是成分残缺还是搭"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-06-06"],
+    keywords: ["语文", "4年级", "看到病句题就发怵，分"]
+  },
+  {
+    id: "CHI-04-005",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "句型转换是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "句型转换是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "句型转换是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "句型转换是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 句型转换是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-05-05"],
+    keywords: ["语文", "4年级", "句型转换是考试必考题"]
+  },
+  {
+    id: "CHI-04-004",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "不但……而且……还是虽然……但是……",
+    icon: "✏️",
+    painPoint: "不但……而且……还是虽然……但是……",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "不但……而且……还是虽然……但是……",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "不但……而且……还是虽然……但是……",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 不但……而且……还是虽然……但是……"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-04-04"],
+    keywords: ["语文", "4年级", "不但……而且……还是"]
+  },
+  {
+    id: "CHI-04-011",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "词语辨析是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "词语辨析是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "词语辨析是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "词语辨析是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 词语辨析是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-11-11"],
+    keywords: ["语文", "4年级", "词语辨析是考试必考题"]
+  },
+  {
+    id: "CHI-04-013",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "观察日记与写作是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "观察日记与写作是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "观察日记与写作是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "观察日记与写作是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 观察日记与写作是考试必考题型，孩子总是拿"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-13-13"],
+    keywords: ["语文", "4年级", "观察日记与写作是考试"]
+  },
+  {
+    id: "CHI-04-015",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "看到古文就头疼，关键实词的意思猜不对，翻译句子总是不通顺",
+    icon: "✏️",
+    painPoint: "看到古文就头疼，关键实词的意思猜不对，翻译句子总是不通顺",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "看到古文就头疼，关键实词的意思猜不对，翻译句子总是不通顺",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "看到古文就头疼，关键实词的意思猜不对，翻译句子总是不通顺",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 看到古文就头疼，关键实词的意思猜不对，翻"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-15-15"],
+    keywords: ["语文", "4年级", "看到古文就头疼，关键"]
+  },
+  {
+    id: "CHI-04-016",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+    icon: "✏️",
+    painPoint: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 古诗背了又忘，默写总写错别字，诗句意思理"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-16-16"],
+    keywords: ["语文", "4年级", "古诗背了又忘，默写总"]
+  },
+  {
+    id: "CHI-04-008",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+    icon: "✏️",
+    painPoint: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 比喻和拟人分不清，让分析修辞手法的作用就"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-08-08"],
+    keywords: ["语文", "4年级", "比喻和拟人分不清，让"]
+  },
+  {
+    id: "CHI-04-007",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+    icon: "✏️",
+    painPoint: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 引号和书名号乱用，逗号句号不分，作文里标"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-07-07"],
+    keywords: ["语文", "4年级", "引号和书名号乱用，逗"]
+  },
+  {
+    id: "CHI-04-009",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "字词基础是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "字词基础是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "字词基础是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "字词基础是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 字词基础是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-09-09"],
+    keywords: ["语文", "4年级", "字词基础是考试必考题"]
+  },
+  {
+    id: "CHI-04-003",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "句子排序是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "句子排序是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "句子排序是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "句子排序是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 句子排序是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-03-03"],
+    keywords: ["语文", "4年级", "句子排序是考试必考题"]
+  },
+  {
+    id: "CHI-04-014",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 非连续性文本是考试必考题型，孩子总是拿不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-14-14"],
+    keywords: ["语文", "4年级", "非连续性文本是考试必"]
+  },
+  {
+    id: "ENG-04-011",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "be动词和doing总是搭配错，一看题就懵",
+    icon: "🇬🇧",
+    painPoint: "be动词和doing总是搭配错，一看题就懵",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "be动词和doing总是搭配错，一看题就懵",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "be动词和doing总是搭配错，一看题就懵",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 be动词和doing总是搭配错，一看题就"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-11-11"],
+    keywords: ["英语", "4年级", "be动词和doing"]
+  },
+  {
+    id: "ENG-04-009",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "阅读文章生词太多看不懂，看到长句子就放弃",
+    icon: "🇬🇧",
+    painPoint: "阅读文章生词太多看不懂，看到长句子就放弃",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "阅读文章生词太多看不懂，看到长句子就放弃",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "阅读文章生词太多看不懂，看到长句子就放弃",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 阅读文章生词太多看不懂，看到长句子就放弃"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-09-09"],
+    keywords: ["英语", "4年级", "阅读文章生词太多看不"]
+  },
+  {
+    id: "ENG-04-018",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语名词复数句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语名词复数句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语名词复数句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语名词复数句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语名词复数句型总是记不住，考试时不知道"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-18-18"],
+    keywords: ["英语", "4年级", "英语名词复数句型总是"]
+  },
+  {
+    id: "ENG-04-010",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My Friends句型总是记不住，考试时不知道…",
+    icon: "🇬🇧",
+    painPoint: "英语My Friends句型总是记不住，考试时不知道…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My Friends句型总是记不住，考试时不知道…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My Friends句型总是记不住，考试时不知道…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语My Friends句型总是记不住，"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-10-10"],
+    keywords: ["英语", "4年级", "英语My Frien"]
+  },
+  {
+    id: "ENG-04-005",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "in、on、at到底用哪个",
+    icon: "🇬🇧",
+    painPoint: "in、on、at到底用哪个",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "in、on、at到底用哪个",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "in、on、at到底用哪个",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 in、on、at到底用哪个"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-05-05"],
+    keywords: ["英语", "4年级", "in、on、at到底"]
+  },
+  {
+    id: "ENG-04-019",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My Home句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语My Home句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My Home句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My Home句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语My Home句型总是记不住，考试时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-19-19"],
+    keywords: ["英语", "4年级", "英语My Home句"]
+  },
+  {
+    id: "ENG-04-006",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Meet My Family句型总是记不住，考试…",
+    icon: "🇬🇧",
+    painPoint: "英语Meet My Family句型总是记不住，考试…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Meet My Family句型总是记不住，考试…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Meet My Family句型总是记不住，考试…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语Meet My Family句型总是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-06-06"],
+    keywords: ["英语", "4年级", "英语Meet My "]
+  },
+  {
+    id: "ENG-04-008",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语What Time Is It句型总是记不住，考…",
+    icon: "🇬🇧",
+    painPoint: "英语What Time Is It句型总是记不住，考…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语What Time Is It句型总是记不住，考…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语What Time Is It句型总是记不住，考…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语What Time Is It句型总"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-08-08"],
+    keywords: ["英语", "4年级", "英语What Tim"]
+  },
+  {
+    id: "ENG-04-013",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Shopping句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语Shopping句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Shopping句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Shopping句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语Shopping句型总是记不住，考试"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-13-13"],
+    keywords: ["英语", "4年级", "英语Shopping"]
+  },
+  {
+    id: "ENG-04-017",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My Classroom句型总是记不住，考试时不…",
+    icon: "🇬🇧",
+    painPoint: "英语My Classroom句型总是记不住，考试时不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My Classroom句型总是记不住，考试时不…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My Classroom句型总是记不住，考试时不…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语My Classroom句型总是记不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-17-17"],
+    keywords: ["英语", "4年级", "英语My Class"]
+  },
+  {
+    id: "ENG-04-004",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Dinner's Ready句型总是记不住，考试…",
+    icon: "🇬🇧",
+    painPoint: "英语Dinner's Ready句型总是记不住，考试…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Dinner's Ready句型总是记不住，考试…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Dinner's Ready句型总是记不住，考试…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语Dinner's Ready句型总是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-04-04"],
+    keywords: ["英语", "4年级", "英语Dinner's"]
+  },
+  {
+    id: "ENG-04-007",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Weather句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语Weather句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Weather句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Weather句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语Weather句型总是记不住，考试时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-07-07"],
+    keywords: ["英语", "4年级", "英语Weather句"]
+  },
+  {
+    id: "ENG-04-014",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My Clothes句型总是记不住，考试时不知道…",
+    icon: "🇬🇧",
+    painPoint: "英语My Clothes句型总是记不住，考试时不知道…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My Clothes句型总是记不住，考试时不知道…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My Clothes句型总是记不住，考试时不知道…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语My Clothes句型总是记不住，"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-14-14"],
+    keywords: ["英语", "4年级", "英语My Cloth"]
+  },
+  {
+    id: "ENG-04-016",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My School句型总是记不住，考试时不知道怎…",
+    icon: "🇬🇧",
+    painPoint: "英语My School句型总是记不住，考试时不知道怎…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My School句型总是记不住，考试时不知道怎…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My School句型总是记不住，考试时不知道怎…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语My School句型总是记不住，考"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-16-16"],
+    keywords: ["英语", "4年级", "英语My Schoo"]
+  },
+  {
+    id: "ENG-04-012",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语At the Farm句型总是记不住，考试时不知…",
+    icon: "🇬🇧",
+    painPoint: "英语At the Farm句型总是记不住，考试时不知…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语At the Farm句型总是记不住，考试时不知…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语At the Farm句型总是记不住，考试时不知…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语At the Farm句型总是记不住"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-12-12"],
+    keywords: ["英语", "4年级", "英语At the F"]
+  },
+  {
+    id: "MATH-05-008",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算除数是整数·小数的除法、循环小数、用计算器…",
+    icon: "🎯",
+    painPoint: "孩子在计算除数是整数/小数的除法、循环小数、用计算器…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算除数是整数/小数的除法、循环小数、用计算器…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算除数是整数/小数的除法、循环小数、用计算器…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算除数是整数/小数的除法、循环小"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-08-08"],
+    keywords: ["数学", "5年级", "孩子在计算除数是整数"]
+  },
+  {
+    id: "MATH-05-006",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算倒数的认识、分数除法计算时频繁出错，不是看…",
+    icon: "🎯",
+    painPoint: "孩子在计算倒数的认识、分数除法计算时频繁出错，不是看…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算倒数的认识、分数除法计算时频繁出错，不是看…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算倒数的认识、分数除法计算时频繁出错，不是看…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算倒数的认识、分数除法计算时频繁"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-06-06"],
+    keywords: ["数学", "5年级", "孩子在计算倒数的认识"]
+  },
+  {
+    id: "MATH-05-021",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画平行四边形·三角形·梯形·组合图形面积公式时图形画…",
+    icon: "🎯",
+    painPoint: "画平行四边形/三角形/梯形/组合图形面积公式时图形画…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画平行四边形/三角形/梯形/组合图形面积公式时图形画…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画平行四边形/三角形/梯形/组合图形面积公式时图形画…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画平行四边形/三角形/梯形/组合图形面积"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-21-21"],
+    keywords: ["数学", "5年级", "画平行四边形/三角形"]
+  },
+  {
+    id: "MATH-05-009",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画特征识别、表面积与体积公式时图形画反、公式记混，空…",
+    icon: "🎯",
+    painPoint: "画特征识别、表面积与体积公式时图形画反、公式记混，空…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画特征识别、表面积与体积公式时图形画反、公式记混，空…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画特征识别、表面积与体积公式时图形画反、公式记混，空…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画特征识别、表面积与体积公式时图形画反、"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-09-09"],
+    keywords: ["数学", "5年级", "画特征识别、表面积与"]
+  },
+  {
+    id: "MATH-05-014",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "遇到植树问题的应用题，孩子读完题目完全不知道从哪里下…",
+    icon: "🎯",
+    painPoint: "遇到植树问题的应用题，孩子读完题目完全不知道从哪里下…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "遇到植树问题的应用题，孩子读完题目完全不知道从哪里下…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "遇到植树问题的应用题，孩子读完题目完全不知道从哪里下…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 遇到植树问题的应用题，孩子读完题目完全不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-14-14"],
+    keywords: ["数学", "5年级", "遇到植树问题的应用题"]
+  },
+  {
+    id: "MATH-05-010",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算小数乘整数·小数、积的近似数、运算定律推广…",
+    icon: "🎯",
+    painPoint: "孩子在计算小数乘整数/小数、积的近似数、运算定律推广…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算小数乘整数/小数、积的近似数、运算定律推广…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算小数乘整数/小数、积的近似数、运算定律推广…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算小数乘整数/小数、积的近似数、"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-10-10"],
+    keywords: ["数学", "5年级", "孩子在计算小数乘整数"]
+  },
+  {
+    id: "MATH-05-004",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算同分母·异分母加减法、分数加减混合运算时频…",
+    icon: "🎯",
+    painPoint: "孩子在计算同分母/异分母加减法、分数加减混合运算时频…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算同分母/异分母加减法、分数加减混合运算时频…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算同分母/异分母加减法、分数加减混合运算时频…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算同分母/异分母加减法、分数加减"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-04-04"],
+    keywords: ["数学", "5年级", "孩子在计算同分母/异"]
+  },
+  {
+    id: "MATH-05-016",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算分数×整数、分数×分数、运算定律时频繁出错…",
+    icon: "🎯",
+    painPoint: "孩子在计算分数×整数、分数×分数、运算定律时频繁出错…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算分数×整数、分数×分数、运算定律时频繁出错…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算分数×整数、分数×分数、运算定律时频繁出错…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算分数×整数、分数×分数、运算定"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-16-16"],
+    keywords: ["数学", "5年级", "孩子在计算分数×整数"]
+  },
+  {
+    id: "MATH-05-020",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画圆的认识、周长与面积公式时图形画反、公式记混，空间…",
+    icon: "🎯",
+    painPoint: "画圆的认识、周长与面积公式时图形画反、公式记混，空间…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画圆的认识、周长与面积公式时图形画反、公式记混，空间…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画圆的认识、周长与面积公式时图形画反、公式记混，空间…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画圆的认识、周长与面积公式时图形画反、公"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-20-20"],
+    keywords: ["数学", "5年级", "画圆的认识、周长与面"]
+  },
+  {
+    id: "MATH-05-023",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算分数意义、真分数假分数、分数基本性质时频繁…",
+    icon: "🎯",
+    painPoint: "孩子在计算分数意义、真分数假分数、分数基本性质时频繁…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算分数意义、真分数假分数、分数基本性质时频繁…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算分数意义、真分数假分数、分数基本性质时频繁…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算分数意义、真分数假分数、分数基"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-23-23"],
+    keywords: ["数学", "5年级", "孩子在计算分数意义、"]
+  },
+  {
+    id: "MATH-05-015",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算因数·倍数概念、2·3·5的倍数特征、质数…",
+    icon: "🎯",
+    painPoint: "孩子在计算因数/倍数概念、2/3/5的倍数特征、质数…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算因数/倍数概念、2/3/5的倍数特征、质数…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算因数/倍数概念、2/3/5的倍数特征、质数…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算因数/倍数概念、2/3/5的倍"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-15-15"],
+    keywords: ["数学", "5年级", "孩子在计算因数/倍数"]
+  },
+  {
+    id: "MATH-05-013",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算比的意义、化简比、按比例分配时频繁出错，不…",
+    icon: "🎯",
+    painPoint: "孩子在计算比的意义、化简比、按比例分配时频繁出错，不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算比的意义、化简比、按比例分配时频繁出错，不…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算比的意义、化简比、按比例分配时频繁出错，不…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算比的意义、化简比、按比例分配时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-13-13"],
+    keywords: ["数学", "5年级", "孩子在计算比的意义、"]
+  },
+  {
+    id: "MATH-05-022",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算用天平找次品的最优策略(三分法)时频繁出错…",
+    icon: "🎯",
+    painPoint: "孩子在计算用天平找次品的最优策略(三分法)时频繁出错…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算用天平找次品的最优策略(三分法)时频繁出错…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算用天平找次品的最优策略(三分法)时频繁出错…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算用天平找次品的最优策略(三分法"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-22-22"],
+    keywords: ["数学", "5年级", "孩子在计算用天平找次"]
+  },
+  {
+    id: "MATH-05-018",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画三视图初步——从三个方向还原立体时图形画反、公式记…",
+    icon: "🎯",
+    painPoint: "画三视图初步——从三个方向还原立体时图形画反、公式记…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画三视图初步——从三个方向还原立体时图形画反、公式记…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画三视图初步——从三个方向还原立体时图形画反、公式记…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画三视图初步——从三个方向还原立体时图形"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-18-18"],
+    keywords: ["数学", "5年级", "画三视图初步——从三"]
+  },
+  {
+    id: "MATH-05-012",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画旋转与旋转作图时图形画反、公式记混，空间想象力跟不…",
+    icon: "🎯",
+    painPoint: "画旋转与旋转作图时图形画反、公式记混，空间想象力跟不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画旋转与旋转作图时图形画反、公式记混，空间想象力跟不…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画旋转与旋转作图时图形画反、公式记混，空间想象力跟不…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画旋转与旋转作图时图形画反、公式记混，空"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-12-12"],
+    keywords: ["数学", "5年级", "画旋转与旋转作图时图"]
+  },
+  {
+    id: "MATH-05-019",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算事件确定性与不确定性、概率大小判断时频繁出…",
+    icon: "🎯",
+    painPoint: "孩子在计算事件确定性与不确定性、概率大小判断时频繁出…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算事件确定性与不确定性、概率大小判断时频繁出…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算事件确定性与不确定性、概率大小判断时频繁出…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算事件确定性与不确定性、概率大小"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-19-19"],
+    keywords: ["数学", "5年级", "孩子在计算事件确定性"]
+  },
+  {
+    id: "MATH-05-007",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算数对表示位置(列,行)时频繁出错，不是看错…",
+    icon: "🎯",
+    painPoint: "孩子在计算数对表示位置(列,行)时频繁出错，不是看错…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算数对表示位置(列,行)时频繁出错，不是看错…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算数对表示位置(列,行)时频繁出错，不是看错…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算数对表示位置(列,行)时频繁出"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-07-07"],
+    keywords: ["数学", "5年级", "孩子在计算数对表示位"]
+  },
+  {
+    id: "MATH-05-005",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算单式·复式折线统计图读图与绘制时频繁出错，…",
+    icon: "🎯",
+    painPoint: "孩子在计算单式/复式折线统计图读图与绘制时频繁出错，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算单式/复式折线统计图读图与绘制时频繁出错，…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算单式/复式折线统计图读图与绘制时频繁出错，…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 孩子在计算单式/复式折线统计图读图与绘制"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-05-05"],
+    keywords: ["数学", "5年级", "孩子在计算单式/复式"]
+  },
+  {
+    id: "MATH-05-017",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+    icon: "🎯",
+    painPoint: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画数字编码与身份证号码时图形画反、公式记"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-17-17"],
+    keywords: ["数学", "5年级", "画数字编码与身份证号"]
+  },
+  {
+    id: "CHI-05-012",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "记叙文阅读是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "记叙文阅读是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "记叙文阅读是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "记叙文阅读是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 记叙文阅读是考试必考题型，孩子总是拿不到"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-12-12"],
+    keywords: ["语文", "5年级", "记叙文阅读是考试必考"]
+  },
+  {
+    id: "CHI-05-006",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+    icon: "✏️",
+    painPoint: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 古诗背了又忘，默写总写错别字，诗句意思理"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-06-06"],
+    keywords: ["语文", "5年级", "古诗背了又忘，默写总"]
+  },
+  {
+    id: "CHI-05-008",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "段落结构分析是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "段落结构分析是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "段落结构分析是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "段落结构分析是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 段落结构分析是考试必考题型，孩子总是拿不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-08-08"],
+    keywords: ["语文", "5年级", "段落结构分析是考试必"]
+  },
+  {
+    id: "CHI-05-004",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "说明文阅读进阶是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "说明文阅读进阶是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "说明文阅读进阶是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "说明文阅读进阶是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 说明文阅读进阶是考试必考题型，孩子总是拿"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-04-04"],
+    keywords: ["语文", "5年级", "说明文阅读进阶是考试"]
+  },
+  {
+    id: "CHI-05-005",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "词语理解进阶是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "词语理解进阶是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "词语理解进阶是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "词语理解进阶是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 词语理解进阶是考试必考题型，孩子总是拿不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-05-05"],
+    keywords: ["语文", "5年级", "词语理解进阶是考试必"]
+  },
+  {
+    id: "CHI-05-003",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+    icon: "✏️",
+    painPoint: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 看到病句题就发怵，分不清是成分残缺还是搭"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-03-03"],
+    keywords: ["语文", "5年级", "看到病句题就发怵，分"]
+  },
+  {
+    id: "CHI-05-010",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "名著阅读是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "名著阅读是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "名著阅读是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "名著阅读是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 名著阅读是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-10-10"],
+    keywords: ["语文", "5年级", "名著阅读是考试必考题"]
+  },
+  {
+    id: "CHI-05-014",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "不但……而且……还是虽然……但是……",
+    icon: "✏️",
+    painPoint: "不但……而且……还是虽然……但是……",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "不但……而且……还是虽然……但是……",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "不但……而且……还是虽然……但是……",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 不但……而且……还是虽然……但是……"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-14-14"],
+    keywords: ["语文", "5年级", "不但……而且……还是"]
+  },
+  {
+    id: "CHI-05-011",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+    icon: "✏️",
+    painPoint: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 比喻和拟人分不清，让分析修辞手法的作用就"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-11-11"],
+    keywords: ["语文", "5年级", "比喻和拟人分不清，让"]
+  },
+  {
+    id: "CHI-05-007",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+    icon: "✏️",
+    painPoint: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "引号和书名号乱用，逗号句号不分，作文里标点错误一大堆",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 引号和书名号乱用，逗号句号不分，作文里标"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-07-07"],
+    keywords: ["语文", "5年级", "引号和书名号乱用，逗"]
+  },
+  {
+    id: "CHI-05-009",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 口语交际与综合性学习是考试必考题型，孩子"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-09-09"],
+    keywords: ["语文", "5年级", "口语交际与综合性学习"]
+  },
+  {
+    id: "ENG-05-009",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语一般将来时句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语一般将来时句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语一般将来时句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语一般将来时句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语一般将来时句型总是记不住，考试时不知"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-09-09"],
+    keywords: ["英语", "5年级", "英语一般将来时句型总"]
+  },
+  {
+    id: "ENG-05-011",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "be动词和doing总是搭配错，一看题就懵",
+    icon: "🇬🇧",
+    painPoint: "be动词和doing总是搭配错，一看题就懵",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "be动词和doing总是搭配错，一看题就懵",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "be动词和doing总是搭配错，一看题就懵",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 be动词和doing总是搭配错，一看题就"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-11-11"],
+    keywords: ["英语", "5年级", "be动词和doing"]
+  },
+  {
+    id: "ENG-05-010",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "阅读文章生词太多看不懂，看到长句子就放弃",
+    icon: "🇬🇧",
+    painPoint: "阅读文章生词太多看不懂，看到长句子就放弃",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "阅读文章生词太多看不懂，看到长句子就放弃",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "阅读文章生词太多看不懂，看到长句子就放弃",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 阅读文章生词太多看不懂，看到长句子就放弃"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-10-10"],
+    keywords: ["英语", "5年级", "阅读文章生词太多看不"]
+  },
+  {
+    id: "ENG-05-012",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "什么时候加er、什么时候加more傻傻分不清楚",
+    icon: "🇬🇧",
+    painPoint: "什么时候加er、什么时候加more傻傻分不清楚",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "什么时候加er、什么时候加more傻傻分不清楚",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "什么时候加er、什么时候加more傻傻分不清楚",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 什么时候加er、什么时候加more傻傻分"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-12-12"],
+    keywords: ["英语", "5年级", "什么时候加er、什么"]
+  },
+  {
+    id: "ENG-05-014",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语There Be句型进阶句型总是记不住，考试时不…",
+    icon: "🇬🇧",
+    painPoint: "英语There Be句型进阶句型总是记不住，考试时不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语There Be句型进阶句型总是记不住，考试时不…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语There Be句型进阶句型总是记不住，考试时不…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语There Be句型进阶句型总是记不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-14-14"],
+    keywords: ["英语", "5年级", "英语There Be"]
+  },
+  {
+    id: "ENG-05-007",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语冠词用法句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语冠词用法句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语冠词用法句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语冠词用法句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语冠词用法句型总是记不住，考试时不知道"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-07-07"],
+    keywords: ["英语", "5年级", "英语冠词用法句型总是"]
+  },
+  {
+    id: "ENG-05-013",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语What Can You Do句型总是记不住，考…",
+    icon: "🇬🇧",
+    painPoint: "英语What Can You Do句型总是记不住，考…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语What Can You Do句型总是记不住，考…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语What Can You Do句型总是记不住，考…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语What Can You Do句型总"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-13-13"],
+    keywords: ["英语", "5年级", "英语What Can"]
+  },
+  {
+    id: "ENG-05-006",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My Week句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语My Week句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My Week句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My Week句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语My Week句型总是记不住，考试时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-06-06"],
+    keywords: ["英语", "5年级", "英语My Week句"]
+  },
+  {
+    id: "ENG-05-004",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语What's He Like句型总是记不住，考试…",
+    icon: "🇬🇧",
+    painPoint: "英语What's He Like句型总是记不住，考试…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语What's He Like句型总是记不住，考试…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语What's He Like句型总是记不住，考试…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语What's He Like句型总是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-04-04"],
+    keywords: ["英语", "5年级", "英语What's H"]
+  },
+  {
+    id: "ENG-05-003",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语What Would You Like句型总是记…",
+    icon: "🇬🇧",
+    painPoint: "英语What Would You Like句型总是记…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语What Would You Like句型总是记…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语What Would You Like句型总是记…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语What Would You Lik"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-03-03"],
+    keywords: ["英语", "5年级", "英语What Wou"]
+  },
+  {
+    id: "ENG-05-005",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语In a Nature Park句型总是记不住，…",
+    icon: "🇬🇧",
+    painPoint: "英语In a Nature Park句型总是记不住，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语In a Nature Park句型总是记不住，…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语In a Nature Park句型总是记不住，…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语In a Nature Park句型"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-05-05"],
+    keywords: ["英语", "5年级", "英语In a Nat"]
+  },
+  {
+    id: "MATH-06-014",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算分数除以整数·分数、已知一个数的几分之几求…",
+    icon: "🎯",
+    painPoint: "孩子在计算分数除以整数/分数、已知一个数的几分之几求…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算分数除以整数/分数、已知一个数的几分之几求…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算分数除以整数/分数、已知一个数的几分之几求…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算分数除以整数/分数、已知一个数"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-14-14"],
+    keywords: ["数学", "6年级", "孩子在计算分数除以整"]
+  },
+  {
+    id: "MATH-06-006",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "遇到行程问题的应用题，孩子读完题目完全不知道从哪里下…",
+    icon: "🎯",
+    painPoint: "遇到行程问题的应用题，孩子读完题目完全不知道从哪里下…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "遇到行程问题的应用题，孩子读完题目完全不知道从哪里下…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "遇到行程问题的应用题，孩子读完题目完全不知道从哪里下…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 遇到行程问题的应用题，孩子读完题目完全不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-06-06"],
+    keywords: ["数学", "6年级", "遇到行程问题的应用题"]
+  },
+  {
+    id: "MATH-06-018",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "遇到工程问题的应用题，孩子读完题目完全不知道从哪里下…",
+    icon: "🎯",
+    painPoint: "遇到工程问题的应用题，孩子读完题目完全不知道从哪里下…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "遇到工程问题的应用题，孩子读完题目完全不知道从哪里下…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "遇到工程问题的应用题，孩子读完题目完全不知道从哪里下…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 遇到工程问题的应用题，孩子读完题目完全不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-18-18"],
+    keywords: ["数学", "6年级", "遇到工程问题的应用题"]
+  },
+  {
+    id: "MATH-06-017",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "遇到浓度问题的应用题，孩子读完题目完全不知道从哪里下…",
+    icon: "🎯",
+    painPoint: "遇到浓度问题的应用题，孩子读完题目完全不知道从哪里下…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "遇到浓度问题的应用题，孩子读完题目完全不知道从哪里下…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "遇到浓度问题的应用题，孩子读完题目完全不知道从哪里下…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 遇到浓度问题的应用题，孩子读完题目完全不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-17-17"],
+    keywords: ["数学", "6年级", "遇到浓度问题的应用题"]
+  },
+  {
+    id: "MATH-06-019",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画圆周长·面积公式推导与应用、环形面积时图形画反、公…",
+    icon: "🎯",
+    painPoint: "画圆周长/面积公式推导与应用、环形面积时图形画反、公…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画圆周长/面积公式推导与应用、环形面积时图形画反、公…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画圆周长/面积公式推导与应用、环形面积时图形画反、公…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 画圆周长/面积公式推导与应用、环形面积时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-19-19"],
+    keywords: ["数学", "6年级", "画圆周长/面积公式推"]
+  },
+  {
+    id: "MATH-06-008",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算比例意义与性质、正比例·反比例判断时频繁出…",
+    icon: "🎯",
+    painPoint: "孩子在计算比例意义与性质、正比例/反比例判断时频繁出…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算比例意义与性质、正比例/反比例判断时频繁出…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算比例意义与性质、正比例/反比例判断时频繁出…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算比例意义与性质、正比例/反比例"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-08-08"],
+    keywords: ["数学", "6年级", "孩子在计算比例意义与"]
+  },
+  {
+    id: "MATH-06-015",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "列方程时找不到等量关系，设未知数就卡住了",
+    icon: "🎯",
+    painPoint: "列方程时找不到等量关系，设未知数就卡住了",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "列方程时找不到等量关系，设未知数就卡住了",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "列方程时找不到等量关系，设未知数就卡住了",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 列方程时找不到等量关系，设未知数就卡住了"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-15-15"],
+    keywords: ["数学", "6年级", "列方程时找不到等量关"]
+  },
+  {
+    id: "MATH-06-021",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算假设法与方程法综合应用时频繁出错，不是看错…",
+    icon: "🎯",
+    painPoint: "孩子在计算假设法与方程法综合应用时频繁出错，不是看错…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算假设法与方程法综合应用时频繁出错，不是看错…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算假设法与方程法综合应用时频繁出错，不是看错…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算假设法与方程法综合应用时频繁出"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-21-21"],
+    keywords: ["数学", "6年级", "孩子在计算假设法与方"]
+  },
+  {
+    id: "MATH-06-022",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "遇到利润问题的应用题，孩子读完题目完全不知道从哪里下…",
+    icon: "🎯",
+    painPoint: "遇到利润问题的应用题，孩子读完题目完全不知道从哪里下…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "遇到利润问题的应用题，孩子读完题目完全不知道从哪里下…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "遇到利润问题的应用题，孩子读完题目完全不知道从哪里下…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 遇到利润问题的应用题，孩子读完题目完全不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-22-22"],
+    keywords: ["数学", "6年级", "遇到利润问题的应用题"]
+  },
+  {
+    id: "MATH-06-020",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算分数乘分数、分数混合运算与简便计算时频繁出…",
+    icon: "🎯",
+    painPoint: "孩子在计算分数乘分数、分数混合运算与简便计算时频繁出…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算分数乘分数、分数混合运算与简便计算时频繁出…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算分数乘分数、分数混合运算与简便计算时频繁出…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算分数乘分数、分数混合运算与简便"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-20-20"],
+    keywords: ["数学", "6年级", "孩子在计算分数乘分数"]
+  },
+  {
+    id: "MATH-06-004",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算折扣·成数·税率·利率应用题时频繁出错，不…",
+    icon: "🎯",
+    painPoint: "孩子在计算折扣/成数/税率/利率应用题时频繁出错，不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算折扣/成数/税率/利率应用题时频繁出错，不…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算折扣/成数/税率/利率应用题时频繁出错，不…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算折扣/成数/税率/利率应用题时"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-04-04"],
+    keywords: ["数学", "6年级", "孩子在计算折扣/成数"]
+  },
+  {
+    id: "MATH-06-013",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算比的基本性质、化简比、按比分配应用题时频繁…",
+    icon: "🎯",
+    painPoint: "孩子在计算比的基本性质、化简比、按比分配应用题时频繁…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算比的基本性质、化简比、按比分配应用题时频繁…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算比的基本性质、化简比、按比分配应用题时频繁…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算比的基本性质、化简比、按比分配"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-13-13"],
+    keywords: ["数学", "6年级", "孩子在计算比的基本性"]
+  },
+  {
+    id: "MATH-06-007",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算百分数意义、百分数·分数·小数互化时频繁出…",
+    icon: "🎯",
+    painPoint: "孩子在计算百分数意义、百分数/分数/小数互化时频繁出…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算百分数意义、百分数/分数/小数互化时频繁出…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算百分数意义、百分数/分数/小数互化时频繁出…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算百分数意义、百分数/分数/小数"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-07-07"],
+    keywords: ["数学", "6年级", "孩子在计算百分数意义"]
+  },
+  {
+    id: "MATH-06-009",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算数与代数·图形与几何·统计与概率·综合应用…",
+    icon: "🎯",
+    painPoint: "孩子在计算数与代数/图形与几何/统计与概率/综合应用…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算数与代数/图形与几何/统计与概率/综合应用…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算数与代数/图形与几何/统计与概率/综合应用…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算数与代数/图形与几何/统计与概"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-09-09"],
+    keywords: ["数学", "6年级", "孩子在计算数与代数/"]
+  },
+  {
+    id: "MATH-06-016",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画数形结合思想、找规律时图形画反、公式记混，空间想象…",
+    icon: "🎯",
+    painPoint: "画数形结合思想、找规律时图形画反、公式记混，空间想象…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画数形结合思想、找规律时图形画反、公式记混，空间想象…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画数形结合思想、找规律时图形画反、公式记混，空间想象…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 画数形结合思想、找规律时图形画反、公式记"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-16-16"],
+    keywords: ["数学", "6年级", "画数形结合思想、找规"]
+  },
+  {
+    id: "MATH-06-011",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算负数认识、数轴与负数比较时频繁出错，不是看…",
+    icon: "🎯",
+    painPoint: "孩子在计算负数认识、数轴与负数比较时频繁出错，不是看…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算负数认识、数轴与负数比较时频繁出错，不是看…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算负数认识、数轴与负数比较时频繁出错，不是看…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算负数认识、数轴与负数比较时频繁"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-11-11"],
+    keywords: ["数学", "6年级", "孩子在计算负数认识、"]
+  },
+  {
+    id: "MATH-06-012",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画扇形统计图读图与信息提取、选择合适的统计图时图形画…",
+    icon: "🎯",
+    painPoint: "画扇形统计图读图与信息提取、选择合适的统计图时图形画…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画扇形统计图读图与信息提取、选择合适的统计图时图形画…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画扇形统计图读图与信息提取、选择合适的统计图时图形画…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 画扇形统计图读图与信息提取、选择合适的统"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-12-12"],
+    keywords: ["数学", "6年级", "画扇形统计图读图与信"]
+  },
+  {
+    id: "MATH-06-010",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+    icon: "🎯",
+    painPoint: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算用方向和距离确定位置时频繁出错"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-10-10"],
+    keywords: ["数学", "6年级", "孩子在计算用方向和距"]
+  },
+  {
+    id: "CHI-06-006",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "习作综合是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "习作综合是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "习作综合是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "习作综合是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 习作综合是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-06-06"],
+    keywords: ["语文", "6年级", "习作综合是考试必考题"]
+  },
+  {
+    id: "CHI-06-012",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+    icon: "✏️",
+    painPoint: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "看到病句题就发怵，分不清是成分残缺还是搭配不当，每次…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 看到病句题就发怵，分不清是成分残缺还是搭"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-12-12"],
+    keywords: ["语文", "6年级", "看到病句题就发怵，分"]
+  },
+  {
+    id: "CHI-06-005",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "句子综合是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "句子综合是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "句子综合是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "句子综合是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 句子综合是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-05-05"],
+    keywords: ["语文", "6年级", "句子综合是考试必考题"]
+  },
+  {
+    id: "CHI-06-004",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+    icon: "✏️",
+    painPoint: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "古诗背了又忘，默写总写错别字，诗句意思理解不透彻",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 古诗背了又忘，默写总写错别字，诗句意思理"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-04-04"],
+    keywords: ["语文", "6年级", "古诗背了又忘，默写总"]
+  },
+  {
+    id: "CHI-06-008",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "小升初语文总复习是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "小升初语文总复习是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "小升初语文总复习是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "小升初语文总复习是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 小升初语文总复习是考试必考题型，孩子总是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-08-08"],
+    keywords: ["语文", "6年级", "小升初语文总复习是考"]
+  },
+  {
+    id: "CHI-06-014",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "说明文阅读综合是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "说明文阅读综合是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "说明文阅读综合是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "说明文阅读综合是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 说明文阅读综合是考试必考题型，孩子总是拿"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-14-14"],
+    keywords: ["语文", "6年级", "说明文阅读综合是考试"]
+  },
+  {
+    id: "CHI-06-007",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "名著阅读综合是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "名著阅读综合是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "名著阅读综合是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "名著阅读综合是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 名著阅读综合是考试必考题型，孩子总是拿不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-07-07"],
+    keywords: ["语文", "6年级", "名著阅读综合是考试必"]
+  },
+  {
+    id: "CHI-06-013",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+    icon: "✏️",
+    painPoint: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "比喻和拟人分不清，让分析修辞手法的作用就只会写'生动…",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 比喻和拟人分不清，让分析修辞手法的作用就"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-13-13"],
+    keywords: ["语文", "6年级", "比喻和拟人分不清，让"]
+  },
+  {
+    id: "CHI-06-009",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "非连续性文本综合是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "非连续性文本综合是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "非连续性文本综合是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "非连续性文本综合是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 非连续性文本综合是考试必考题型，孩子总是"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-09-09"],
+    keywords: ["语文", "6年级", "非连续性文本综合是考"]
+  },
+  {
+    id: "CHI-06-011",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "字词综合是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "字词综合是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "字词综合是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "字词综合是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 字词综合是考试必考题型，孩子总是拿不到满"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-11-11"],
+    keywords: ["语文", "6年级", "字词综合是考试必考题"]
+  },
+  {
+    id: "CHI-06-003",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "不但……而且……还是虽然……但是……",
+    icon: "✏️",
+    painPoint: "不但……而且……还是虽然……但是……",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "不但……而且……还是虽然……但是……",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "不但……而且……还是虽然……但是……",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 不但……而且……还是虽然……但是……"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-03-03"],
+    keywords: ["语文", "6年级", "不但……而且……还是"]
+  },
+  {
+    id: "ENG-06-008",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "四种时态混在一起考就全乱了，不知道该用哪个",
+    icon: "🇬🇧",
+    painPoint: "四种时态混在一起考就全乱了，不知道该用哪个",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "四种时态混在一起考就全乱了，不知道该用哪个",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "四种时态混在一起考就全乱了，不知道该用哪个",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 四种时态混在一起考就全乱了，不知道该用哪"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-08-08"],
+    keywords: ["英语", "6年级", "四种时态混在一起考就"]
+  },
+  {
+    id: "ENG-06-010",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "什么时候加er、什么时候加more傻傻分不清楚",
+    icon: "🇬🇧",
+    painPoint: "什么时候加er、什么时候加more傻傻分不清楚",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "什么时候加er、什么时候加more傻傻分不清楚",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "什么时候加er、什么时候加more傻傻分不清楚",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 什么时候加er、什么时候加more傻傻分"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-10-10"],
+    keywords: ["英语", "6年级", "什么时候加er、什么"]
+  },
+  {
+    id: "ENG-06-009",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语小升初英语总复习句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语小升初英语总复习句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语小升初英语总复习句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语小升初英语总复习句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语小升初英语总复习句型总是记不住，考试"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-09-09"],
+    keywords: ["英语", "6年级", "英语小升初英语总复习"]
+  },
+  {
+    id: "ENG-06-015",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Last Weekend句型总是记不住，考试时不…",
+    icon: "🇬🇧",
+    painPoint: "英语Last Weekend句型总是记不住，考试时不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Last Weekend句型总是记不住，考试时不…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Last Weekend句型总是记不住，考试时不…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语Last Weekend句型总是记不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-15-15"],
+    keywords: ["英语", "6年级", "英语Last Wee"]
+  },
+  {
+    id: "ENG-06-012",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语情态动词综合句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语情态动词综合句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语情态动词综合句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语情态动词综合句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语情态动词综合句型总是记不住，考试时不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-12-12"],
+    keywords: ["英语", "6年级", "英语情态动词综合句型"]
+  },
+  {
+    id: "ENG-06-016",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语疑问词综合句型总是记不住，考试时不知道怎么回答",
+    icon: "🇬🇧",
+    painPoint: "英语疑问词综合句型总是记不住，考试时不知道怎么回答",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语疑问词综合句型总是记不住，考试时不知道怎么回答",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语疑问词综合句型总是记不住，考试时不知道怎么回答",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语疑问词综合句型总是记不住，考试时不知"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-16-16"],
+    keywords: ["英语", "6年级", "英语疑问词综合句型总"]
+  },
+  {
+    id: "ENG-06-017",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语I Have a Pen Pal句型总是记不住，…",
+    icon: "🇬🇧",
+    painPoint: "英语I Have a Pen Pal句型总是记不住，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语I Have a Pen Pal句型总是记不住，…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语I Have a Pen Pal句型总是记不住，…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语I Have a Pen Pal句型"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-17-17"],
+    keywords: ["英语", "6年级", "英语I Have a"]
+  },
+  {
+    id: "ENG-06-006",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语My Weekend Plan句型总是记不住，考…",
+    icon: "🇬🇧",
+    painPoint: "英语My Weekend Plan句型总是记不住，考…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语My Weekend Plan句型总是记不住，考…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语My Weekend Plan句型总是记不住，考…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语My Weekend Plan句型总"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-06-06"],
+    keywords: ["英语", "6年级", "英语My Weeke"]
+  },
+  {
+    id: "ENG-06-005",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Then and Now句型总是记不住，考试时不…",
+    icon: "🇬🇧",
+    painPoint: "英语Then and Now句型总是记不住，考试时不…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Then and Now句型总是记不住，考试时不…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Then and Now句型总是记不住，考试时不…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语Then and Now句型总是记不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-05-05"],
+    keywords: ["英语", "6年级", "英语Then and"]
+  },
+  {
+    id: "ENG-06-014",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Where Did You Go句型总是记不住，…",
+    icon: "🇬🇧",
+    painPoint: "英语Where Did You Go句型总是记不住，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Where Did You Go句型总是记不住，…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Where Did You Go句型总是记不住，…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语Where Did You Go句型"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-14-14"],
+    keywords: ["英语", "6年级", "英语Where Di"]
+  },
+  {
+    id: "ENG-06-013",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语What Does He Do句型总是记不住，考…",
+    icon: "🇬🇧",
+    painPoint: "英语What Does He Do句型总是记不住，考…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语What Does He Do句型总是记不住，考…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语What Does He Do句型总是记不住，考…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语What Does He Do句型总"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-13-13"],
+    keywords: ["英语", "6年级", "英语What Doe"]
+  },
+  {
+    id: "ENG-06-007",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语How Tall Are You句型总是记不住，…",
+    icon: "🇬🇧",
+    painPoint: "英语How Tall Are You句型总是记不住，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语How Tall Are You句型总是记不住，…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语How Tall Are You句型总是记不住，…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语How Tall Are You句型"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-07-07"],
+    keywords: ["英语", "6年级", "英语How Tall"]
+  },
+  {
+    id: "ENG-06-011",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语How Can I Get There句型总是记…",
+    icon: "🇬🇧",
+    painPoint: "英语How Can I Get There句型总是记…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语How Can I Get There句型总是记…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语How Can I Get There句型总是记…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语How Can I Get Ther"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-11-11"],
+    keywords: ["英语", "6年级", "英语How Can "]
+  },
+  {
+    id: "ENG-06-003",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Ways to Go to School句型总是…",
+    icon: "🇬🇧",
+    painPoint: "英语Ways to Go to School句型总是…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Ways to Go to School句型总是…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Ways to Go to School句型总是…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语Ways to Go to Scho"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-03-03"],
+    keywords: ["英语", "6年级", "英语Ways to "]
+  },
+  {
+    id: "MATH-04-019",
+    grade: 4,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+    icon: "🎯",
+    painPoint: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画数据整理与图表绘制时图形画反、公式记混，空间想象力…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学4年级 画数据整理与图表绘制时图形画反、公式记混"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-4A-19-19"],
+    keywords: ["数学", "4年级", "画数据整理与图表绘制"]
+  },
+  {
+    id: "CHI-04-012",
+    grade: 4,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "非连续性文本是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学4年级 非连续性文本是考试必考题型，孩子总是拿不"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-4A-12-12"],
+    keywords: ["语文", "4年级", "非连续性文本是考试必"]
+  },
+  {
+    id: "ENG-04-015",
+    grade: 4,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语At the Farm句型总是记不住，考试时不知…",
+    icon: "🇬🇧",
+    painPoint: "英语At the Farm句型总是记不住，考试时不知…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语At the Farm句型总是记不住，考试时不知…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语At the Farm句型总是记不住，考试时不知…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学4年级 英语At the Farm句型总是记不住"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-4A-15-15"],
+    keywords: ["英语", "4年级", "英语At the F"]
+  },
+  {
+    id: "MATH-05-011",
+    grade: 5,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+    icon: "🎯",
+    painPoint: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "画数字编码与身份证号码时图形画反、公式记混，空间想象…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学5年级 画数字编码与身份证号码时图形画反、公式记"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-5A-11-11"],
+    keywords: ["数学", "5年级", "画数字编码与身份证号"]
+  },
+  {
+    id: "CHI-05-013",
+    grade: 5,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+    icon: "✏️",
+    painPoint: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "口语交际与综合性学习是考试必考题型，孩子总是拿不到满分",
+      duration: "约3分钟",
+      searchKeyword: "语文小学5年级 口语交际与综合性学习是考试必考题型，孩子"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-5A-13-13"],
+    keywords: ["语文", "5年级", "口语交际与综合性学习"]
+  },
+  {
+    id: "ENG-05-008",
+    grade: 5,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语In a Nature Park句型总是记不住，…",
+    icon: "🇬🇧",
+    painPoint: "英语In a Nature Park句型总是记不住，…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语In a Nature Park句型总是记不住，…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语In a Nature Park句型总是记不住，…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学5年级 英语In a Nature Park句型"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-5A-08-08"],
+    keywords: ["英语", "5年级", "英语In a Nat"]
+  },
+  {
+    id: "MATH-06-005",
+    grade: 6,
+    subject: "数学",
+    category: "计算与应用思维",
+    title: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+    icon: "🎯",
+    painPoint: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+      modelType: "通用",
+      modelDesc: "此题考察数学核心能力，建议先理解题意再逐步分析。画图辅助理解，分步计算。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "孩子在计算用方向和距离确定位置时频繁出错，不是看错数…",
+      duration: "约3分钟",
+      searchKeyword: "数学小学6年级 孩子在计算用方向和距离确定位置时频繁出错"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["MATH-6A-05-05"],
+    keywords: ["数学", "6年级", "孩子在计算用方向和距"]
+  },
+  {
+    id: "CHI-06-010",
+    grade: 6,
+    subject: "语文",
+    category: "阅读与写作",
+    title: "不但……而且……还是虽然……但是……",
+    icon: "✏️",
+    painPoint: "不但……而且……还是虽然……但是……",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "不但……而且……还是虽然……但是……",
+      modelType: "通用",
+      modelDesc: "此题考察语文核心能力，建议先理解题意再逐步分析。关注关键字词，理解上下文。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "不但……而且……还是虽然……但是……",
+      duration: "约3分钟",
+      searchKeyword: "语文小学6年级 不但……而且……还是虽然……但是……"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["CHI-6A-10-10"],
+    keywords: ["语文", "6年级", "不但……而且……还是"]
+  },
+  {
+    id: "ENG-06-004",
+    grade: 6,
+    subject: "英语",
+    category: "语法与词汇",
+    title: "英语Ways to Go to School句型总是…",
+    icon: "🇬🇧",
+    painPoint: "英语Ways to Go to School句型总是…",
+    aiDiagnosis: {
+      trigger: "做错时弹出",
+      action: "系统弹出追问引导孩子反思错误原因",
+      interactionType: "dynamic-question"
+    },
+    chip: {
+      script: "英语Ways to Go to School句型总是…",
+      modelType: "通用",
+      modelDesc: "此题考察英语核心能力，建议先理解题意再逐步分析。先确定时态和人称，再套用句型。",
+      modelVisual: {
+        type: "accordion",
+        component: "generic"
+      }
+    },
+    video: {
+      source: "Bilibili",
+      bvid: "",
+      title: "英语Ways to Go to School句型总是…",
+      duration: "约3分钟",
+      searchKeyword: "英语小学6年级 英语Ways to Go to Scho"
+    },
+    video2: {},
+    exams: ["待补充真题"],
+    examCodes: ["ENG-6A-04-04"],
+    keywords: ["英语", "6年级", "英语Ways to "]
+  }
 ];
 
 // ============== 按年级科目分组索引 ==============
