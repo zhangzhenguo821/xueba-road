@@ -11,7 +11,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "得分扣分题换个壳就不会",
+    title: "鸡兔同笼倒扣分问题·两分钟掌握解题方法",
     icon: "🎯",
     painPoint: "投篮比赛，投中一球得5分，投错一球扣2分，共投10球得36分。问投中几球？孩子总是把差量算成 5−2=3，导致满盘皆输。",
     aiDiagnosis: {
@@ -48,7 +48,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "数论与巧算思维",
-    title: "周期循环问题余数对应",
+    title: "周期循环余数问题·有余数的除法",
     icon: "🔄",
     painPoint: "一串彩灯按红、黄、黄、蓝、绿的顺序排列，第128盏灯是什么颜色？孩子算出了余数，但数数的时候数错，或者余数是0的时候不知道是谁。",
     aiDiagnosis: {
@@ -85,7 +85,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "几何与空间思维",
-    title: "长方形剪拼与重叠面积",
+    title: "重叠问题·长方形剪拼重叠面积",
     icon: "📐",
     painPoint: "两个长方形重叠在一起，已知重叠部分是个正方形，求组合后的总面积。孩子找不到不重叠部分的各自长宽，卡死。",
     aiDiagnosis: {
@@ -122,7 +122,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "盈亏问题",
-    title: "盈亏问题多多少少搞不清",
+    title: "盈亏问题·四年级奥数精讲",
     icon: "⚖️",
     painPoint: "学校买来一批图书，如果每班分8本则多出15本；如果每班分10本则少25本。问有多少个班？孩子不知道什么时候该加，什么时候该减。",
     aiDiagnosis: {
@@ -161,7 +161,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "运算定律",
-    title: "乘法分配律正向逆向全考",
+    title: "乘法分配律七大题型·四年级数学",
     icon: "✖️",
     painPoint: "用简便方法计算：(40+4)×25，孩子只乘第一个数40×25+4，忘记4也要乘25！常见错误：只乘第一项漏乘第二项。",
     aiDiagnosis: {
@@ -195,7 +195,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "小数运算",
-    title: "小数加减竖式小数点不对齐",
+    title: "小数加减法·小数点对齐",
     icon: "🔢",
     painPoint: "列竖式计算15.62+7.8，孩子末尾对齐而不是小数点对齐，导致错误。20-5.46忘记给整数补0变成20.00。",
     aiDiagnosis: {
@@ -229,7 +229,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "三角形几何",
-    title: "三角形三边关系内角和总记错",
+    title: "三角形的内角和·说课讲解",
     icon: "🔺",
     painPoint: "判断能否围成三角形：2,3,5不能！孩子以为两边之和等于第三边就行。内角和记成360°（那是四边形）。等腰三角形底角忘记除以2。",
     aiDiagnosis: {
@@ -263,7 +263,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "图形运动",
-    title: "平移格数数对应点不是数间距",
+    title: "平移格数·对应点移动",
     icon: "↗️",
     painPoint: "图形A向右平移5格再向下平移3格得到图形B，孩子数两个图形中间的空格数而不是对应点移动的格数。",
     aiDiagnosis: {
@@ -299,7 +299,7 @@ const CHIPS = [
     grade: 4,
     subject: "语文",
     category: "阅读理解",
-    title: "词句赏析题只会写'生动形象'",
+    title: "小学语文阅读理解·10种说明方法",
     icon: "📖",
     painPoint: "结合上下文，体会'嫩绿的叶子在风中摇曳'中'摇曳'的意思。孩子只会写'生动形象'，拿不到阅卷老师的采分点。",
     aiDiagnosis: {
@@ -341,7 +341,7 @@ const CHIPS = [
     grade: 4,
     subject: "语文",
     category: "考场作文",
-    title: "写事流水账干巴巴写不长",
+    title: "小学满分作文·通用方法技巧",
     icon: "✍️",
     painPoint: "写《记一次游戏》，孩子写：他跑过来一脚把球踢进了球门，我很开心。全是流水账，没有细节。",
     aiDiagnosis: {
@@ -387,7 +387,7 @@ const CHIPS = [
     grade: 4,
     subject: "英语",
     category: "时态与动词变形",
-    title: "单三后面的s永远漏掉",
+    title: "什么是英语中的三单·动词加s",
     icon: "🧲",
     painPoint: "He like_____ playing football. 孩子永远写 like，不知道 She goes 为什么要加 es。",
     aiDiagnosis: {
@@ -424,7 +424,7 @@ const CHIPS = [
     grade: 4,
     subject: "英语",
     category: "介词与空间思维",
-    title: "介词in/on/at换个场景就瞎猜",
+    title: "英语时间介词in/on/at·语法精讲",
     icon: "📍",
     painPoint: "My mom is waiting for me _____ the bus stop. 孩子分不清到底是在'里面'、'在上面'还是'在哪个点'。",
     aiDiagnosis: {
@@ -461,7 +461,7 @@ const CHIPS = [
     grade: 4,
     subject: "英语",
     category: "完形填空与逻辑思维",
-    title: "完形填空看懂了也选错",
+    title: "小学英语完形填空怎么做·得阅读者得天下",
     icon: "🔍",
     painPoint: "Mike was very ______, because his dog died yesterday. 选项：A.happy B.sad C.tired。孩子全凭翻译瞎猜。",
     aiDiagnosis: {
@@ -500,7 +500,7 @@ const CHIPS = [
     grade: 5,
     subject: "数学",
     category: "几何思维",
-    title: "梯形对角线阴影面积毫无头绪",
+    title: "五年级蝴蝶模型·梯形阴影面积",
     icon: "🦋",
     painPoint: "已知梯形面积，对角线交于点O，求左右两个小三角形的面积关系。孩子习惯了死套 S=½ah，找不到高就直接放弃。",
     aiDiagnosis: {
@@ -537,7 +537,7 @@ const CHIPS = [
     grade: 5,
     subject: "数学",
     category: "应用题思维",
-    title: "列车过桥路程总漏车长",
+    title: "火车过桥问题·一个视频搞定",
     icon: "🚂",
     painPoint: "一列火车长200米，以每秒20米的速度通过一座长800米的桥，求完全过桥需要多少秒？孩子往往直接拿桥长800除以速度，漏掉车长。",
     aiDiagnosis: {
@@ -574,7 +574,7 @@ const CHIPS = [
     grade: 5,
     subject: "数学",
     category: "数论思维",
-    title: "公因数公倍数分不清该求哪个",
+    title: "公因数与最小公倍数·求解及原理",
     icon: "🍬",
     painPoint: "有一些糖果，3个一堆剩2个，4个一堆剩2个，5个一堆剩2个，求最少有多少个？孩子看到数字就盲目通分或乱乘。",
     aiDiagnosis: {
@@ -613,7 +613,7 @@ const CHIPS = [
     grade: 5,
     subject: "语文",
     category: "阅读理解",
-    title: "非连续性文本不会提取对比信息",
+    title: "非连续性文本核心方法·3步掌握",
     icon: "📊",
     painPoint: "给出药品说明书或两家快递公司价格对比图表，问：小明要寄5公斤行李选哪家划算？孩子长篇大论写废话，却拿不到对比分。",
     aiDiagnosis: {
@@ -650,7 +650,7 @@ const CHIPS = [
     grade: 5,
     subject: "语文",
     category: "考场作文",
-    title: "写人只会堆砌外貌千人一面",
+    title: "作文写人·五官仿写特写",
     icon: "📸",
     painPoint: "写《一个XX的人》或《我想对您说》，描写妈妈只会写：妈妈很辛苦，头上有了白发……阅卷老师直接判为三类文。",
     aiDiagnosis: {
@@ -696,7 +696,7 @@ const CHIPS = [
     grade: 5,
     subject: "英语",
     category: "时态逻辑",
-    title: "分不清一般过去时和现在完成时",
+    title: "区分一般过去和现在完成时·五分钟",
     icon: "⚡",
     painPoint: "I _____ (lose) my key yesterday vs I _____ (lose) my key. I can't get into the room now. 孩子全填 lost，完全不知道区别。",
     aiDiagnosis: {
@@ -733,7 +733,7 @@ const CHIPS = [
     grade: 5,
     subject: "英语",
     category: "情态动词",
-    title: "情态动词must/can/may全凭翻译瞎猜",
+    title: "小学英语语法·情态动词",
     icon: "💡",
     painPoint: "The light is on. He _____ be at home. 选项：must/can/may。孩子觉得填'可能'、'必须'都说得通，随便盲选。",
     aiDiagnosis: {
@@ -772,7 +772,7 @@ const CHIPS = [
     grade: 6,
     subject: "数学",
     category: "小升初经典行程",
-    title: "流水行船帽子丢了模型",
+    title: "流水行船问题·小升初精讲",
     icon: "🚢",
     painPoint: "甲乙两船在河中相向而行，甲顺水乙逆水，擦身而过时帽子从甲船掉入水中。20分钟后甲船掉头追帽子，问追上需要多少分钟？孩子把所有速度列出来设未知数，算到天荒地老。",
     aiDiagnosis: {
@@ -809,7 +809,7 @@ const CHIPS = [
     grade: 6,
     subject: "数学",
     category: "小升初立体几何",
-    title: "圆柱剪开圆锥旋转空间崩塌",
+    title: "旋转体体积计算·半小时搞定",
     icon: "🌀",
     painPoint: "一个直角三角形，直角边分别为3厘米和4厘米，以3厘米的边为轴旋转一周，求得到的立体图形体积。孩子分不清底面半径是3还是4。",
     aiDiagnosis: {
@@ -846,7 +846,7 @@ const CHIPS = [
     grade: 6,
     subject: "数学",
     category: "小升初抽屉原理",
-    title: "抽屉原理至少保证数数数漏",
+    title: "鸽巢问题·抽屉原理一次讲清楚",
     icon: "🎁",
     painPoint: "口袋里有红、黄、蓝三种颜色的球各10个，闭着眼睛往外拿，至少摸出多少个球才能保证有3个球颜色一样？孩子全凭感觉猜4个、7个。",
     aiDiagnosis: {
@@ -885,7 +885,7 @@ const CHIPS = [
     grade: 6,
     subject: "语文",
     category: "文言文突破",
-    title: "课外文言文一句话都看不懂",
+    title: "走进小古文·小学文言文阅读理解",
     icon: "📜",
     painPoint: "小升初课外文言文阅读，给出一段墨子或战国策的故事，问主人公什么品质。孩子连字面意思都翻译不出来。",
     aiDiagnosis: {
@@ -927,7 +927,7 @@ const CHIPS = [
     grade: 6,
     subject: "语文",
     category: "满分作文",
-    title: "结尾只会喊口号空洞煽情",
+    title: "小学作文如何写结尾·以景结情",
     icon: "🌅",
     painPoint: "写抒情或成长作文（如《那些年，我们一起走过》），结尾只会写：我们要好好学习，不辜负老师的期望，啊！明天真美好！阅卷老师直接扣分。",
     aiDiagnosis: {
@@ -973,7 +973,7 @@ const CHIPS = [
     grade: 6,
     subject: "英语",
     category: "被动语态核心",
-    title: "被动语态永远漏掉be动词",
+    title: "英语被动语态·语法讲解",
     icon: "🔄",
     painPoint: "The web platform ______ (build) by the IT team tomorrow. 孩子看到 tomorrow 习惯性盲填 will build 导致全错。",
     aiDiagnosis: {
@@ -1015,7 +1015,7 @@ const CHIPS = [
     grade: 6,
     subject: "英语",
     category: "终极短文填空",
-    title: "首字母填空全凭语感毫无章法",
+    title: "小学英语首字母填词·做题技巧",
     icon: "🔎",
     painPoint: "小升初压轴题：一段长短文挖出10个空只给首字母，要求填入正确形式。孩子全凭语感猜词。",
     aiDiagnosis: {
@@ -1058,7 +1058,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "年龄问题几年后永远搞反",
+    title: "年龄问题·四年级奥数基础",
     icon: "🎂",
     painPoint: "小明今年8岁，妈妈今年36岁，几年后妈妈的年龄是小明的3倍？孩子总是直接拿 36÷3=12，然后说4年后，完全忘了妈妈也在变老！",
     aiDiagnosis: {
@@ -1092,7 +1092,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "数论与巧算思维",
-    title: "植树问题端点要不要算总搞混",
+    title: "植树问题完整版·从不会到会",
     icon: "🌳",
     painPoint: "一条100米长的路一边种树，每隔5米种一棵，两头都种，一共种多少棵？孩子直接 100÷5=20，忘了两头都要种！或者路是环形的，孩子还是+1！",
     aiDiagnosis: {
@@ -1126,7 +1126,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "几何与空间思维",
-    title: "角的两条边延长角会变大吗",
+    title: "角的大小与边长无关·小学数学",
     icon: "📐",
     painPoint: "老师问：一个角的两条边延长后，角的大小变不变？孩子回答'变大了'，因为两条边看起来更长了！但角的大小跟边长没关系啊！",
     aiDiagnosis: {
@@ -1160,7 +1160,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "和差问题谁大谁小分不清",
+    title: "和差问题·三年级奥数第七讲",
     icon: "⚖️",
     painPoint: "两个数的和是48，差是12，求这两个数。孩子看到'差'就慌了，不知道是大的减小的还是小的减大的，列算式更是乱七八糟。",
     aiDiagnosis: {
@@ -1194,7 +1194,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "计算与应用思维",
-    title: "归一问题先求什么后求什么搞乱了",
+    title: "归一问题·小学数学必学",
     icon: "🔑",
     painPoint: "3台拖拉机5天耕地120亩，4台拖拉机7天耕地多少亩？孩子不知道先算1台1天耕多少，直接 120÷3÷4÷7 乱除一通，结果完全不对。",
     aiDiagnosis: {
@@ -1228,7 +1228,7 @@ const CHIPS = [
     grade: 4,
     subject: "数学",
     category: "几何与空间思维",
-    title: "平行四边形拉动变成长方形面积到底变不变",
+    title: "长方形拉成平行四边形面积变化",
     icon: "🔄",
     painPoint: "一个长方形框架，拉成平行四边形后，面积变了吗？孩子说'没变，还是那根框子'，但面积明明变小了！因为底没变但高变了啊！",
     aiDiagnosis: {
