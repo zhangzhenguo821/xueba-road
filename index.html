@@ -80,15 +80,47 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .tree-subject-arrow{font-size:12px;transition:transform 0.3s ease}
 .tree-subject.open .tree-subject-arrow{transform:rotate(90deg)}
 .tree-chips{display:none;padding:4px 0 4px 22px}
-.tree-subject.open .tree-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:6px}
+.tree-subject.open .tree-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
 
-.tree-chip{padding:8px 14px;border-radius:6px;font-size:12px;cursor:pointer;transition:var(--transition);background:rgba(0,0,0,0.02);color:var(--text-secondary);border:1.5px solid transparent;display:flex;align-items:center;gap:6px;line-height:1.4}
+.tree-chip{padding:8px 14px;border-radius:6px;font-size:12px;cursor:pointer;transition:var(--transition);background:rgba(0,0,0,0.02);color:var(--text-secondary);border:1.5px solid transparent;display:flex;align-items:flex-start;gap:6px;line-height:1.5}
 .tree-chip:hover{background:rgba(0,0,0,0.04);color:var(--text);border-color:rgba(0,0,0,0.06);transform:translateX(2px)}
 .tree-chip-id{font-size:10px;font-weight:600;padding:1px 5px;border-radius:3px;flex-shrink:0}
 .tree-chip.math .tree-chip-id{background:var(--math-bg);color:var(--math)}
 .tree-chip.chinese .tree-chip-id{background:var(--chinese-bg);color:var(--chinese)}
 .tree-chip.english .tree-chip-id{background:var(--english-bg);color:var(--english)}
-.tree-chip-text{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tree-chip-text{overflow:visible;white-space:normal;word-break:break-word}
+
+/* ====== Exam Download Page ====== */
+.exam-container{max-width:1100px;margin:0 auto;padding:16px 20px}
+.exam-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.exam-filters{display:flex;flex-wrap:wrap;gap:8px;flex:1}
+.exam-filter{padding:6px 10px;border:1.5px solid rgba(0,0,0,0.08);border-radius:6px;font-size:12px;background:white;color:var(--text);cursor:pointer;outline:none}
+.exam-filter:focus{border-color:var(--accent, #2563eb)}
+.exam-search{flex:0 0 200px;padding:6px 10px;border:1.5px solid rgba(0,0,0,0.08);border-radius:6px;font-size:12px;outline:none;background:white}
+.exam-search:focus{border-color:var(--accent, #2563eb)}
+.exam-stats{font-size:12px;color:var(--text-dim);margin-bottom:12px}
+.exam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:10px}
+.exam-card{background:white;border:1.5px solid rgba(0,0,0,0.06);border-radius:10px;padding:14px 16px;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;gap:8px}
+.exam-card:hover{border-color:rgba(0,0,0,0.15);box-shadow:0 2px 12px rgba(0,0,0,0.06);transform:translateY(-1px)}
+.exam-card-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.5}
+.exam-card-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.exam-card-tag{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:500}
+.exam-card-tag.exam{background:var(--math-bg);color:var(--math)}
+.exam-card-tag.mid{background:#fef3c7;color:#92400e}
+.exam-card-tag.race{background:#fce7f3;color:#9d174d}
+.exam-card-tag.region{background:rgba(0,0,0,0.04);color:var(--text-secondary)}
+.exam-card-tag.grade{background:var(--chinese-bg);color:var(--chinese)}
+.exam-card-chips{margin-top:4px;font-size:11px;color:var(--text-dim);line-height:1.6;max-height:58px;overflow:hidden}
+.exam-card-chips.expanded{max-height:none}
+.exam-card-chip{display:inline-block;padding:1px 6px;margin:1px 3px 1px 0;border-radius:3px;font-size:10px;background:rgba(0,0,0,0.04);cursor:pointer;transition:background 0.15s}
+.exam-card-chip:hover{background:var(--math-bg);color:var(--math)}
+.exam-card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:2px}
+.exam-card-expand{font-size:11px;color:var(--accent, #2563eb);cursor:pointer;user-select:none}
+.exam-card-expand:hover{text-decoration:underline}
+.exam-empty{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-dim)}
+.exam-empty-icon{font-size:40px;margin-bottom:12px}
+.exam-empty-title{font-size:14px;margin-bottom:4px}
+.exam-empty-desc{font-size:12px;color:var(--text-dim)}
 
 /* ====== Page: 痛点路由器 ====== */
 .home-hero{text-align:center;padding:32px 20px 20px}
@@ -374,6 +406,7 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <button class="nav-pill" data-page="home" onclick="showPage('home')">🏠 痛点直达</button>
     <button class="nav-pill" data-page="model" onclick="showPage('model')">🧠 模型舱</button>
     <button class="nav-pill" data-page="diag" onclick="showPage('diag')">🔍 诊断区</button>
+    <button class="nav-pill" data-page="exam" onclick="showPage('exam')">📝 真题下载</button>
     <div class="progress-bar-mini" id="progressMini"></div>
     <span class="progress-count" id="progressCount">0/161</span>
   </div>
@@ -429,6 +462,40 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
       <div class="empty-title">先观看讲解视频</div>
       <div class="empty-desc">在模型舱里观看完两位老师的讲解后，再来这里通关验证</div>
     </div>
+  </div>
+</div>
+
+<!-- Page: 真题下载 -->
+<div class="page" id="page-exam">
+  <div class="exam-container" id="examContainer">
+    <div class="exam-toolbar">
+      <div class="exam-filters">
+        <select class="exam-filter" id="examGrade" onchange="renderExams()">
+          <option value="0">全部年级</option>
+          <option value="4">四年级</option>
+          <option value="5">五年级</option>
+          <option value="6">六年级</option>
+        </select>
+        <select class="exam-filter" id="examSubject" onchange="renderExams()">
+          <option value="">全部科目</option>
+          <option value="数学">数学</option>
+          <option value="语文">语文</option>
+          <option value="英语">英语</option>
+        </select>
+        <select class="exam-filter" id="examType" onchange="renderExams()">
+          <option value="">全部类型</option>
+          <option value="期末">期末</option>
+          <option value="期中">期中</option>
+          <option value="竞赛">竞赛</option>
+        </select>
+        <select class="exam-filter" id="examRegion" onchange="renderExams()" style="min-width:100px">
+          <option value="">全部地区</option>
+        </select>
+      </div>
+      <input class="exam-search" id="examSearch" placeholder="搜索试卷..." oninput="renderExams()">
+    </div>
+    <div class="exam-stats" id="examStats"></div>
+    <div class="exam-grid" id="examGrid"></div>
   </div>
 </div>
 
@@ -1439,12 +1506,95 @@ function loadVideoWarehouse() {
     });
 }
 
+// ====== Exam Library ======
+var _examData = [];
+var _examRegions = [];
+
+function loadExams() {
+  fetch('data/exams/index.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      _examData = data;
+      // 收集所有地区
+      var regionSet = {};
+      data.forEach(function(e) { regionSet[e.region] = true; });
+      _examRegions = Object.keys(regionSet).sort();
+      // 填充地区下拉框
+      var sel = document.getElementById('examRegion');
+      _examRegions.forEach(function(r) {
+        var opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        sel.appendChild(opt);
+      });
+      renderExams();
+    })
+    .catch(function(err) {
+      console.error('加载真题数据失败:', err);
+      document.getElementById('examGrid').innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">📭</div><div class="exam-empty-title">真题数据加载失败</div><div class="exam-empty-desc">请检查 network 连接后刷新页面</div></div>';
+    });
+}
+
+function renderExams() {
+  var grade = parseInt(document.getElementById('examGrade').value) || 0;
+  var subject = document.getElementById('examSubject').value;
+  var type = document.getElementById('examType').value;
+  var region = document.getElementById('examRegion').value;
+  var search = (document.getElementById('examSearch').value || '').trim().toLowerCase();
+
+  var filtered = _examData.filter(function(e) {
+    if (grade > 0 && e.grade !== grade) return false;
+    if (subject && e.subject !== subject) return false;
+    if (type && e.type !== type) return false;
+    if (region && e.region !== region) return false;
+    if (search) {
+      var t = e.title.toLowerCase();
+      if (t.indexOf(search) === -1) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('examStats').textContent = '共 ' + filtered.length + ' 张试卷，关联 ' + (function(){
+    var s = new Set();
+    filtered.forEach(function(e) { e.chips.forEach(function(c) { s.add(c); }); });
+    return s.size + ' 个芯片';
+  })();
+
+  var grid = document.getElementById('examGrid');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">🔍</div><div class="exam-empty-title">没有匹配的试卷</div><div class="exam-empty-desc">试试调整筛选条件</div></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(function(e) {
+    var tagClass = e.type === '期末' ? 'exam' : e.type === '期中' ? 'mid' : 'race';
+    var chipsHtml = e.chips.map(function(cid) {
+      return '<span class="exam-card-chip" onclick="event.stopPropagation();openChip(\'' + cid + '\')" title="点击打开芯片">' + cid + '</span>';
+    }).join('');
+    return '<div class="exam-card" onclick="this.querySelector(\'.exam-card-chips\').classList.toggle(\'expanded\');var btn=this.querySelector(\'.exam-card-expand\');btn.textContent=btn.textContent.startsWith(\'展开\')?\'收起 ▲\':\'展开 ▼\';event.stopPropagation()">' +
+      '<div class="exam-card-title">' + e.title + '</div>' +
+      '<div class="exam-card-meta">' +
+        '<span class="exam-card-tag ' + tagClass + '">' + e.type + '</span>' +
+        '<span class="exam-card-tag region">📍 ' + e.region + '</span>' +
+        '<span class="exam-card-tag grade">G' + e.grade + '</span>' +
+        '<span class="exam-card-tag region">' + e.subject + '</span>' +
+      '</div>' +
+      '<div class="exam-card-chips">' + chipsHtml + '</div>' +
+      '<div class="exam-card-foot">' +
+        '<span style="font-size:11px;color:var(--text-dim)">关联 ' + e.chipCount + '/' + e.totalChips + ' 个芯片</span>' +
+        '<span class="exam-card-expand">展开 ▼</span>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
 // ====== Init ======
 function init() {
   renderTree();
   selectGrade(4);
   updateProgress();
   loadVideoWarehouse();
+  loadExams();
 }
 
 init();
