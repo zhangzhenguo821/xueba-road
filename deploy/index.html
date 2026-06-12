@@ -150,6 +150,49 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .exam-empty-icon{font-size:40px;margin-bottom:12px}
 .exam-empty-title{font-size:14px;margin-bottom:4px}
 .exam-empty-desc{font-size:12px;color:var(--text-dim)}
+/* ====== Paper Layout (in Modal) ====== */
+.paper-info-bar{background:rgba(0,0,0,0.03);border-radius:8px;padding:12px 16px;margin-bottom:20px;display:flex;gap:24px;font-size:13px;color:var(--text-secondary);border:1px dashed rgba(0,0,0,0.1);flex-wrap:wrap}
+.paper-sections{display:flex;flex-direction:column;gap:20px}
+.paper-section{background:white;border:1.5px solid rgba(0,0,0,0.04);border-radius:10px;overflow:hidden}
+.paper-section-title{background:rgba(0,0,0,0.02);padding:10px 16px;font-size:15px;font-weight:800;color:var(--text);border-bottom:1px solid rgba(0,0,0,0.04)}
+.paper-q-list{display:flex;flex-direction:column}
+.paper-q-item{display:flex;align-items:flex-start;gap:8px;padding:14px 16px;border-bottom:1px solid rgba(0,0,0,0.03);transition:background 0.15s;line-height:1.7}
+.paper-q-item:last-child{border-bottom:none}
+.paper-q-item:hover{background:rgba(108,92,231,0.02)}
+.paper-q-num{font-size:13px;font-weight:800;color:var(--math);min-width:28px;flex-shrink:0}
+.paper-q-text{font-size:13px;color:var(--text);flex:1}
+.paper-q-blank{font-size:13px;color:var(--text-dim);flex-shrink:0;font-style:italic}
+.paper-answers{margin-top:24px;background:rgba(0,184,148,0.03);border-radius:10px;border:2px solid rgba(0,184,148,0.15);padding:20px;animation:fadeIn 0.3s ease}
+.paper-answers-title{font-size:15px;font-weight:800;color:#00B894;margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.paper-answers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.paper-ans-item{padding:6px 10px;background:white;border-radius:6px;font-size:12px;color:var(--text);border:1px solid rgba(0,0,0,0.04)}
+.paper-ans-item b{color:var(--math)}
+.paper-toolbar{display:flex;justify-content:center;gap:10px;margin-top:24px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.06);flex-wrap:wrap}
+.paper-btn{padding:9px 22px;border-radius:8px;border:1.5px solid rgba(0,0,0,0.1);font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;background:white;color:var(--text)}
+.paper-btn:hover{transform:scale(1.03)}
+.paper-btn-close{background:white;color:var(--text-secondary)}
+.paper-btn-answer{background:white;color:var(--math);border-color:var(--math)}
+.paper-btn-print{color:white;border:none}
+.paper-empty{background:rgba(0,0,0,0.02);border-radius:12px;padding:32px;text-align:center;border:1.5px dashed rgba(0,0,0,0.08);margin-bottom:20px}
+.paper-empty-icon{font-size:44px;margin-bottom:10px}
+.paper-empty-title{font-size:14px;font-weight:600;color:var(--text-secondary);margin-bottom:6px}
+.paper-empty-desc{font-size:12px;color:var(--text-dim);line-height:1.6}
+.paper-chips-section{margin-top:24px}
+.paper-chips-title{font-size:14px;font-weight:700;color:var(--text-secondary);margin-bottom:10px}
+/* Print styles */
+@media print {
+  .app-header,.nav-pill,.app-nav{display:none!important}
+  .page{display:block!important;padding:0!important}
+  .exam-modal-overlay{position:static!important;background:none!important;padding:0!important}
+  .exam-modal{box-shadow:none!important;border-radius:0!important;max-width:100%!important;max-height:none!important;overflow:visible!important}
+  .exam-modal-header{background:#16213E!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .exam-modal-close,.paper-toolbar,.paper-btn-close,.paper-btn-answer{display:none!important}
+  .paper-answers{display:block!important;-webkit-print-color-adjust:exact}
+  .paper-q-blank{color:#999!important}
+  .exam-modal-chips{display:none!important}
+  .paper-chips-section{display:none!important}
+  @page{margin:1.5cm}
+}
 
 /* ====== Page: 痛点路由器 ====== */
 .home-hero{text-align:center;padding:32px 20px 20px}
@@ -536,6 +579,7 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 <script src="data.js?v=202606121200"></script>
 <script src="data/exams/index-data.js?v=202606121700"></script>
 <script src="data/exams/index-enriched-data.js?v=202606121700"></script>
+<script src="data/exams/exam-papers.js?v=202606121730"></script>
 <script>
 // ====== State ======
 let currentGrade = 4;
@@ -1631,19 +1675,22 @@ function renderExams() {
 
   grid.innerHTML = filtered.map(function(e) {
     var tagClass = e.type === '期末' ? 'exam' : e.type === '期中' ? 'mid' : 'race';
-    var enr = _examEnriched[e.id];
-    var isEnriched = enr && enr.sampleQuestions && enr.sampleQuestions.length > 0;
-    var cardClass = isEnriched ? 'exam-card enriched' : 'exam-card';
+    var paper = (typeof _EXAM_PAPERS !== 'undefined') ? _EXAM_PAPERS[e.id] : null;
+    var hasPaper = paper && paper.sections && paper.totalQuestions >= 3;
+    var totalQ = hasPaper ? paper.totalQuestions : 0;
+    var cardClass = hasPaper ? 'exam-card enriched' : 'exam-card';
+    var subjectEmoji = e.subject === '数学' ? '🧮' : e.subject === '语文' ? '📖' : '🌍';
     
-    // Question preview (show up to 2 sample questions)
+    // Question preview (show first 2 questions from full paper)
     var questionPreview = '';
-    if (isEnriched) {
-      var samples = enr.sampleQuestions.slice(0, 2);
+    if (hasPaper && paper.sections.length > 0) {
+      var firstSec = paper.sections[0];
+      var previewQS = firstSec.questions.slice(0, 2);
       questionPreview = '<div class="exam-question-preview">' +
-        samples.map(function(q, i) {
-          return '<div style="margin-bottom:3px"><b>Q' + (i+1) + '.</b> ' + q.question.substring(0, 50) + (q.question.length > 50 ? '…' : '') + '</div>';
+        previewQS.map(function(q) {
+          return '<div style="margin-bottom:3px"><b>' + q.number + '.</b> ' + q.question.substring(0, 55) + (q.question.length > 55 ? '…' : '') + '</div>';
         }).join('') +
-        (enr.sampleQuestions.length > 2 ? '<div style="font-size:10px;color:#00B894;margin-top:2px">+ 还有 ' + (enr.sampleQuestions.length - 2) + ' 道题…</div>' : '') +
+        (totalQ > 2 ? '<div style="font-size:10px;color:#00B894;margin-top:2px">+ 共 ' + totalQ + ' 道题 → 点击查看完整试卷</div>' : '') +
         '</div>';
     }
     
@@ -1657,20 +1704,20 @@ function renderExams() {
     
     return '<div class="' + cardClass + '" onclick="viewExamPaper(\'' + e.id + '\')">' +
       '<div class="exam-card-title">' +
-        (isEnriched ? '📋 ' : '📄 ') + e.title +
+        subjectEmoji + ' ' + e.title +
       '</div>' +
       '<div class="exam-card-meta">' +
         '<span class="exam-card-tag ' + tagClass + '">' + e.type + '</span>' +
         '<span class="exam-card-tag region">📍 ' + e.region + '</span>' +
         '<span class="exam-card-tag grade">G' + e.grade + '</span>' +
         '<span class="exam-card-tag subject-tag">' + e.subject + '</span>' +
-        (isEnriched ? '<span class="exam-card-tag" style="background:#d4fceb;color:#00B894">✅ ' + enr.sampleQuestions.length + '题可练</span>' : '') +
+        (hasPaper ? '<span class="exam-card-tag" style="background:#d4fceb;color:#00B894">📋 ' + totalQ + '题完整试卷</span>' : '') +
       '</div>' +
       questionPreview +
       '<div class="exam-card-chips">' + chipsHtml + '</div>' +
       '<div class="exam-card-foot">' +
         '<span style="font-size:11px;color:var(--text-dim)">关联 ' + e.chipCount + '/' + e.totalChips + ' 个芯片</span>' +
-        '<button class="exam-view-btn" onclick="event.stopPropagation();viewExamPaper(\'' + e.id + '\')">' + (isEnriched ? '📝 查看试卷' : '📋 查看详情') + '</button>' +
+        '<button class="exam-view-btn" onclick="event.stopPropagation();viewExamPaper(\'' + e.id + '\')">' + (hasPaper ? '📝 查看试卷' : '📋 查看详情') + '</button>' +
       '</div>' +
     '</div>';
   }).join('');
@@ -1681,81 +1728,107 @@ function viewExamPaper(examId) {
   var exam = _examData.find(function(e) { return e.id === examId; });
   if (!exam) return;
   
-  var enr = _examEnriched[examId];
-  var isEnriched = enr && enr.sampleQuestions && enr.sampleQuestions.length > 0;
+  var paper = (typeof _EXAM_PAPERS !== 'undefined') ? _EXAM_PAPERS[examId] : null;
+  var hasPaper = paper && paper.sections && paper.sections.length > 0;
+  var totalQ = hasPaper ? paper.totalQuestions : 0;
   
-  var tagClass = exam.type === '期末' ? 'exam' : exam.type === '期中' ? 'mid' : 'race';
   var color = exam.subject === '数学' ? '#6C5CE7' : exam.subject === '语文' ? '#FF6B35' : '#00B894';
+  var subjectEmoji = exam.subject === '数学' ? '🧮' : exam.subject === '语文' ? '📖' : '🌍';
   
-  // Questions section
-  var questionsHTML = '';
-  if (isEnriched) {
-    questionsHTML = 
-      '<div class="exam-section-title"><div class="dot" style="background:' + color + '"></div>📝 真题内容 (' + enr.sampleQuestions.length + '题)</div>' +
-      '<div class="exam-question-list">' +
-        enr.sampleQuestions.map(function(q, i) {
-          var diffStars = q.difficulty === 1 ? '⭐' : q.difficulty === 2 ? '⭐⭐' : '⭐⭐⭐';
-          return '<div class="exam-question-item">' +
-            '<div style="display:flex;align-items:flex-start;gap:10px">' +
-              '<div class="exam-q-number">' + (i+1) + '</div>' +
-              '<div class="exam-q-main">' +
-                q.question +
-                (q.relatedChip ? '<span class="exam-q-chip" onclick="openChip(\'' + q.relatedChip + '\')">🔗 ' + q.relatedChip + '</span>' : '') +
-              '</div>' +
-            '</div>' +
-            '<div class="exam-q-answer">✅ 答案：' + q.answer + ' <span style="font-size:10px;color:var(--text-dim);font-weight:400">' + diffStars + '</span></div>' +
-          '</div>';
-        }).join('') +
+  // ── Build full paper HTML ──
+  var paperHTML = '';
+  if (hasPaper) {
+    // Header info bar
+    var gradeLabel = '四年级'; if (exam.grade === 5) gradeLabel = '五年级'; if (exam.grade === 6) gradeLabel = '六年级';
+    paperHTML += '<div class="paper-info-bar">' +
+      '<span>姓名：________</span><span>班级：________</span><span>得分：________</span>' +
       '</div>';
+    
+    // Sections with questions
+    paperHTML += '<div class="paper-sections">';
+    paper.sections.forEach(function(sec) {
+      paperHTML += '<div class="paper-section">' +
+        '<div class="paper-section-title">' + sec.name + '</div>' +
+        '<div class="paper-q-list">';
+      sec.questions.forEach(function(q) {
+        paperHTML += '<div class="paper-q-item">' +
+          '<span class="paper-q-num">' + q.number + '.</span>' +
+          '<span class="paper-q-text">' + q.question + '</span>' +
+          '<span class="paper-q-blank">________________</span>' +
+          '</div>';
+      });
+      paperHTML += '</div></div>';
+    });
+    paperHTML += '</div>';
+    
+    // Answer section (hidden by default)
+    paperHTML += '<div class="paper-answers" id="paperAnswers" style="display:none">' +
+      '<div class="paper-answers-title">📋 参考答案</div>' +
+      '<div class="paper-answers-grid">';
+    paper.answers.forEach(function(a) {
+      paperHTML += '<div class="paper-ans-item"><b>' + a.number + '.</b> ' + a.answer + '</div>';
+    });
+    paperHTML += '</div></div>';
   } else {
-    questionsHTML = 
-      '<div class="exam-section-title"><div class="dot" style="background:' + color + '"></div>📝 真题内容</div>' +
-      '<div style="background:rgba(0,0,0,0.02);border-radius:12px;padding:24px;text-align:center;border:1.5px dashed rgba(0,0,0,0.08);margin-bottom:20px">' +
-        '<div style="font-size:40px;margin-bottom:10px">📭</div>' +
-        '<div style="font-size:14px;font-weight:600;color:var(--text-secondary);margin-bottom:6px">试卷题目数据正在收集中</div>' +
-        '<div style="font-size:12px;color:var(--text-dim);line-height:1.6">该试卷来自全国题库索引<br>具体真题内容将在后续版本中陆续填充<br>当前可查看下方关联的考点芯片</div>' +
+    paperHTML = 
+      '<div class="paper-empty">' +
+        '<div class="paper-empty-icon">📭</div>' +
+        '<div class="paper-empty-title">试卷内容正在收集中</div>' +
+        '<div class="paper-empty-desc">该试卷的完整真题内容将在后续版本中陆续填充<br>当前可查看下方关联的考点芯片进行针对性练习</div>' +
       '</div>';
   }
   
   // Chips section
-  var chipsHTML = 
-    '<div class="exam-section-title"><div class="dot" style="background:' + color + '"></div>🔗 关联考点芯片 (' + exam.chips.length + '个)</div>' +
+  var chipsHTML = '<div class="paper-chips-section">' +
+    '<div class="paper-chips-title">🔗 关联考点 (' + exam.chips.length + '个)</div>' +
     '<div class="exam-modal-chips">' +
       exam.chips.map(function(cid) {
-        return '<span class="exam-modal-chip" onclick="openChip(\'' + cid + '\')" title="点击查看芯片详情">' + cid + '</span>';
+        return '<span class="exam-modal-chip" onclick="openChip(\'' + cid + '\')">' + cid + '</span>';
       }).join('') +
-    '</div>';
+    '</div></div>';
   
   var modal = document.getElementById('examModal');
   modal.innerHTML = 
     '<div class="exam-modal-header">' +
       '<button class="exam-modal-close" onclick="closeExamPaper()">✕</button>' +
-      '<div class="exam-modal-title">' + exam.title + '</div>' +
+      '<div class="exam-modal-title">' + subjectEmoji + ' ' + exam.title + '</div>' +
       '<div class="exam-modal-meta">' +
-        '<span>' + exam.region + '</span>' +
-        '<span>·</span>' +
-        '<span>G' + exam.grade + '</span>' +
-        '<span>·</span>' +
-        '<span>' + exam.subject + '</span>' +
-        '<span>·</span>' +
+        '<span>' + exam.region + '</span><span>·</span>' +
+        '<span>' + gradeLabel + '</span><span>·</span>' +
+        '<span>' + exam.subject + '</span><span>·</span>' +
         '<span>' + exam.type + '</span>' +
         (exam.term ? '<span>·</span><span>' + (exam.term === '上' ? '上学期' : '下学期') + '</span>' : '') +
+        (totalQ > 0 ? '<span>·</span><span>' + totalQ + '题</span>' : '') +
       '</div>' +
     '</div>' +
     '<div class="exam-modal-body">' +
-      questionsHTML +
+      paperHTML +
       chipsHTML +
-      '<div style="text-align:center;margin-top:24px;padding-top:16px;border-top:1px solid rgba(0,0,0,0.06)">' +
-        '<button onclick="closeExamPaper()" style="padding:8px 24px;border-radius:8px;border:1.5px solid rgba(0,0,0,0.1);background:white;font-size:13px;cursor:pointer;margin-right:8px">关闭</button>' +
-        '<button onclick="window.print()" style="padding:8px 24px;border-radius:8px;border:none;background:' + color + ';color:white;font-size:13px;cursor:pointer;font-weight:600">🖨️ 打印试卷</button>' +
+      '<div class="paper-toolbar">' +
+        '<button class="paper-btn paper-btn-close" onclick="closeExamPaper()">关闭</button>' +
+        (hasPaper ? '<button class="paper-btn paper-btn-answer" id="toggleAnswerBtn" onclick="toggleAnswers()">📋 查看答案</button>' : '') +
+        '<button class="paper-btn paper-btn-print" onclick="window.print()" style="background:' + color + '">🖨️ 打印试卷</button>' +
       '</div>' +
     '</div>';
   
   document.getElementById('examModalOverlay').classList.add('active');
 }
 
-function closeExamPaper() {
-  document.getElementById('examModalOverlay').classList.remove('active');
+function toggleAnswers() {
+  var ans = document.getElementById('paperAnswers');
+  var btn = document.getElementById('toggleAnswerBtn');
+  if (ans.style.display === 'none') {
+    ans.style.display = 'block';
+    btn.textContent = '🙈 隐藏答案';
+    btn.style.background = '#FF6B6B';
+    btn.style.color = 'white';
+  } else {
+    ans.style.display = 'none';
+    btn.textContent = '📋 查看答案';
+    btn.style.background = '';
+    btn.style.color = '';
+  }
+}
 }
 
 // ====== Init ======
