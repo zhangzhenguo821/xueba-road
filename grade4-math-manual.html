@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>四年级数学 · 高频错题手册</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F5F6FA;--bg-card:#FFFFFF;--bg-dark:#1A1A2E;
+  --text:#2D3436;--text-secondary:#636E72;--text-dim:#B2BEC3;
+  --primary:#FF6B35;--accent:#FFE66D;--danger:#FF6B6B;--success:#00B894;
+  --math:#6C5CE7;--math-light:#A29BFE;--math-bg:rgba(108,92,231,0.06);
+  --radius:16px;--radius-sm:10px;
+  --shadow:0 4px 20px rgba(0,0,0,0.06);--shadow-lg:0 8px 30px rgba(0,0,0,0.10);
+}
+body{font-family:'Noto Sans SC',-apple-system,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.7}
+
+/* Header */
+.manual-header{background:linear-gradient(135deg,#1A1A2E,#16213E);padding:40px 32px;color:white;text-align:center;position:relative;overflow:hidden}
+.manual-header::before{content:'';position:absolute;top:-60px;right:-60px;width:250px;height:250px;background:radial-gradient(circle,rgba(108,92,231,0.25),transparent);border-radius:50%}
+.manual-header::after{content:'';position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,107,53,0.15),transparent);border-radius:50%}
+.manual-header h1{font-size:32px;font-weight:900;margin-bottom:8px;position:relative;z-index:1}
+.manual-header .subtitle{font-size:15px;color:var(--text-dim);position:relative;z-index:1}
+.manual-header .badge-row{display:flex;gap:8px;justify-content:center;margin-top:16px;flex-wrap:wrap;position:relative;z-index:1}
+.manual-header .badge{background:rgba(108,92,231,0.3);border:1px solid rgba(108,92,231,0.4);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;color:var(--math-light)}
+
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--math);text-decoration:none;font-size:14px;font-weight:600;padding:8px 16px;margin:16px 0 0 32px;border-radius:8px;transition:all .2s}
+.back-link:hover{background:var(--math-bg)}
+
+/* Container */
+.container{max-width:900px;margin:0 auto;padding:0 24px 60px}
+
+/* Section */
+.section{margin-top:32px}
+.section-title{font-size:22px;font-weight:800;margin-bottom:20px;padding-bottom:10px;border-bottom:3px solid var(--math);display:inline-block}
+
+/* Topic Card */
+.topic-card{background:var(--bg-card);border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:24px;overflow:hidden;border-left:5px solid var(--math);transition:all .25s}
+.topic-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.topic-card:nth-child(2){border-left-color:#FF6B6B}
+.topic-card:nth-child(3){border-left-color:#00B894}
+.topic-card:nth-child(4){border-left-color:#FDCB6E}
+.topic-card:nth-child(5){border-left-color:#74B9FF}
+
+.topic-header{padding:20px 24px 12px;display:flex;align-items:center;gap:12px}
+.topic-number{width:42px;height:42px;border-radius:12px;background:var(--math);color:white;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;flex-shrink:0}
+.topic-card:nth-child(2) .topic-number{background:#FF6B6B}
+.topic-card:nth-child(3) .topic-number{background:#00B894}
+.topic-card:nth-child(4) .topic-number{background:#FDCB6E}
+.topic-card:nth-child(5) .topic-number{background:#74B9FF}
+
+.topic-title{font-size:18px;font-weight:700}
+.topic-subtitle{font-size:13px;color:var(--text-secondary);margin-top:2px}
+
+.topic-body{padding:0 24px 20px}
+
+/* Sub-blocks */
+.sub-block{margin-bottom:16px}
+.sub-block-title{font-size:15px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.sub-block-title .icon{font-size:16px}
+
+/* Steps list */
+.steps-list{list-style:none;padding:0}
+.steps-list li{padding:6px 0 6px 28px;position:relative;font-size:14px;line-height:1.8}
+.steps-list li::before{content:'✓';position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--math-bg);color:var(--math);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+
+/* Principle box */
+.principle-box{background:var(--math-bg);border-radius:var(--radius-sm);padding:14px 18px;margin:12px 0;font-size:14px;line-height:1.9;border-left:3px solid var(--math)}
+
+/* Example */
+.example-box{background:#FFFBF0;border-radius:var(--radius-sm);padding:16px 20px;margin:12px 0;border:1px solid #FDCB6E}
+.example-box .example-label{font-size:12px;font-weight:700;color:#E17055;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.example-box .example-question{font-size:14px;font-weight:600;margin-bottom:12px;padding-bottom:8px;border-bottom:1px dashed #DFE6E9}
+.example-box .example-think{font-size:13px;line-height:1.9;color:var(--text-secondary)}
+.example-box .example-think b{color:var(--text)}
+
+/* Trap table */
+.trap-table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0}
+.trap-table th{background:var(--bg-dark);color:white;padding:8px 12px;text-align:left;font-weight:600;font-size:12px}
+.trap-table th:first-child{border-radius:8px 0 0 0}
+.trap-table th:last-child{border-radius:0 8px 0 0}
+.trap-table td{padding:8px 12px;border-bottom:1px solid #EEE}
+.trap-table tr:last-child td:first-child{border-radius:0 0 0 8px}
+.trap-table tr:last-child td:last-child{border-radius:0 0 8px 0}
+.trap-table .trap-label{background:var(--danger);color:white;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:600;white-space:nowrap}
+
+/* Mantra box */
+.mantra-box{background:linear-gradient(135deg,#6C5CE7,#A29BFE);color:white;border-radius:var(--radius-sm);padding:14px 20px;margin-top:14px;font-size:15px;font-weight:700;text-align:center;letter-spacing:1px}
+
+/* Stats Section */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px}
+.stat-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow)}
+.stat-card .rank{font-size:36px;font-weight:900;color:var(--math)}
+.stat-card .label{font-size:13px;color:var(--text-secondary);margin-top:4px}
+.stat-card .count{font-size:13px;font-weight:600;color:var(--danger);margin-top:2px}
+
+/* Diagnostics Section */
+.diag-section{margin-bottom:32px}
+.diag-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--bg-card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.diag-table th{background:var(--bg-dark);color:white;padding:10px 14px;text-align:left;font-size:12px;font-weight:600}
+.diag-table td{padding:10px 14px;border-bottom:1px solid #EEE}
+.diag-table .stars{color:#FDCB6E;letter-spacing:1px}
+.diag-table .weak{color:var(--danger);font-weight:600}
+
+/* Rating grid */
+.rating-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.rating-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);text-align:center}
+.rating-card .grade{font-size:42px;font-weight:900;margin:8px 0}
+.rating-card .grade.B{color:#F39C12}
+.rating-card .grade.B-plus{color:#00B894}
+.rating-card .grade.B-minus{color:#E17055}
+.rating-card .domain{font-size:14px;font-weight:600;margin-bottom:4px}
+.rating-card .trend{font-size:12px;color:var(--text-secondary)}
+
+/* Summary card */
+.summary-card{background:linear-gradient(135deg,var(--math),var(--math-light));color:white;border-radius:var(--radius);padding:24px;margin-top:24px}
+.summary-card h3{font-size:18px;margin-bottom:12px}
+.summary-card .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;font-size:14px;line-height:1.9}
+
+/* Print styles */
+@media print {
+  body{background:white;font-size:12px}
+  .manual-header{background:#1A1A2E!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:24px}
+  .back-link{display:none}
+  .container{max-width:100%;padding:0 16px}
+  .topic-card{break-inside:avoid;box-shadow:none;border:1px solid #DDD}
+  .trap-table th{background:#1A1A2E!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .mantra-box{background:var(--math)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .principle-box{border-left:3px solid var(--math)}
+  .section-title{border-bottom-color:var(--math)}
+}
+
+/* Link to manual from exam page */
+.manual-cta{text-align:center;margin:16px 0}
+.manual-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--math),var(--math-light));color:white;padding:12px 28px;border-radius:12px;text-decoration:none;font-size:15px;font-weight:700;box-shadow:0 4px 15px rgba(108,92,231,0.3);transition:all .25s}
+.manual-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,92,231,0.4)}
+</style>
+</head>
+<body>
+
+<div class="manual-header">
+  <h1>📐 四年级数学 · 高频错题手册</h1>
+  <div class="subtitle">针对最容易出错的5个知识点，教你"看题怎么看、怎么想、注意什么"</div>
+  <div class="badge-row">
+    <span class="badge">数与代数</span>
+    <span class="badge">图形与几何</span>
+    <span class="badge">解决问题</span>
+    <span class="badge">量与计量</span>
+  </div>
+</div>
+
+<a href="index.html?page=exam&grade=4" class="back-link">← 返回试卷下载</a>
+
+<div class="container">
+
+<!-- ===== 错题排行榜 ===== -->
+<div class="section">
+  <h2 class="section-title">📊 高频错误知识点统计</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="rank">#1</div>
+      <div class="label">小数的近似数（四舍五入）</div>
+      <div class="count">出错 5+ 次</div>
+    </div>
+    <div class="stat-card">
+      <div class="rank">#2</div>
+      <div class="label">小数末尾0的性质</div>
+      <div class="count">出错 3+ 次</div>
+    </div>
+    <div class="stat-card">
+      <div class="rank">#3</div>
+      <div class="label">爬楼梯/植树问题</div>
+      <div class="count">出错 2+ 次</div>
+    </div>
+    <div class="stat-card">
+      <div class="rank">#4</div>
+      <div class="label">单位换算</div>
+      <div class="count">出错 3+ 次</div>
+    </div>
+    <div class="stat-card">
+      <div class="rank">#5</div>
+      <div class="label">平行与相交的判断</div>
+      <div class="count">出错 3+ 次</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 五大知识点详解 ===== -->
+<div class="section">
+  <h2 class="section-title">🔍 五大易错知识点详解</h2>
+
+  <!-- 一、小数近似数 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-number">一</div>
+      <div>
+        <div class="topic-title">小数的近似数（反向推理）</div>
+        <div class="topic-subtitle">错误类型：概念混淆 / 规则记错</div>
+      </div>
+    </div>
+    <div class="topic-body">
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">👀</span> 读题三件事</div>
+        <ol class="steps-list">
+          <li><b>圈"几位小数"</b>：题目说的是两位小数还是三位小数？这是关键。</li>
+          <li><b>圈近似值末尾</b>：比如"≈5.0"，圈住那个0，它告诉你精确到十分位。</li>
+          <li><b>画数轴</b>：在草稿纸上标出近似值，往左右各迈一小步，框出范围。</li>
+        </ol>
+      </div>
+
+      <div class="principle-box">
+        <b>💡 核心原理</b><br>
+        四舍五入就像"看邻居定去留"。精确到十分位，就看百分位这个"邻居"：邻居≥5就进位，邻居≤4就舍去。反向推理时，最大的数就是"进位得来的"（末尾填4），最小的数是"舍去得来的"（前一位减1，末尾填5）。想象你在调一个数字的"上限"和"下限"，让它在四舍五入后恰好落在目标值上。
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">📝 典型例题</div>
+        <div class="example-question">一个两位小数精确到十分位是5.0，这个数最大是多少？最小是多少？</div>
+        <div class="example-think">
+          <b>思考过程：</b><br>
+          精确到十分位 → 看百分位。近似值5.0。<br>
+          <b>最大：</b>让百分位尽量大但不能让十分位变成5.1 → 百分位最大是4 → <b>5.04</b>。<br>
+          <b>最小：</b>让十分位从5.0往后退一档，也就是4.9开头，百分位要≥5才能进位到5.0 → 最小是 <b>4.95</b>。
+        </div>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">⚠️</span> 常见陷阱</div>
+        <table class="trap-table">
+          <tr><th>陷阱</th><th>反例</th></tr>
+          <tr><td><span class="trap-label">忘位数</span></td><td>最大写成 5.049（题目说两位小数，不能三位）</td></tr>
+          <tr><td><span class="trap-label">写反了</span></td><td>把 4.95 当最大、5.04 当最小</td></tr>
+          <tr><td><span class="trap-label">位数错</span></td><td>三位小数保留两位，却按保留一位的规则推理</td></tr>
+        </table>
+      </div>
+
+      <div class="mantra-box">📌 自查口诀："看准位数，最大填4，最小退1填5"</div>
+    </div>
+  </div>
+
+  <!-- 二、小数末尾0 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-number">二</div>
+      <div>
+        <div class="topic-title">小数末尾0的性质</div>
+        <div class="topic-subtitle">错误类型：概念混淆</div>
+      </div>
+    </div>
+    <div class="topic-body">
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">👀</span> 读题三件事</div>
+        <ol class="steps-list">
+          <li><b>圈末尾0的位置</b>：0在小数点右边最后一位，还是在整数末尾？</li>
+          <li><b>区分"大小"和"意义"</b>：去掉0大小变不变？计数单位变不变？</li>
+          <li><b>看清是添0还是去0</b>：题目问的是"去掉"还是"添上"？</li>
+        </ol>
+      </div>
+
+      <div class="principle-box">
+        <b>💡 核心原理</b><br>
+        小数末尾的0就像一个"不占重量的标签"——它改变了这个数的"身份"（计数单位），但不改变它的"体重"（大小）。比如0.70和0.7大小一样，但0.70的计数单位是0.01（精确到分），0.7的计数单位是0.1（精确到角）。整数末尾的0完全不同——整数末尾加0，大小就变了！35和350能一样吗？
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">📝 典型例题</div>
+        <div class="example-question">0.70去掉末尾的0后，大小变不变？计数单位怎么变？</div>
+        <div class="example-think">
+          <b>思考过程：</b><br>
+          0.70去掉末尾0 → 0.7。大小：0.70 = 0.7，<b>不变</b>。<br>
+          0.70的计数单位是0.01（百分位），0.7的计数单位是0.1（十分位）。<br>
+          结论：<b>大小不变，计数单位从0.01变成了0.1，变大了10倍。</b>
+        </div>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">⚠️</span> 常见陷阱</div>
+        <table class="trap-table">
+          <tr><th>陷阱</th><th>反例</th></tr>
+          <tr><td><span class="trap-label">当整数</span></td><td>35末尾添0变350，大小变了！（只有小数末尾加0才不变）</td></tr>
+          <tr><td><span class="trap-label">混意义</span></td><td>0.8和0.80大小相等但精确度不同，意义不一样</td></tr>
+          <tr><td><span class="trap-label">误删0</span></td><td>3.05的0不是末尾0，不能随便去掉</td></tr>
+        </table>
+      </div>
+
+      <div class="mantra-box">📌 自查口诀："小数末尾随便加，整数末尾不能碰；大小不变意义变"</div>
+    </div>
+  </div>
+
+  <!-- 三、爬楼梯/植树 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-number">三</div>
+      <div>
+        <div class="topic-title">爬楼梯 / 植树问题</div>
+        <div class="topic-subtitle">错误类型：模型识别错误</div>
+      </div>
+    </div>
+    <div class="topic-body">
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">👀</span> 读题三件事</div>
+        <ol class="steps-list">
+          <li><b>画线段图</b>：画一条线，标上起点和终点，点上代表树或楼层。</li>
+          <li><b>圈"两端"条件</b>：两端都种、只种一端、两端不种，公式不一样。</li>
+          <li><b>数间隔不是数点</b>：楼梯问题数的是"层与层之间的间隔"，不是楼层数。</li>
+        </ol>
+      </div>
+
+      <div class="principle-box">
+        <b>💡 核心原理</b><br>
+        植树和爬楼梯，本质都是"点数 = 间隔数 + 关系"。想象一条绳子剪成几段：剪的次数（点）和段数（间隔）的关系是：两端都有点 → 点数 = 段数+1。爬到8楼，你只走了7段楼梯（1→2、2→3……7→8），所以层数要减1。记住：两头都有就加1，两头都没就减1，只一头就相等。
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">📝 典型例题</div>
+        <div class="example-question">小明家住8楼，从1楼到家用了210秒，每层时间相同，爬一层要多少秒？</div>
+        <div class="example-think">
+          <b>思考过程：</b><br>
+          从1楼到8楼，爬了几层？<b>不是8层！</b>画一下：1→2→3→4→5→6→7→8，共<b>7段</b>。<br>
+          7段用了210秒 → 210 ÷ 7 = <b>30秒</b>。每爬一层30秒。
+        </div>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">⚠️</span> 常见陷阱</div>
+        <table class="trap-table">
+          <tr><th>陷阱</th><th>反例</th></tr>
+          <tr><td><span class="trap-label">楼层当间隔</span></td><td>到15层走15段台阶 → 错！是15−1=14段</td></tr>
+          <tr><td><span class="trap-label">忘两端</span></td><td>200米每隔10米装灯，直接200÷10=20 → 漏了起点那盏，应该是21</td></tr>
+          <tr><td><span class="trap-label">环形直线混</span></td><td>圆形花坛种树没有"两端"，点数=间隔数</td></tr>
+        </table>
+      </div>
+
+      <div class="mantra-box">📌 自查口诀："先画图数间隔，两端有加1，两端没减1，环形刚刚好"</div>
+    </div>
+  </div>
+
+  <!-- 四、单位换算 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-number">四</div>
+      <div>
+        <div class="topic-title">单位换算</div>
+        <div class="topic-subtitle">错误类型：进率混淆</div>
+      </div>
+    </div>
+    <div class="topic-body">
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">👀</span> 读题三件事</div>
+        <ol class="steps-list">
+          <li><b>圈单位</b>：把题目里每个带单位的地方都圈出来，看清楚"从哪到哪"。</li>
+          <li><b>写进率</b>：在草稿纸上写出两个单位之间的进率。米→厘米是100，吨→千克是1000。</li>
+          <li><b>判断乘除</b>：大单位变小单位 → 乘进率；小单位变大单位 → 除以进率。</li>
+        </ol>
+      </div>
+
+      <div class="principle-box">
+        <b>💡 核心原理</b><br>
+        单位换算就像"换零钱"：1张100元 = 10张10元 = 100张1元。大单位是"大面额"，小单位是"小面额"。用"大化小，乘进率；小化大，除进率"这一句话搞定所有换算。特别注意复名数（几吨几千克这种），把整数部分留着不动，只换算小数部分。
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">📝 典型例题</div>
+        <div class="example-question">3.6吨 = ___吨 ___千克</div>
+        <div class="example-think">
+          <b>思考过程：</b><br>
+          3.6吨 = 3吨 + 0.6吨。3吨不动，填第一个空：<b>3</b>。<br>
+          0.6吨 → 千克，是大化小，乘进率1000。0.6 × 1000 = <b>600千克</b>。填第二个空：<b>600</b>。
+        </div>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">⚠️</span> 常见陷阱</div>
+        <table class="trap-table">
+          <tr><th>陷阱</th><th>反例</th></tr>
+          <tr><td><span class="trap-label">进率错</span></td><td>1平方米=100平方分米（不是10！长度10，面积100）</td></tr>
+          <tr><td><span class="trap-label">方向反</span></td><td>3米5厘米=3.5米？错！5厘米=0.05米，应该是3.05米</td></tr>
+          <tr><td><span class="trap-label">移位错</span></td><td>4.05平方米=40.5平方分米？错！×100应小数点右移两位：405</td></tr>
+          <tr><td><span class="trap-label">改写漏0</span></td><td>50800000=0.508亿写成5.08亿？少算一位！</td></tr>
+        </table>
+      </div>
+
+      <div class="mantra-box">📌 自查口诀："大化小乘进率，小化大除进率；长度进10，面积进100，质量进1000"</div>
+    </div>
+  </div>
+
+  <!-- 五、平行与相交 -->
+  <div class="topic-card">
+    <div class="topic-header">
+      <div class="topic-number">五</div>
+      <div>
+        <div class="topic-title">平行与相交的判断</div>
+        <div class="topic-subtitle">错误类型：概念理解不深</div>
+      </div>
+    </div>
+    <div class="topic-body">
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">👀</span> 读题三件事</div>
+        <ol class="steps-list">
+          <li><b>圈"同一平面内"</b>：这是大前提，没这句话的选项要警惕。</li>
+          <li><b>画两条线</b>：在草稿纸上随手画两条线，比划它们的各种可能关系。</li>
+          <li><b>找"垂直"信号</b>：看到"直角""90°""⊥"，马上想到这是相交的特殊情况。</li>
+        </ol>
+      </div>
+
+      <div class="principle-box">
+        <b>💡 核心原理</b><br>
+        在同一平面内，两条直线只有两种命运：要么相交，要么平行——没有第三条路。平行线就像铁轨的两根钢轨，永远保持同样的距离，永不相交。垂直线是相交的特殊情况（夹角90°）。记住三个层次：平行（永不相交）→ 相交（有交点）→ 垂直（相交且成直角）。还有一个关键：过直线外一点，只能画1条平行线，也只能画1条垂直线。
+      </div>
+
+      <div class="example-box">
+        <div class="example-label">📝 典型例题</div>
+        <div class="example-question">"不相交的两条直线一定平行"，对吗？</div>
+        <div class="example-think">
+          <b>思考过程：</b><br>
+          少了什么？<b>"在同一平面内"</b>！想象教室里，天花板的一条边和地板上斜着的一条边，它们不相交，但在空间中既不平行也不相交（异面直线）。<br>
+          加上"在同一平面内"，这句话才成立。所以原话是<b>错的</b>。
+        </div>
+      </div>
+
+      <div class="sub-block">
+        <div class="sub-block-title"><span class="icon">⚠️</span> 常见陷阱</div>
+        <table class="trap-table">
+          <tr><th>陷阱</th><th>反例</th></tr>
+          <tr><td><span class="trap-label">忘前提</span></td><td>不相交就一定平行 → 错（如墙角的两条棱，异面直线）</td></tr>
+          <tr><td><span class="trap-label">逻辑反</span></td><td>认为平行就不会相交于一点 → 对。但"不平行就一定相交"才对（同一平面内）</td></tr>
+          <tr><td><span class="trap-label">数量错</span></td><td>过一点能画无数条垂直线 → 错！只有1条</td></tr>
+          <tr><td><span class="trap-label">梯形高</span></td><td>梯形的高只有一条 → 错！梯形有无数条高（平行线间的垂线段都相等）</td></tr>
+        </table>
+      </div>
+
+      <div class="mantra-box">📌 自查口诀："同一平面是前提，不交则平交则交，交成直角叫垂直，过点平行只一条"</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 分板块学情诊断 ===== -->
+<div class="section">
+  <h2 class="section-title">📋 分板块学情诊断</h2>
+
+  <div class="diag-section">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--math)">数与代数</h3>
+    <table class="diag-table">
+      <tr><th>维度</th><th>掌握程度</th><th>说明</th></tr>
+      <tr><td>小数的意义与读写</td><td class="stars">★★★★☆</td><td>基本掌握，偶有计数单位混淆</td></tr>
+      <tr><td>小数的性质（末尾0）</td><td class="stars">★★★☆☆</td><td class="weak">整数与小数末尾0的区别需强化</td></tr>
+      <tr><td>小数的大小比较</td><td class="stars">★★★★☆</td><td>较好，数轴定位偶有失误</td></tr>
+      <tr><td>近似数与四舍五入</td><td class="stars">★★☆☆☆</td><td class="weak">最薄弱点，反向求范围题频繁出错</td></tr>
+      <tr><td>小数的改写（万/亿）</td><td class="stars">★★★☆☆</td><td>改写后保留小数位易出错</td></tr>
+      <tr><td>正负数初步</td><td class="stars">★★★☆☆</td><td>生活情境转化有待加强</td></tr>
+    </table>
+  </div>
+
+  <div class="diag-section">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--math)">数与运算</h3>
+    <table class="diag-table">
+      <tr><th>维度</th><th>掌握程度</th><th>说明</th></tr>
+      <tr><td>小数加减法（竖式）</td><td class="stars">★★★★☆</td><td>基本熟练，偶有对齐错误</td></tr>
+      <tr><td>小数加减混合运算</td><td class="stars">★★★☆☆</td><td>去括号法则有时出错</td></tr>
+      <tr><td>简便运算（运算律）</td><td class="stars">★★★☆☆</td><td>加法交换律/结合律会套用，但灵活度不够</td></tr>
+      <tr><td>计算速度与正确率</td><td class="stars">★★★☆☆</td><td>计算圈练习中可见个别粗心错误</td></tr>
+    </table>
+  </div>
+
+  <div class="diag-section">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--math)">图形与几何</h3>
+    <table class="diag-table">
+      <tr><th>维度</th><th>掌握程度</th><th>说明</th></tr>
+      <tr><td>平行与相交</td><td class="stars">★★★☆☆</td><td>概念基本理解，判断和画图不够精准</td></tr>
+      <tr><td>垂线与距离</td><td class="stars">★★★☆☆</td><td>点到直线距离的垂线段概念需巩固</td></tr>
+      <tr><td>观察物体（三视图）</td><td class="stars">★★★☆☆</td><td>从三个方向观察立体图形的空间想象需提升</td></tr>
+      <tr><td>平移与轴对称</td><td class="stars">★★★★☆</td><td>操作题基本正确</td></tr>
+      <tr><td>对称轴</td><td class="stars">★★★☆☆</td><td>常见图形对称轴数量记忆不全</td></tr>
+    </table>
+  </div>
+
+  <div class="diag-section">
+    <h3 style="font-size:16px;font-weight:700;margin-bottom:12px;color:var(--math)">解决问题（应用题）</h3>
+    <table class="diag-table">
+      <tr><th>维度</th><th>掌握程度</th><th>说明</th></tr>
+      <tr><td>购物/生活情境</td><td class="stars">★★★★☆</td><td>基本能够正确列式</td></tr>
+      <tr><td>植树/间隔问题</td><td class="stars">★★☆☆☆</td><td class="weak">易错，端点处理不清</td></tr>
+      <tr><td>相遇/行程问题</td><td class="stars">★★★☆☆</td><td>进阶题目（如附加题）有困难</td></tr>
+      <tr><td>统计图表分析</td><td class="stars">★★★★☆</td><td>基本掌握</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===== 整体评价 ===== -->
+<div class="section">
+  <h2 class="section-title">🎯 整体学情评价</h2>
+
+  <div class="rating-grid">
+    <div class="rating-card">
+      <div class="domain">数与代数</div>
+      <div class="grade B">B</div>
+      <div class="trend">近似数需重点突破</div>
+    </div>
+    <div class="rating-card">
+      <div class="domain">数与运算</div>
+      <div class="grade B-plus">B+</div>
+      <div class="trend">计算稳定，简便运算待加强</div>
+    </div>
+    <div class="rating-card">
+      <div class="domain">图形与几何</div>
+      <div class="grade B">B</div>
+      <div class="trend">概念可，空间想象待提升</div>
+    </div>
+    <div class="rating-card">
+      <div class="domain">解决问题</div>
+      <div class="grade B-minus">B−</div>
+      <div class="trend">应用题建模能力偏弱</div>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <h3>📊 综合评级：B+（良好）— 有潜力冲刺A级</h3>
+    <div class="summary-grid">
+      <div>
+        <b>✅ 优势：</b><br>
+        • 学习态度端正，试卷覆盖全面<br>
+        • 期末测试90分，属于中上水平<br>
+        • 图形操作题（平移、画垂线/平行线）基本正确<br>
+        • 小数读写和基本比较掌握较扎实
+      </div>
+      <div>
+        <b>⚠️ 待提升：</b><br>
+        • <b>小数近似数是最大短板</b>：反复出错，未形成稳定正确认知<br>
+        • "陷阱题"抵抗力弱：爬楼梯、小数末尾0等容易掉入思维定式<br>
+        • 逆向思维能力不足：从近似数反推原数范围表现不佳<br>
+        • 简便运算灵活度不够：面对变式题目时不够灵活
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- .container -->
+
+</body>
+</html>
