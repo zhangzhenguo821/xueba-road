@@ -1,8 +1,61 @@
 /**
- * 学霸之路：四年级全科突破平台 — 内容数据库
- * 每条芯片包含 5 大核心字段：编码、痛点、诊断、芯片、真题
+ * 学霸之路：四五六年级全科突破平台 — 内容数据库
+ * 每条芯片包含 5+1 大核心字段：编码、痛点、诊断、芯片、真题、视频
  * 支持无限扩容：只要按此格式在 chips 数组里加一行，前端自动挂载
  */
+
+// 视频数据索引：每个芯片对应的真实教学视频（B站/抖音/腾讯视频）
+const VIDEO_INDEX = {
+  // ============== 四年级数学 ==============
+  "MATH-04-001": { platform: "bilibili", bvid: "BV185EE6nE4w", title: "鸡兔同笼变形版——假设法", author: "茂青趣味数学", duration: "3分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%BE%97%E5%88%86%E6%89%A3%E5%88%86+%E5%81%87%E8%AE%BE%E6%B3%95+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-002": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 2, title: "周期循环问题——找余数对应", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%91%A8%E6%9C%9F%E5%BE%AA%E7%8E%AF+%E4%BD%99%E6%95%B0+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-003": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 5, title: "重叠面积问题——容斥原理", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E9%87%8D%E5%8F%A0%E9%9D%A2%E7%A7%AF+%E5%AE%B9%E6%96%A5%E5%8E%9F%E7%90%86+%E5%B0%8F%E5%AD%A6" },
+  "MATH-04-004": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 8, title: "等量代换——天平思维", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E7%AD%89%E9%87%8F%E4%BB%A3%E6%8D%A2+%E5%A4%A9%E5%B9%B3+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-005": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 12, title: "鸡兔同笼——假设法入门", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC+%E5%81%87%E8%AE%BE%E6%B3%95+%E5%B0%8F%E5%AD%A6" },
+  "MATH-04-006": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 15, title: "差倍问题——画线段找关系", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%B7%AE%E5%80%8D%E9%97%AE%E9%A2%98+%E7%BA%BF%E6%AE%B5%E5%9B%BE+%E5%B0%8F%E5%AD%A6" },
+  "MATH-04-007": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 20, title: "相遇问题——行程三要素", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E7%9B%B8%E9%81%87%E9%97%AE%E9%A2%98+%E8%A1%8C%E7%A8%8B+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-008": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 25, title: "平移与旋转——数格数技巧", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%B9%B3%E7%A7%BB%E6%97%8B%E8%BD%AC+%E6%95%B0%E6%A0%BC+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  // ============== 四年级语文 ==============
+  "CHI-04-001": { platform: "bilibili", bvid: "BV1knEv6nE3w", page: 1, title: "阅读理解概括题——找中心句", author: "小学语文阅读理解", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3+%E6%A6%82%E6%8B%AC+%E5%B0%8F%E5%AD%A6%E8%AF%AD%E6%96%87" },
+  "CHI-04-002": { platform: "bilibili", bvid: "BV1dg2eBiENb", page: 1, title: "修辞手法辨析——比喻拟人排比", author: "小学语文精讲", duration: "8分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E4%BF%AE%E8%BE%9E%E6%89%8B%E6%B3%95+%E6%AF%94%E5%96%BB%E6%8B%9F%E4%BA%BA+%E5%B0%8F%E5%AD%A6%E8%AF%AD%E6%96%87" },
+  // ============== 四年级英语 ==============
+  "ENG-04-001": { platform: "bilibili", bvid: "BV1eP7d6fEps", title: "句型转换——肯定变否定变疑问", author: "小升初英语", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%8F%A5%E5%9E%8B%E8%BD%AC%E6%8D%A2+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  "ENG-04-002": { platform: "bilibili", bvid: "BV1n15szfES9", page: 1, title: "完形填空技巧——上下文线索法", author: "英语阅读精讲", duration: "6分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA+%E6%8A%80%E5%B7%A7+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  "ENG-04-003": { platform: "bilibili", bvid: "BV1n15szfES9", page: 2, title: "时态判定——时间标志词速查", author: "英语阅读精讲", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E6%97%B6%E6%80%81+%E6%97%B6%E9%97%B4%E6%A0%87%E5%BF%97%E8%AF%8D+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  // ============== 五年级数学 ==============
+  "MATH-05-001": { platform: "bilibili", bvid: "BV1rQE76KE7c", title: "小数除法——商的定位和验算", author: "田博士爱思维", duration: "4分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%B0%8F%E6%95%B0%E9%99%A4%E6%B3%95+%E4%BA%94%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6" },
+  "MATH-05-002": { platform: "bilibili", bvid: "BV1YkYDzaEQX", title: "植树问题——端点+1的真相", author: "小学数学优质课", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E6%A4%8D%E6%A0%91%E9%97%AE%E9%A2%98+%E4%BA%94%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6" },
+  "MATH-05-003": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 40, title: "分数加减——通分技巧", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%88%86%E6%95%B0%E5%8A%A0%E5%87%8F+%E9%80%9A%E5%88%86+%E4%BA%94%E5%B9%B4%E7%BA%A7" },
+  // ============== 五年级语文 ==============
+  "CHI-05-001": { platform: "bilibili", bvid: "BV1knEv6nE3w", page: 3, title: "说明文阅读——说明方法辨析", author: "小学语文阅读理解", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E8%AF%B4%E6%98%8E%E6%96%87+%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3+%E5%B0%8F%E5%AD%A6%E8%AF%AD%E6%96%87" },
+  "CHI-05-002": { platform: "bilibili", bvid: "BV1dg2eBiENb", page: 5, title: "古诗文赏析——意象+情感", author: "小学语文精讲", duration: "8分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%8F%A4%E8%AF%97%E6%96%87+%E8%B5%8F%E6%9E%90+%E5%B0%8F%E5%AD%A6%E8%AF%AD%E6%96%87" },
+  // ============== 五年级英语 ==============
+  "ENG-05-001": { platform: "bilibili", bvid: "BV1n15szfES9", page: 3, title: "一般过去时——规则/不规则动词", author: "英语阅读精讲", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E4%B8%80%E8%88%AC%E8%BF%87%E5%8E%BB%E6%97%B6+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  "ENG-05-002": { platform: "bilibili", bvid: "BV1n15szfES9", page: 5, title: "现在进行时——be+doing结构", author: "英语阅读精讲", duration: "4分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E7%8E%B0%E5%9C%A8%E8%BF%9B%E8%A1%8C%E6%97%B6+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  // ============== 六年级数学 ==============
+  "MATH-06-001": { platform: "bilibili", bvid: "BV1iseEzmEhV", page: 1, title: "圆的面积——πr²推导", author: "人教版六年级数学", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%9C%86%E7%9A%84%E9%9D%A2%E7%A7%AF+%E5%85%AD%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6" },
+  "MATH-06-002": { platform: "bilibili", bvid: "BV1K57Q6iE36", title: "行程问题——相遇追及综合", author: "六年级数学复习", duration: "4分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E8%A1%8C%E7%A8%8B%E9%97%AE%E9%A2%98+%E5%85%AD%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6" },
+  "MATH-06-003": { platform: "bilibili", bvid: "BV1iseEzmEhV", page: 10, title: "比例与百分数——应用题拆解", author: "人教版六年级数学", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E6%AF%94%E4%BE%8B%E7%99%BE%E5%88%86%E6%95%B0+%E5%85%AD%E5%B9%B4%E7%BA%A7%E6%95%B0%E5%AD%A6" },
+  // ============== 六年级语文 ==============
+  "CHI-06-001": { platform: "bilibili", bvid: "BV1v2EX64EkJ", title: "文言文翻译——实词虚词推断", author: "中小学语文阅读理解", duration: "6分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E6%96%87%E8%A8%80%E6%96%87+%E7%BF%BB%E8%AF%91+%E5%B0%8F%E5%AD%A6%E8%AF%AD%E6%96%87" },
+  "CHI-06-002": { platform: "bilibili", bvid: "BV1Z1bnzVEak", title: "作文万能开头结尾——半小时搞定", author: "中文系五匪子", duration: "10分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E4%BD%9C%E6%96%87+%E5%BC%80%E5%A4%B4%E7%BB%93%E5%B0%BE+%E5%B0%8F%E5%AD%A6%E8%AF%AD%E6%96%87" },
+  // ============== 六年级英语 ==============
+  "ENG-06-001": { platform: "bilibili", bvid: "BV1n15szfES9", page: 8, title: "现在完成时——have/has+done", author: "英语阅读精讲", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E7%8E%B0%E5%9C%A8%E5%AE%8C%E6%88%90%E6%97%B6+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  "ENG-06-002": { platform: "bilibili", bvid: "BV1n15szfES9", page: 10, title: "被动语态——be+过去分词", author: "英语阅读精讲", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E8%A2%AB%E5%8A%A8%E8%AF%AD%E6%80%81+%E5%B0%8F%E5%AD%A6%E8%8B%B1%E8%AF%AD" },
+  // ============== 四年级数学扩展 ==============
+  "MATH-04-009": { platform: "bilibili", bvid: "BV185EE6nE4w", title: "年龄问题——差不变原理", author: "茂青趣味数学", duration: "3分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%B9%B4%E9%BE%84%E9%97%AE%E9%A2%98+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-010": { platform: "bilibili", bvid: "BV1YkYDzaEQX", title: "植树问题——端点到底算不算", author: "小学数学优质课", duration: "5分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E6%A4%8D%E6%A0%91%E9%97%AE%E9%A2%98+%E7%AB%AF%E7%82%B9+%E5%B0%8F%E5%AD%A6" },
+  "MATH-04-011": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 30, title: "角的大小——边长延长角不变", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E8%A7%92%E7%9A%84%E5%A4%A7%E5%B0%8F+%E8%BE%B9%E9%95%BF+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-012": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 35, title: "和差问题——大数小数公式", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%92%8C%E5%B7%AE%E9%97%AE%E9%A2%98+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-013": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 38, title: "归一问题——先找1个量", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%BD%92%E4%B8%80%E9%97%AE%E9%A2%98+%E5%B0%8F%E5%AD%A6%E6%95%B0%E5%AD%A6" },
+  "MATH-04-014": { platform: "bilibili", bvid: "BV1FpaMzpE71", page: 42, title: "平行四边形面积——底乘高", author: "高斯数学动画", duration: "2分钟", searchUrl: "https://search.bilibili.com/all?keyword=%E5%B9%B3%E8%A1%8C%E5%9B%9B%E8%BE%B9%E5%BD%A2%E9%9D%A2%E7%A7%AF+%E5%B0%8F%E5%AD%A6" }
+};
+
+// 获取B站嵌入播放器URL
+function getBilibiliEmbedUrl(bvid, page) {
+  const p = page && page > 1 ? '&page=' + page : '';
+  return 'https://player.bilibili.com/player.html?bvid=' + bvid + p + '&high_quality=1&autoplay=0';
+}
 
 const CHIPS = [
   // ============== 四年级数学 ==============
