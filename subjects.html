@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学霸之路 · 全科思维拆解库</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+    :root {
+      --bg: #F5F6FA;
+      --card: #FFFFFF;
+      --text: #2D3436;
+      --sub: #636E72;
+      --accent-math: #FF6B35;
+      --accent-cn: #6C5CE7;
+      --accent-en: #00B894;
+      --radius: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+      color: white;
+      padding: 32px 24px 28px;
+      text-align: center;
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    header h1 { font-size: 26px; font-weight: 900; margin-bottom: 6px; }
+    header p { font-size: 13px; color: rgba(255,255,255,0.65); }
+
+    /* ── Subject Tabs ── */
+    .tabs {
+      display: flex;
+      gap: 8px;
+      padding: 20px 16px 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .tab {
+      flex: 1;
+      padding: 10px 0;
+      border: none;
+      border-radius: 12px 12px 0 0;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      color: white;
+      opacity: 0.55;
+    }
+    .tab.math { background: var(--accent-math); }
+    .tab.cn   { background: var(--accent-cn); }
+    .tab.en   { background: var(--accent-en); }
+    .tab.active { opacity: 1; transform: translateY(2px); }
+
+    /* ── Main Container ── */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 16px 48px;
+    }
+
+    /* ── Subject Section ── */
+    .subject-section { display: none; }
+    .subject-section.active { display: block; }
+
+    /* ── KP Card ── */
+    .kp-card {
+      background: var(--card);
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .kp-header {
+      padding: 16px 20px 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .kp-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .kp-meta { flex: 1; }
+    .kp-id { font-size: 10px; color: #B2BEC3; font-family: monospace; margin-bottom: 2px; }
+    .kp-title { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+    .kp-pain {
+      font-size: 12px;
+      color: var(--sub);
+      background: #FFF5F5;
+      border-left: 3px solid #FF6B6B;
+      padding: 5px 10px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 6px;
+    }
+    .kp-pain.cn { background: #F5F0FF; border-color: #6C5CE7; }
+    .kp-pain.en { background: #F0FFF9; border-color: #00B894; }
+
+    /* ── Canvas area ── */
+    .canvas-wrap {
+      padding: 16px 20px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .canvas-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #B2BEC3;
+      margin-bottom: 8px;
+    }
+    .canvas-host {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      min-height: 160px;
+      background: #F5F6FA;
+    }
+
+    /* ── Thought Model ── */
+    .thought-model {
+      padding: 14px 20px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #B2BEC3;
+      margin-bottom: 10px;
+    }
+    .model-name {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .model-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .model-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+    }
+    .step-num {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .anchor-quote {
+      font-size: 13px;
+      font-style: italic;
+      color: #444;
+      background: #FAFAFA;
+      border-left: 3px solid #DDD;
+      padding: 6px 12px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 8px;
+    }
+
+    /* ── Script Preview ── */
+    .script-section {
+      padding: 14px 20px;
+      border-bottom: 1px solid #F0F0F0;
+    }
+    .script-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .script-line {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .script-time {
+      font-size: 10px;
+      color: #B2BEC3;
+      font-family: monospace;
+      min-width: 60px;
+      padding-top: 3px;
+    }
+    .script-bar {
+      width: 2px;
+      background: #EEE;
+      align-self: stretch;
+      flex-shrink: 0;
+    }
+    .script-text { font-size: 12px; color: #444; padding: 3px 0 10px; line-height: 1.6; }
+
+    /* ── Video Card ── */
+    .video-section {
+      padding: 14px 20px;
+    }
+    .video-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #FAFAFA;
+      border: 1px solid #EEE;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .video-thumb {
+      width: 56px; height: 40px;
+      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .video-info { flex: 1; }
+    .video-source { font-size: 10px; color: #B2BEC3; margin-bottom: 2px; }
+    .video-keyword { font-size: 12px; font-weight: 700; color: #2D3436; margin-bottom: 4px; line-height: 1.4; }
+    .video-check {
+      font-size: 10px;
+      color: var(--sub);
+      background: #F0F0F0;
+      border-radius: 4px;
+      padding: 2px 6px;
+      display: inline-block;
+    }
+    .video-status {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      background: #FFF3CD;
+      color: #856404;
+      flex-shrink: 0;
+    }
+
+    /* ── JSON Viewer ── */
+    .json-section {
+      padding: 14px 20px;
+      border-top: 1px solid #F0F0F0;
+    }
+    .json-toggle {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: #B2BEC3;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .json-toggle:hover { color: #888; }
+    .json-body {
+      display: none;
+      margin-top: 10px;
+      background: #1E1E2E;
+      border-radius: 8px;
+      padding: 12px 14px;
+      overflow-x: auto;
+    }
+    .json-body.open { display: block; }
+    pre { font-size: 11px; line-height: 1.6; color: #CDD6F4; font-family: "SF Mono", Menlo, monospace; }
+    .json-key { color: #89DCEB; }
+    .json-str { color: #A6E3A1; }
+    .json-num { color: #FAB387; }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      header h1 { font-size: 20px; }
+      .kp-title { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">🧠 XUEBA ROAD · 全科考点库</div>
+  <h1>思维碎骨机 · 语数外三科</h1>
+  <p>真题难点 × 思维模型 × 交互 Canvas × 视频匹配</p>
+</header>
+
+<div class="container">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab math active" onclick="switchTab('math', this)">📐 数学</button>
+    <button class="tab cn" onclick="switchTab('cn', this)">📖 语文</button>
+    <button class="tab en" onclick="switchTab('en', this)">🌍 英语</button>
+  </div>
+
+  <!-- ═══════════════ MATH ═══════════════ -->
+  <div class="subject-section active" id="sec-math">
+    <div class="kp-card">
+      <!-- Header -->
+      <div class="kp-header">
+        <div class="kp-icon" style="background:#FFF0E8;">🐔</div>
+        <div class="kp-meta">
+          <div class="kp-id">MATH-GR4-001 · 四年级 · 数学</div>
+          <div class="kp-title">鸡兔同笼 · 假设补差法</div>
+          <div class="kp-pain">❗ 痛点：学生只会死算，不理解假设逻辑，遇变式题立刻崩溃</div>
+        </div>
+      </div>
+
+      <!-- Canvas -->
+      <div class="canvas-wrap">
+        <div class="canvas-label">🎮 交互思维演练</div>
+        <div class="canvas-host" id="canvas-math-001"></div>
+      </div>
+
+      <!-- Thought Model -->
+      <div class="thought-model">
+        <div class="section-title">💡 思维模型</div>
+        <div class="model-name" style="background: var(--accent-math);">假设补差法</div>
+        <div class="model-steps">
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-math);">1</div>
+            <div>先假设全是鸡（或全是兔），算出理论总腿数</div>
+          </div>
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-math);">2</div>
+            <div>对比实际腿数，算出差值（多了/少了几条）</div>
+          </div>
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-math);">3</div>
+            <div>差值 ÷ 每换一只的腿数差 = 另一种动物数量</div>
+          </div>
+        </div>
+        <div class="anchor-quote">「假设全是鸡，腿少了多少？每换一只兔，多出2条。换了几次就有几只兔。」</div>
+      </div>
+
+      <!-- Script -->
+      <div class="script-section">
+        <div class="section-title">🎬 教学脚本（抖音分镜级）</div>
+        <div class="script-timeline">
+          <div class="script-line">
+            <div class="script-time">0–5s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">这道题让90%的孩子蒙圈——鸡和兔共20只，腿54条，各几只？</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">5–15s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">很多同学开始列方程，但四年级还没学！那怎么办？</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">15–40s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">先假设20只全是鸡 → 40条腿，实际54条，多了14条。每把1只鸡换成兔，腿数多2条，14÷2=7，兔7只，鸡13只！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">40–55s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">再试一题：36只动物，100条腿，各几只？按刚才的方法算！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">55–60s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">这就是假设法，遇到这类题秒杀！</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="video-section">
+        <div class="section-title">🎥 匹配视频</div>
+        <div class="video-card">
+          <div class="video-thumb" style="background: linear-gradient(135deg,#FF6B35,#FF8E53);">▶</div>
+          <div class="video-info">
+            <div class="video-source">📺 Bilibili · 待填入 BVID</div>
+            <div class="video-keyword">鸡兔同笼 假设法 小学四年级 思维讲解</div>
+            <div class="video-check">✅ 必须有：数轴图示 + 变式题练习 + 非直接套公式</div>
+          </div>
+          <div class="video-status">待填</div>
+        </div>
+      </div>
+
+      <!-- JSON -->
+      <div class="json-section">
+        <div class="json-toggle" onclick="toggleJson(this)">
+          <span>▶</span> <span>RAW JSON · 外包填入格式</span>
+        </div>
+        <div class="json-body">
+          <pre>{
+  <span class="json-key">"subject"</span>: <span class="json-str">"数学"</span>,
+  <span class="json-key">"grade"</span>: <span class="json-str">"四年级"</span>,
+  <span class="json-key">"id"</span>: <span class="json-str">"MATH-GR4-001"</span>,
+  <span class="json-key">"core_pain_point"</span>: <span class="json-str">"鸡兔同笼：只会死算，不理解假设逻辑"</span>,
+  <span class="json-key">"thought_model"</span>: {
+    <span class="json-key">"name"</span>: <span class="json-str">"假设补差法"</span>,
+    <span class="json-key">"logic"</span>: <span class="json-str">"假设→算差→换算"</span>,
+    <span class="json-key">"canvas_type"</span>: <span class="json-str">"chicken-rabbit"</span>
+  },
+  <span class="json-key">"video"</span>: {
+    <span class="json-key">"source"</span>: <span class="json-str">"Bilibili"</span>,
+    <span class="json-key">"bvid"</span>: <span class="json-str">"【待填】"</span>,
+    <span class="json-key">"search_keyword"</span>: <span class="json-str">"鸡兔同笼 假设法 小学四年级"</span>
+  }
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div><!-- /sec-math -->
+
+
+  <!-- ═══════════════ CHINESE ═══════════════ -->
+  <div class="subject-section" id="sec-cn">
+    <div class="kp-card">
+      <div class="kp-header">
+        <div class="kp-icon" style="background:#F3EEFF;">🔍</div>
+        <div class="kp-meta">
+          <div class="kp-id">CHN-GR4-001 · 四年级 · 语文</div>
+          <div class="kp-title">阅读理解 · 动词锚定·首尾追踪法</div>
+          <div class="kp-pain cn">❗ 痛点：孩子要么全文抄，要么一句话不到位，不知道从哪"抠"中心意思</div>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <div class="canvas-label">🎮 交互思维演练</div>
+        <div class="canvas-host" id="canvas-cn-001"></div>
+      </div>
+
+      <div class="thought-model">
+        <div class="section-title">💡 思维模型</div>
+        <div class="model-name" style="background: var(--accent-cn);">动词锚定·首尾追踪法</div>
+        <div class="model-steps">
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-cn);">1</div>
+            <div>先找段落首句/末句（80%概率是中心句）</div>
+          </div>
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-cn);">2</div>
+            <div>圈出核心动词（做了什么？）</div>
+          </div>
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-cn);">3</div>
+            <div>套公式：主语 + 动词 + 结果 = 标准概括</div>
+          </div>
+        </div>
+        <div class="anchor-quote" style="border-color:#6C5CE7;">「谁？做了什么？结果怎样？三问凑齐，答案就出来了。」</div>
+        <div style="margin-top:10px; display:flex; gap:8px; font-size:11px;">
+          <span style="background:#FF6B6B22; border:1px solid #FF6B6B; color:#FF6B6B; padding:3px 8px; border-radius:12px;">🔴 主语</span>
+          <span style="background:#6C5CE722; border:1px solid #6C5CE7; color:#6C5CE7; padding:3px 8px; border-radius:12px;">🔵 动词</span>
+          <span style="background:#00B89422; border:1px solid #00B894; color:#00B894; padding:3px 8px; border-radius:12px;">🟢 结果</span>
+        </div>
+      </div>
+
+      <div class="script-section">
+        <div class="section-title">🎬 教学脚本（抖音分镜级）</div>
+        <div class="script-timeline">
+          <div class="script-line">
+            <div class="script-time">0–5s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">每次做概括题，你是不是不知道该写哪句话？今天教你一个三步法。</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">5–15s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">很多同学把全段都抄上去，老师说"太长"；只写两字，老师说"不完整"。对不对的标准到底是什么？</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">15–40s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">先找首句/末句有没有总结意味，圈出来；然后找"谁在做事"的动词；最后套：主语+做了什么+怎么了。</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">40–55s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">现在看这段课文，用三色笔分别圈出主语、动词、结果词，30秒！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">55–60s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">记住：中心句找动词，概括题不再空！</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-section">
+        <div class="section-title">🎥 匹配视频</div>
+        <div class="video-card">
+          <div class="video-thumb" style="background: linear-gradient(135deg,#6C5CE7,#a29bfe);">▶</div>
+          <div class="video-info">
+            <div class="video-source">📺 Bilibili · 待填入 BVID</div>
+            <div class="video-keyword">小学语文 阅读理解 概括段意 中心句 方法 四年级</div>
+            <div class="video-check">✅ 必须有：实际段落演示 + 学生互动 + 非纯念课本</div>
+          </div>
+          <div class="video-status">待填</div>
+        </div>
+      </div>
+
+      <div class="json-section">
+        <div class="json-toggle" onclick="toggleJson(this)">
+          <span>▶</span> <span>RAW JSON · 外包填入格式</span>
+        </div>
+        <div class="json-body">
+          <pre>{
+  <span class="json-key">"subject"</span>: <span class="json-str">"语文"</span>,
+  <span class="json-key">"grade"</span>: <span class="json-str">"四年级"</span>,
+  <span class="json-key">"id"</span>: <span class="json-str">"CHN-GR4-001"</span>,
+  <span class="json-key">"core_pain_point"</span>: <span class="json-str">"阅读概括：全文抄或太短，不知如何抠中心"</span>,
+  <span class="json-key">"thought_model"</span>: {
+    <span class="json-key">"name"</span>: <span class="json-str">"动词锚定·首尾追踪法"</span>,
+    <span class="json-key">"logic"</span>: <span class="json-str">"首/末句→圈动词→套公式"</span>,
+    <span class="json-key">"canvas_type"</span>: <span class="json-str">"verb-anchor"</span>
+  },
+  <span class="json-key">"video"</span>: {
+    <span class="json-key">"source"</span>: <span class="json-str">"Bilibili"</span>,
+    <span class="json-key">"bvid"</span>: <span class="json-str">"【待填】"</span>,
+    <span class="json-key">"search_keyword"</span>: <span class="json-str">"小学语文 阅读理解 概括段意 中心句 四年级"</span>
+  }
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div><!-- /sec-cn -->
+
+
+  <!-- ═══════════════ ENGLISH ═══════════════ -->
+  <div class="subject-section" id="sec-en">
+    <div class="kp-card">
+      <div class="kp-header">
+        <div class="kp-icon" style="background:#E8FFF6;">⏰</div>
+        <div class="kp-meta">
+          <div class="kp-id">ENG-GR4-001 · 四年级 · 英语</div>
+          <div class="kp-title">时态 · 时间轴定位法（过去时 vs 现在时）</div>
+          <div class="kp-pain en">❗ 痛点：记住了-ed规则但不知何时用，时间词与时态对应完全混乱</div>
+        </div>
+      </div>
+
+      <div class="canvas-wrap">
+        <div class="canvas-label">🎮 交互思维演练</div>
+        <div class="canvas-host" id="canvas-en-001"></div>
+      </div>
+
+      <div class="thought-model">
+        <div class="section-title">💡 思维模型</div>
+        <div class="model-name" style="background: var(--accent-en);">时间轴定位法</div>
+        <div class="model-steps">
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-en);">1</div>
+            <div>先找句子里的"时间词"（yesterday / last week / every day / now）</div>
+          </div>
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-en);">2</div>
+            <div>把时间词贴到时间轴（左边 = 过去，中间 = 现在）</div>
+          </div>
+          <div class="model-step">
+            <div class="step-num" style="background: var(--accent-en);">3</div>
+            <div>时间词在哪里，动词就变成那里的形式</div>
+          </div>
+        </div>
+        <div class="anchor-quote" style="border-color:#00B894;">「先看时间词，时间词是指挥官，动词要听它的命令。」</div>
+        <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; font-size:11px;">
+          <span style="background:#FF6B6B22; border:1px solid #FF6B6B; color:#FF6B6B; padding:3px 8px; border-radius:12px;">yesterday → -ed</span>
+          <span style="background:#FF6B6B22; border:1px solid #FF6B6B; color:#FF6B6B; padding:3px 8px; border-radius:12px;">last week → -ed</span>
+          <span style="background:#00B89422; border:1px solid #00B894; color:#00B894; padding:3px 8px; border-radius:12px;">every day → 原形</span>
+          <span style="background:#00B89422; border:1px solid #00B894; color:#00B894; padding:3px 8px; border-radius:12px;">now → 原形/ing</span>
+        </div>
+      </div>
+
+      <div class="script-section">
+        <div class="section-title">🎬 教学脚本（抖音分镜级）</div>
+        <div class="script-timeline">
+          <div class="script-line">
+            <div class="script-time">0–5s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">为什么同一个动词，有时候加 -ed，有时候不加？今天彻底搞清楚！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">5–15s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">很多同学背了规则，但一遇到题还是错。因为你忘了找"线索词"——时间词！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">15–40s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">画时间轴……左边是过去，右边是现在。"Yesterday I played soccer"——yesterday在左边，所以play变played。"Every day I play soccer"——every day在中间，所以不加-ed！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">40–55s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">看这三句话，先圈出时间词，再决定动词用哪种形式，30秒！</div>
+          </div>
+          <div class="script-line">
+            <div class="script-time">55–60s</div>
+            <div class="script-bar"></div>
+            <div class="script-text">时间词是指挥官！找到它，时态不再错！</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-section">
+        <div class="section-title">🎥 匹配视频</div>
+        <div class="video-card">
+          <div class="video-thumb" style="background: linear-gradient(135deg,#00B894,#55EFC4);">▶</div>
+          <div class="video-info">
+            <div class="video-source">📺 Bilibili · 待填入 BVID</div>
+            <div class="video-keyword">小学英语 一般过去时 时间词 yesterday last 四年级讲解</div>
+            <div class="video-check">✅ 必须有：时间轴图示 + yesterday/every day对比 + 练习题</div>
+          </div>
+          <div class="video-status">待填</div>
+        </div>
+      </div>
+
+      <div class="json-section">
+        <div class="json-toggle" onclick="toggleJson(this)">
+          <span>▶</span> <span>RAW JSON · 外包填入格式</span>
+        </div>
+        <div class="json-body">
+          <pre>{
+  <span class="json-key">"subject"</span>: <span class="json-str">"英语"</span>,
+  <span class="json-key">"grade"</span>: <span class="json-str">"四年级"</span>,
+  <span class="json-key">"id"</span>: <span class="json-str">"ENG-GR4-001"</span>,
+  <span class="json-key">"core_pain_point"</span>: <span class="json-str">"时态混用：记住-ed但不知何时用，时间词对应混乱"</span>,
+  <span class="json-key">"thought_model"</span>: {
+    <span class="json-key">"name"</span>: <span class="json-str">"时间轴定位法"</span>,
+    <span class="json-key">"logic"</span>: <span class="json-str">"找时间词→贴轴→动词听命令"</span>,
+    <span class="json-key">"canvas_type"</span>: <span class="json-str">"tense-timeline"</span>
+  },
+  <span class="json-key">"video"</span>: {
+    <span class="json-key">"source"</span>: <span class="json-str">"Bilibili"</span>,
+    <span class="json-key">"bvid"</span>: <span class="json-str">"【待填】"</span>,
+    <span class="json-key">"search_keyword"</span>: <span class="json-str">"小学英语 一般过去时 时间词 yesterday last 四年级"</span>
+  }
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div><!-- /sec-en -->
+
+
+  <!-- ── 外包监控表 ── -->
+  <div style="background:white; border-radius:var(--radius); box-shadow:var(--shadow); padding:20px; margin-top:8px;">
+    <div style="font-size:13px; font-weight:800; margin-bottom:12px;">📊 外包验收监控表（你只需要盯这3个）</div>
+    <table style="width:100%; border-collapse:collapse; font-size:12px;">
+      <thead>
+        <tr style="background:#F5F6FA;">
+          <th style="padding:8px 10px; text-align:left; border-bottom:2px solid #EEE;">科目 · 考点</th>
+          <th style="padding:8px 10px; text-align:left; border-bottom:2px solid #EEE;">验收关键词</th>
+          <th style="padding:8px 10px; text-align:center; border-bottom:2px solid #EEE;">状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:9px 10px; border-bottom:1px solid #F5F6FA; font-weight:700; color: var(--accent-math);">📐 数学 · 鸡兔同笼</td>
+          <td style="padding:9px 10px; border-bottom:1px solid #F5F6FA; color:#636E72;">必须有"先假设全是X，多了/少了多少腿"的逻辑拆解视频</td>
+          <td style="padding:9px 10px; border-bottom:1px solid #F5F6FA; text-align:center;"><span style="background:#FFF3CD; color:#856404; padding:2px 10px; border-radius:20px; font-size:11px; font-weight:700;">待填</span></td>
+        </tr>
+        <tr>
+          <td style="padding:9px 10px; border-bottom:1px solid #F5F6FA; font-weight:700; color: var(--accent-cn);">📖 语文 · 阅读概括</td>
+          <td style="padding:9px 10px; border-bottom:1px solid #F5F6FA; color:#636E72;">必须有实际段落演示，非直接给答案</td>
+          <td style="padding:9px 10px; border-bottom:1px solid #F5F6FA; text-align:center;"><span style="background:#FFF3CD; color:#856404; padding:2px 10px; border-radius:20px; font-size:11px; font-weight:700;">待填</span></td>
+        </tr>
+        <tr>
+          <td style="padding:9px 10px; font-weight:700; color: var(--accent-en);">🌍 英语 · 时态</td>
+          <td style="padding:9px 10px; color:#636E72;">必须画时间轴，yesterday/every day对比出现</td>
+          <td style="padding:9px 10px; text-align:center;"><span style="background:#FFF3CD; color:#856404; padding:2px 10px; border-radius:20px; font-size:11px; font-weight:700;">待填</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- /container -->
+
+<script src="canvas-interactive.js"></script>
+<script>
+// ── Tab switching ──
+function switchTab(subject, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.subject-section').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('sec-' + subject).classList.add('active');
+}
+
+// ── JSON toggle ──
+function toggleJson(el) {
+  const body = el.nextElementSibling;
+  const arrow = el.querySelector('span');
+  body.classList.toggle('open');
+  arrow.textContent = body.classList.contains('open') ? '▼' : '▶';
+}
+
+// ── Init all Canvases ──
+window.addEventListener('load', function() {
+  // Math: chicken-rabbit
+  renderCanvasInteraction('canvas-math-001', 'chicken-rabbit');
+
+  // CN: verb-anchor
+  renderCanvasInteraction('canvas-cn-001', 'verb-anchor');
+
+  // EN: tense-timeline
+  renderCanvasInteraction('canvas-en-001', 'tense-timeline');
+});
+</script>
+</body>
+</html>
