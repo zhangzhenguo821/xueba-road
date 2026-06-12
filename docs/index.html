@@ -1207,7 +1207,9 @@ function renderTree(filterText) {
         chipEl.className = 'tree-chip ' + meta.cls;
         chipEl.innerHTML = '<span class="tree-chip-id">' + chip.id + '</span>' +
           '<span class="tree-chip-text" title="' + chip.title.replace(/"/g, '&quot;') + '">' + chip.title + '</span>';
-        chipEl.onclick = function() { openChip(chip.id); };
+        (function(c) {
+          chipEl.onclick = function() { openChip(c.id); };
+        })(chip);
         chipsDiv.appendChild(chipEl);
       });
 
