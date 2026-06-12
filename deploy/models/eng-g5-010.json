@@ -1,0 +1,56 @@
+{
+  "id": "eng-g5-010",
+  "title": "知识卡片",
+  "chipId": "ENG-05-010",
+  "grade": 5,
+  "subject": "英语",
+  "category": "词汇语法与阅读",
+  "icon": "🌏",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "现在进行时进阶核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "现在进行时=be动词+动词ing",
+        "action": "现在进行时=be动词+动词ing",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "be动词看主语：I用am，he/she/",
+        "action": "be动词看主语：I用am，he/she/it用is，you/we/they用are",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "ing变化规则：直接加、去e加、双写加",
+        "action": "ing变化规则：直接加、去e加、双写加",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

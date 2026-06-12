@@ -1,0 +1,62 @@
+{
+  "id": "math-g4-015",
+  "title": "知识卡片",
+  "chipId": "MATH-04-015",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "大数的认识核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "读大数，先分级",
+        "action": "读大数，先分级",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "从右往左每四位画一道竖线，万级读完加个'",
+        "action": "从右往左每四位画一道竖线，万级读完加个'万'，亿级读完加个'亿'",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "4 5 6 7 | 8 9 0 1 → ",
+        "action": "4 5 6 7 | 8 9 0 1 → 四千五百六十七万八千九百零一",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "记住：每一级的读法跟个级一模一样",
+        "action": "记住：每一级的读法跟个级一模一样",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

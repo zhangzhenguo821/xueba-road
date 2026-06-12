@@ -1,0 +1,80 @@
+{
+  "id": "eng-g6-001",
+  "title": "passive-formula",
+  "chipId": "ENG-06-001",
+  "grade": 6,
+  "subject": "英语",
+  "category": "被动语态核心",
+  "icon": "🔄",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "passive-formula",
+  "modelDesc": "结构代换图。动作发出者（IT team）和承受者（Web platform）位置互换，中间高亮弹出红色的 be + Vpp 核心卡槽。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "做这种题，先问问主语是人还是物",
+        "action": "做这种题，先问问主语是人还是物",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "主语是 The web platform",
+        "action": "主语是 The web platform（网站平台），网站能自己拔腿去建自己吗？绝对不能",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "它必须'被建设'",
+        "action": "它必须'被建设'",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "只要确定了是被动，无脑锁定黄金公式：被动",
+        "action": "只要确定了是被动，无脑锁定黄金公式：被动 = be + 过去分词（Vpp）",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "因为有 tomorrow（明天），所以 ",
+        "action": "因为有 tomorrow（明天），所以 be 动词变成 will be",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "合起来就是 will be built",
+        "action": "合起来就是 will be built",
+        "hint": ""
+      },
+      {
+        "step": 7,
+        "title": "不加 be 动词的被动语态，都是在耍流氓",
+        "action": "不加 be 动词的被动语态，都是在耍流氓",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

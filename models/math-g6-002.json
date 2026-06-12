@@ -1,0 +1,62 @@
+{
+  "id": "math-g6-002",
+  "title": "3d-cone",
+  "chipId": "MATH-06-002",
+  "grade": 6,
+  "subject": "数学",
+  "category": "小升初立体几何",
+  "icon": "🌀",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "3d-cone",
+  "modelDesc": "3D动态转换图。左边是一个静态直角三角形（红轴蓝边），右边随着转动，逐渐虚化出底面半径r和高的高亮连线。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "立体几何旋转，就看'谁定谁动'",
+        "action": "立体几何旋转，就看'谁定谁动'",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "以3厘米的边为轴，说明这根3厘米的边死锁",
+        "action": "以3厘米的边为轴，说明这根3厘米的边死锁在中心当旋转定海神针，它就是圆锥的高",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "而另外那根在外面拼命跑圈的4厘米直角边，",
+        "action": "而另外那根在外面拼命跑圈的4厘米直角边，跑出来的轨迹就是底面的圆形，所以它就是底面半径",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "锁定 h=3, r=4，直接套公式 V=",
+        "action": "锁定 h=3, r=4，直接套公式 V=⅓πr²h 解决",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

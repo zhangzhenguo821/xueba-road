@@ -1,0 +1,56 @@
+{
+  "id": "eng-g4-002",
+  "title": "3d-space",
+  "chipId": "ENG-04-002",
+  "grade": 4,
+  "subject": "英语",
+  "category": "介词与空间思维",
+  "icon": "📍",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "3d-space",
+  "modelDesc": "绘制3D空间图：一个飞镖扎在靶心上（at），一本书平贴在桌面上（on），一只猫缩在纸箱子里（in）。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "别去背中文翻译了",
+        "action": "别去背中文翻译了",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "学霸眼里只有三个空间模型：at 是一个精",
+        "action": "学霸眼里只有三个空间模型：at 是一个精准的坐标点（Point），比如你在地图上找公交车站，它只是个点；on 是一个接触面（Surface），必须有脚踏实地的粘连，比如苍蝇趴在墙上；in 是一个立体包裹空间（Volume），必须有四周包围的安全感",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "车站是个点，所以无脑选 at",
+        "action": "车站是个点，所以无脑选 at",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

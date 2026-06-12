@@ -1,0 +1,56 @@
+{
+  "id": "math-g6-022",
+  "title": "知识卡片",
+  "chipId": "MATH-06-022",
+  "grade": 6,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "鸡兔同笼进阶核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "鸡兔同笼最稳解法——假设全是鸡",
+        "action": "鸡兔同笼最稳解法——假设全是鸡",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "算总脚数差，每把一只鸡换成一只兔，脚就多",
+        "action": "算总脚数差，每把一只鸡换成一只兔，脚就多2只",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "差多少只脚就换多少只兔子",
+        "action": "差多少只脚就换多少只兔子",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

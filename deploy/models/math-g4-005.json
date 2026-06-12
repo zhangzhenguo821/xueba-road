@@ -1,0 +1,62 @@
+{
+  "id": "math-g4-005",
+  "title": "distributive-law",
+  "chipId": "MATH-04-005",
+  "grade": 4,
+  "subject": "数学",
+  "category": "运算定律",
+  "icon": "✖️",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "distributive-law",
+  "modelDesc": "分配律拆分可视化：(40+4)×25 → 40×25 + 4×25，每个分支必须完整。逆向：37×(28+72)，提取37后28+72=100。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "乘法分配律口诀：括号外面乘进来，每个都要",
+        "action": "乘法分配律口诀：括号外面乘进来，每个都要乘",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "40×25=1000，4×25=100，",
+        "action": "40×25=1000，4×25=100，加起来1100",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "记住：括号里的每一个数，都必须跟外面的数",
+        "action": "记住：括号里的每一个数，都必须跟外面的数相乘，漏乘一个就全错",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "逆用也一样：37×28+37×72 = ",
+        "action": "逆用也一样：37×28+37×72 = 37×(28+72) = 37×100 = 3700，提取公因数37，剩下的凑整百",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

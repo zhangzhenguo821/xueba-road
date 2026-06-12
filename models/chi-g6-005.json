@@ -1,0 +1,50 @@
+{
+  "id": "chi-g6-005",
+  "title": "知识卡片",
+  "chipId": "CHI-06-005",
+  "grade": 6,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "修改病句综合核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "改病句四步法：一读（读句子）、二找（找病",
+        "action": "改病句四步法：一读（读句子）、二找（找病因）、三改（对症改）、四查（查通顺）",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "记住八大病因：成分残缺、搭配不当、重复啰",
+        "action": "记住八大病因：成分残缺、搭配不当、重复啰嗦、前后矛盾、指代不明、语序不当、不合逻辑、用词不当",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

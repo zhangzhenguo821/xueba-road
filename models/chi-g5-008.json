@@ -1,0 +1,50 @@
+{
+  "id": "chi-g5-008",
+  "title": "知识卡片",
+  "chipId": "CHI-05-008",
+  "grade": 5,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "古诗文进阶核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "古诗学习三件套：先读准字音，再解关键字词",
+        "action": "古诗学习三件套：先读准字音，再解关键字词，最后翻译整句",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "默写之前先理解意思，死记硬背改不了错别字",
+        "action": "默写之前先理解意思，死记硬背改不了错别字",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

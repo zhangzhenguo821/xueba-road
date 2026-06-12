@@ -1,0 +1,56 @@
+{
+  "id": "eng-g5-001",
+  "title": "time-arrow",
+  "chipId": "ENG-05-001",
+  "grade": 5,
+  "subject": "英语",
+  "category": "时态逻辑",
+  "icon": "⚡",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "time-arrow",
+  "modelDesc": "动态时间轴。一般过去时是一个孤立在Past的黑点；现在完成时是一根从Past延伸出来、狠狠扎进Present（现在）的红色闪电链。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "一般过去时是'死去的历史'，只发生在过去",
+        "action": "一般过去时是'死去的历史'，只发生在过去，和现在没关系（昨天丢了，可能今天找到了，无所谓）；而现在完成时是'过去射向现在的一支箭'，它发生在过去，但重点在对现在的后果",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "因为丢了钥匙，导致我现在'进不去屋'",
+        "action": "因为丢了钥匙，导致我现在'进不去屋'",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "后果还热乎着呢，必须用现在完成时 hav",
+        "action": "后果还热乎着呢，必须用现在完成时 have lost",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "eng-g6-006",
+  "title": "知识卡片",
+  "chipId": "ENG-06-006",
+  "grade": 6,
+  "subject": "英语",
+  "category": "词汇语法与阅读",
+  "icon": "🌏",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "I Have a Pen Pal核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "I Have a Pen Pal是小学英",
+        "action": "I Have a Pen Pal是小学英语重要考点",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "用对方法，轻松拿满分",
+        "action": "用对方法，轻松拿满分",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "eng-g6-008",
+  "title": "知识卡片",
+  "chipId": "ENG-06-008",
+  "grade": 6,
+  "subject": "英语",
+  "category": "词汇语法与阅读",
+  "icon": "🌏",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "一般过去时核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "过去时两件事要记住：第一，动词要变过去式",
+        "action": "过去时两件事要记住：第一，动词要变过去式（规则加ed，不规则要背）；第二，时间标志词（yesterday, last week, ago）一出现，动词马上变过去",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "math-g5-001",
+  "title": "butterfly-model",
+  "chipId": "MATH-05-001",
+  "grade": 5,
+  "subject": "数学",
+  "category": "几何思维",
+  "icon": "🦋",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "butterfly-model",
+  "modelDesc": "在一个彩色梯形中，对角线划出四块，左右两块三角形高亮闪烁，并标注 S₂=S₄，视觉呈蝴蝶展翅状。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，这就是著名的几何蝴蝶模型",
+        "action": "孩子们，这就是著名的几何蝴蝶模型",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "只要是梯形，不管它怎么变形，左边翅膀的三",
+        "action": "只要是梯形，不管它怎么变形，左边翅膀的三角形和右边翅膀的三角形，面积永远一模一样",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "为什么？因为△ABC和△DBC等底等高，",
+        "action": "为什么？因为△ABC和△DBC等底等高，面积相等",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "它们同时减去底部公共的三角形，剩下的两翼",
+        "action": "它们同时减去底部公共的三角形，剩下的两翼自然死死相等",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "记住：左右翅膀，面积死锁",
+        "action": "记住：左右翅膀，面积死锁",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

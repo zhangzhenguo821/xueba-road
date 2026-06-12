@@ -1,0 +1,80 @@
+{
+  "id": "math-g4-002",
+  "title": "film-strip",
+  "chipId": "MATH-04-002",
+  "grade": 4,
+  "subject": "数学",
+  "category": "数论与巧算思维",
+  "icon": "🔄",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "film-strip",
+  "modelDesc": "做出'胶卷/电影底片'的视觉，5个灯一卷胶卷。余数3对应的胶卷第三帧高亮闪烁。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "数周期就像看电影",
+        "action": "数周期就像看电影",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "红、黄、黄、蓝、绿，这 5 个色是一集",
+        "action": "红、黄、黄、蓝、绿，这 5 个色是一集",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "128÷5=25余3",
+        "action": "128÷5=25余3",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "说明放完了25集全集，第26集刚刚演到第",
+        "action": "说明放完了25集全集，第26集刚刚演到第3个镜头",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "咱们直接去第一集里数第3个镜头——黄灯",
+        "action": "咱们直接去第一集里数第3个镜头——黄灯",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "如果余数是0，说明这一集完美大团圆，演完",
+        "action": "如果余数是0，说明这一集完美大团圆，演完了",
+        "hint": ""
+      },
+      {
+        "step": 7,
+        "title": "那它就是这集大结局的最后一个颜色——绿灯",
+        "action": "那它就是这集大结局的最后一个颜色——绿灯",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

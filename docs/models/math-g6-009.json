@@ -1,0 +1,56 @@
+{
+  "id": "math-g6-009",
+  "title": "知识卡片",
+  "chipId": "MATH-06-009",
+  "grade": 6,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "百分数(一)核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "百分数就是分母为100的分数",
+        "action": "百分数就是分母为100的分数",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "折扣=现价÷原价，税率=税额÷收入，利率",
+        "action": "折扣=现价÷原价，税率=税额÷收入，利率=利息÷本金",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "三个公式，一通百通",
+        "action": "三个公式，一通百通",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

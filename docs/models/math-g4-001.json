@@ -1,0 +1,62 @@
+{
+  "id": "math-g4-001",
+  "title": "number-axis",
+  "chipId": "MATH-04-001",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🎯",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "number-axis",
+  "modelDesc": "画一个数轴，0在中间。向右是奖5分，向左是罚2分。中间的距离用大红线标注：总共差了 7 步。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，投错一球，你不仅拿不到原本能得到",
+        "action": "孩子们，投错一球，你不仅拿不到原本能得到的 5 分，还要被倒扣 2 分",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "这一进一出，你和全对的差距拉开了 5+2",
+        "action": "这一进一出，你和全对的差距拉开了 5+2=7 分",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "这叫里外里原理",
+        "action": "这叫里外里原理",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "所以总差量要除以 7，而不是除以 3",
+        "action": "所以总差量要除以 7，而不是除以 3",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "chi-g5-001",
+  "title": "comparison-radar",
+  "chipId": "CHI-05-001",
+  "grade": 5,
+  "subject": "语文",
+  "category": "阅读理解",
+  "icon": "📊",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "comparison-radar",
+  "modelDesc": "洋葱反差图。左边密密麻麻的文字说明书，右边被AI提炼成一根红色放大镜，直击两个关键数据的对比连线。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "做图表说明题，千万别当抒情文写",
+        "action": "做图表说明题，千万别当抒情文写",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "阅卷老师只看两个核心：数字对比和条件对应",
+        "action": "阅卷老师只看两个核心：数字对比和条件对应",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "第一步，在图表里把小明的核心条件（5公斤",
+        "action": "第一步，在图表里把小明的核心条件（5公斤）圈出来；第二步，列出A、B两家公司的纯数字算式；第三步，得出结论",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "用数字说话，一字不多，一字不少，这就是满",
+        "action": "用数字说话，一字不多，一字不少，这就是满分标准",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

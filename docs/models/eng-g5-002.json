@@ -1,0 +1,68 @@
+{
+  "id": "eng-g5-002",
+  "title": "evidence-bar",
+  "chipId": "ENG-05-002",
+  "grade": 5,
+  "subject": "英语",
+  "category": "情态动词",
+  "icon": "💡",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "evidence-bar",
+  "modelDesc": "视觉进度条。0%对应can't（绝对不可能），50%对应may（也许吧），100%对应must（绝对铁证）。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "别用中文翻译去套",
+        "action": "别用中文翻译去套",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "学霸眼里只有证据的百分比",
+        "action": "学霸眼里只有证据的百分比",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "题目第一句说了什么？The light ",
+        "action": "题目第一句说了什么？The light is on（灯亮着呢）",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "既然灯亮着，他家在家的可能性就是100%",
+        "action": "既然灯亮着，他家在家的可能性就是100%稳了，这时候必须用 must（一定，表示百分之百的笃定）；如果没有任何证据，只是瞎猜，才用 may（可能）",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "做英语题就是看证据给百分比",
+        "action": "做英语题就是看证据给百分比",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

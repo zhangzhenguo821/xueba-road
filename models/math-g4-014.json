@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-014",
+  "title": "overlap-area",
+  "chipId": "MATH-04-014",
+  "grade": 4,
+  "subject": "数学",
+  "category": "几何与空间思维",
+  "icon": "🔄",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "overlap-area",
+  "modelDesc": "画一个长方形，可以拖动顶点使其变为平行四边形。底边固定不变，高用虚线标注。拖动时高会缩短，面积颜色从绿色变红色表示减小。右侧实时显示底、高、面积数值变化。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "学霸们，想象你的手电筒从正上方照下来：长",
+        "action": "学霸们，想象你的手电筒从正上方照下来：长方形的时候，光照的面积最大",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "你把它一歪变成平行四边形，底边没变，但'",
+        "action": "你把它一歪变成平行四边形，底边没变，但'光柱的高度'矮了",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "你以为框子没断面积就不变，其实面积 = ",
+        "action": "你以为框子没断面积就不变，其实面积 = 底×高，高变小了面积肯定变小",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "就像你斜着切面包，切面看起来变长了，但面",
+        "action": "就像你斜着切面包，切面看起来变长了，但面包片变薄了",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "一句话口诀：框子没断不算数，底乘高才是面",
+        "action": "一句话口诀：框子没断不算数，底乘高才是面积的根",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

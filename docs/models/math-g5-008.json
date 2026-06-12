@@ -1,0 +1,50 @@
+{
+  "id": "math-g5-008",
+  "title": "知识卡片",
+  "chipId": "MATH-05-008",
+  "grade": 5,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "简易方程核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "解方程就三步：第一步，把含有x的放一边，",
+        "action": "解方程就三步：第一步，把含有x的放一边，数字放另一边（移项变号",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "）；第二步，合并同类项；第三步，x前面的",
+        "action": "）；第二步，合并同类项；第三步，x前面的数除过去",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

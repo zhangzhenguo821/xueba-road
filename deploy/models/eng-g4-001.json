@@ -1,0 +1,62 @@
+{
+  "id": "eng-g4-001",
+  "title": "magnet-s",
+  "chipId": "ENG-04-001",
+  "grade": 4,
+  "subject": "英语",
+  "category": "时态与动词变形",
+  "icon": "🧲",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "magnet-s",
+  "modelDesc": "小红书多巴胺手账风。将 He/She/It 画成红色磁铁，动词 run 走过去，屁股上瞬间被吸附上一个大大的绿色 -s。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，在英语王国里，He（他）、She",
+        "action": "孩子们，在英语王国里，He（他）、She（她）、It（它）是能量最强的三大'单身傲娇怪'",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "因为他们太孤单了，所以只要他们出来当老大",
+        "action": "因为他们太孤单了，所以只要他们出来当老大，身后的动词就必须被吸过来一个尾巴——字母 -s 或 -es 来陪伴他们",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "这叫单三磁铁原理",
+        "action": "这叫单三磁铁原理",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "漏了 -s，句子就会摔倒",
+        "action": "漏了 -s，句子就会摔倒",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

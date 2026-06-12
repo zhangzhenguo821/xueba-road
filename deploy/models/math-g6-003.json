@@ -1,0 +1,68 @@
+{
+  "id": "math-g6-003",
+  "title": "drawer-pigeonhole",
+  "chipId": "MATH-06-003",
+  "grade": 6,
+  "subject": "数学",
+  "category": "小升初抽屉原理",
+  "icon": "🎁",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "drawer-pigeonhole",
+  "modelDesc": "小红书卡通手账风。三个彩色的抽屉（红黄蓝），每个抽屉里不情不愿地塞了2个球，此时天空中掉下一个闪光的金色球（标记：+1），落入任何一个抽屉都会打破平衡。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "记住，抽屉原理的突破动作就四个字：'倒霉",
+        "action": "记住，抽屉原理的突破动作就四个字：'倒霉透顶'",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "题目要3个球颜色一样，最倒霉的状况是什么",
+        "action": "题目要3个球颜色一样，最倒霉的状况是什么？是你拿了2个红的、2个黄的、2个蓝的，完美避开了所有大满贯",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "此时你手里已经有了2×3=6个球",
+        "action": "此时你手里已经有了2×3=6个球",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "这时候哪怕天塌下来，你再随便摸1个球，不",
+        "action": "这时候哪怕天塌下来，你再随便摸1个球，不管摸出什么颜色，都一定会和手里的某一种颜色凑成3个",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "所以：答案 = (目标数−1)×颜色数+",
+        "action": "所以：答案 = (目标数−1)×颜色数+1 = 7个",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

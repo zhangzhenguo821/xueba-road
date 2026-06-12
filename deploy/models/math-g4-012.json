@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-012",
+  "title": "number-axis",
+  "chipId": "MATH-04-012",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "⚖️",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "number-axis",
+  "modelDesc": "画一个数轴，标出小数和大数的位置。小数在左，大数在右。用红线标注'差'（两数之间的距离），用蓝线标注'和'（从0到两数之和的距离）。拖动滑块调整和与差，数轴实时更新。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "学霸们，和差问题就一个秘诀：大数 =（和",
+        "action": "学霸们，和差问题就一个秘诀：大数 =（和+差）÷2，小数 =（和-差）÷2",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "别担心，想想跷跷板：和是两个数加起来，差",
+        "action": "别担心，想想跷跷板：和是两个数加起来，差是两个数减出来的",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "你把和加上差，就等于两个大数，除以2就是",
+        "action": "你把和加上差，就等于两个大数，除以2就是一个大数",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "把和减去差，就等于两个小数，除以2就是一",
+        "action": "把和减去差，就等于两个小数，除以2就是一个小数",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "一句话口诀：和加差除2得大，和减差除2得",
+        "action": "一句话口诀：和加差除2得大，和减差除2得小",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "eng-g5-014",
+  "title": "知识卡片",
+  "chipId": "ENG-05-014",
+  "grade": 5,
+  "subject": "英语",
+  "category": "词汇语法与阅读",
+  "icon": "🌏",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "形容词比较级核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "比较级规则：单音节+er，多音节+mor",
+        "action": "比较级规则：单音节+er，多音节+more",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "最高级：单音节+est，多音节+most",
+        "action": "最高级：单音节+est，多音节+most",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "三个特殊要背：good-better-b",
+        "action": "三个特殊要背：good-better-best，bad-worse-worst，many-more-most",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

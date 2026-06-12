@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-011",
+  "title": "overlap-area",
+  "chipId": "MATH-04-011",
+  "grade": 4,
+  "subject": "数学",
+  "category": "几何与空间思维",
+  "icon": "📐",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "overlap-area",
+  "modelDesc": "画一个角，两条边可以拖动延长或缩短。中间用扇形填充颜色表示角的大小。拖动边长时，扇形面积不变，用动画直观展示'边变长、角不变'的效果。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，角的大小就像嘴巴张开的大小——你",
+        "action": "孩子们，角的大小就像嘴巴张开的大小——你嘴巴张多大声，跟你嘴唇多长有关系吗？没有",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "角只看两条边张开的角度，不看边有多长",
+        "action": "角只看两条边张开的角度，不看边有多长",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "你以为边越长角越大，其实角只看开口大小",
+        "action": "你以为边越长角越大，其实角只看开口大小",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "就像手电筒，光柱照得再远，张角还是那么大",
+        "action": "就像手电筒，光柱照得再远，张角还是那么大",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "一句话口诀：角看开口不看边，边长延长角不",
+        "action": "一句话口诀：角看开口不看边，边长延长角不变",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

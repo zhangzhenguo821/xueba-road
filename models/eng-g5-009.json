@@ -1,0 +1,62 @@
+{
+  "id": "eng-g5-009",
+  "title": "知识卡片",
+  "chipId": "ENG-05-009",
+  "grade": 5,
+  "subject": "英语",
+  "category": "词汇语法与阅读",
+  "icon": "🌏",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "一般现在时进阶核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "一般现在时的灵魂是三单",
+        "action": "一般现在时的灵魂是三单",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "he/she/it后面的动词要加s或es",
+        "action": "he/she/it后面的动词要加s或es",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "判断口诀：'不是我就是你，单数三人都加s",
+        "action": "判断口诀：'不是我就是你，单数三人都加s",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "'",
+        "action": "'",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

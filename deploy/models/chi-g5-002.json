@@ -1,0 +1,62 @@
+{
+  "id": "chi-g5-002",
+  "title": "closeup-lens",
+  "chipId": "CHI-05-002",
+  "grade": 5,
+  "subject": "语文",
+  "category": "考场作文",
+  "icon": "📸",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "closeup-lens",
+  "modelDesc": "电影镜头感图示。一个远景全身人像被画上大红叉，一个聚焦在'手部厚茧'或'微笑时眼角细纹'的特写镜头高亮放大。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "写外貌，不许写五官全景，要写特征特写",
+        "action": "写外貌，不许写五官全景，要写特征特写",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "满头白发太老套，学霸怎么写？'妈妈在灯下",
+        "action": "满头白发太老套，学霸怎么写？'妈妈在灯下帮我检查作业，有一根银丝在她的黑发里任性地翘着，怎么藏也藏不住",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "' 别写全身，只抓一根头发、一个老茧、或",
+        "action": "' 别写全身，只抓一根头发、一个老茧、或者一个标志性的苦笑",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "用局部特写代替全景扫描，画面感瞬间高级",
+        "action": "用局部特写代替全景扫描，画面感瞬间高级",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

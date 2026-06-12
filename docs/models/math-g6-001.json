@@ -1,0 +1,74 @@
+{
+  "id": "math-g6-001",
+  "title": "stage-model",
+  "chipId": "MATH-06-001",
+  "grade": 6,
+  "subject": "数学",
+  "category": "小升初经典行程",
+  "icon": "🚢",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "stage-model",
+  "modelDesc": "动态Canvas演示：拉动一个大水流背景。当水流拼命往右冲时，孩子会发现，船和帽子的相对距离红线，拉伸和缩短的速度完全没有变化。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，这就是吓退无数人的'帽子丢了模型",
+        "action": "孩子们，这就是吓退无数人的'帽子丢了模型'",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "别去管那该死的水流速度",
+        "action": "别去管那该死的水流速度",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "水流就像是一个会移动的舞台，甲船、乙船、",
+        "action": "水流就像是一个会移动的舞台，甲船、乙船、帽子都在这个舞台上",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "水流让甲船变快，同时也让帽子往前漂，这两",
+        "action": "水流让甲船变快，同时也让帽子往前漂，这两者的效果是完全抵消的",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "所以在'舞台内部'，甲船开走20分钟再回",
+        "action": "所以在'舞台内部'，甲船开走20分钟再回头追，永远只需要耗费一模一样的20分钟就能追上",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "水速就是个烟雾弹，无脑秒杀",
+        "action": "水速就是个烟雾弹，无脑秒杀",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

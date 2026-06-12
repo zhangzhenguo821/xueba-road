@@ -1,0 +1,50 @@
+{
+  "id": "math-g5-009",
+  "title": "知识卡片",
+  "chipId": "MATH-05-009",
+  "grade": 5,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "多边形面积核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "所有多边形面积就三个祖宗公式：平行四边形",
+        "action": "所有多边形面积就三个祖宗公式：平行四边形=底×高，三角形=底×高÷2，梯形=(上底+下底)×高÷2",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "其他的都是这三个的变体",
+        "action": "其他的都是这三个的变体",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "math-g5-010",
+  "title": "知识卡片",
+  "chipId": "MATH-05-010",
+  "grade": 5,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "植树问题核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "植树问题三句话：两端都种=间隔数+1，两",
+        "action": "植树问题三句话：两端都种=间隔数+1，两端不种=间隔数-1，环形=间隔数",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "画个图，秒懂",
+        "action": "画个图，秒懂",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

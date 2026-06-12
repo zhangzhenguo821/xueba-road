@@ -1,0 +1,62 @@
+{
+  "id": "math-g4-003",
+  "title": "overlap-canvas",
+  "chipId": "MATH-04-003",
+  "grade": 4,
+  "subject": "数学",
+  "category": "几何与空间思维",
+  "icon": "📐",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "overlap-canvas",
+  "modelDesc": "动态Canvas。两个半透明的彩色长方形，重叠部分由于颜色叠加变得特别深（红+蓝=紫），提示孩子'这里重叠了，多算了一次'。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "求组合图形，就一招：'多退少补'",
+        "action": "求组合图形，就一招：'多退少补'",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "两个图形叠在一起，重叠的那块地方（正方形",
+        "action": "两个图形叠在一起，重叠的那块地方（正方形）被算了两遍",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "所以，总面积 = 长方形A + 长方形B",
+        "action": "所以，总面积 = 长方形A + 长方形B − 重叠面积",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "学霸的眼睛能看到重叠部分的'重影'，把多",
+        "action": "学霸的眼睛能看到重叠部分的'重影'，把多算的那一遍剪掉就收工",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

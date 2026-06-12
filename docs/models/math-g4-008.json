@@ -1,0 +1,62 @@
+{
+  "id": "math-g4-008",
+  "title": "translation-grid",
+  "chipId": "MATH-04-008",
+  "grade": 4,
+  "subject": "数学",
+  "category": "图形运动",
+  "icon": "↗️",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "translation-grid",
+  "modelDesc": "网格图上一个三角形，标记关键点A和A'，红色箭头画出A→A'的移动路径和格数。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "平移数格子的铁律：找对应点，数这个点移动",
+        "action": "平移数格子的铁律：找对应点，数这个点移动了多少格",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "不是数两个图形中间的空格",
+        "action": "不是数两个图形中间的空格",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "比如三角形的一个角，原来在第2列第3行，",
+        "action": "比如三角形的一个角，原来在第2列第3行，平移后到了第7列第6行，那就是右移5格、下移3格",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "平移还有一个妙用：不规则图形的周长，可以",
+        "action": "平移还有一个妙用：不规则图形的周长，可以通过平移转化成标准长方形来算",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

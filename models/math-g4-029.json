@@ -1,0 +1,50 @@
+{
+  "id": "math-g4-029",
+  "title": "知识卡片",
+  "chipId": "MATH-04-029",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "观察物体(二)核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "观察物体(二)是小学数学的核心考点",
+        "action": "观察物体(二)是小学数学的核心考点",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "掌握方法，举一反三，所有变式题都不怕",
+        "action": "掌握方法，举一反三，所有变式题都不怕",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

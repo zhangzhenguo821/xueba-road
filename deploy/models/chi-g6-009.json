@@ -1,0 +1,44 @@
+{
+  "id": "chi-g6-009",
+  "title": "知识卡片",
+  "chipId": "CHI-06-009",
+  "grade": 6,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "修辞手法综合核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "辨别修辞就背口诀：比喻像什么，拟人当人写",
+        "action": "辨别修辞就背口诀：比喻像什么，拟人当人写，排比三句起，夸张往大说，设问自问自答，反问答在问中",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

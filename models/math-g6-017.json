@@ -1,0 +1,50 @@
+{
+  "id": "math-g6-017",
+  "title": "知识卡片",
+  "chipId": "MATH-06-017",
+  "grade": 6,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "工程问题核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "工程问题万能公式：工作效率×工作时间=工",
+        "action": "工程问题万能公式：工作效率×工作时间=工作总量",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "没有总量就设总量为1，工效就是1/时间",
+        "action": "没有总量就设总量为1，工效就是1/时间",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

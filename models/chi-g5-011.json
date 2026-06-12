@@ -1,0 +1,44 @@
+{
+  "id": "chi-g5-011",
+  "title": "知识卡片",
+  "chipId": "CHI-05-011",
+  "grade": 5,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "关联词语进阶核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "关联词看逻辑：因为所以因果，虽然但是转折",
+        "action": "关联词看逻辑：因为所以因果，虽然但是转折，如果就假设，不但而且递进，不是就是选择，只要就条件",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

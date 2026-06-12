@@ -1,0 +1,74 @@
+{
+  "id": "math-g4-004",
+  "title": "seesaw",
+  "chipId": "MATH-04-004",
+  "grade": 4,
+  "subject": "数学",
+  "category": "盈亏问题",
+  "icon": "⚖️",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "seesaw",
+  "modelDesc": "动态跷跷板WebGL动效，展示'多'与'少'叠加后的总差距。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "别背公式了",
+        "action": "别背公式了",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "咱们来玩跷跷板",
+        "action": "咱们来玩跷跷板",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "多15本，跷跷板往上翘了15度；缺25本",
+        "action": "多15本，跷跷板往上翘了15度；缺25本，陷下去了25度",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "从最上面到最下面，总共差了多少度？是不是",
+        "action": "从最上面到最下面，总共差了多少度？是不是 15+25=40 度？为什么会差40度？因为每个班分到的书变多了",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "记住，'多和少'是仇人，数量要相加；'多",
+        "action": "记住，'多和少'是仇人，数量要相加；'多和多'是朋友，数量要相减",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "永远用总差量除以单差量",
+        "action": "永远用总差量除以单差量",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

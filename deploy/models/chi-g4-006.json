@@ -1,0 +1,44 @@
+{
+  "id": "chi-g4-006",
+  "title": "知识卡片",
+  "chipId": "CHI-04-006",
+  "grade": 4,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "阅读理解核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "阅读理解三步走：第一步，标自然段、圈关键",
+        "action": "阅读理解三步走：第一步，标自然段、圈关键句；第二步，看题目，带着问题回文章找答案；第三步，概括题用'谁+干什么+结果'公式",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

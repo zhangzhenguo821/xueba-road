@@ -1,0 +1,80 @@
+{
+  "id": "chi-g6-001",
+  "title": "ancient-modern-map",
+  "chipId": "CHI-06-001",
+  "grade": 6,
+  "subject": "语文",
+  "category": "文言文突破",
+  "icon": "📜",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "ancient-modern-map",
+  "modelDesc": "左侧古文单字卡片，右侧被一根链条拉开，膨胀变成双字词语。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "看课外文言文别害怕，学霸通关就两招",
+        "action": "看课外文言文别害怕，学霸通关就两招",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "第一招：单字变双字",
+        "action": "第一招：单字变双字",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "文言文里的一个字，就是现代汉语里的一个词",
+        "action": "文言文里的一个字，就是现代汉语里的一个词",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "文中的'夺'就是'争夺'，'走'就是'奔",
+        "action": "文中的'夺'就是'争夺'，'走'就是'奔跑'，'恐'就是'恐怕/害怕'",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "第二招：看结局推品质",
+        "action": "第二招：看结局推品质",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "故事里的主角最后如果是悲剧，九成在歌颂他",
+        "action": "故事里的主角最后如果是悲剧，九成在歌颂他的忠诚或坚贞；最后如果是喜剧，九成在夸他的聪明和智慧",
+        "hint": ""
+      },
+      {
+        "step": 7,
+        "title": "顺着结局反推，答案虽不中亦不远矣",
+        "action": "顺着结局反推，答案虽不中亦不远矣",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

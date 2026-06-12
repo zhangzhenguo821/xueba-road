@@ -1,0 +1,50 @@
+{
+  "id": "chi-g6-013",
+  "title": "知识卡片",
+  "chipId": "CHI-06-013",
+  "grade": 6,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "名著阅读综合核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "小学语文名著阅读综合是考试必考点",
+        "action": "小学语文名著阅读综合是考试必考点",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "掌握核心方法，不再盲目丢分",
+        "action": "掌握核心方法，不再盲目丢分",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

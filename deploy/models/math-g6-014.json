@@ -1,0 +1,50 @@
+{
+  "id": "math-g6-014",
+  "title": "知识卡片",
+  "chipId": "MATH-06-014",
+  "grade": 6,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "圆柱与圆锥核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "圆柱体积=底面积×高，圆锥体积是等底等高",
+        "action": "圆柱体积=底面积×高，圆锥体积是等底等高圆柱的1/3",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "记住这个1/3，90%的人考试都忘",
+        "action": "记住这个1/3，90%的人考试都忘",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

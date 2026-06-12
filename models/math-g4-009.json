@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-009",
+  "title": "seesaw",
+  "chipId": "MATH-04-009",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🎂",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "seesaw",
+  "modelDesc": "画一个跷跷板，左边坐着妈妈（标注36+X岁），右边坐着3个小明叠在一起（每个标注8+X岁）。跷跷板平衡时，36+X = 3×(8+X)。X用滑块可以拖动，拖到X=6时跷跷板平衡。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，年龄问题有个铁律：你长1岁，妈妈",
+        "action": "孩子们，年龄问题有个铁律：你长1岁，妈妈也长1岁，你们之间的年龄差永远不变",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "小明8岁，妈妈36岁，差了28岁，这个2",
+        "action": "小明8岁，妈妈36岁，差了28岁，这个28岁是一辈子锁死的",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "你要找的3倍关系，是指几年后妈妈的年龄 ",
+        "action": "你要找的3倍关系，是指几年后妈妈的年龄 = 小明的年龄 × 3",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "别担心，用跷跷板模型一想就通：左边是妈妈",
+        "action": "别担心，用跷跷板模型一想就通：左边是妈妈的年龄，右边是小明的3倍，它们要平衡",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "一句话口诀：年龄差永不变，倍数关系找时间",
+        "action": "一句话口诀：年龄差永不变，倍数关系找时间",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

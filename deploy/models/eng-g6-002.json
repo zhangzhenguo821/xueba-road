@@ -1,0 +1,74 @@
+{
+  "id": "eng-g6-002",
+  "title": "word-type-radar",
+  "chipId": "ENG-06-002",
+  "grade": 6,
+  "subject": "英语",
+  "category": "终极短文填空",
+  "icon": "🔎",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "word-type-radar",
+  "modelDesc": "小红书侦探手账风。放大镜聚焦在一个单词空格上，左边雷达扫描到 the，右边扫描到 in the park，中间锁定必须填复数名词。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "首字母填空是小升初的第一大坑，但学霸做题",
+        "action": "首字母填空是小升初的第一大坑，但学霸做题有铁律",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "第一步：看左邻右舍定词性",
+        "action": "第一步：看左邻右舍定词性",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "如果空格前面是 a/an/the，后面没",
+        "action": "如果空格前面是 a/an/the，后面没东西了，那这里百分之百填名词；如果前面是 can/should，这里百分之百填动词原形",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "第二步：看全篇定变形",
+        "action": "第二步：看全篇定变形",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "如果是名词，想想用不用加 s（变复数）；",
+        "action": "如果是名词，想想用不用加 s（变复数）；如果是动词，看看全篇是过去（加 ed）还是现在（加 s）",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "两步走，把瞎猜变成推理",
+        "action": "两步走，把瞎猜变成推理",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

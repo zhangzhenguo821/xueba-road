@@ -1,0 +1,74 @@
+{
+  "id": "math-g5-003",
+  "title": "lcm-tail",
+  "chipId": "MATH-05-003",
+  "grade": 5,
+  "subject": "数学",
+  "category": "数论思维",
+  "icon": "🍬",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "lcm-tail",
+  "modelDesc": "小红书卡通手账风。3个圈、4个圈、5个圈的集合图，重叠交汇处是最小公倍数60，旁边单独画出2颗闪闪发光的糖果。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "分不清因数倍数？记住一招：求总数，用倍数",
+        "action": "分不清因数倍数？记住一招：求总数，用倍数；求分组，用因数",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "这道题糖果是总数，无脑锁定公倍数",
+        "action": "这道题糖果是总数，无脑锁定公倍数",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "3、4、5的最小公倍数是60",
+        "action": "3、4、5的最小公倍数是60",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "不管怎么分都剩2个，说明总数比完美的整除",
+        "action": "不管怎么分都剩2个，说明总数比完美的整除多了2个",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "我们直接加上这个小尾巴：60+2=62个",
+        "action": "我们直接加上这个小尾巴：60+2=62个",
+        "hint": ""
+      },
+      {
+        "step": 6,
+        "title": "这叫多退少补法",
+        "action": "这叫多退少补法",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

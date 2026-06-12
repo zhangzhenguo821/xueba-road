@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-006",
+  "title": "decimal-align",
+  "chipId": "MATH-04-006",
+  "grade": 4,
+  "subject": "数学",
+  "category": "小数运算",
+  "icon": "🔢",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "decimal-align",
+  "modelDesc": "竖式对齐演示：小数点用红色竖线标注，位数不够的补0显示。两数对齐后逐位计算。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "小数加减法的铁律：小数点对齐",
+        "action": "小数加减法的铁律：小数点对齐",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "不是末尾对齐",
+        "action": "不是末尾对齐",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "15.62和7.8，7.8后面补一个0变",
+        "action": "15.62和7.8，7.8后面补一个0变成7.80，小数点对齐后逐位相加",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "整数减小数更要注意：20变成20.00，",
+        "action": "整数减小数更要注意：20变成20.00，小数点对齐后再减5.46",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "记住：小数点对齐=相同数位对齐，这是小数",
+        "action": "记住：小数点对齐=相同数位对齐，这是小数加减的全部核心",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

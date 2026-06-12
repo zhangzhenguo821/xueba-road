@@ -1,0 +1,50 @@
+{
+  "id": "math-g4-026",
+  "title": "知识卡片",
+  "chipId": "MATH-04-026",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🧮",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "小数除法核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "除数是小数的除法，核心一招：把除数变成整",
+        "action": "除数是小数的除法，核心一招：把除数变成整数",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "除数小数点向右移几位，被除数也移几位，然",
+        "action": "除数小数点向右移几位，被除数也移几位，然后就变成普通的整数除法了",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

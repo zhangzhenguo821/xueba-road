@@ -1,0 +1,56 @@
+{
+  "id": "chi-g4-002",
+  "title": "verb-burst",
+  "chipId": "CHI-04-002",
+  "grade": 4,
+  "subject": "语文",
+  "category": "考场作文",
+  "icon": "✍️",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "verb-burst",
+  "modelDesc": "抖音短视频慢动作回放，配上四个动词的闪烁出现。一个动作被打碎成4个微动词。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "把平凡动词进行像素级拆解",
+        "action": "把平凡动词进行像素级拆解",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "别写'他一脚把球踢进了球门'，用微动作慢",
+        "action": "别写'他一脚把球踢进了球门'，用微动作慢放：他【弓】下腰，左脚往地上一【跺】，右腿抡圆了往前一【甩】，鞋尖狠狠地【抽】在足球上，球离弦之箭般破网得分",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "连用四个微动词，流水账瞬间变成动作大片",
+        "action": "连用四个微动词，流水账瞬间变成动作大片",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-007",
+  "title": "triangle-rules",
+  "chipId": "MATH-04-007",
+  "grade": 4,
+  "subject": "数学",
+  "category": "三角形几何",
+  "icon": "🔺",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "triangle-rules",
+  "modelDesc": "三边关系可视化：短+短>长，用颜色标注最短两边和最长边。内角和180°标注在三角形内部。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "三角形铁律两招：第一，三边关系：最短两边",
+        "action": "三角形铁律两招：第一，三边关系：最短两边之和>最长边，等于也不行",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "2+3=5，刚好等于所以不能围成",
+        "action": "2+3=5，刚好等于所以不能围成",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "第二，内角和：三角形=180°，不是36",
+        "action": "第二，内角和：三角形=180°，不是360°",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "360°是四边形的",
+        "action": "360°是四边形的",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "等腰三角形求底角：底角=(180°-顶角",
+        "action": "等腰三角形求底角：底角=(180°-顶角)÷2，别忘了÷2",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

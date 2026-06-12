@@ -1,0 +1,68 @@
+{
+  "id": "math-g4-013",
+  "title": "seesaw",
+  "chipId": "MATH-04-013",
+  "grade": 4,
+  "subject": "数学",
+  "category": "计算与应用思维",
+  "icon": "🔑",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "seesaw",
+  "modelDesc": "画一个跷跷板模型：左边放3台拖拉机和5天的图标，右边放120亩。先点击'归一'按钮，跷跷板缩放为1台1天=8亩。然后再点击'扩展'按钮，换为4台7天，跷跷板自动算出224亩。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，归一问题就像找钥匙——先把'1台",
+        "action": "孩子们，归一问题就像找钥匙——先把'1台1天'这个最小单位算出来",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "别担心，3台5天干了120亩，1台5天就",
+        "action": "别担心，3台5天干了120亩，1台5天就是 120÷3=40亩，1台1天就是 40÷5=8亩",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "找到这把钥匙（8亩/台/天），后面随便开",
+        "action": "找到这把钥匙（8亩/台/天），后面随便开锁：4台7天 = 8×4×7 = 224亩",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "你以为要一步一步想好几个量，其实只要先找",
+        "action": "你以为要一步一步想好几个量，其实只要先找到'1个单位'，剩下的就是乘法",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "一句话口诀：归一先找1个量，剩下全是乘法",
+        "action": "一句话口诀：归一先找1个量，剩下全是乘法账",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

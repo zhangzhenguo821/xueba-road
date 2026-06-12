@@ -1,0 +1,62 @@
+{
+  "id": "chi-g4-001",
+  "title": "onion-three-layer",
+  "chipId": "CHI-04-001",
+  "grade": 4,
+  "subject": "语文",
+  "category": "阅读理解",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "onion-three-layer",
+  "modelDesc": "UI绘制成一个可剥开的三层洋葱图（外皮：表层本义；内肉：语境状态；核心：作者情感）。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，考试看到'某个动词用得好不好'，",
+        "action": "孩子们，考试看到'某个动词用得好不好'，别再写生动形象了",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "阅卷老师手里的判卷标准有三层",
+        "action": "阅卷老师手里的判卷标准有三层",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "第一层（表层），把这个词本来的意思写出来",
+        "action": "第一层（表层），把这个词本来的意思写出来（摇晃）；第二层（深层），看它写出了主角什么样子（像小姑娘跳舞，充满生机）；第三层（核心），表达了作者什么感情（对大自然的喜爱）",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "这叫三层剥洋葱法",
+        "action": "这叫三层剥洋葱法",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "chi-g4-016",
+  "title": "知识卡片",
+  "chipId": "CHI-04-016",
+  "grade": 4,
+  "subject": "语文",
+  "category": "语言素养与读写",
+  "icon": "📖",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "文言文入门核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "文言文翻译口诀：'留删补换调'",
+        "action": "文言文翻译口诀：'留删补换调'",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "人名地名保留，无义虚词删除，省略成分补上",
+        "action": "人名地名保留，无义虚词删除，省略成分补上，单音词换双音词，倒装句调顺序",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

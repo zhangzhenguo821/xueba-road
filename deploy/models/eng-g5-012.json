@@ -1,0 +1,56 @@
+{
+  "id": "eng-g5-012",
+  "title": "知识卡片",
+  "chipId": "ENG-05-012",
+  "grade": 5,
+  "subject": "英语",
+  "category": "词汇语法与阅读",
+  "icon": "🌏",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "知识卡片",
+  "modelDesc": "阅读理解进阶核心解题方法与技巧",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "英语阅读理解先看题目再读文章",
+        "action": "英语阅读理解先看题目再读文章",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "带着问题找答案，遇到生词不要慌，上下文猜",
+        "action": "带着问题找答案，遇到生词不要慌，上下文猜意思，实在猜不出跳过去",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "主旨题看首尾段，细节题回原文定位",
+        "action": "主旨题看首尾段，细节题回原文定位",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

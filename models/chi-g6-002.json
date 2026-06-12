@@ -1,0 +1,62 @@
+{
+  "id": "chi-g6-002",
+  "title": "scene-ending",
+  "chipId": "CHI-06-002",
+  "grade": 6,
+  "subject": "语文",
+  "category": "满分作文",
+  "icon": "🌅",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "scene-ending",
+  "modelDesc": "视觉大字报，左边是一个喇叭在喊口号（打红叉），右边是一扇窗户，夕阳西下，树影斑驳，意境拉满（打绿勾）。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "孩子们，聪明的学霸在作文结尾从来不喊口号",
+        "action": "孩子们，聪明的学霸在作文结尾从来不喊口号，他们都在写天气、写风景",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "你想表达你的不舍和难过，不要写'我很舍不",
+        "action": "你想表达你的不舍和难过，不要写'我很舍不得大家'",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "写成：'夕阳把操场上孤单的单杠拉得老长，",
+        "action": "写成：'夕阳把操场上孤单的单杠拉得老长，风吹过来，凤凰花落了一地，红得像一团火，又像是一场盛大的告别",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "' 记住：把你的千言万语，藏进考场最后那",
+        "action": "' 记住：把你的千言万语，藏进考场最后那一眼的风景里，这叫以景结情，高级至极",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "语文6年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

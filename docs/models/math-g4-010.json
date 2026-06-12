@@ -1,0 +1,62 @@
+{
+  "id": "math-g4-010",
+  "title": "film-strip",
+  "chipId": "MATH-04-010",
+  "grade": 4,
+  "subject": "数学",
+  "category": "数论与巧算思维",
+  "icon": "🌳",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "film-strip",
+  "modelDesc": "画一条直线路上种树，每隔5米一棵。用胶卷式交互：点击播放，树木逐棵出现，旁边实时显示间隔数和树的数量。可以切换'两端都种/只种一头/环形'三种模式，对比数量变化。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "学霸们，植树问题就是数间隔和数树的关系",
+        "action": "学霸们，植树问题就是数间隔和数树的关系",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "别担心，记住三句话：两头都种，树比间隔多",
+        "action": "别担心，记住三句话：两头都种，树比间隔多1（+1）；只种一头，树=间隔（不加不减）；两头都不种，树比间隔少1（-1）；环形路，树=间隔",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "就像排队，10个人排一排，中间9个间隔，",
+        "action": "就像排队，10个人排一排，中间9个间隔，但如果头尾都要站人，人就比间隔多1个",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "一句话口诀：两端都种加1，环形不加不减，",
+        "action": "一句话口诀：两端都种加1，环形不加不减，两端不种减1",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

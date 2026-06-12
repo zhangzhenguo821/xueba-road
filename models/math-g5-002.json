@@ -1,0 +1,62 @@
+{
+  "id": "math-g5-002",
+  "title": "train-track",
+  "chipId": "MATH-05-002",
+  "grade": 5,
+  "subject": "数学",
+  "category": "应用题思维",
+  "icon": "🚂",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "train-track",
+  "modelDesc": "动态轨迹图。一辆小火车通过隧道，从车头进到车尾出，红线标注出车头行进的实际总长度（桥长+自长）。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "火车过桥，绝对不是只有桥的长度",
+        "action": "火车过桥，绝对不是只有桥的长度",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "当火车头刚上桥，到火车尾巴完全离开桥，火",
+        "action": "当火车头刚上桥，到火车尾巴完全离开桥，火车头实际上不仅走完了整座桥，还把自己的车身长度也走了一遍",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "所以，总路程 = 桥长 + 车长",
+        "action": "所以，总路程 = 桥长 + 车长",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "学霸过桥，必加车长",
+        "action": "学霸过桥，必加车长",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "数学5年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}

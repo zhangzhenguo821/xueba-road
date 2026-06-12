@@ -1,0 +1,68 @@
+{
+  "id": "eng-g4-003",
+  "title": "detective-chain",
+  "chipId": "ENG-04-003",
+  "grade": 4,
+  "subject": "英语",
+  "category": "完形填空与逻辑思维",
+  "icon": "🔍",
+  "version": "1.0.0",
+  "created": "2026-06-12",
+  "modelType": "detective-chain",
+  "modelDesc": "在文章大背景上，空格和后面的线索词 raining 之间，拉出一根闪烁的绿色激光连线，锁死正确答案。",
+  "insight": {
+    "oneliner": "",
+    "explanation": "",
+    "trigger": "",
+    "keyQuestion": ""
+  },
+  "commonMistakes": [],
+  "standardSolution": {
+    "formula": "",
+    "steps": [
+      {
+        "step": 1,
+        "title": "做英语完形填空，不是考你当翻译官，而是考",
+        "action": "做英语完形填空，不是考你当翻译官，而是考你当福尔摩斯",
+        "hint": ""
+      },
+      {
+        "step": 2,
+        "title": "出题老师挖掉的每一个空，都在前后3句话里",
+        "action": "出题老师挖掉的每一个空，都在前后3句话里留下了'逻辑钩子'",
+        "hint": ""
+      },
+      {
+        "step": 3,
+        "title": "看看空格后面写了什么？because i",
+        "action": "看看空格后面写了什么？because it was raining（因为下雨了）",
+        "hint": ""
+      },
+      {
+        "step": 4,
+        "title": "顺着这个证据往前抓，下雨天出门必须带什么",
+        "action": "顺着这个证据往前抓，下雨天出门必须带什么？当然是 umbrella（伞）",
+        "hint": ""
+      },
+      {
+        "step": 5,
+        "title": "学霸做题，不看运气，只看证据链",
+        "action": "学霸做题，不看运气，只看证据链",
+        "hint": ""
+      }
+    ]
+  },
+  "variantTraining": [],
+  "nationalFrequency": {
+    "description": "英语4年级必考点",
+    "examTypes": [],
+    "frequencyRank": "待标注",
+    "relatedExams": [],
+    "skinVariants": []
+  },
+  "crossReferences": {
+    "prerequisite": [],
+    "leadsTo": [],
+    "relatedChips": []
+  }
+}
