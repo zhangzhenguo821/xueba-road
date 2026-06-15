@@ -1240,9 +1240,9 @@ function renderModelPage(chip) {
     var typeIds = CHIP_TO_TYPE_IDS[chip.id];
     if (typeIds && typeIds.length > 0) {
       var typeItems = typeIds.slice(0, 8).map(function(tid) {
-        var typeObj = TYPES.find(function(tt) { return tt.id === tid; });
+        var typeObj = TYPES[tid];
         if (!typeObj) return '';
-        return '<div class="related-type-item" onclick="event.stopPropagation();showPage(\'types\');setTimeout(function(){openTypeModal(\'' + tid + '\')},100)">' +
+        return '<div class="related-type-item" onclick="event.stopPropagation();showPage(\'types\');setTimeout(function(){openTypeModal(' + tid + ')},100)">' +
           '<div class="related-type-name">📋 ' + typeObj.typeName + '</div>' +
           '<div class="related-type-model">🧠 ' + typeObj.coreModel + '</div>' +
           (typeObj.mnemonic ? '<div class="related-type-mnemonic">🔑 ' + typeObj.mnemonic + '</div>' : '') +
@@ -2247,7 +2247,7 @@ function renderTypes() {
     }
     var mnemonicHTML = t.mnemonic ? '<div class="type-card-mnemonic">🔑 ' + t.mnemonic + '</div>' : '';
     
-    return '<div class="type-card" onclick="openTypeModal('' + t.id + '')">' +
+    return '<div class="type-card" onclick="openTypeModal(\'' + t.id + '\')">' +
       '<div class="type-card-id">' + t.id + '</div>' +
       '<div class="type-card-name">' + t.typeName + '</div>' +
       '<div class="type-card-model">🧠 ' + t.coreModel + '</div>' +
@@ -2264,7 +2264,7 @@ function renderTypes() {
 }
 
 function openTypeModal(typeId) {
-  var t = TYPES.find(function(x) { return x.id === typeId; });
+  var t = (typeof typeId === 'number') ? TYPES[typeId] : TYPES.find(function(x) { return x.id === typeId; });
   if (!t) return;
 
   var gradeLabel = '四年级';
@@ -2277,7 +2277,7 @@ function openTypeModal(typeId) {
     var chipLinks = t.relatedChips.slice(0, 20).map(function(cid) {
       var chip = CHIPS.find(function(c) { return c.id === cid; });
       var label = chip ? chip.title : cid;
-      return '<span class="type-chip-link" onclick="event.stopPropagation();closeTypeModal();openChip('' + cid + '')" title="' + label.replace(/"/g, '&quot;') + '">' + cid + '</span>';
+      return '<span class="type-chip-link" onclick="event.stopPropagation();closeTypeModal();openChip(\'' + cid + '\')" title="' + label.replace(/"/g, '&quot;') + '">' + cid + '</span>';
     }).join('');
     relatedChipsHTML = 
       '<div class="type-section">' +
