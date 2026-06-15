@@ -546,38 +546,68 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .followup-item:hover{background:rgba(0,184,148,0.08);color:var(--text);border-color:rgba(0,184,148,0.2)}
 .followup-item .followup-dot{width:6px;height:6px;border-radius:50%;background:var(--english);flex-shrink:0}
 
-/* ② 一句话模型（万能口诀上方） */
-.one-line-model{font-size:16px;font-style:italic;color:var(--text-secondary);line-height:1.6;margin-bottom:10px;padding:6px 14px;border-left:3px solid rgba(108,92,231,0.3);background:rgba(108,92,231,0.03);border-radius:0 8px 8px 0}
-.one-line-model::before{content:'\201C';font-size:24px;font-weight:700;color:var(--math);margin-right:2px;vertical-align:-2px}
-.one-line-model::after{content:'\201D';font-size:24px;font-weight:700;color:var(--math);margin-left:2px;vertical-align:-2px}
+/* ====== 核心题型视图 (Types View) - 绿色系 ====== */
+:root{
+  --type-primary:#059669;--type-light:#34D399;--type-bg:rgba(5,150,105,0.06);
+  --type-accent:#10B981;--type-card-border:rgba(5,150,105,0.12);
+}
+.types-hero{background:linear-gradient(135deg,#064E3B,#065F46);border-radius:var(--radius);padding:32px;margin-bottom:24px;color:white;position:relative;overflow:hidden}
+.types-hero::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(16,185,129,0.2),transparent);border-radius:50%}
+.types-hero-title{font-size:28px;font-weight:900;margin-bottom:6px}
+.types-hero-sub{font-size:13px;color:var(--text-dim);margin-bottom:16px}
+.types-hero-sub b{color:#34D399}
+.types-filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:20px}
+.types-filter{padding:8px 14px;border:1.5px solid rgba(5,150,105,0.2);border-radius:8px;font-size:13px;background:white;color:var(--text);cursor:pointer;outline:none;transition:var(--transition);font-weight:500}
+.types-filter:hover{border-color:var(--type-primary)}
+.types-filter:focus{border-color:var(--type-primary);box-shadow:0 0 0 3px rgba(5,150,105,0.08)}
+.types-search{flex:0 0 240px;padding:8px 14px;border:1.5px solid rgba(5,150,105,0.2);border-radius:8px;font-size:13px;outline:none;background:white;transition:var(--transition)}
+.types-search:focus{border-color:var(--type-primary);box-shadow:0 0 0 3px rgba(5,150,105,0.08)}
+.types-stats{font-size:12px;color:var(--text-dim);margin-bottom:14px}
+.types-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;max-width:1200px;margin:0 auto}
+.type-card{background:var(--bg-card);border-radius:var(--radius-sm);padding:18px 20px;cursor:pointer;transition:var(--transition);border:2px solid var(--type-card-border);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.type-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:var(--type-primary)}
+.type-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--type-primary),var(--type-light));border-radius:2px}
+.type-card-id{font-size:10px;font-weight:700;color:var(--type-primary);background:var(--type-bg);display:inline-block;padding:2px 8px;border-radius:4px;margin-bottom:8px}
+.type-card-name{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.4}
+.type-card-model{font-size:12px;color:var(--type-primary);font-weight:600;margin-bottom:6px}
+.type-card-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.type-tag{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600}
+.type-tag.freq{background:rgba(5,150,105,0.08);color:#059669}
+.type-tag.diff{background:rgba(245,158,11,0.08);color:#D97706}
+.type-tag.cat{background:rgba(139,92,246,0.08);color:#7C3AED}
+.type-tag.grade{background:rgba(236,72,153,0.08);color:#DB2777}
+.type-card-mnemonic{font-size:11px;color:var(--text-dim);background:var(--type-bg);padding:6px 10px;border-radius:6px;margin-top:8px;line-height:1.5}
+.type-card-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.type-card-chip-tag{font-size:10px;padding:1px 6px;border-radius:3px;background:rgba(108,92,231,0.06);color:#6C5CE7;font-weight:500}
 
-/* ⑦ AI总结 */
-.ai-summary-block{background:rgba(0,184,148,0.05);border:1.5px solid rgba(0,184,148,0.15);border-radius:var(--radius-sm);padding:14px 18px;margin-top:12px}
-.ai-summary-block .ai-summary-label{font-size:11px;font-weight:700;color:var(--english);margin-bottom:6px;display:flex;align-items:center;gap:6px}
-.ai-summary-block .ai-summary-label::before{content:'✨';font-size:13px}
-.ai-summary-block .ai-summary-text{font-size:13px;color:var(--text);line-height:1.7}
+/* Type Detail Modal */
+.type-modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:999;justify-content:center;align-items:center;padding:20px}
+.type-modal-overlay.active{display:flex}
+.type-modal{background:white;border-radius:16px;width:100%;max-width:800px;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.type-modal-header{background:linear-gradient(135deg,#064E3B,#065F46);color:white;padding:24px 28px;border-radius:16px 16px 0 0;position:sticky;top:0;z-index:1}
+.type-modal-close{position:absolute;top:16px;right:20px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.12);border:none;color:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+.type-modal-close:hover{background:rgba(255,255,255,0.25)}
+.type-modal-title{font-size:20px;font-weight:900;margin-bottom:4px}
+.type-modal-meta{font-size:12px;color:rgba(255,255,255,0.7);display:flex;gap:12px;flex-wrap:wrap}
+.type-modal-body{padding:24px 28px}
+.type-section{background:var(--bg-card);border-radius:12px;padding:18px 20px;margin-bottom:14px;border-left:4px solid var(--type-primary);box-shadow:0 2px 8px rgba(0,0,0,0.03)}
+.type-section-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.type-section-content{font-size:13px;color:var(--text-secondary);line-height:1.8}
+.type-section-content b{color:var(--type-primary)}
+.type-related-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.type-chip-link{padding:5px 12px;border-radius:6px;font-size:12px;font-weight:600;background:rgba(108,92,231,0.06);color:#6C5CE7;cursor:pointer;border:1px solid rgba(108,92,231,0.15);transition:all 0.15s}
+.type-chip-link:hover{background:rgba(108,92,231,0.15);transform:translateY(-1px)}
 
-/* ⑨ 优秀案例 */
-.best-example-card{background:var(--bg-card);border-left:4px solid #F9A825;border-radius:var(--radius-sm);padding:18px 22px;margin-top:14px;box-shadow:var(--shadow);transition:var(--transition)}
-.best-example-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg)}
-.best-example-card .best-example-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.best-example-card .best-example-badge{display:inline-flex;padding:2px 10px;border-radius:4px;font-size:10px;font-weight:700;background:rgba(249,168,37,0.12);color:#F9A825}
-.best-example-card .best-example-title{font-size:15px;font-weight:700;color:var(--text)}
-.best-example-card .best-example-desc{font-size:12px;color:var(--text-secondary);line-height:1.7;margin-bottom:8px}
-.best-example-card .best-example-image{width:100%;max-width:400px;border-radius:8px;margin-top:8px;border:1px solid rgba(0,0,0,0.06)}
+/* Related Types in Chip Detail */
+.related-types-section{background:var(--type-bg);border-radius:12px;padding:18px 20px;margin-top:16px;border:1.5px dashed var(--type-card-border)}
+.related-types-title{font-size:14px;font-weight:700;color:var(--type-primary);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.related-type-item{padding:10px 14px;background:white;border-radius:8px;margin-bottom:8px;cursor:pointer;transition:all 0.15s;border:1px solid var(--type-card-border);display:flex;flex-direction:column;gap:4px}
+.related-type-item:hover{border-color:var(--type-primary);box-shadow:0 2px 8px rgba(5,150,105,0.08);transform:translateX(2px)}
+.related-type-name{font-size:13px;font-weight:700;color:var(--text)}
+.related-type-model{font-size:11px;color:var(--type-primary)}
+.related-type-mnemonic{font-size:11px;color:var(--text-dim);line-height:1.5}
+.related-type-example{font-size:11px;color:var(--text-secondary);line-height:1.5;background:rgba(0,0,0,0.02);padding:6px 10px;border-radius:4px;margin-top:2px}
 
-/* ⑩ 原视频溯源 */
-.source-video-card{background:var(--bg-card);border-radius:var(--radius-sm);padding:16px 20px;margin-top:14px;box-shadow:var(--shadow);display:flex;align-items:center;gap:14px;flex-wrap:wrap;transition:var(--transition)}
-.source-video-card:hover{box-shadow:var(--shadow-lg)}
-.source-video-card .source-platform-tag{padding:3px 12px;border-radius:6px;font-size:11px;font-weight:700;color:white;flex-shrink:0}
-.source-video-card .source-platform-tag.douyin{background:#FF2A54}
-.source-video-card .source-platform-tag.bilibili{background:#00A1D6}
-.source-video-card .source-platform-tag.xiaohongshu{background:#FF2442}
-.source-video-card .source-info{flex:1;min-width:180px}
-.source-video-card .source-author{font-size:11px;color:var(--text-dim);margin-bottom:2px}
-.source-video-card .source-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.4}
-.source-video-card .source-link{font-size:11px;color:var(--math);text-decoration:none;flex-shrink:0;padding:6px 14px;border-radius:6px;background:rgba(108,92,231,0.06);transition:var(--transition)}
-.source-video-card .source-link:hover{background:rgba(108,92,231,0.12)}
 </style>
 </head>
 <body>
@@ -594,6 +624,7 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <button class="nav-pill" data-page="model" onclick="showPage('model')">🧠 模型舱</button>
     <button class="nav-pill" data-page="diag" onclick="showPage('diag')">🔍 诊断区</button>
     <button class="nav-pill" data-page="exam" onclick="showPage('exam')">📝 真题下载</button>
+    <button class="nav-pill" data-page="types" onclick="showPage('types')">📋 核心题型</button>
     <span class="nav-divider"></span>
     <a class="nav-pill nav-manual" href="grade4-math-manual.html" target="_blank">📐 易错手册</a>
     <a class="nav-pill nav-kb" href="knowledge.html" target="_blank">📚 知识宝库</a>
@@ -700,6 +731,47 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
   <div class="exam-modal-overlay" id="examModalOverlay" onclick="if(event.target===this)closeExamPaper()">
     <div class="exam-modal" id="examModal"></div>
   </div>
+
+<!-- Page: 核心题型 -->
+<div class="page" id="page-types">
+  <div class="types-hero">
+    <h1 class="types-hero-title">📋 核心题型详解库</h1>
+    <p class="types-hero-sub">覆盖四五六年级全科 <b id="typesTotal">159</b> 个核心题型，以题型为考法入口，关联知识点芯片</p>
+    <div class="types-filters">
+      <select class="types-filter" id="typesGrade" onchange="renderTypes()">
+        <option value="0">全部年级</option>
+        <option value="4">四年级</option>
+        <option value="5">五年级</option>
+        <option value="6">六年级</option>
+      </select>
+      <select class="types-filter" id="typesSubject" onchange="renderTypes()">
+        <option value="">全部科目</option>
+        <option value="数学">数学</option>
+        <option value="语文">语文</option>
+        <option value="英语">英语</option>
+      </select>
+      <select class="types-filter" id="typesModule" onchange="renderTypes()">
+        <option value="">全部模块</option>
+      </select>
+      <select class="types-filter" id="typesFreq" onchange="renderTypes()">
+        <option value="">全部考频</option>
+        <option value="高频">高频</option>
+        <option value="中频">中频</option>
+        <option value="低频">低频</option>
+      </select>
+      <input class="types-search" id="typesSearch" placeholder="搜索题型..." oninput="renderTypes()">
+    </div>
+  </div>
+  <div class="types-stats" id="typesStats"></div>
+  <div class="types-grid" id="typesGrid"></div>
+</div>
+
+<!-- Type Detail Modal -->
+<div class="type-modal-overlay" id="typeModalOverlay" onclick="if(event.target===this)closeTypeModal()">
+  <div class="type-modal" id="typeModal"></div>
+</div>
+
+
 </div>
 
 <script src="data.js?v=202606121200"></script>
@@ -1054,14 +1126,9 @@ function renderModelPage(chip) {
   var formulaHTML = '';
   if (chip.formula) {
     var subjClass = (chip.subject === '数学') ? 'math' : (chip.subject === '语文') ? 'chinese' : 'english';
-    var oneLineHTML = '';
-    if (chip.oneLineModel) {
-      oneLineHTML = '<div class="one-line-model">' + chip.oneLineModel + '</div>';
-    }
     formulaHTML = 
       '<div class="formula-card ' + subjClass + '">' +
         '<div class="formula-label">🔑 万能口诀</div>' +
-        oneLineHTML +
         '<div class="formula-text">' + chip.formula + '</div>' +
       '</div>';
   }
@@ -1126,27 +1193,6 @@ function renderModelPage(chip) {
       '</div>';
   }
 
-  // ──── ⑨ 优秀案例 ────
-  var bestExampleHTML = '';
-  if (chip.bestExample) {
-    var beImgHTML = '';
-    if (chip.bestExample.imageUrl) {
-      beImgHTML = '<img class="best-example-image" src="' + chip.bestExample.imageUrl + '" alt="' + (chip.bestExample.title || '优秀案例配图') + '" loading="lazy">';
-    }
-    bestExampleHTML = 
-      '<div class="solve-section">' +
-        '<div class="solve-section-title">🌟 优秀案例</div>' +
-        '<div class="best-example-card">' +
-          '<div class="best-example-header">' +
-            '<span class="best-example-badge">典范</span>' +
-            '<span class="best-example-title">' + (chip.bestExample.title || '精选案例') + '</span>' +
-          '</div>' +
-          (chip.bestExample.description ? '<div class="best-example-desc">' + chip.bestExample.description + '</div>' : '') +
-          beImgHTML +
-        '</div>' +
-      '</div>';
-  }
-
   // ──── ⑦ AI 诊断动作 ────
   var aiDiagHTML = '';
   {
@@ -1158,14 +1204,6 @@ function renderModelPage(chip) {
         }).join('') +
       '</div>';
     }
-    var aiSummaryHTML = '';
-    if (chip.aiSummary) {
-      aiSummaryHTML = 
-        '<div class="ai-summary-block">' +
-          '<div class="ai-summary-label">AI总结</div>' +
-          '<div class="ai-summary-text">' + chip.aiSummary + '</div>' +
-        '</div>';
-    }
     aiDiagHTML = 
       '<div class="solve-section ai-diag">' +
         '<div class="solve-section-title">🤖 AI 诊断提示</div>' +
@@ -1173,29 +1211,6 @@ function renderModelPage(chip) {
           '<div class="solve-ai-row"><b>触发条件：</b>' + (chip.aiDiagnosis && chip.aiDiagnosis.trigger ? chip.aiDiagnosis.trigger : '—') + '</div>' +
           '<div class="solve-ai-row"><b>操作动作：</b>' + (chip.aiDiagnosis && chip.aiDiagnosis.action ? chip.aiDiagnosis.action : '—') + '</div>' +
           followUpHTML +
-          aiSummaryHTML +
-        '</div>' +
-      '</div>';
-  }
-
-  // ──── ⑩ 原视频溯源 ────
-  var sourceVideoHTML = '';
-  if (chip.sourceVideo) {
-    var platformClass = '';
-    var platformName = chip.sourceVideo.platform || '';
-    if (/抖音|douyin/i.test(platformName)) { platformClass = 'douyin'; }
-    else if (/B站|bilibili|bili/i.test(platformName)) { platformClass = 'bilibili'; }
-    else if (/小红书|xiaohongshu/i.test(platformName)) { platformClass = 'xiaohongshu'; }
-    sourceVideoHTML = 
-      '<div class="solve-section">' +
-        '<div class="solve-section-title">📺 原视频溯源</div>' +
-        '<div class="source-video-card">' +
-          (platformName ? '<span class="source-platform-tag ' + platformClass + '">' + platformName + '</span>' : '') +
-          '<div class="source-info">' +
-            (chip.sourceVideo.author ? '<div class="source-author">👤 ' + chip.sourceVideo.author + '</div>' : '') +
-            (chip.sourceVideo.title ? '<div class="source-title">' + chip.sourceVideo.title + '</div>' : '') +
-          '</div>' +
-          (chip.sourceVideo.url ? '<a class="source-link" href="' + chip.sourceVideo.url + '" target="_blank" rel="noopener">查看原视频 →</a>' : '') +
         '</div>' +
       '</div>';
   }
@@ -1218,6 +1233,32 @@ function renderModelPage(chip) {
         }).join('') +
       '</div>' +
     '</div>';
+
+  // ──── 关联题型 ────
+  var relatedTypesHTML = '';
+  if (typeof CHIP_TO_TYPE_IDS !== 'undefined' && CHIP_TO_TYPE_IDS[chip.id]) {
+    var typeIds = CHIP_TO_TYPE_IDS[chip.id];
+    if (typeIds && typeIds.length > 0) {
+      var typeItems = typeIds.slice(0, 8).map(function(tid) {
+        var typeObj = TYPES[tid];
+        if (!typeObj) return '';
+        return '<div class="related-type-item" onclick="event.stopPropagation();showPage(\'types\');setTimeout(function(){openTypeModal(' + tid + ')},100)">' +
+          '<div class="related-type-name">📋 ' + typeObj.typeName + '</div>' +
+          '<div class="related-type-model">🧠 ' + typeObj.coreModel + '</div>' +
+          (typeObj.mnemonic ? '<div class="related-type-mnemonic">🔑 ' + typeObj.mnemonic + '</div>' : '') +
+          (typeObj.exampleAnalysis ? '<div class="related-type-example">📝 ' + typeObj.exampleAnalysis.substring(0, 80) + (typeObj.exampleAnalysis.length > 80 ? '…' : '') + '</div>' : '') +
+        '</div>';
+      }).filter(Boolean).join('');
+      if (typeItems) {
+        relatedTypesHTML = 
+          '<div class="related-types-section">' +
+            '<div class="related-types-title">📋 关联题型 (' + typeIds.length + '个)</div>' +
+            typeItems +
+            (typeIds.length > 8 ? '<div style="font-size:11px;color:var(--text-dim);margin-top:4px;text-align:center">+ 还有 ' + (typeIds.length - 8) + ' 个关联题型</div>' : '') +
+          '</div>';
+      }
+    }
+  }
 
   // ──── 组装最终 HTML ────
   container.innerHTML =
@@ -1249,13 +1290,10 @@ function renderModelPage(chip) {
     // ⑤ 一题通多题（条件渲染）
     transferHTML +
 
-    // ⑨ 优秀案例（条件渲染，新增）
-    bestExampleHTML +
-
     // ⑥ 进阶连接（条件渲染）
     advancedHTML +
 
-    // ⑦ AI 诊断提示（含追问 + AI总结）
+    // ⑦ AI 诊断提示（含追问）
     aiDiagHTML +
 
     // 通关按钮
@@ -1263,11 +1301,11 @@ function renderModelPage(chip) {
       '<button onclick="goToDiag(\'' + chip.id + '\')" class="pass-btn unlocked" style="font-size:13px;padding:10px 28px">🔍 进入通关诊断 →</button>' +
     '</div>' +
 
-    // ⑩ 原视频溯源（条件渲染，新增）
-    sourceVideoHTML +
-
     // ⑧ 视频讲解 + 真题映射
-    videoExamHTML;
+    videoExamHTML +
+
+    // ⑨ 关联题型
+    relatedTypesHTML;
 }
 
 // ====== 认知模型详情页（从JSON加载结构化模型） ======
@@ -2151,10 +2189,194 @@ function toggleAnswers() {
 }
 
 // ====== Init ======
+
+// ====== Types View ======
+var _allTypesModules = [];
+function initTypesModules() {
+  var modSet = {};
+  TYPES.forEach(function(t) {
+    if (t.module) modSet[t.module] = true;
+  });
+  _allTypesModules = Object.keys(modSet).sort();
+  var sel = document.getElementById('typesModule');
+  if (sel) {
+    _allTypesModules.forEach(function(m) {
+      var opt = document.createElement('option');
+      opt.value = m;
+      opt.textContent = m;
+      sel.appendChild(opt);
+    });
+  }
+  document.getElementById('typesTotal').textContent = TYPES.length;
+  renderTypes();
+}
+
+function renderTypes() {
+  var grade = parseInt(document.getElementById('typesGrade').value) || 0;
+  var subject = document.getElementById('typesSubject').value;
+  var module = document.getElementById('typesModule').value;
+  var freq = document.getElementById('typesFreq').value;
+  var search = (document.getElementById('typesSearch').value || '').trim().toLowerCase();
+
+  var filtered = TYPES.filter(function(t) {
+    if (grade > 0 && t.grade !== grade) return false;
+    if (subject && t.subject !== subject) return false;
+    if (module && t.module !== module) return false;
+    if (freq && t.frequency !== freq) return false;
+    if (search) {
+      var hay = (t.typeName + ' ' + t.coreModel + ' ' + t.knowledgePoint + ' ' + t.module + ' ' + t.commonMistakes).toLowerCase();
+      if (hay.indexOf(search) === -1) return false;
+    }
+    return true;
+  });
+
+  document.getElementById('typesStats').innerHTML = '共 <b>' + filtered.length + '</b> 个题型';
+
+  var grid = document.getElementById('typesGrid');
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="exam-empty"><div class="exam-empty-icon">🔍</div><div class="exam-empty-title">没有匹配的题型</div><div class="exam-empty-desc">试试调整筛选条件</div></div>';
+    return;
+  }
+
+  grid.innerHTML = filtered.map(function(t) {
+    var chipTags = (t.relatedChips || []).slice(0, 5).map(function(cid) {
+      return '<span class="type-card-chip-tag">' + cid + '</span>';
+    }).join('');
+    if ((t.relatedChips || []).length > 5) {
+      chipTags += '<span style="font-size:10px;color:var(--text-dim)"> +' + (t.relatedChips.length - 5) + '</span>';
+    }
+    var mnemonicHTML = t.mnemonic ? '<div class="type-card-mnemonic">🔑 ' + t.mnemonic + '</div>' : '';
+    
+    return '<div class="type-card" onclick="openTypeModal(\'' + t.id + '\')">' +
+      '<div class="type-card-id">' + t.id + '</div>' +
+      '<div class="type-card-name">' + t.typeName + '</div>' +
+      '<div class="type-card-model">🧠 ' + t.coreModel + '</div>' +
+      '<div class="type-card-meta">' +
+        '<span class="type-tag freq">📊 ' + t.frequency + '</span>' +
+        '<span class="type-tag diff">' + t.difficulty + '</span>' +
+        '<span class="type-tag cat">📂 ' + (t.typeCategory || '') + '</span>' +
+        '<span class="type-tag grade">📌 ' + (t.applyGrade || 'G' + t.grade) + '</span>' +
+      '</div>' +
+      mnemonicHTML +
+      (chipTags ? '<div class="type-card-chips">🔗 ' + chipTags + '</div>' : '') +
+    '</div>';
+  }).join('');
+}
+
+function openTypeModal(typeId) {
+  var t = (typeof typeId === 'number') ? TYPES[typeId] : TYPES.find(function(x) { return x.id === typeId; });
+  if (!t) return;
+
+  var gradeLabel = '四年级';
+  if (t.grade === 5) gradeLabel = '五年级';
+  if (t.grade === 6) gradeLabel = '六年级';
+
+  // Build related chips section
+  var relatedChipsHTML = '';
+  if (t.relatedChips && t.relatedChips.length > 0) {
+    var chipLinks = t.relatedChips.slice(0, 20).map(function(cid) {
+      var chip = CHIPS.find(function(c) { return c.id === cid; });
+      var label = chip ? chip.title : cid;
+      return '<span class="type-chip-link" onclick="event.stopPropagation();closeTypeModal();openChip(\'' + cid + '\')" title="' + label.replace(/"/g, '&quot;') + '">' + cid + '</span>';
+    }).join('');
+    relatedChipsHTML = 
+      '<div class="type-section">' +
+        '<div class="type-section-title">🔗 关联知识点芯片 (' + t.relatedChips.length + '个)</div>' +
+        '<div class="type-related-chips">' + chipLinks + '</div>' +
+        (t.relatedChips.length > 20 ? '<div style="font-size:11px;color:var(--text-dim);margin-top:6px">+ 还有 ' + (t.relatedChips.length - 20) + ' 个关联芯片</div>' : '') +
+      '</div>';
+  }
+
+  // Build AI script section
+  var aiScriptHTML = '';
+  if (t.aiScript) {
+    aiScriptHTML = 
+      '<div class="type-section">' +
+        '<div class="type-section-title">🤖 AI讲解脚本</div>' +
+        '<div class="type-section-content" style="white-space:pre-wrap">' + t.aiScript.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</div>' +
+      '</div>';
+  }
+
+  // Build example analysis
+  var exampleHTML = '';
+  if (t.exampleAnalysis) {
+    exampleHTML = 
+      '<div class="type-section">' +
+        '<div class="type-section-title">📝 例题解析</div>' +
+        '<div class="type-section-content" style="white-space:pre-wrap">' + t.exampleAnalysis.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</div>' +
+      '</div>';
+  }
+
+  var modal = document.getElementById('typeModal');
+  modal.innerHTML = 
+    '<div class="type-modal-header">' +
+      '<button class="type-modal-close" onclick="closeTypeModal()">✕</button>' +
+      '<div class="type-modal-title">' + t.typeName + '</div>' +
+      '<div class="type-modal-meta">' +
+        '<span>' + t.id + '</span><span>·</span>' +
+        '<span>' + gradeLabel + '</span><span>·</span>' +
+        '<span>' + t.subject + '</span><span>·</span>' +
+        '<span>' + t.module + '</span>' +
+      '</div>' +
+    '</div>' +
+    '<div class="type-modal-body">' +
+      '<div class="type-section">' +
+        '<div class="type-section-title">📋 基本信息</div>' +
+        '<div class="type-section-content">' +
+          '<b>题型类别：</b>' + (t.typeCategory || '—') + '<br>' +
+          '<b>考频：</b>' + t.frequency + ' · <b>难度：</b>' + t.difficulty + '<br>' +
+          '<b>适用年级：</b>' + (t.applyGrade || '—') + '<br>' +
+          '<b>知识点：</b>' + t.knowledgePoint + '<br>' +
+          '<b>关联知识点：</b>' + t.relatedKnowledge +
+        '</div>' +
+      '</div>' +
+
+      '<div class="type-section">' +
+        '<div class="type-section-title">🧠 核心模型：' + t.coreModel + '</div>' +
+        '<div class="type-section-content">' + t.modelDetail + '</div>' +
+      '</div>' +
+
+      '<div class="type-section">' +
+        '<div class="type-section-title">📐 解题步骤</div>' +
+        '<div class="type-section-content" style="white-space:pre-wrap">' + (t.solveSteps || '—') + '</div>' +
+      '</div>' +
+
+      '<div class="type-section">' +
+        '<div class="type-section-title">⚠️ 常见错误</div>' +
+        '<div class="type-section-content">' + t.commonMistakes + '</div>' +
+      '</div>' +
+
+      (t.mnemonic ? 
+      '<div class="type-section">' +
+        '<div class="type-section-title">🔑 记忆口诀</div>' +
+        '<div class="type-section-content" style="font-size:16px;font-weight:700;color:var(--type-primary)">' + t.mnemonic + '</div>' +
+      '</div>' : '') +
+
+      exampleHTML +
+      aiScriptHTML +
+      relatedChipsHTML +
+
+      '<div style="text-align:center;padding:16px 0">' +
+        '<button onclick="closeTypeModal()" style="padding:10px 28px;border-radius:8px;border:none;font-size:13px;font-weight:700;cursor:pointer;background:var(--type-primary);color:white;transition:all 0.2s" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">关闭</button>' +
+      '</div>' +
+    '</div>';
+
+  document.getElementById('typeModalOverlay').classList.add('active');
+}
+
+function closeTypeModal() {
+  document.getElementById('typeModalOverlay').classList.remove('active');
+}
+
+// Modified renderModelPage: add related types section at the bottom
+
 function init() {
   // 动态修正考点总数
   var heroTotal = document.getElementById('heroTotal');
   if (heroTotal) heroTotal.textContent = CHIPS.length;
+  
+  // 初始化题型模块下拉
+  try { initTypesModules(); } catch(e) {}
   
   // URL 参数处理：支持 ?page=exam&grade=4&subject=数学 等直接跳转
   var params = new URLSearchParams(window.location.search);
