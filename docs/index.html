@@ -833,7 +833,7 @@ function renderPainWall(filterText) {
       </div>
       <div class="pain-grid">
         ${items.map(item => `
-          <div class="pain-card ${cssClass}" data-chip-id="${item.chipId}">
+          <div class="pain-card ${cssClass}" data-chip-id="${item.chipId}" onclick="openChip('${item.chipId}')" style="cursor:pointer">
             <div class="pain-card-icon">${meta.icon}</div>
             <div class="pain-card-title">${item.label}</div>
             <div class="pain-card-desc">点击进入 → 3步开始实操</div>
