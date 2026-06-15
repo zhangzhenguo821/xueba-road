@@ -899,8 +899,22 @@ function renderModelPage(chip) {
 
   // 图文解题方法：从chip.chip.script拆解步骤
   var script = chip.chip.script || '';
-  var scriptSentences = script.split(/[。！？]/).map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 4; });
-  var solutionSteps = scriptSentences.slice(0, 5);
+  // 优先按"第X步/第一/第二/首先"等序号切，其次按；切，最后按。切
+  var solutionSteps = [];
+  // 1) 按"第"序号或"；"切割出来多块
+  var byStep = script.split(/；|(?=第[一二三四五六七八九十\d]步)|(?=第[一二三四五六七八九十]，)|(?=首先|其次|然后(?!.{0,2}[，,]))|(?=\d+[\.、])/);
+  var filtered = byStep.map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 5; });
+  if (filtered.length >= 2) {
+    solutionSteps = filtered.slice(0, 5);
+  } else {
+    // fallback：按。！？切
+    var bySentence = script.split(/[。！？]/).map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 5; });
+    solutionSteps = bySentence.slice(0, 5);
+  }
+  // 兜底：如果最终仍为空，用完整script作为一条
+  if (solutionSteps.length === 0 && script.length > 0) {
+    solutionSteps = [script];
+  }
   
   // 建立解题思路SVG（流程图）
   var solveSVG = buildSolveFlowSVG(chip, meta.color, solutionSteps);
