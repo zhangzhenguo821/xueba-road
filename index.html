@@ -488,6 +488,63 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 /* 思维路径图 SVG */
 .mind-path-container{background:var(--bg-card);border-radius:var(--radius);padding:20px;margin-bottom:20px;box-shadow:var(--shadow);text-align:center}
 .mind-path-container svg{max-width:100%;height:auto}
+
+/* ====== 解题思维卡（AI辅导卡）新增样式 ====== */
+/* ② 万能口诀 */
+.formula-card{background:linear-gradient(135deg,var(--math-bg),rgba(108,92,231,0.15));border:2px solid rgba(108,92,231,0.2);border-radius:var(--radius-sm);padding:20px 24px;margin-top:14px;position:relative;overflow:hidden}
+.formula-card.math{background:linear-gradient(135deg,var(--math-bg),rgba(108,92,231,0.15));border-color:rgba(108,92,231,0.2)}
+.formula-card.chinese{background:linear-gradient(135deg,var(--chinese-bg),rgba(255,107,53,0.15));border-color:rgba(255,107,53,0.2)}
+.formula-card.english{background:linear-gradient(135deg,var(--english-bg),rgba(0,184,148,0.15));border-color:rgba(0,184,148,0.2)}
+.formula-card::before{content:'🔑';position:absolute;top:12px;right:16px;font-size:28px;opacity:0.3}
+.formula-card .formula-label{display:inline-flex;padding:3px 12px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:10px}
+.formula-card.math .formula-label{background:var(--math);color:white}
+.formula-card.chinese .formula-label{background:var(--chinese);color:white}
+.formula-card.english .formula-label{background:var(--english);color:white}
+.formula-card .formula-text{font-size:18px;font-weight:800;line-height:1.6;color:var(--text);padding-right:40px}
+
+/* ③ 解题流程（4步法卡片流） */
+.solve-flow{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;margin-top:4px}
+.solve-flow-step{flex:1;min-width:130px;background:var(--bg-card);border-radius:var(--radius-sm);padding:16px 12px;text-align:center;border:2px solid rgba(0,0,0,0.04);transition:var(--transition);position:relative}
+.solve-flow-step:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.solve-flow-step .flow-num{width:36px;height:36px;border-radius:50%;color:white;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.solve-flow-step .flow-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.solve-flow-step .flow-detail{font-size:11px;color:var(--text-secondary);line-height:1.5}
+.solve-flow-arrow{display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text-dim);flex-shrink:0;width:28px}
+
+/* ④ Top 3 常见错误 */
+.mistake-warn-list{display:flex;flex-direction:column;gap:10px}
+.mistake-warn-card{background:rgba(255,107,107,0.03);border:2px solid rgba(255,107,107,0.15);border-left:4px solid var(--danger);border-radius:var(--radius-sm);padding:14px 18px;transition:var(--transition)}
+.mistake-warn-card:hover{border-color:rgba(255,107,107,0.3);background:rgba(255,107,107,0.05)}
+.mistake-warn-card .warn-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.mistake-warn-card .warn-badge{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;background:var(--danger);color:white}
+.mistake-warn-card .warn-type{font-size:14px;font-weight:700;color:var(--text)}
+.mistake-warn-card .warn-desc{font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:6px}
+.mistake-warn-card .warn-fix{font-size:12px;color:#00B894;font-weight:600;background:rgba(0,184,148,0.06);border-radius:6px;padding:6px 10px;display:inline-block}
+
+/* ⑤ 一题通多题 */
+.transfer-graph{background:var(--bg-card);border-radius:var(--radius-sm);padding:20px;border:2px solid rgba(108,92,231,0.1)}
+.transfer-core{text-align:center;margin-bottom:6px}
+.transfer-core-tag{display:inline-flex;padding:6px 18px;border-radius:20px;font-size:13px;font-weight:700;border:2px solid rgba(0,0,0,0.06);background:var(--bg)}
+.transfer-arrow-down{text-align:center;font-size:20px;color:var(--text-dim);margin:4px 0}
+.transfer-branches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.transfer-branch{display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;font-size:12px;font-weight:600;background:rgba(108,92,231,0.06);color:var(--math);border:1.5px solid rgba(108,92,231,0.12);transition:var(--transition)}
+.transfer-branch:hover{background:rgba(108,92,231,0.12);transform:translateY(-1px)}
+.transfer-branch .branch-arrow{font-size:10px}
+.transfer-desc{font-size:12px;color:var(--text-secondary);line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(0,0,0,0.06)}
+
+/* ⑥ 进阶连接（虚线未来感） */
+.advanced-card{border:2px dashed rgba(0,0,0,0.12);border-radius:var(--radius-sm);padding:18px 22px;background:rgba(0,0,0,0.01);transition:var(--transition)}
+.advanced-card:hover{border-color:rgba(108,92,231,0.25);background:rgba(108,92,231,0.02)}
+.advanced-card .advanced-label{display:inline-flex;padding:3px 12px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:10px;background:rgba(108,92,231,0.08);color:var(--math)}
+.advanced-card .advanced-desc{font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:10px}
+.advanced-future-list{display:flex;flex-wrap:wrap;gap:6px}
+.advanced-future-tag{padding:4px 12px;border-radius:6px;font-size:11px;font-weight:600;background:rgba(0,184,148,0.06);color:var(--english);border:1px dashed rgba(0,184,148,0.2)}
+
+/* ⑦ AI诊断追问列表 */
+.followup-list{display:flex;flex-direction:column;gap:6px;margin-top:10px;padding-top:10px;border-top:1px dashed rgba(0,184,148,0.15)}
+.followup-item{padding:8px 14px;border-radius:8px;font-size:12px;color:var(--text-secondary);background:rgba(0,184,148,0.03);cursor:pointer;transition:var(--transition);border:1px solid rgba(0,184,148,0.08);display:flex;align-items:center;gap:8px}
+.followup-item:hover{background:rgba(0,184,148,0.08);color:var(--text);border-color:rgba(0,184,148,0.2)}
+.followup-item .followup-dot{width:6px;height:6px;border-radius:50%;background:var(--english);flex-shrink:0}
 </style>
 </head>
 <body>
@@ -891,85 +948,170 @@ function openChip(chipId) {
   }
 }
 
-// ====== Render Model Page ======
+// ====== Render Model Page (解题思维卡 v2.0) ======
 function renderModelPage(chip) {
   const container = document.getElementById('modelContent');
   const meta = SUBJECT_MAP[chip.subject];
   const gradeMeta = GRADE_MAP[chip.grade];
+  const color = meta.color;
 
-  // 图文解题方法：从chip.chip.script拆解步骤
-  var script = chip.chip.script || '';
-  // 优先按"第X步/第一/第二/首先"等序号切，其次按；切，最后按。切
-  var solutionSteps = [];
-  // 1) 按"第"序号或"；"切割出来多块
-  var byStep = script.split(/；|(?=第[一二三四五六七八九十\d]步)|(?=第[一二三四五六七八九十]，)|(?=首先|其次|然后(?!.{0,2}[，,]))|(?=\d+[\.、])/);
-  var filtered = byStep.map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 5; });
-  if (filtered.length >= 2) {
-    solutionSteps = filtered.slice(0, 5);
-  } else {
-    // fallback：按。！？切
-    var bySentence = script.split(/[。！？]/).map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 5; });
-    solutionSteps = bySentence.slice(0, 5);
-  }
-  // 兜底：如果最终仍为空，用完整script作为一条
-  if (solutionSteps.length === 0 && script.length > 0) {
-    solutionSteps = [script];
-  }
-  
-  // 建立解题思路SVG（流程图）
-  var solveSVG = buildSolveFlowSVG(chip, meta.color, solutionSteps);
-  
   // 关键词标签
   var kwTags = (chip.keywords || []).map(function(k) {
-    return '<span style="display:inline-block;background:' + meta.bg + ';color:' + meta.color + ';border-radius:6px;padding:3px 10px;font-size:12px;margin:3px">' + k + '</span>';
+    return '<span style="display:inline-block;background:' + meta.bg + ';color:' + color + ';border-radius:6px;padding:3px 10px;font-size:12px;margin:3px">' + k + '</span>';
   }).join('');
 
-  container.innerHTML =
-    '<div class="model-top">' +
-      '<button class="model-back" onclick="showPage(\'home\')">← 回首页</button>' +
-      '<div class="model-code" style="background:' + meta.bg + ';color:' + meta.color + '">🏷️ ' + chip.id + '</div>' +
-    '</div>' +
-    
-    '<h2 class="model-title" style="color:' + meta.color + '">' + chip.icon + ' ' + chip.title + '</h2>' +
-    '<div class="model-subtitle">' + gradeMeta.label + ' · ' + chip.subject + ' · ' + chip.category + '</div>' +
-    '<div style="margin:8px 0 16px">' + kwTags + '</div>' +
+  // ──── ③ 解题流程：优先 chip.solveSteps[]，回退到旧 script 拆解 ────
+  var solveStepsHTML = '';
+  var hasStructuredSteps = chip.solveSteps && Array.isArray(chip.solveSteps) && chip.solveSteps.length > 0;
+  if (hasStructuredSteps) {
+    var colors = [color, '#4ECDC4', '#FF6B35', '#00B894'];
+    var flowItems = chip.solveSteps.slice(0, 4).map(function(s, i) {
+      return '<div class="solve-flow-step">' +
+        '<div class="flow-num" style="background:' + colors[i] + '">' + (i+1) + '</div>' +
+        '<div class="flow-title">' + (s.step || '步骤'+(i+1)) + '</div>' +
+        '<div class="flow-detail">' + (s.detail || '') + '</div>' +
+      '</div>';
+    });
+    var flowWithArrows = [];
+    for (var fi = 0; fi < flowItems.length; fi++) {
+      flowWithArrows.push(flowItems[fi]);
+      if (fi < flowItems.length - 1) {
+        flowWithArrows.push('<div class="solve-flow-arrow">→</div>');
+      }
+    }
+    solveStepsHTML = '<div class="solve-section">' +
+      '<div class="solve-section-title">🗺️ 解题流程（' + chip.solveSteps.length + '步法）</div>' +
+      '<div class="solve-flow">' + flowWithArrows.join('') + '</div>' +
+    '</div>';
+  } else {
+    // 回退：旧逻辑 script 拆解 → SVG + 步骤列表
+    var script = chip.chip.script || '';
+    var solutionSteps = [];
+    var byStep = script.split(/；|(?=第[一二三四五六七八九十\d]步)|(?=第[一二三四五六七八九十]，)|(?=首先|其次|然后(?!.{0,2}[，,]))|(?=\d+[\.、])/);
+    var filtered = byStep.map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 5; });
+    if (filtered.length >= 2) {
+      solutionSteps = filtered.slice(0, 5);
+    } else {
+      var bySentence = script.split(/[。！？]/).map(function(s){ return s.trim(); }).filter(function(s){ return s.length > 5; });
+      solutionSteps = bySentence.slice(0, 5);
+    }
+    if (solutionSteps.length === 0 && script.length > 0) {
+      solutionSteps = [script];
+    }
+    var solveSVG = buildSolveFlowSVG(chip, color, solutionSteps);
+    solveStepsHTML = 
+      '<div class="solve-section">' +
+        '<div class="solve-section-title">🗺️ 解题思路导图</div>' +
+        solveSVG +
+      '</div>' +
+      '<div class="solve-section">' +
+        '<div class="solve-section-title">📐 大白话解题步骤</div>' +
+        '<div class="solve-steps">' +
+          solutionSteps.map(function(s, i) {
+            return '<div class="solve-step">' +
+              '<div class="solve-step-num" style="background:' + color + '">' + (i + 1) + '</div>' +
+              '<div class="solve-step-text">' + s + '</div>' +
+            '</div>';
+          }).join('') +
+        '</div>' +
+      '</div>';
+  }
 
-    // ① 一句话点破核心痛点
-    '<div class="solve-section" style="border-left:4px solid ' + meta.color + '">' +
-      '<div class="solve-section-title">💥 核心痛点</div>' +
-      '<div class="solve-pain">' + chip.painPoint + '</div>' +
-      '<div class="solve-model-tag">模型类型：<b>' + (chip.chip.modelType || '通用') + '</b> — ' + (chip.chip.modelDesc || '') + '</div>' +
-    '</div>' +
+  // ──── ② 万能口诀 ────
+  var formulaHTML = '';
+  if (chip.formula) {
+    var subjClass = (chip.subject === '数学') ? 'math' : (chip.subject === '语文') ? 'chinese' : 'english';
+    formulaHTML = 
+      '<div class="formula-card ' + subjClass + '">' +
+        '<div class="formula-label">🔑 万能口诀</div>' +
+        '<div class="formula-text">' + chip.formula + '</div>' +
+      '</div>';
+  }
 
-    // ② 图文解题思路（SVG流程图）
-    '<div class="solve-section">' +
-      '<div class="solve-section-title">🗺️ 解题思路导图</div>' +
-      solveSVG +
-    '</div>' +
+  // ──── ④ Top 3 常见错误 ────
+  var mistakesHTML = '';
+  if (chip.commonMistakes && Array.isArray(chip.commonMistakes) && chip.commonMistakes.length > 0) {
+    var mistakeCards = chip.commonMistakes.slice(0, 3).map(function(m) {
+      return '<div class="mistake-warn-card">' +
+        '<div class="warn-header">' +
+          '<div class="warn-badge">⚠️ 易错</div>' +
+          '<div class="warn-type">' + (m.type || '常见错误') + '</div>' +
+        '</div>' +
+        '<div class="warn-desc">' + (m.description || '') + '</div>' +
+        '<div class="warn-fix">✅ ' + (m.fix || '注意审题，按步骤检查') + '</div>' +
+      '</div>';
+    }).join('');
+    mistakesHTML = 
+      '<div class="solve-section">' +
+        '<div class="solve-section-title">⚠️ Top ' + Math.min(chip.commonMistakes.length, 3) + ' 常见错误</div>' +
+        '<div class="mistake-warn-list">' + mistakeCards + '</div>' +
+      '</div>';
+  }
 
-    // ③ 分步详解
-    '<div class="solve-section">' +
-      '<div class="solve-section-title">📐 大白话解题步骤</div>' +
-      '<div class="solve-steps">' +
-        solutionSteps.map(function(s, i) {
-          return '<div class="solve-step">' +
-            '<div class="solve-step-num" style="background:' + meta.color + '">' + (i + 1) + '</div>' +
-            '<div class="solve-step-text">' + s + '</div>' +
-          '</div>';
+  // ──── ⑤ 一题通多题 ────
+  var transferHTML = '';
+  if (chip.transfer) {
+    var branchesHTML = '';
+    if (chip.transfer.relatedTopics && Array.isArray(chip.transfer.relatedTopics)) {
+      branchesHTML = chip.transfer.relatedTopics.map(function(t) {
+        return '<div class="transfer-branch"><span class="branch-arrow">→</span> ' + t + '</div>';
+      }).join('');
+    }
+    transferHTML = 
+      '<div class="solve-section">' +
+        '<div class="solve-section-title">🔗 一题通多题</div>' +
+        '<div class="transfer-graph">' +
+          '<div class="transfer-core"><div class="transfer-core-tag">' + chip.title + '</div></div>' +
+          (branchesHTML ? '<div class="transfer-arrow-down">↓</div><div class="transfer-branches">' + branchesHTML + '</div>' : '') +
+          (chip.transfer.description ? '<div class="transfer-desc">' + chip.transfer.description + '</div>' : '') +
+        '</div>' +
+      '</div>';
+  }
+
+  // ──── ⑥ 进阶连接 ────
+  var advancedHTML = '';
+  if (chip.advanced) {
+    var futureTagsHTML = '';
+    if (chip.advanced.futureTopics && Array.isArray(chip.advanced.futureTopics)) {
+      futureTagsHTML = chip.advanced.futureTopics.map(function(t) {
+        return '<span class="advanced-future-tag">📌 ' + t + '</span>';
+      }).join('');
+    }
+    advancedHTML = 
+      '<div class="solve-section">' +
+        '<div class="solve-section-title">🚀 进阶连接</div>' +
+        '<div class="advanced-card">' +
+          '<div class="advanced-label">未来你会遇到</div>' +
+          (chip.advanced.description ? '<div class="advanced-desc">' + chip.advanced.description + '</div>' : '') +
+          (futureTagsHTML ? '<div class="advanced-future-list">' + futureTagsHTML + '</div>' : '') +
+        '</div>' +
+      '</div>';
+  }
+
+  // ──── ⑦ AI 诊断动作 ────
+  var aiDiagHTML = '';
+  {
+    var followUpHTML = '';
+    if (chip.aiDiagnosis && chip.aiDiagnosis.followUpQuestions && Array.isArray(chip.aiDiagnosis.followUpQuestions)) {
+      followUpHTML = '<div class="followup-list">' +
+        chip.aiDiagnosis.followUpQuestions.map(function(q) {
+          return '<div class="followup-item"><div class="followup-dot"></div>' + q + '</div>';
         }).join('') +
-      '</div>' +
-    '</div>' +
+      '</div>';
+    }
+    aiDiagHTML = 
+      '<div class="solve-section ai-diag">' +
+        '<div class="solve-section-title">🤖 AI 诊断提示</div>' +
+        '<div class="solve-ai-content">' +
+          '<div class="solve-ai-row"><b>触发条件：</b>' + (chip.aiDiagnosis && chip.aiDiagnosis.trigger ? chip.aiDiagnosis.trigger : '—') + '</div>' +
+          '<div class="solve-ai-row"><b>操作动作：</b>' + (chip.aiDiagnosis && chip.aiDiagnosis.action ? chip.aiDiagnosis.action : '—') + '</div>' +
+          followUpHTML +
+        '</div>' +
+      '</div>';
+  }
 
-    // ④ AI诊断提示
-    '<div class="solve-section ai-diag">' +
-      '<div class="solve-section-title">🤖 AI 诊断提示</div>' +
-      '<div class="solve-ai-content">' +
-        '<div class="solve-ai-row"><b>触发条件：</b>' + (chip.aiDiagnosis && chip.aiDiagnosis.trigger ? chip.aiDiagnosis.trigger : '—') + '</div>' +
-        '<div class="solve-ai-row"><b>操作动作：</b>' + (chip.aiDiagnosis && chip.aiDiagnosis.action ? chip.aiDiagnosis.action : '—') + '</div>' +
-      '</div>' +
-    '</div>' +
-
-    // ⑤ 视频讲解（只留一个）
+  // ──── ⑧ 视频讲解 + 真题映射 ────
+  var videoExamHTML = 
     '<div class="solve-section">' +
       '<div class="solve-section-title">▶️ 视频讲解</div>' +
       '<div class="video-area" id="videoArea_' + chip.id + '">' +
@@ -978,19 +1120,58 @@ function renderModelPage(chip) {
         '<div class="video-duration" id="videoDur_' + chip.id + '">⏱ ' + (chip.video && chip.video.duration ? chip.video.duration : '约3-5分钟') + ' · 建议1.25x倍速</div>' +
       '</div>' +
     '</div>' +
-
-    '<div style="text-align:center;margin:16px 0">' +
-      '<button onclick="goToDiag(\'' + chip.id + '\')" class="pass-btn unlocked" style="font-size:13px;padding:10px 28px">🔍 进入通关诊断 →</button>' +
-    '</div>' +
-
     '<div class="exams-area">' +
       '<div class="exams-label">📋 全国真题映射</div>' +
       '<div class="exam-list">' +
         chip.exams.map(function(e) {
-          return '<div class="exam-item"><div class="exam-dot" style="background:' + meta.color + '"></div>' + e + '</div>';
+          return '<div class="exam-item"><div class="exam-dot" style="background:' + color + '"></div>' + e + '</div>';
         }).join('') +
       '</div>' +
     '</div>';
+
+  // ──── 组装最终 HTML ────
+  container.innerHTML =
+    '<div class="model-top">' +
+      '<button class="model-back" onclick="showPage(\'home\')">← 回首页</button>' +
+      '<div class="model-code" style="background:' + meta.bg + ';color:' + color + '">🏷️ ' + chip.id + '</div>' +
+    '</div>' +
+    
+    '<h2 class="model-title" style="color:' + color + '">' + chip.icon + ' ' + chip.title + '</h2>' +
+    '<div class="model-subtitle">' + gradeMeta.label + ' · ' + chip.subject + ' · ' + chip.category + '</div>' +
+    '<div style="margin:8px 0 16px">' + kwTags + '</div>' +
+
+    // ① 核心痛点
+    '<div class="solve-section" style="border-left:4px solid ' + color + '">' +
+      '<div class="solve-section-title">💥 核心痛点</div>' +
+      '<div class="solve-pain">' + chip.painPoint + '</div>' +
+      '<div class="solve-model-tag">模型类型：<b>' + (chip.chip.modelType || '通用') + '</b> — ' + (chip.chip.modelDesc || '') + '</div>' +
+    '</div>' +
+
+    // ② 万能口诀（条件渲染）
+    formulaHTML +
+
+    // ③ 解题流程（新4步法 / 回退旧SVG）
+    solveStepsHTML +
+
+    // ④ Top 3 常见错误（条件渲染）
+    mistakesHTML +
+
+    // ⑤ 一题通多题（条件渲染）
+    transferHTML +
+
+    // ⑥ 进阶连接（条件渲染）
+    advancedHTML +
+
+    // ⑦ AI 诊断提示（含追问）
+    aiDiagHTML +
+
+    // 通关按钮
+    '<div style="text-align:center;margin:16px 0">' +
+      '<button onclick="goToDiag(\'' + chip.id + '\')" class="pass-btn unlocked" style="font-size:13px;padding:10px 28px">🔍 进入通关诊断 →</button>' +
+    '</div>' +
+
+    // ⑧ 视频讲解 + 真题映射
+    videoExamHTML;
 }
 
 // ====== 认知模型详情页（从JSON加载结构化模型） ======
