@@ -2630,6 +2630,8 @@ function switchWritingGrade(grade) {
   
   var writingLib = (typeof CHINESE_METHODOLOGY !== 'undefined' && CHINESE_METHODOLOGY.writingLibrary) ? CHINESE_METHODOLOGY.writingLibrary : null;
   if (!writingLib && typeof WRITING_LIBRARY !== 'undefined') writingLib = WRITING_LIBRARY;
+  // 兼容 byGrade 嵌套结构：WRITING_LIBRARY = { byGrade: { 4:{...}, 5:{...}, 6:{...} } }
+  if (writingLib && writingLib.byGrade) writingLib = writingLib.byGrade;
   
   if (!writingLib || !writingLib[grade]) {
     container.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:20px">正在加载写作素材…</p>';
