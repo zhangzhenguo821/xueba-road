@@ -608,7 +608,87 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 .related-type-mnemonic{font-size:11px;color:var(--text-dim);line-height:1.5}
 .related-type-example{font-size:11px;color:var(--text-secondary);line-height:1.5;background:rgba(0,0,0,0.02);padding:6px 10px;border-radius:4px;margin-top:2px}
 
-</style>
+
+/* ====== 必考作战大盘 ====== */
+.dashboard-section{background:linear-gradient(135deg,#1A1A2E,#16213E);padding:30px;border-radius:16px;margin:20px 0;color:white}
+.dashboard-section h2{font-size:24px;font-weight:900;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.dashboard-section .subtitle{font-size:13px;color:var(--text-dim);margin-bottom:20px}
+.star-badge{display:inline-flex;padding:3px 12px;border-radius:20px;font-size:12px;font-weight:700;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1A1A2E}
+.hotspot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.hotspot-card{background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;cursor:pointer;transition:all 0.25s cubic-bezier(0.4,0,0.2,1)}
+.hotspot-card:hover{transform:translateY(-3px);background:rgba(255,255,255,0.1);border-color:rgba(255,230,109,0.3);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+.hotspot-card .hc-star{font-size:14px;margin-bottom:4px}
+.hotspot-card .hc-title{font-size:14px;font-weight:700;color:white;margin-bottom:8px;line-height:1.4}
+.hotspot-card .hc-meta{display:flex;gap:6px;flex-wrap:wrap}
+.hotspot-card .hc-tag{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600}
+.hotspot-card .hc-tag.math{background:var(--math-bg);color:var(--math-light)}
+.hotspot-card .hc-tag.chinese{background:var(--chinese-bg);color:var(--chinese-light)}
+.hotspot-card .hc-tag.english{background:var(--english-bg);color:var(--english-light)}
+.hotspot-card .hc-tag.grade{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7)}
+.btn-expand{display:block;margin:20px auto 0;padding:10px 28px;border-radius:8px;border:1.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.8);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s}
+.btn-expand:hover{background:rgba(255,255,255,0.12);border-color:var(--accent);color:var(--accent)}
+
+/* ====== Killer Chip 三段式 ====== */
+.killer-opener{background:rgba(26,26,46,0.95);color:rgba(255,255,255,0.9);font-style:italic;font-size:16px;line-height:1.8;padding:20px;border-left:4px solid #FFD700;border-radius:8px;margin-bottom:16px}
+.killer-layer{padding:18px 20px;border-radius:10px;margin-bottom:12px;border-left:4px solid}
+.killer-layer h4{font-size:15px;font-weight:800;margin-bottom:10px}
+.killer-layer p,.killer-layer div{font-size:13px;line-height:1.8;color:var(--text)}
+.layer-green{background:#e8f5e9;border-left-color:#4CAF50}
+.layer-blue{background:#e3f2fd;border-left-color:#2196F3}
+.layer-orange{background:#fff3e0;border-left-color:#FF9800}
+
+/* ====== 语文阅读写作 ====== */
+.chinese-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1100px;margin:0 auto}
+.chinese-left,.chinese-right{background:var(--bg-card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+.chinese-left h2,.chinese-right h2{font-size:20px;font-weight:900;margin-bottom:8px}
+.chinese-left>p{font-size:13px;color:var(--text-secondary);margin-bottom:16px}
+.method-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.method-card{background:rgba(255,107,53,0.04);border:1.5px solid rgba(255,107,53,0.12);border-radius:10px;padding:14px 16px;transition:all 0.2s}
+.method-card:hover{border-color:var(--chinese);transform:translateY(-1px);box-shadow:0 4px 12px rgba(255,107,53,0.08)}
+.method-card h4{font-size:15px;font-weight:700;color:var(--chinese);margin-bottom:6px}
+.method-card .method-mantra{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px}
+.method-card .method-detect{font-size:11px;color:var(--text-dim);margin-bottom:4px}
+.method-card .method-types{font-size:11px;color:var(--text-secondary);line-height:1.5}
+.grade-tabs{display:flex;gap:8px;margin-bottom:16px}
+.grade-tab{padding:8px 18px;border-radius:8px;border:1.5px solid rgba(0,0,0,0.08);font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;background:white;color:var(--text-secondary)}
+.grade-tab.active{background:var(--chinese);color:white;border-color:var(--chinese)}
+.grade-tab:hover:not(.active){border-color:var(--chinese);color:var(--chinese)}
+.writing-scene{margin-bottom:20px}
+.writing-scene h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px}
+.scene-item{background:rgba(0,0,0,0.02);border-radius:8px;padding:10px 14px;margin-bottom:6px}
+.scene-name{font-size:13px;font-weight:700;color:var(--chinese);margin-bottom:4px}
+.scene-desc{font-size:12px;color:var(--text-secondary);line-height:1.6}
+.writing-template{margin-bottom:14px}
+.writing-template h4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;padding-bottom:6px;border-bottom:1px dashed rgba(0,0,0,0.08)}
+.template-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;padding:8px 12px;background:rgba(255,107,53,0.03);border-radius:6px}
+.template-tag{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;background:var(--chinese-bg);color:var(--chinese);flex-shrink:0;white-space:nowrap}
+.template-text{font-size:12px;color:var(--text);line-height:1.6}
+
+/* ====== 高频真题 ====== */
+.hfex-filters{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.hfex-filters select{padding:8px 14px;border:1.5px solid rgba(0,0,0,0.1);border-radius:8px;font-size:13px;background:white;cursor:pointer;outline:none}
+.hfex-filters select:focus{border-color:var(--primary)}
+.hfex-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.hfex-card{background:var(--bg-card);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);border:2px solid rgba(0,0,0,0.04);transition:all 0.2s;cursor:default}
+.hfex-card:hover{border-color:rgba(108,92,231,0.15);box-shadow:var(--shadow-lg)}
+.hfex-card .hfex-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.4}
+.hfex-card .hfex-star{font-size:12px;margin-bottom:6px}
+.hfex-card .hfex-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.hfex-card .hfex-tag{padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600}
+.hfex-card .hfex-tag.subj{background:var(--math-bg);color:var(--math)}
+.hfex-card .hfex-tag.grade{background:var(--chinese-bg);color:var(--chinese)}
+.hfex-card .hfex-method{font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:8px;padding:8px 12px;background:rgba(0,184,148,0.04);border-radius:6px}
+.hfex-card .hfex-script-toggle{font-size:11px;color:var(--primary);cursor:pointer;font-weight:600;user-select:none}
+.hfex-card .hfex-script-toggle:hover{text-decoration:underline}
+.hfex-card .hfex-script{display:none;font-size:12px;color:var(--text-secondary);line-height:1.7;margin-top:8px;padding:10px 14px;background:rgba(0,0,0,0.02);border-radius:8px;border:1px dashed rgba(0,0,0,0.08)}
+
+/* Responsive */
+@media(max-width:768px){
+  .chinese-layout{grid-template-columns:1fr}
+  .hotspot-grid{grid-template-columns:repeat(2,1fr)}
+  .hfex-grid{grid-template-columns:1fr}
+}
+</style></style>
 </head>
 <body>
 
@@ -628,6 +708,8 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <span class="nav-divider"></span>
     <a class="nav-pill nav-manual" href="grade4-math-manual.html" target="_blank">📐 易错手册</a>
     <a class="nav-pill nav-kb" href="knowledge.html" target="_blank">📚 知识宝库</a>
+    <button class="nav-pill" data-page="chinese" onclick="showPage('chinese')">📖 语文专项</button>
+    <button class="nav-pill" data-page="hfex" onclick="showPage('hfex')">📊 高频真题</button>
     <div class="progress-bar-mini" id="progressMini"></div>
     <span class="progress-count" id="progressCount">0/0</span>
   </div>
@@ -652,6 +734,12 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
     <h1 class="home-hero-title">3步之内开始实操</h1>
     <p class="home-hero-sub">不要章节目录，直接<b>阻击你的考场痛点</b></p>
   </div>
+  <section id="dashboard-hotspot" class="dashboard-section" style="display:none;">
+    <h2>🔥 必考作战大盘 <span class="star-badge">5⭐优先</span></h2>
+    <p class="subtitle">这些考点每年都考，先搞定它们！</p>
+    <div id="hotspot-cards" class="hotspot-grid"></div>
+    <button id="show-all-hotspots" class="btn-expand" onclick="toggleAllHotspots()">展开全部 64 个必考点 ▼</button>
+  </section>
   <div class="grade-selector" id="gradeSelector">
     <button class="grade-btn g4" data-grade="4" onclick="selectGrade(4)">🔴 四年级</button>
     <button class="grade-btn" data-grade="5" onclick="selectGrade(5)">🟢 五年级</button>
@@ -767,6 +855,46 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
   <div class="types-grid" id="typesGrid"></div>
 </div>
 
+<!-- Page: 语文阅读写作 -->
+<div id="page-chinese" class="page" style="display:none;">
+  <div class="chinese-layout">
+    <div class="chinese-left">
+      <h2>📖 阅读理解·侦探工具箱</h2>
+      <p>6个方法，每个都是"破案秘籍"</p>
+      <div id="reading-methods" class="method-grid"></div>
+    </div>
+    <div class="chinese-right">
+      <h2>✏️ 写作·素材搭积木</h2>
+      <div class="grade-tabs" id="writing-grade-tabs">
+        <button class="grade-tab active" onclick="switchWritingGrade(4)">四年级</button>
+        <button class="grade-tab" onclick="switchWritingGrade(5)">五年级</button>
+        <button class="grade-tab" onclick="switchWritingGrade(6)">六年级</button>
+      </div>
+      <div id="writing-content"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Page: 高频真题 -->
+<div id="page-hfex" class="page" style="display:none;">
+  <h2>📊 高频真题精讲</h2>
+  <div class="hfex-filters">
+    <select id="hfex-subject" onchange="renderHFExams()">
+      <option value="all">全部科目</option>
+      <option value="数学">数学</option>
+      <option value="语文">语文</option>
+      <option value="英语">英语</option>
+    </select>
+    <select id="hfex-grade" onchange="renderHFExams()">
+      <option value="all">全部年级</option>
+      <option value="4">四年级</option>
+      <option value="5">五年级</option>
+      <option value="6">六年级</option>
+    </select>
+  </div>
+  <div id="hfex-list" class="hfex-grid"></div>
+</div>
+
 <!-- Type Detail Modal -->
 <div class="type-modal-overlay" id="typeModalOverlay" onclick="if(event.target===this)closeTypeModal()">
   <div class="type-modal" id="typeModal"></div>
@@ -776,6 +904,10 @@ body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;back
 <script src="data/exams/index-data.js?v=202606121700"></script>
 <script src="data/exams/index-enriched-data.js?v=202606121700"></script>
 <script src="data/exams/exam-papers.js?v=202606121730"></script>
+<script src="dashboard-hotspot.js"></script>
+<script src="top10-killer-chips.js"></script>
+<script src="chinese-methodology.js"></script>
+<script src="high-freq-exams.js"></script>
 <script>
 // ====== State ======
 let currentGrade = 4;
@@ -790,6 +922,18 @@ function showPage(name) {
     n.classList.toggle('active', n.dataset.page === name);
   });
   window.scrollTo(0, 0);
+  
+  // Show/hide dashboard hotspot (only on home page)
+  var dashEl = document.getElementById('dashboard-hotspot');
+  if (dashEl) dashEl.style.display = (name === 'home') ? 'block' : 'none';
+  
+  // Initialize sub-pages on first visit
+  if (name === 'chinese') {
+    try { renderChineseMethodology(); } catch(e) { console.warn('Chinese methodology render failed:', e); }
+  }
+  if (name === 'hfex') {
+    try { renderHFExams(); } catch(e) { console.warn('HF exams render failed:', e); }
+  }
 }
 
 // ====== Grade Selection ======
@@ -833,7 +977,7 @@ function renderPainWall(filterText) {
         ${items.map(item => `
           <div class="pain-card ${cssClass}" data-chip-id="${item.chipId}" onclick="openChip('${item.chipId}')" style="cursor:pointer">
             <div class="pain-card-icon">${meta.icon}</div>
-            <div class="pain-card-title">${item.label}</div>
+            <div class="pain-card-title">${(function(){var c=CHIPS.find(function(x){return x.id===item.chipId;});return (c&&c.star)?'⭐'.repeat(c.star)+' ':'';})()}${item.label}</div>
             <div class="pain-card-desc">点击进入 → 3步开始实操</div>
             <div class="pain-card-tag">🏷️ ${item.chipId}</div>
           </div>
@@ -1039,11 +1183,17 @@ function openChip(chipId) {
     if (!chip) return;
     currentChip = chip;
     
-    var modelId = MODEL_MAP[chipId];
-    if (modelId) {
-      renderModelDetail(chip, modelId);
+    // Check if this chip is in TOP10_KILLER_CHIPS
+    var killerChip = (typeof TOP10_KILLER_CHIPS !== 'undefined') ? TOP10_KILLER_CHIPS.find(function(c){ return c.chipId === chipId; }) : null;
+    if (killerChip) {
+      renderKillerChipDetail(chip, killerChip);
     } else {
-      renderModelPage(chip);
+      var modelId = MODEL_MAP[chipId];
+      if (modelId) {
+        renderModelDetail(chip, modelId);
+      } else {
+        renderModelPage(chip);
+      }
     }
     showPage('model');
   } catch(e) {
@@ -1886,8 +2036,9 @@ function renderTree(filterText) {
         var chipEl = document.createElement('div');
         chipEl.className = 'tree-chip ' + meta.cls;
         chipEl.setAttribute('data-chip-id', chip.id);
+        var starStr = (chip.star) ? '⭐'.repeat(chip.star) + ' ' : '';
         chipEl.innerHTML = '<span class="tree-chip-id">' + chip.id + '</span>' +
-          '<span class="tree-chip-text" title="' + chip.title.replace(/"/g, '&quot;') + '">' + chip.title + '</span>';
+          '<span class="tree-chip-text" title="' + chip.title.replace(/"/g, '&quot;') + '">' + starStr + chip.title + '</span>';
         chipEl.addEventListener('click', function(e) {
           e.stopPropagation();
           openChip(chip.id);
@@ -2368,6 +2519,200 @@ function closeTypeModal() {
 
 // Modified renderModelPage: add related types section at the bottom
 
+
+// ====== 必考作战大盘 ======
+function renderHotspotDashboard() {
+  var container = document.getElementById('hotspot-cards');
+  if (!container) return;
+  var hotspots = (typeof DASHBOARD_HOTSPOTS !== 'undefined' && DASHBOARD_HOTSPOTS.grade5Stars) ? DASHBOARD_HOTSPOTS.grade5Stars : [];
+  if (!hotspots.length) { container.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:20px">正在加载考点数据…</p>'; return; }
+  
+  var shownHotspots = hotspots.slice(0, 12);
+  window._allHotspots = hotspots;
+  window._hotspotsExpanded = false;
+  renderHotspotCards(shownHotspots);
+}
+
+function renderHotspotCards(items) {
+  var container = document.getElementById('hotspot-cards');
+  if (!container) return;
+  container.innerHTML = items.map(function(chip) {
+    var starStr = '⭐'.repeat(chip.star || 1);
+    var subjCls = (chip.subject === '数学') ? 'math' : (chip.subject === '语文') ? 'chinese' : 'english';
+    return '<div class="hotspot-card" onclick="openChip(\'' + chip.id + '\')">' +
+      '<div class="hc-star">' + starStr + '</div>' +
+      '<div class="hc-title">' + chip.title + '</div>' +
+      '<div class="hc-meta">' +
+        '<span class="hc-tag ' + subjCls + '">' + chip.subject + '</span>' +
+        '<span class="hc-tag grade">' + chip.grade + '年级</span>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function toggleAllHotspots() {
+  var btn = document.getElementById('show-all-hotspots');
+  if (!window._allHotspots) return;
+  var isExpanded = window._hotspotsExpanded;
+  if (isExpanded) {
+    renderHotspotCards(window._allHotspots.slice(0, 12));
+    btn.textContent = '展开全部 ' + window._allHotspots.length + ' 个必考点 ▼';
+    window._hotspotsExpanded = false;
+  } else {
+    renderHotspotCards(window._allHotspots);
+    btn.textContent = '收起 ▲';
+    window._hotspotsExpanded = true;
+  }
+}
+
+// ====== Killer Chip 三段式详情 ======
+function renderKillerChipDetail(chip, killerChip) {
+  var container = document.getElementById('modelContent');
+  var meta = SUBJECT_MAP[chip.subject] || { color: '#6C5CE7', bg: 'rgba(108,92,231,0.08)', icon: '📘' };
+  var pageSubj = chip.subject;
+  var pageGrade = chip.grade;
+  var chipId = chip.id;
+  
+  container.innerHTML = 
+    '<div class="model-page">' +
+      '<div class="model-top">' +
+        '<button class="model-back" onclick="history.back()">← 返回</button>' +
+        '<div class="model-code" style="background:' + meta.bg + ';color:' + meta.color + '">' + chipId + '</div>' +
+        '<span style="font-size:12px;color:var(--text-dim)">' + meta.icon + ' ' + pageSubj + ' · ' + pageGrade + '年级</span>' +
+      '</div>' +
+      '<div class="model-title">' + '⭐'.repeat(chip.star || 1) + ' ' + chip.title + '</div>' +
+      '<div class="model-subtitle">' + (killerChip.kidFriendlyTitle || chip.title) + '</div>' +
+      '<div class="killer-detail">' +
+        '<div class="killer-opener">' + (killerChip.opener || '') + '</div>' +
+        '<div class="killer-layer layer-green"><h4>🧠 第一层·必杀技</h4>' + (killerChip.layer1_killerMove || '') + '</div>' +
+        '<div class="killer-layer layer-blue"><h4>🔥 第二层·真题复刻</h4>' + (killerChip.layer2_realExam || '') + '</div>' +
+        '<div class="killer-layer layer-orange"><h4>⚠️ 第三层·老师叮嘱</h4>' + (killerChip.layer3_teacherWarning || '') + '</div>' +
+      '</div>' +
+    '</div>';
+  
+  window.scrollTo(0, 0);
+}
+
+// ====== 语文阅读写作 ======
+function renderChineseMethodology() {
+  // Reading methods
+  var methodsContainer = document.getElementById('reading-methods');
+  if (methodsContainer) {
+    var methods = (typeof CHINESE_METHODOLOGY !== 'undefined' && CHINESE_METHODOLOGY.readingMethods) ? CHINESE_METHODOLOGY.readingMethods : [];
+    // Fallback: READING_METHODS
+    if (!methods.length && typeof READING_METHODS !== 'undefined') methods = READING_METHODS;
+    if (methods.length) {
+      methodsContainer.innerHTML = methods.map(function(m) {
+        return '<div class="method-card">' +
+          '<h4>' + (m.name || '') + '</h4>' +
+          '<div class="method-mantra">📢 口诀：' + (m.kidFormula || '') + '</div>' +
+          '<div class="method-detect">🕵️ 侦探话术：' + (m.detectiveScript || '') + '</div>' +
+          '<div class="method-types">📋 适用题型：' + (m.applicableTypes || '') + '</div>' +
+        '</div>';
+      }).join('');
+    } else {
+      methodsContainer.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:20px">正在加载方法论…</p>';
+    }
+  }
+  
+  // Writing: default grade 4
+  switchWritingGrade(4);
+}
+
+function switchWritingGrade(grade) {
+  var tabs = document.querySelectorAll('#writing-grade-tabs .grade-tab');
+  tabs.forEach(function(t) { t.classList.remove('active'); });
+  var activeTab = document.querySelector('#writing-grade-tabs .grade-tab[onclick="switchWritingGrade(' + grade + ')"]');
+  if (activeTab) activeTab.classList.add('active');
+  
+  var container = document.getElementById('writing-content');
+  if (!container) return;
+  
+  var writingLib = (typeof CHINESE_METHODOLOGY !== 'undefined' && CHINESE_METHODOLOGY.writingLibrary) ? CHINESE_METHODOLOGY.writingLibrary : null;
+  if (!writingLib && typeof WRITING_LIBRARY !== 'undefined') writingLib = WRITING_LIBRARY;
+  
+  if (!writingLib || !writingLib[grade]) {
+    container.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:20px">正在加载写作素材…</p>';
+    return;
+  }
+  
+  var data = writingLib[grade];
+  var html = '';
+  
+  // Scenes
+  if (data.scenes && data.scenes.length) {
+    html += '<div class="writing-scene"><h4>🎬 场景骨架</h4>';
+    data.scenes.forEach(function(s) {
+      html += '<div class="scene-item"><div class="scene-name">' + (s.name || '') + '</div><div class="scene-desc">' + (s.description || '') + '</div></div>';
+    });
+    html += '</div>';
+  }
+  
+  // Openings
+  if (data.openings && data.openings.length) {
+    html += '<div class="writing-template"><h4>🚀 开头模板</h4>';
+    data.openings.forEach(function(o) {
+      html += '<div class="template-item"><span class="template-tag">' + (o.type || '模板') + '</span><span class="template-text">' + (o.template || '') + (o.example ? '<br><em style="color:var(--text-dim);font-size:11px">例：' + o.example + '</em>' : '') + '</span></div>';
+    });
+    html += '</div>';
+  }
+  
+  // Endings
+  if (data.endings && data.endings.length) {
+    html += '<div class="writing-template"><h4>🏁 结尾模板</h4>';
+    data.endings.forEach(function(e) {
+      html += '<div class="template-item"><span class="template-tag">' + (e.type || '模板') + '</span><span class="template-text">' + (e.template || '') + (e.example ? '<br><em style="color:var(--text-dim);font-size:11px">例：' + e.example + '</em>' : '') + '</span></div>';
+    });
+    html += '</div>';
+  }
+  
+  container.innerHTML = html || '<p style="color:var(--text-dim);text-align:center;padding:20px">暂无' + grade + '年级写作素材</p>';
+}
+
+// ====== 高频真题 ======
+function renderHFExams() {
+  var container = document.getElementById('hfex-list');
+  if (!container) return;
+  
+  var exams = (typeof HIGH_FREQ_EXAMS !== 'undefined') ? HIGH_FREQ_EXAMS : [];
+  if (!exams.length) {
+    container.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:40px">正在加载真题数据…</p>';
+    return;
+  }
+  
+  var subjectFilter = document.getElementById('hfex-subject');
+  var gradeFilter = document.getElementById('hfex-grade');
+  var filterSubj = subjectFilter ? subjectFilter.value : 'all';
+  var filterGrade = gradeFilter ? gradeFilter.value : 'all';
+  
+  var filtered = exams.filter(function(e) {
+    if (filterSubj !== 'all' && e.subject !== filterSubj) return false;
+    if (filterGrade !== 'all' && String(e.grade) !== filterGrade) return false;
+    return true;
+  });
+  
+  if (!filtered.length) {
+    container.innerHTML = '<p style="color:var(--text-dim);text-align:center;padding:40px">没有匹配的真题</p>';
+    return;
+  }
+  
+  container.innerHTML = filtered.map(function(e) {
+    var starStr = '⭐'.repeat(e.star || 1);
+    var examId = e.id || '';
+    return '<div class="hfex-card">' +
+      '<div class="hfex-title">' + (e.title || e.typeName || '') + '</div>' +
+      '<div class="hfex-star">' + starStr + '</div>' +
+      '<div class="hfex-meta">' +
+        '<span class="hfex-tag subj">' + (e.subject || '') + '</span>' +
+        '<span class="hfex-tag grade">' + (e.grade || '') + '年级</span>' +
+      '</div>' +
+      '<div class="hfex-method">💡 ' + (e.kidFriendlyMethod || '暂无口诀') + '</div>' +
+      '<div class="hfex-script-toggle" onclick="var s=this.nextElementSibling;var isOpen=s.style.display===\'block\';s.style.display=isOpen?\'none\':\'block\';this.textContent=isOpen?\'📖 查看老师讲解 ▼\':\'📖 收起讲解 ▲\'">📖 查看老师讲解 ▼</div>' +
+      '<div class="hfex-script">' + (e.teacherScript || '暂无讲解') + '</div>' +
+    '</div>';
+  }).join('');
+}
+
 function init() {
   // 动态修正考点总数
   var heroTotal = document.getElementById('heroTotal');
@@ -2387,6 +2732,13 @@ function init() {
   updateProgress();
   loadVideoWarehouse();
   loadExams();
+  
+  // 渲染首页必考作战大盘
+  try {
+    renderHotspotDashboard();
+    var dashEl = document.getElementById('dashboard-hotspot');
+    if (dashEl) dashEl.style.display = 'block';
+  } catch(e) { console.warn('Dashboard render failed:', e); }
   
   // 如果 URL 指定了页面，自动切换
   if (targetPage) {
