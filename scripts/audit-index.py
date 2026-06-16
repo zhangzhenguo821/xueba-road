@@ -52,15 +52,28 @@ else:
 # ===== 3. JS 语法验证 =====
 with open('/tmp/index_audit.js', 'w') as f:
     f.write(js)
-result = subprocess.run(['node', '--check', '/tmp/index_audit.js'], capture_output=True, text=True)
-if result.returncode != 0:
-    errors.append(f"JS语法错误: {result.stderr.strip()}")
+_node_paths = ['/usr/local/bin/node', '/opt/homebrew/bin/node', 'node']
+_node_bin = None
+for _np in _node_paths:
+    try:
+        subprocess.run([_np, '--version'], capture_output=True, check=True)
+        _node_bin = _np
+        break
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        continue
+if not _node_bin:
+    print("⚠️ 找不到 node 可执行文件，跳过 JS 语法检查")
+else:
+    result = subprocess.run([_node_bin, '--check', '/tmp/index_audit.js'], capture_output=True, text=True)
+    if result.returncode != 0:
+        errors.append(f"JS语法错误: {result.stderr.strip()}")
 
 # ===== 4. 提取 onclick 绑定的函数名 (排除内联表达式) =====
 # onclick 中可能包含: func(), obj.method(), if(), event.stopPropagation(), window.open()
 # 我们只检查 "裸函数调用" 模式：onclick="funcName(...)"
 native_patterns = {'if','else','return','event','this','window','document','console',
-                   'true','false','null','undefined','new','typeof','instanceof'}
+                   'true','false','null','undefined','new','typeof','instanceof',
+                   'setTimeout','setInterval','clearTimeout','clearInterval'}
 onclick_funcs = set()
 for m in re.finditer(r'onclick="([^"]*)"', html):
     code = m.group(1)

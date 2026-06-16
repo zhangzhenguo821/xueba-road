@@ -2536,10 +2536,16 @@ function renderHotspotDashboard() {
 function renderHotspotCards(items) {
   var container = document.getElementById('hotspot-cards');
   if (!container) return;
-  container.innerHTML = items.map(function(chip) {
+  // 按年级→科目排序
+  var sorted = items.slice().sort(function(a, b) {
+    if (a.grade !== b.grade) return a.grade - b.grade;
+    if (a.subject !== b.subject) return a.subject < b.subject ? -1 : 1;
+    return 0;
+  });
+  container.innerHTML = sorted.map(function(chip) {
     var starStr = '⭐'.repeat(chip.star || 1);
     var subjCls = (chip.subject === '数学') ? 'math' : (chip.subject === '语文') ? 'chinese' : 'english';
-    return '<div class="hotspot-card" onclick="openChip(\'' + chip.id + '\')">' +
+    return '<div class="hotspot-card" onclick="openChip(\'' + (chip.chipId || '') + '\')">' +
       '<div class="hc-star">' + starStr + '</div>' +
       '<div class="hc-title">' + chip.title + '</div>' +
       '<div class="hc-meta">' +
