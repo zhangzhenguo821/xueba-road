@@ -2607,7 +2607,7 @@ function renderChineseMethodology() {
           '<h4>' + (m.name || '') + '</h4>' +
           '<div class="method-mantra">📢 口诀：' + (m.kidFormula || '') + '</div>' +
           '<div class="method-detect">🕵️ 侦探话术：' + (m.detectiveScript || '') + '</div>' +
-          '<div class="method-types">📋 适用题型：' + (m.applicableTypes || '') + '</div>' +
+          '<div class="method-types">📋 适用题型：' + (Array.isArray(m.applicableTypes) ? m.applicableTypes.join('、') : (m.applicableTypes || '')) + '</div>' +
         '</div>';
       }).join('');
     } else {
@@ -2645,7 +2645,12 @@ function switchWritingGrade(grade) {
   if (data.scenes && data.scenes.length) {
     html += '<div class="writing-scene"><h4>🎬 场景骨架</h4>';
     data.scenes.forEach(function(s) {
-      html += '<div class="scene-item"><div class="scene-name">' + (s.name || '') + '</div><div class="scene-desc">' + (s.description || '') + '</div></div>';
+      var senses = [];
+      if (s.visual) senses.push('👁 ' + s.visual);
+      if (s.auditory) senses.push('👂 ' + s.auditory);
+      if (s.tactile) senses.push('✋ ' + s.tactile);
+      if (s.feeling) senses.push('💭 ' + s.feeling);
+      html += '<div class="scene-item"><div class="scene-name">' + (s.sceneName || '') + '</div><div class="scene-desc">' + senses.join('<br>') + '</div></div>';
     });
     html += '</div>';
   }
@@ -2699,7 +2704,8 @@ function renderHFExams() {
   }
   
   container.innerHTML = filtered.map(function(e) {
-    var starStr = '⭐'.repeat(e.star || 1);
+    var starCount = e.star || (e.frequency === '高频' ? 4 : e.frequency === '中频' ? 3 : 2);
+    var starStr = '⭐'.repeat(starCount);
     var examId = e.id || '';
     return '<div class="hfex-card">' +
       '<div class="hfex-title">' + (e.title || e.typeName || '') + '</div>' +
