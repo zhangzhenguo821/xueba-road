@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KET备考专页 · 学霸之路</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a1a;--bg-card:#1A1A2E;--bg-panel:#16213E;
+  --text:#E0E0E0;--text-secondary:#8892B0;--text-dim:#5A6480;
+  --primary:#FF6B35;--accent:#FFE66D;--success:#00B894;--danger:#FF6B6B;
+  --purple:#A29BFE;--purple-bg:rgba(108,92,231,0.15);--purple-border:rgba(108,92,231,0.3);
+  --cyan:#00d4ff;--cyan-bg:rgba(0,212,255,0.12);
+  --radius:14px;--radius-sm:10px;--radius-xs:6px;
+  --shadow:0 4px 20px rgba(0,0,0,0.3);--shadow-lg:0 8px 30px rgba(0,0,0,0.5);
+  --transition:all 0.25s cubic-bezier(0.4,0,0.2,1)
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;line-height:1.6}
+
+.ket-header{background:var(--bg-panel);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,0.4);border-bottom:1px solid rgba(255,255,255,0.06)}
+.ket-header-left{display:flex;align-items:center;gap:14px}
+.ket-header-back{color:var(--text-dim);text-decoration:none;font-size:13px;font-weight:600;padding:6px 12px;border-radius:var(--radius-xs);transition:var(--transition);border:1px solid rgba(255,255,255,0.08)}
+.ket-header-back:hover{color:white;background:rgba(255,255,255,0.08)}
+.ket-header-title{font-size:18px;font-weight:800;color:white}
+.ket-header-title span{color:var(--accent)}
+.ket-header-countdown{font-size:12px;color:var(--cyan);background:var(--cyan-bg);padding:5px 14px;border-radius:20px;font-weight:600}
+
+.ket-tabs{display:flex;gap:4px;padding:16px 24px 0;background:var(--bg);position:sticky;top:56px;z-index:99;overflow-x:auto}
+.ket-tab{padding:10px 20px;border-radius:var(--radius-sm) var(--radius-sm) 0 0;font-size:14px;font-weight:600;border:none;cursor:pointer;transition:var(--transition);background:rgba(255,255,255,0.03);color:var(--text-dim);white-space:nowrap}
+.ket-tab:hover{background:rgba(255,255,255,0.06);color:var(--text)}
+.ket-tab.active{background:var(--bg-card);color:var(--accent);box-shadow:0 -2px 10px rgba(0,0,0,0.2)}
+
+.ket-content{max-width:1100px;margin:0 auto;padding:24px}
+.ket-tab-panel{display:none;animation:fadeIn .3s ease}
+.ket-tab-panel.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.ket-card{background:var(--bg-card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.04);margin-bottom:20px;transition:var(--transition)}
+.ket-card:hover{border-color:rgba(255,255,255,0.08)}
+.ket-card.accent{border-left:4px solid var(--primary)}
+.ket-card.done{opacity:0.6;border-left:4px solid var(--success)}
+.ket-card-header{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ket-card-icon{font-size:24px}
+.ket-card-title{font-size:17px;font-weight:800}
+.ket-card-subtitle{font-size:12px;color:var(--text-secondary)}
+
+.ket-check{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;background:rgba(255,255,255,0.03);border-radius:var(--radius-sm);margin-bottom:10px;cursor:pointer;transition:var(--transition);border:1px solid rgba(255,255,255,0.04)}
+.ket-check:hover{background:rgba(255,255,255,0.06)}
+.ket-check.checked{background:rgba(0,184,148,0.08);border-color:rgba(0,184,148,0.2)}
+.ket-check.checked .ket-check-text{color:var(--success)}
+.ket-checkbox{width:22px;height:22px;border-radius:6px;border:2px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--transition);font-size:14px;color:transparent}
+.ket-check.checked .ket-checkbox{border-color:var(--success);background:var(--success);color:white}
+.ket-check-content{flex:1}
+.ket-check-text{font-size:14px;font-weight:600;transition:var(--transition)}
+.ket-check-desc{font-size:12px;color:var(--text-dim);margin-top:2px}
+
+.ket-timeline{position:relative;padding-left:28px}
+.ket-timeline::before{content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:rgba(255,255,255,0.1)}
+.ket-tl-node{position:relative;margin-bottom:18px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.04)}
+.ket-tl-node::before{content:'';position:absolute;left:-24px;top:14px;width:12px;height:12px;border-radius:50%;background:var(--text-dim);border:2px solid var(--bg);z-index:1}
+.ket-tl-node.current{background:var(--cyan-bg);border-color:rgba(0,212,255,0.3)}
+.ket-tl-node.current::before{background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.ket-tl-node.done{opacity:0.55}
+.ket-tl-node.done::before{background:var(--success)}
+.ket-tl-node.future{opacity:0.35}
+.ket-tl-month{font-size:12px;font-weight:700;color:var(--cyan);margin-bottom:3px}
+.ket-tl-node.current .ket-tl-month{color:var(--accent)}
+.ket-tl-label{font-size:13px;font-weight:600}
+.ket-tl-detail{font-size:11px;color:var(--text-dim);margin-top:2px}
+
+/* Tab 2 */
+.ket-cat-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.ket-cat-tab{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,0.1);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary)}
+.ket-cat-tab:hover{border-color:var(--purple);color:var(--purple)}
+.ket-cat-tab.active{background:var(--purple-bg);border-color:var(--purple);color:var(--purple)}
+.ket-resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.ket-res-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.04);transition:var(--transition);display:flex;flex-direction:column;gap:10px}
+.ket-res-card:hover{transform:translateY(-2px);border-color:rgba(108,92,231,0.3);box-shadow:var(--shadow-lg)}
+.ket-res-icon{font-size:32px}
+.ket-res-name{font-size:15px;font-weight:700}
+.ket-res-desc{font-size:12px;color:var(--text-secondary);line-height:1.5}
+.ket-res-tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:10px;font-weight:600;background:var(--purple-bg);color:var(--purple)}
+.ket-res-tip{font-size:11px;color:var(--accent);background:rgba(255,230,109,0.08);padding:6px 10px;border-radius:6px;margin-top:auto}
+
+/* Tab 3 */
+.ket-print-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.ket-print-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:2px solid rgba(255,255,255,0.04);cursor:pointer;transition:var(--transition);position:relative;overflow:hidden}
+.ket-print-card:hover{border-color:rgba(108,92,231,0.3);transform:translateY(-2px)}
+.ket-print-card .print-btn{position:absolute;top:16px;right:16px;padding:6px 14px;border-radius:var(--radius-xs);background:var(--primary);color:white;border:none;font-size:12px;font-weight:600;cursor:pointer;transition:var(--transition)}
+.ket-print-card .print-btn:hover{transform:scale(1.05)}
+.ket-print-icon{font-size:28px;margin-bottom:8px}
+.ket-print-title{font-size:15px;font-weight:700;margin-bottom:4px}
+.ket-print-desc{font-size:12px;color:var(--text-secondary);margin-bottom:12px}
+.ket-print-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.ket-print-table th{background:rgba(108,92,231,0.15);color:var(--purple);padding:8px 10px;text-align:left;font-weight:600;border-bottom:2px solid rgba(108,92,231,0.2)}
+.ket-print-table td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,0.04);color:var(--text-secondary)}
+.ket-print-table tr:hover td{background:rgba(255,255,255,0.02)}
+
+/* Tab 4 */
+.ket-cal-top{display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.ket-month-selector{display:flex;gap:4px;flex-wrap:wrap}
+.ket-month-btn{padding:7px 14px;border-radius:var(--radius-xs);font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,0.1);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-dim)}
+.ket-month-btn:hover{border-color:var(--primary);color:var(--primary)}
+.ket-month-btn.active{background:var(--primary);border-color:var(--primary);color:white}
+.ket-month-btn.done{border-color:var(--success);color:var(--success)}
+.ket-month-btn.done.active{background:var(--success);color:white}
+.ket-progress-wrap{flex:1;min-width:200px;display:flex;align-items:center;gap:10px}
+.ket-progress-bar{flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,0.06);overflow:hidden}
+.ket-progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--success),var(--cyan));transition:width .4s ease}
+.ket-progress-text{font-size:13px;font-weight:700;color:var(--cyan);white-space:nowrap}
+.ket-cal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.ket-cal-card{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.04)}
+.ket-cal-card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.ket-cal-month{font-size:18px;font-weight:800;color:var(--accent)}
+.ket-cal-count{font-size:11px;color:var(--text-dim);background:rgba(255,255,255,0.04);padding:3px 10px;border-radius:12px}
+.ket-cal-tasks{display:flex;flex-direction:column;gap:8px}
+.ket-cal-reminder{margin-top:14px;padding:10px 14px;background:rgba(255,230,109,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--accent);font-size:12px;color:var(--accent);line-height:1.5}
+
+/* Modal */
+.ket-modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:200;justify-content:center;align-items:center;padding:20px}
+.ket-modal-overlay.active{display:flex}
+.ket-modal{background:var(--bg-card);border-radius:var(--radius);width:100%;max-width:700px;max-height:85vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.08)}
+.ket-modal-header{padding:20px 24px;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg-card);z-index:1}
+.ket-modal-close{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);border:none;color:var(--text-dim);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:var(--transition)}
+.ket-modal-close:hover{background:rgba(255,107,107,0.2);color:var(--danger)}
+.ket-modal-body{padding:24px;font-size:14px;line-height:1.8;color:var(--text-secondary)}
+.ket-modal-body h3{color:var(--text);margin:14px 0 8px;font-size:16px}
+.ket-modal-body ul{margin:8px 0;padding-left:20px}
+.ket-modal-body li{margin-bottom:6px}
+.ket-modal-body .step-num{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--purple);color:white;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-right:8px;flex-shrink:0}
+
+/* Footer */
+.ket-footer{position:sticky;bottom:0;background:var(--bg-panel);padding:12px 24px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);z-index:100;box-shadow:0 -2px 20px rgba(0,0,0,0.4)}
+.ket-footer-btn{padding:8px 18px;border-radius:var(--radius-xs);font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,0.12);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary);text-decoration:none}
+.ket-footer-btn:hover{background:rgba(255,255,255,0.08);color:white}
+.ket-footer-btn.primary{background:var(--primary);border-color:var(--primary);color:white}
+.ket-footer-btn.primary:hover{background:#e55a2b}
+.ket-footer-btn.export-btn{background:rgba(108,92,231,0.2);border-color:var(--purple);color:var(--purple)}
+.ket-footer-btn.export-btn:hover{background:rgba(108,92,231,0.35);color:white}
+
+/* ====== DASHBOARD STYLES ====== */
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+.dash-card{background:rgba(26,26,46,0.85);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(6px)}
+.dash-card.full{grid-column:1/-1}
+.dash-stat-row{display:flex;gap:20px;align-items:stretch;flex-wrap:wrap}
+.dash-big-num{flex:1;min-width:160px;text-align:center;padding:20px 16px;background:linear-gradient(135deg,rgba(108,92,231,0.12),rgba(0,212,255,0.08));border-radius:var(--radius-sm);border:1px solid rgba(108,92,231,0.2)}
+.dash-big-num-val{font-size:48px;font-weight:900;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.dash-big-num-label{font-size:12px;color:var(--text-dim);margin-top:6px}
+.dash-big-num-sub{font-size:13px;color:var(--text-secondary);margin-top:4px}
+.dash-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-top:8px}
+.dash-badge.ok{background:rgba(0,184,148,0.15);color:var(--success)}
+.dash-badge.warn{background:rgba(255,107,53,0.15);color:var(--primary)}
+
+/* Heatmap */
+.heatmap-wrap{display:flex;gap:4px;justify-content:center;align-items:flex-end;padding:10px 0}
+.heatmap-col{display:flex;flex-direction:column;gap:4px}
+.heatmap-cell{width:28px;height:28px;border-radius:3px;background:rgba(255,255,255,0.05);transition:.2s;cursor:pointer;position:relative}
+.heatmap-cell:hover{transform:scale(1.15);z-index:2}
+.heatmap-cell.lv0{background:rgba(255,255,255,0.04)}
+.heatmap-cell.lv1{background:rgba(0,184,148,0.25)}
+.heatmap-cell.lv2{background:rgba(0,184,148,0.5)}
+.heatmap-cell.lv3{background:rgba(0,184,148,0.8)}
+.heatmap-cell.empty{background:transparent;cursor:default}
+.heatmap-cell .cell-tip{display:none;position:absolute;bottom:110%;left:50%;transform:translateX(-50%);background:#1A1A2E;color:white;padding:4px 10px;border-radius:4px;font-size:11px;white-space:nowrap;border:1px solid rgba(255,255,255,0.1);pointer-events:none}
+.heatmap-cell:hover .cell-tip{display:block}
+.heatmap-legend{display:flex;gap:6px;align-items:center;justify-content:center;font-size:11px;color:var(--text-dim);margin-top:8px}
+.heatmap-legend-cell{width:14px;height:14px;border-radius:2px}
+.heatmap-legend-cell.lg0{background:rgba(255,255,255,0.04)}
+.heatmap-legend-cell.lg1{background:rgba(0,184,148,0.25)}
+.heatmap-legend-cell.lg2{background:rgba(0,184,148,0.5)}
+.heatmap-legend-cell.lg3{background:rgba(0,184,148,0.8)}
+
+/* Chart wrappers */
+.chart-wrap{position:relative;width:100%}
+.chart-wrap canvas{width:100%!important}
+.dash-table{width:100%;border-collapse:collapse;font-size:13px}
+.dash-table th{background:rgba(108,92,231,0.12);color:var(--purple);padding:10px 12px;text-align:center;font-weight:600;border-bottom:2px solid rgba(108,92,231,0.15)}
+.dash-table td{padding:10px 12px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.04)}
+.dash-table tr:hover td{background:rgba(255,255,255,0.02)}
+.dash-table .check-ok{color:var(--success);font-weight:700}
+.dash-table .check-no{color:var(--danger)}
+
+/* Vocab input in Tab2 */
+.vocab-progress-panel{background:rgba(108,92,231,0.06);border:1px solid rgba(108,92,231,0.18);border-radius:var(--radius-sm);padding:16px;margin-top:12px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.vocab-progress-panel input{width:80px;padding:8px 12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xs);color:white;font-size:16px;font-weight:700;text-align:center}
+.vocab-progress-panel button{padding:8px 16px;background:var(--purple);color:white;border:none;border-radius:var(--radius-xs);cursor:pointer;font-weight:600;font-size:12px}
+.vocab-progress-panel button:hover{opacity:0.85}
+.vocab-progress-panel .vocab-label{font-size:13px;color:var(--text-secondary)}
+
+/* Responsive */
+@media(max-width:768px){
+  .ket-content{padding:16px}
+  .ket-tabs{padding:12px 12px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ket-tab{padding:8px 14px;font-size:12px}
+  .ket-resource-grid{grid-template-columns:1fr}
+  .ket-print-grid{grid-template-columns:1fr}
+  .ket-cal-grid{grid-template-columns:1fr}
+  .ket-header{padding:12px 16px}
+  .ket-header-title{font-size:15px}
+  .dash-grid{grid-template-columns:1fr}
+  .dash-stat-row{flex-direction:column}
+  .dash-big-num-val{font-size:36px}
+  .heatmap-cell{width:22px;height:22px}
+}
+@media print{
+  .ket-header,.ket-tabs,.ket-footer,.print-btn,.ket-modal-overlay{display:none!important}
+  .ket-tab-panel{display:block!important}
+  body{background:white;color:black}
+  .ket-card{background:white;border:1px solid #ccc;box-shadow:none}
+  @page{margin:1.5cm}
+}
+</style>
+</head>
+<body>
+
+<header class="ket-header">
+  <div class="ket-header-left">
+    <a href="index.html" class="ket-header-back">← 返回学霸之路</a>
+    <div class="ket-header-title">🎯 KET备考专页 · <span>傻瓜式操作</span></div>
+  </div>
+  <div class="ket-header-countdown" id="countdown">距2027年1月KET考试</div>
+</header>
+
+<nav class="ket-tabs" id="ketTabs">
+  <button class="ket-tab active" data-tab="tab1">📋 今日任务</button>
+  <button class="ket-tab" data-tab="tab2">🗡️ 武器库</button>
+  <button class="ket-tab" data-tab="tab3">🖨️ 打印中心</button>
+  <button class="ket-tab" data-tab="tab4">📅 家长日历</button>
+  <button class="ket-tab" data-tab="tab5">📊 数据看板</button>
+</nav>
+
+<div class="ket-content">
+
+<!-- TAB 1 -->
+<div class="ket-tab-panel active" id="tab1">
+  <div class="ket-card accent">
+    <div class="ket-card-header">
+      <span class="ket-card-icon">✅</span>
+      <span class="ket-card-title">今日要做 3 件事</span>
+    </div>
+    <div id="dailyTasks"></div>
+  </div>
+  <div class="ket-card">
+    <div class="ket-card-header">
+      <span class="ket-card-icon">🎧</span>
+      <span class="ket-card-title">7-12月听力训练路线图</span>
+      <span class="ket-card-subtitle">当前阶段已高亮</span>
+    </div>
+    <div class="ket-timeline" id="timeline"></div>
+  </div>
+</div>
+
+<!-- TAB 2 -->
+<div class="ket-tab-panel" id="tab2">
+  <div class="ket-cat-tabs" id="resCatTabs">
+    <button class="ket-cat-tab active" data-cat="pan">☁️ 百度网盘</button>
+    <button class="ket-cat-tab" data-cat="app">📱 App工具</button>
+    <button class="ket-cat-tab" data-cat="book">📚 教材推荐</button>
+    <button class="ket-cat-tab" data-cat="vocab">📝 词汇表</button>
+    <button class="ket-cat-tab" data-cat="exam">📋 报名信息</button>
+  </div>
+  <div class="ket-resource-grid" id="resourceGrid"></div>
+  <div class="vocab-progress-panel" id="vocabProgressPanel" style="display:none">
+    <span class="vocab-label">📝 已背单词数：</span>
+    <input type="number" id="vocabInput" min="0" max="1500" value="0" onchange="saveVocabProgress()">
+    <span class="vocab-label">/ 1500 词</span>
+    <button onclick="saveVocabProgress()">💾 保存进度</button>
+  </div>
+</div>
+
+<!-- TAB 3 -->
+<div class="ket-tab-panel" id="tab3">
+  <div class="ket-print-grid" id="printGrid"></div>
+</div>
+
+<!-- TAB 4 -->
+<div class="ket-tab-panel" id="tab4">
+  <div class="ket-cal-top">
+    <div class="ket-month-selector" id="monthSelector"></div>
+    <div class="ket-progress-wrap">
+      <div class="ket-progress-bar"><div class="ket-progress-fill" id="progressFill" style="width:0%"></div></div>
+      <span class="ket-progress-text" id="progressText">0/0</span>
+    </div>
+  </div>
+  <div class="ket-cal-grid" id="calGrid"></div>
+</div>
+
+<!-- TAB 5: 数据看板 -->
+<div class="ket-tab-panel" id="tab5">
+  <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+    <button class="ket-footer-btn export-btn" onclick="exportData()">📥 导出数据 (CSV)</button>
+  </div>
+  <div class="dash-grid">
+    <div class="dash-card" id="dashModule1"></div>
+    <div class="dash-card" id="dashModule4"></div>
+    <div class="dash-card full" id="dashModule2"></div>
+  </div>
+  <div class="dash-grid">
+    <div class="dash-card" id="dashModule3"></div>
+    <div class="dash-card" id="dashModule5"></div>
+  </div>
+  <div class="dash-card full" id="dashModule6" style="margin-bottom:20px"></div>
+</div>
+
+</div>
+
+<div class="ket-modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="ket-modal" id="modalContent"></div>
+</div>
+
+<footer class="ket-footer">
+  <button class="ket-footer-btn primary" onclick="printTodayTasks()">🖨️ 打印今日任务</button>
+  <button class="ket-footer-btn" onclick="copyBaiduLinks()">📋 复制网盘链接</button>
+  <span style="font-size:11px;color:var(--text-dim);margin-left:8px" id="copyMsg"></span>
+</footer>
+
+<script>
+// ====== DATA ======
+var dailyTasks = [
+  {id:'t1', emoji:'🎧', title:'K5倾听者下载真题 + 定时播放', desc:'每日30分钟以上，放学后/睡前固定时段'},
+  {id:'t2', emoji:'📱', title:'咔咔背-KET 打卡', desc:'按艾宾浩斯遗忘曲线自动复习，每天10-15个单词'},
+  {id:'t3', emoji:'📋', title:'家长检查打卡情况', desc:'确认前两项已完成，咔咔背App内查看打卡记录'}
+];
+
+var timeline = [
+  {month:6, label:'准备期', detail:'了解KET考试形式，准备设备（K5倾听者），注册咔咔背账号，收集学习资源', time:'本月'},
+  {month:7, label:'建立听力习惯', detail:'15分钟/天 · 英语动画 + 儿歌 · 0.8倍速', time:'7月'},
+  {month:8, label:'过渡期', detail:'20分钟/天 · RAZ分级阅读 + Little Fox动画', time:'8月'},
+  {month:9, label:'KET入门', detail:'25分钟/天 · KET真题听力 Part 1-2 · 0.75倍速 · 可可英语辅助', time:'9月'},
+  {month:10, label:'真题突破', detail:'30分钟/天 · KET真题听力 Part 1-5完整 · 正常1.0x速度', time:'10月'},
+  {month:11, label:'真题强化', detail:'30分钟/天 · 正常/1.0x速度 + AB复读精听 · 错题回顾', time:'11月'},
+  {month:12, label:'冲刺期', detail:'35分钟/天 · 模拟题全套 · 1.2倍速训练 · 适应考试节奏', time:'12月'}
+];
+
+var listenMinMap = {6:15,7:15,8:20,9:25,10:30,11:30,12:35};
+
+var resources = {
+  pan: [
+    {icon:'📦', name:'KET真题合集', desc:'剑桥KET官方真题集 1-7 + 青少版真题，含听力音频和答案', tag:'核心资源', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'三级合集（剑少→KET→PET）', desc:'剑桥少儿英语三级 + KET + PET 全套过渡资源', tag:'7月启用', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'Power Up 教材全套', desc:'剑桥Power Up 1-6级 学生书+练习册+音频+白板软件', tag:'基础教材', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'Think 教材全套', desc:'剑桥Think Starter-5级 学生书+练习册+音频+视频', tag:'进阶教材', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'COMPLETE KET 全套', desc:'官方备考主教材 学生书+教师书+练习册+音频', tag:'主教材', tip:'⚠️ 需手动从百度网盘下载'}
+  ],
+  app: [
+    {icon:'📱', name:'咔咔背-KET', desc:'艾宾浩斯遗忘曲线背单词App，内置KET核心1500词库，自动安排每日复习', tag:'每日必用'},
+    {icon:'📱', name:'可可英语', desc:'海量英语听力资源 + 口语跟读打分，KET真题听力专区，支持倍速调节', tag:'听力+口语'},
+    {icon:'📱', name:'英语趣配音', desc:'通过给动画/电影片段配音练口语，趣味性强，适合保持学习兴趣', tag:'口语趣味'},
+    {icon:'🎧', name:'K5倾听者（硬件）', desc:'复读机硬件设备，下载MP3后离线播放，支持AB复读、变速播放，核心听力训练工具', tag:'必备硬件'}
+  ],
+  book: [
+    {icon:'📚', name:'COMPLETE KET', desc:'剑桥官方KET备考主教材，14个单元覆盖全部考点，适合系统学习', tag:'主教材 · 核心'},
+    {icon:'📚', name:'KET Trainer', desc:'精讲精练，6套完整模拟题 + 详细解析，适合刷题提分', tag:'刷题必备'},
+    {icon:'📚', name:'Compact KET', desc:'紧凑型备考教材，适合时间紧张时快速过一遍考点', tag:'快速备考'},
+    {icon:'📚', name:'Power Up', desc:'剑桥少儿到KET的过渡教材，适合基础薄弱的孩子打基础', tag:'基础入门'},
+    {icon:'📚', name:'Think', desc:'剑桥青少英语教材，高于KET难度，适合学有余力时拓展', tag:'进阶拓展'}
+  ],
+  vocab: [
+    {icon:'📝', name:'KET核心词汇表', desc:'约1500个高频词汇，按18个主题分类：家庭、学校、食物、交通、天气、运动、购物、健康、工作、娱乐、自然、科技、节日、服装、城市、动物、时间、情感', tag:'必背'},
+    {icon:'📝', name:'动词短语汇总', desc:'常考动词短语120个：get up, look after, turn on/off, put on, take off, pick up等', tag:'高频'},
+    {icon:'📝', name:'固定搭配汇总', desc:'make/do/have/take/go等高频动词的固定搭配表', tag:'易错'}
+  ],
+  exam: [
+    {icon:'📋', name:'考试时间', desc:'2027年1月（具体日期待官方公布），通常为周六', tag:'倒计时'},
+    {icon:'📋', name:'报名时间', desc:'考前约3个月开放报名，预计2026年10月左右。关注剑桥英语官网公告', tag:'10月关注'},
+    {icon:'📋', name:'考点查询', desc:'全国主要城市均有考点：北京、上海、广州、深圳、杭州、南京、成都、武汉等。官网可查就近考点', tag:'提前踩点'},
+    {icon:'📋', name:'考试费用', desc:'KET考试费约500元人民币（以官方最新公告为准）', tag:'预算'}
+  ]
+};
+
+var printItems = [
+  {id:'p1', icon:'📝', title:'词汇速记检查清单', desc:'按主题分类的KET核心词汇速记表，含中文释义，可打印贴在书桌前', type:'table'},
+  {id:'p2', icon:'📊', title:'分数记录表', desc:'每次模考后记录分数，跟踪各模块进步曲线', type:'table'},
+  {id:'p3', icon:'🗓️', title:'每周时间安排表', desc:'周一至周日学习计划模板，合理分配听说读写时间', type:'table'},
+  {id:'p4', icon:'🎯', title:'三遍精听法操作卡', desc:'听力训练的标准操作流程卡片，放在K5倾听器旁边', type:'modal'},
+  {id:'p5', icon:'🚑', title:'考场救命技巧卡', desc:'10条考场快速提分技巧，考前必看', type:'modal'},
+  {id:'p6', icon:'🗺️', title:'7-12月学习路线图', desc:'A4一页纸全景图，贴墙上随时查看进度', type:'modal'}
+];
+
+var calendarData = {
+  7: {tasks:[
+    {id:'c71', text:'购买K5倾听者复读机（京东/淘宝，约200-300元）'},
+    {id:'c72', text:'注册咔咔背-KET账号，导入KET1500词库'},
+    {id:'c73', text:'从百度网盘下载KET真题合集+音频到K5倾听者'},
+    {id:'c74', text:'下载可可英语App，收藏KET真题听力频道'},
+    {id:'c75', text:'和孩子一起制定每日15分钟听力时间（固定时段）'}
+  ], reminder:'🔑 关键提醒：7月重点是"建立习惯"而非"追求效果"。让孩子先适应每天听英语的节奏，0.8倍速起步，不要一上来就正常速度。购买K5倾听者时注意选支持AB复读的型号。'},
+  8: {tasks:[
+    {id:'c81', text:'升级每日听力到20分钟，引入RAZ分级阅读音频'},
+    {id:'c82', text:'下载Little Fox动画资源，每天看1集（约5分钟）'},
+    {id:'c83', text:'咔咔背每日打卡保持，复习+新词各占一半'},
+    {id:'c84', text:'检查孩子对0.8倍速的适应情况，准备过渡到正常速度'}
+  ], reminder:'🔑 关键提醒：8月是承上启下的过渡月。RAZ建议从Level D-E开始，Little Fox选Level 3-4。此时不要急于做真题，重点是积累听力词汇量。'},
+  9: {tasks:[
+    {id:'c91', text:'开始KET真题听力训练，25分钟/天，0.75倍速起步'},
+    {id:'c92', text:'完成COMPLETE教材Unit 1-4（第一遍系统学习）'},
+    {id:'c93', text:'关注剑桥英语官网，设置报名通知提醒'},
+    {id:'c94', text:'咔咔背打卡升级到每天15个单词'}
+  ], reminder:'🔑 关键提醒：9月正式进入KET备考。⚠️ 重要：关注KET报名官网通知（约10月开放报名），提前准备好考生照片（白底证件照电子版）。'},
+  10: {tasks:[
+    {id:'c101', text:'听力升级到30分钟/天，正常1.0x速度'},
+    {id:'c102', text:'完成COMPLETE教材Unit 5-10'},
+    {id:'c103', text:'开始做Trainer模拟题第一套，记录分数'},
+    {id:'c104', text:'KET报名！准备好照片和身份证信息'}
+  ], reminder:'🔑 关键提醒：10月是报名月 + 真题突破月！一旦开放报名立即抢位（热门城市名额紧张）。听力开始用正常速度，孩子可能会觉得快，坚持1-2周就能适应。'},
+  11: {tasks:[
+    {id:'c111', text:'听力30分钟/天，AB复读精听错题段落'},
+    {id:'c112', text:'完成Trainer模拟题第2-4套，对比分数变化'},
+    {id:'c113', text:'口语开始模拟练习：英语趣配音 + 家长模拟考官'},
+    {id:'c114', text:'梳理KET写作模板：邮件格式 + 看图写话框架'}
+  ], reminder:'🔑 关键提醒：11月是强化月，重点攻克弱项。如果听力分数停滞不前，回到0.75倍速做精听。口语不要忽略，考试占比25%。家长可以扮演口语考官，用网上可查的KET口语真题练习。'},
+  12: {tasks:[
+    {id:'c121', text:'听力升级到35分钟/天，1.2倍速冲刺训练'},
+    {id:'c122', text:'完成Trainer最后2套模拟题，目标稳定在130分以上'},
+    {id:'c123', text:'打印准考证（通常考前2周官网下载）'},
+    {id:'c124', text:'踩点考场：确认交通路线、考场位置、周边环境'}
+  ], reminder:'🔑 关键提醒：12月是冲刺月！打印准考证、踩点考场是硬任务不能忘。最后一周降低强度，不再刷新题，回顾错题本和技巧卡。考试当天带齐：准考证+身份证+2B铅笔+橡皮+黑色签字笔。'}
+};
+
+// ====== UTILS ======
+function getLS(key) {
+  try { return JSON.parse(localStorage.getItem(key) || '{}'); } catch(e) { return {}; }
+}
+function setLS(key, val) {
+  localStorage.setItem(key, JSON.stringify(val));
+}
+function getToday() {
+  var d = new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function getNowMonth() { return new Date().getMonth() + 1; }
+function fmtDate(d) {
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function dateObj(s) { var p=s.split('-'); return new Date(+p[0],+p[1]-1,+p[2]); }
+
+// ====== MIGRATION ======
+(function migrateOldData() {
+  if (localStorage.getItem('ket_checkin_log')) return;
+  var today = getToday();
+  var newLog = getLS('ket_checkin_log') || {};
+  var migrated = false;
+
+  var oldTab1 = getLS('ket_tab1_tasks');
+  if (Object.keys(oldTab1).length > 0) {
+    var m = {t1:'tab1_task1',t2:'tab1_task2',t3:'tab1_task3'};
+    for (var k in m) { if (oldTab1[k]) { newLog[m[k]] = [today]; migrated = true; } }
+    localStorage.removeItem('ket_tab1_tasks');
+  }
+
+  var oldTab4 = getLS('ket_tab4_tasks');
+  if (Object.keys(oldTab4).length > 0) {
+    for (var k in oldTab4) {
+      if (oldTab4[k]) {
+        var month = parseInt(k.substring(1, k.length - 1));
+        var tn = k.substring(k.length - 1);
+        newLog['tab4_m' + month + '_task' + tn] = [today];
+        migrated = true;
+      }
+    }
+    localStorage.removeItem('ket_tab4_tasks');
+  }
+
+  if (migrated || Object.keys(newLog).length > 0) {
+    setLS('ket_checkin_log', newLog);
+  }
+})();
+
+// ====== COUNTDOWN ======
+function updateCountdown() {
+  var examDate = new Date('2027-01-15');
+  var now = new Date();
+  var diff = Math.ceil((examDate - now) / (1000 * 60 * 60 * 24));
+  document.getElementById('countdown').textContent = '距考试约 ' + diff + ' 天';
+}
+updateCountdown();
+
+// ====== TAB SWITCHING ======
+var currentTab = 'tab1';
+var dashRendered = false;
+
+function switchTab(name) {
+  currentTab = name;
+  document.querySelectorAll('.ket-tab').forEach(function(t) { t.classList.toggle('active', t.dataset.tab === name); });
+  document.querySelectorAll('.ket-tab-panel').forEach(function(p) { p.classList.toggle('active', p.id === name); });
+  if (name === 'tab5' && !dashRendered) {
+    setTimeout(function() {
+      renderAllDashboard();
+      dashRendered = true;
+    }, 120);
+  } else if (name === 'tab5' && dashRendered) {
+    setTimeout(refreshDashboard, 80);
+  }
+}
+
+document.querySelectorAll('.ket-tab').forEach(function(t) {
+  t.addEventListener('click', function() { switchTab(this.dataset.tab); });
+});
+
+// ====== AUTO-SWITCH LOGIC ======
+(function autoSwitchTab() {
+  var today = getToday();
+  var lastOpened = localStorage.getItem('ket_today_opened');
+  if (lastOpened === today) return; // already opened today, use default tab logic
+
+  localStorage.setItem('ket_today_opened', today);
+
+  var log = getLS('ket_checkin_log');
+  var t1 = (log['tab1_task1'] || []).indexOf(today) >= 0;
+  var t2 = (log['tab1_task2'] || []).indexOf(today) >= 0;
+  var t3 = (log['tab1_task3'] || []).indexOf(today) >= 0;
+  if (t1 && t2 && t3) {
+    // All done → Tab5
+    switchTab('tab5');
+    return;
+  }
+
+  // Not all done → Tab1
+  var m = getNowMonth();
+  if (m >= 6 && m <= 7) switchTab('tab1');
+  else if (m >= 8 && m <= 11) switchTab('tab2');
+  else if (m === 12) switchTab('tab4');
+  else switchTab('tab1');
+})();
+
+// ====== STORAGE HELPERS ======
+function getCheckinLog() { return getLS('ket_checkin_log'); }
+function saveCheckinLog(log) { setLS('ket_checkin_log', log); }
+
+function isCheckedToday(key) {
+  var log = getCheckinLog();
+  return (log[key] || []).indexOf(getToday()) >= 0;
+}
+
+function toggleDateStamp(key) {
+  var log = getCheckinLog();
+  var dates = log[key] || [];
+  var today = getToday();
+  var idx = dates.indexOf(today);
+  if (idx >= 0) { dates.splice(idx, 1); }
+  else { dates.push(today); dates.sort(); }
+  log[key] = dates;
+  saveCheckinLog(log);
+}
+
+// ====== TAB 1 ======
+(function renderTab1() {
+  var log = getCheckinLog();
+  var html = '';
+  var keyMap = {t1:'tab1_task1', t2:'tab1_task2', t3:'tab1_task3'};
+  dailyTasks.forEach(function(t) {
+    var key = keyMap[t.id];
+    var done = (log[key] || []).indexOf(getToday()) >= 0;
+    html += '<div class="ket-check' + (done ? ' checked' : '') + '" onclick="toggleTask1(\'' + t.id + '\')">';
+    html += '<div class="ket-checkbox">✓</div>';
+    html += '<div class="ket-check-content">';
+    html += '<div class="ket-check-text">' + t.emoji + ' ' + t.title + '</div>';
+    html += '<div class="ket-check-desc">' + t.desc + '</div>';
+    html += '</div></div>';
+  });
+  document.getElementById('dailyTasks').innerHTML = html;
+
+  var nowMonth = getNowMonth();
+  var tlHtml = '';
+  timeline.forEach(function(n) {
+    var cls = n.month < nowMonth ? 'done' : (n.month === nowMonth ? 'current' : 'future');
+    tlHtml += '<div class="ket-tl-node ' + cls + '">';
+    tlHtml += '<div class="ket-tl-month">' + n.time + '</div>';
+    tlHtml += '<div class="ket-tl-label">' + n.label + '</div>';
+    tlHtml += '<div class="ket-tl-detail">' + n.detail + '</div>';
+    tlHtml += '</div>';
+  });
+  document.getElementById('timeline').innerHTML = tlHtml;
+})();
+
+function toggleTask1(id) {
+  var keyMap = {t1:'tab1_task1', t2:'tab1_task2', t3:'tab1_task3'};
+  toggleDateStamp(keyMap[id]);
+  (function renderTab1() {
+    var log = getCheckinLog();
+    var html = '';
+    dailyTasks.forEach(function(t) {
+      var key = keyMap[t.id];
+      var done = (log[key] || []).indexOf(getToday()) >= 0;
+      html += '<div class="ket-check' + (done ? ' checked' : '') + '" onclick="toggleTask1(\'' + t.id + '\')">';
+      html += '<div class="ket-checkbox">✓</div>';
+      html += '<div class="ket-check-content">';
+      html += '<div class="ket-check-text">' + t.emoji + ' ' + t.title + '</div>';
+      html += '<div class="ket-check-desc">' + t.desc + '</div>';
+      html += '</div></div>';
+    });
+    document.getElementById('dailyTasks').innerHTML = html;
+  })();
+  // Invalidate dashboard cache
+  dashRendered = false;
+}
+
+// ====== TAB 2 ======
+var currentResCat = 'pan';
+document.getElementById('resCatTabs').addEventListener('click', function(e) {
+  if (e.target.classList.contains('ket-cat-tab')) {
+    currentResCat = e.target.dataset.cat;
+    document.querySelectorAll('#resCatTabs .ket-cat-tab').forEach(function(b) { b.classList.remove('active'); });
+    e.target.classList.add('active');
+    renderResources();
+  }
+});
+
+function renderResources() {
+  var items = resources[currentResCat] || [];
+  var html = '';
+  items.forEach(function(r) {
+    html += '<div class="ket-res-card">';
+    html += '<div class="ket-res-icon">' + r.icon + '</div>';
+    html += '<div class="ket-res-name">' + r.name + '</div>';
+    html += '<div class="ket-res-desc">' + r.desc + '</div>';
+    html += '<div><span class="ket-res-tag">' + r.tag + '</span></div>';
+    if (r.tip) html += '<div class="ket-res-tip">' + r.tip + '</div>';
+    html += '</div>';
+  });
+  document.getElementById('resourceGrid').innerHTML = html;
+
+  // Show vocab progress panel only for vocab category
+  var panel = document.getElementById('vocabProgressPanel');
+  if (currentResCat === 'vocab') {
+    panel.style.display = 'flex';
+    var v = parseInt(localStorage.getItem('ket_vocab_progress')) || 0;
+    document.getElementById('vocabInput').value = v;
+  } else {
+    panel.style.display = 'none';
+  }
+}
+renderResources();
+
+function saveVocabProgress() {
+  var val = parseInt(document.getElementById('vocabInput').value) || 0;
+  if (val < 0) val = 0; if (val > 1500) val = 1500;
+  localStorage.setItem('ket_vocab_progress', val);
+  document.getElementById('vocabInput').value = val;
+  dashRendered = false;
+}
+
+// ====== TAB 3 ======
+(function renderPrint() {
+  var html = '';
+  printItems.forEach(function(item) {
+    html += '<div class="ket-print-card" id="printCard-' + item.id + '">';
+    html += '<button class="print-btn" onclick="event.stopPropagation();handlePrint(\'' + item.id + '\')">🖨️ 打印</button>';
+    html += '<div class="ket-print-icon">' + item.icon + '</div>';
+    html += '<div class="ket-print-title">' + item.title + '</div>';
+    html += '<div class="ket-print-desc">' + item.desc + '</div>';
+    if (item.type === 'table') {
+      html += '<div id="printContent-' + item.id + '"></div>';
+    } else {
+      html += '<div style="text-align:center;padding:12px;color:var(--cyan);font-size:13px;cursor:pointer" onclick="event.stopPropagation();openPrintModal(\'' + item.id + '\')">📖 点击查看完整内容</div>';
+    }
+    html += '</div>';
+  });
+  document.getElementById('printGrid').innerHTML = html;
+  renderVocabTable(); renderScoreTable(); renderScheduleTable();
+})();
+
+function renderVocabTable() {
+  var topics = [
+    ['家庭','father, mother, brother, sister, uncle, aunt, cousin, grandson, granddaughter, husband, wife, parent, child, relative'],
+    ['学校','classroom, blackboard, textbook, notebook, pencil, ruler, eraser, homework, exam, subject, teacher, student, playground, library'],
+    ['食物','bread, rice, noodle, egg, milk, cheese, chicken, fish, vegetable, fruit, apple, banana, orange, cake, sandwich, soup'],
+    ['交通','bus, train, taxi, bicycle, car, plane, airport, station, ticket, passenger, driver, traffic, journey, map, road'],
+    ['天气','sunny, rainy, cloudy, windy, snowy, hot, cold, warm, cool, temperature, umbrella, weather, forecast, storm, fog'],
+    ['运动','football, basketball, tennis, swimming, running, cycling, gym, match, player, team, winner, exercise, healthy, competition'],
+    ['购物','supermarket, shop, price, cheap, expensive, money, pound, pence, receipt, customer, buy, sell, size, color, discount'],
+    ['健康','hospital, doctor, nurse, medicine, headache, toothache, fever, appointment, patient, healthy, exercise, rest, sleep, ill']
+  ];
+  var html = '<table class="ket-print-table"><thead><tr><th>主题</th><th>核心词汇</th></tr></thead><tbody>';
+  topics.forEach(function(t) { html += '<tr><td><b>'+t[0]+'</b></td><td>'+t[1]+'</td></tr>'; });
+  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">共8大主题，完整1500词请参考咔咔背-KET App词库</div>';
+  document.getElementById('printContent-p1').innerHTML = html;
+}
+
+function renderScoreTable() {
+  var html = '<table class="ket-print-table"><thead><tr><th>日期</th><th>试卷</th><th>阅读写作(50%)</th><th>听力(25%)</th><th>口语(25%)</th><th>总分</th><th>备注</th></tr></thead><tbody>';
+  for (var i = 0; i < 8; i++) { html += '<tr><td>____/____</td><td>Trainer '+(i+1)+'</td><td></td><td></td><td></td><td></td><td></td></tr>'; }
+  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">及格线120分，优秀线133分，卓越线140分（满分150）</div>';
+  document.getElementById('printContent-p2').innerHTML = html;
+}
+
+function renderScheduleTable() {
+  var days = ['周一','周二','周三','周四','周五','周六','周日'];
+  var html = '<table class="ket-print-table"><thead><tr><th>时段</th>'+days.map(function(d){return '<th>'+d+'</th>';}).join('')+'</tr></thead><tbody>';
+  var rows = [['早晨 (7:00-7:30)'],['放学后 (16:30-17:00)'],['晚饭后 (19:00-19:30)'],['睡前 (20:30-21:00)']];
+  rows.forEach(function(r) {
+    html += '<tr><td><b>'+r[0]+'</b></td>';
+    for (var i = 0; i < 7; i++) html += '<td></td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">建议：周一至周五每天2个时段，周末每天3个时段，每周合计约12-14小时</div>';
+  document.getElementById('printContent-p3').innerHTML = html;
+}
+
+function handlePrint(id) {
+  if (id === 'p1' || id === 'p2' || id === 'p3') { window.print(); }
+  else { openPrintModal(id); }
+}
+
+function openPrintModal(id) {
+  var item = printItems.find(function(p) { return p.id === id; });
+  if (!item) return;
+  var content = '';
+  if (id === 'p4') {
+    content = '<h3>🎯 三遍精听法操作卡</h3>'+
+      '<div style="background:rgba(108,92,231,0.08);padding:14px;border-radius:10px;margin:10px 0">'+
+      '<p><span class="step-num">1</span><b>第一遍：盲听（不暂停）</b></p><p style="margin-left:32px;color:var(--text-dim)">完整听一遍，不按暂停。目标：抓住大意，知道在讲什么。听完后用一句话概括内容。</p>'+
+      '<p style="margin-top:12px"><span class="step-num">2</span><b>第二遍：逐句精听（逐句暂停）</b></p><p style="margin-left:32px;color:var(--text-dim)">每句话暂停一次，尝试复述或写下关键词。听不懂的标记出来，不要回退。这一遍的目标是抓细节。</p>'+
+      '<p style="margin-top:12px"><span class="step-num">3</span><b>第三遍：对照原文（看着文本听）</b></p><p style="margin-left:32px;color:var(--text-dim)">打开听力原文，边看边听。重点关注第二遍没听懂的地方。标记生词加入咔咔背复习队列。</p>'+
+      '</div>'+
+      '<p><b>适用场景：</b>KET Part 3-5 长对话/独白</p><p><b>工具配合：</b>K5倾听者AB复读模式 + 可可英语逐句播放</p><p><b>耗时：</b>约15-20分钟/篇</p>';
+  } else if (id === 'p5') {
+    content = '<h3>🚑 考场救命技巧卡（10条）</h3><ol style="line-height:2">'+
+      '<li><b>听力前快速浏览题目：</b>利用Direction时间把题目关键词划出来，预测对话场景。</li>'+
+      '<li><b>听力第二遍查漏补缺：</b>KET听力放两遍，第一遍不确定的，第二遍重点听。</li>'+
+      '<li><b>阅读先看问题再读文章：</b>带着问题找答案，不要逐字读完全文。</li>'+
+      '<li><b>遇到生词不要慌：</b>根据上下文猜意思，KET不需要认识所有单词。</li>'+
+      '<li><b>写作邮件格式分白送：</b>Dear + 开头问候 + 正文 + Best wishes + 署名，这5部分不漏就能拿格式分。</li>'+
+      '<li><b>看图写话用5W1H：</b>Who/What/Where/When/Why/How，每张图写2-3句话。</li>'+
+      '<li><b>口语回答要完整句：</b>不要只蹦单词，考官问"Do you like music?"要回答"Yes, I like music because..."。</li>'+
+      '<li><b>口语不会说别停：</b>想不起来用"Well, let me think..."或"I\'m not sure but I think..."争取时间。</li>'+
+      '<li><b>答题卡填涂要清晰：</b>用2B铅笔，修改要擦干净，不要折答题卡。</li>'+
+      '<li><b>最后5分钟检查：</b>优先检查答题卡是否填完，再回看标记的不确定题目。</li></ol>';
+  } else if (id === 'p6') {
+    content = '<h3>🗺️ 7-12月 KET学习路线图</h3>'+
+      '<div style="background:rgba(0,212,255,0.06);padding:16px;border-radius:10px;line-height:2.2">'+
+      '<p><b>7月 🔧 准备期</b> — 购买设备(K5) · 注册App(咔咔背+可可英语) · 收集资源</p>'+
+      '<p><b>8月 🌱 习惯期</b> — 20min/天 听力 · RAZ+Little Fox · 培养每日英语习惯</p>'+
+      '<p><b>9月 🚀 KET入门</b> — 25min/天 真题听力 · COMPLETE U1-4 · 关注报名</p>'+
+      '<p><b>10月 📈 真题突破</b> — 30min/天 正常速度 · COMPLETE U5-10 · 报名+KET Trainer</p>'+
+      '<p><b>11月 💪 强化训练</b> — 30min/天 AB精听 · Trainer模考 · 口语+写作专项</p>'+
+      '<p><b>12月 🏁 冲刺</b> — 35min/天 1.2x速 · 打印准考证 · 踩点考场 · 回顾错题</p></div>'+
+      '<p style="margin-top:12px"><b>🎯 目标分数：</b>130+（优秀线，对应CEFR A2水平）</p>'+
+      '<p><b>⏱️ 总规划时长：</b>每周12-15小时 × 24周 ≈ 288-360小时</p>';
+  }
+  document.getElementById('modalContent').innerHTML =
+    '<div class="ket-modal-header"><span style="font-size:18px;font-weight:700">'+item.icon+' '+item.title+'</span><button class="ket-modal-close" onclick="closeModal()">✕</button></div>'+
+    '<div class="ket-modal-body">'+content+'<div style="text-align:center;margin-top:16px"><button class="ket-footer-btn primary" onclick="window.print()">🖨️ 打印此内容</button></div></div>';
+  document.getElementById('modalOverlay').classList.add('active');
+}
+
+function closeModal() { document.getElementById('modalOverlay').classList.remove('active'); }
+
+// ====== TAB 4 ======
+var currentCalMonth = getNowMonth();
+if (currentCalMonth < 7) currentCalMonth = 7;
+if (currentCalMonth > 12) currentCalMonth = 7;
+
+(function renderCalendar() {
+  var selHtml = '';
+  for (var m = 7; m <= 12; m++) {
+    var nowM = getNowMonth();
+    var cls = (m < nowM ? 'done' : '') + (m === currentCalMonth ? ' active' : '');
+    selHtml += '<button class="ket-month-btn '+cls.trim()+'" data-month="'+m+'" onclick="selectMonth('+m+')">'+m+'月</button>';
+  }
+  document.getElementById('monthSelector').innerHTML = selHtml;
+  renderCalCards();
+})();
+
+function selectMonth(m) {
+  currentCalMonth = m;
+  document.querySelectorAll('.ket-month-btn').forEach(function(b) {
+    var nowM = getNowMonth(); var bm = parseInt(b.dataset.month);
+    var cls = (bm < nowM ? 'done' : '') + (bm === m ? ' active' : '');
+    b.className = 'ket-month-btn ' + cls.trim();
+  });
+  renderCalCards();
+}
+
+function tab4TaskKey(id) {
+  var month = parseInt(id.substring(1, id.length - 1));
+  var tn = id.substring(id.length - 1);
+  return 'tab4_m' + month + '_task' + tn;
+}
+
+function renderCalCards() {
+  var log = getCheckinLog();
+  var cd = calendarData[currentCalMonth];
+  if (!cd) return;
+
+  // Overall progress
+  var totalAll = 0, doneAll = 0;
+  for (var m = 7; m <= 12; m++) {
+    var cm = calendarData[m]; if (!cm) continue;
+    cm.tasks.forEach(function(t) {
+      totalAll++;
+      var key = tab4TaskKey(t.id);
+      if ((log[key] || []).indexOf(getToday()) >= 0) doneAll++;
+    });
+  }
+  var pct = totalAll > 0 ? Math.round(doneAll / totalAll * 100) : 0;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = doneAll + '/' + totalAll + ' (' + pct + '%)';
+
+  var tasksHtml = '';
+  cd.tasks.forEach(function(t) {
+    var key = tab4TaskKey(t.id);
+    var done = (log[key] || []).indexOf(getToday()) >= 0;
+    tasksHtml += '<div class="ket-check' + (done ? ' checked' : '') + '" onclick="toggleCalTask(\'' + t.id + '\')">';
+    tasksHtml += '<div class="ket-checkbox">✓</div>';
+    tasksHtml += '<div class="ket-check-content"><div class="ket-check-text">' + t.text + '</div></div>';
+    tasksHtml += '</div>';
+  });
+
+  var todayChecked = cd.tasks.filter(function(t) { return (log[tab4TaskKey(t.id)] || []).indexOf(getToday()) >= 0; }).length;
+  var html = '<div class="ket-cal-card">';
+  html += '<div class="ket-cal-card-header"><span class="ket-cal-month">' + currentCalMonth + '月</span>';
+  html += '<span class="ket-cal-count">今日 ' + todayChecked + '/' + cd.tasks.length + ' 完成</span></div>';
+  html += '<div class="ket-cal-tasks">' + tasksHtml + '</div>';
+  html += '<div class="ket-cal-reminder">' + cd.reminder + '</div></div>';
+  document.getElementById('calGrid').innerHTML = html;
+}
+
+function toggleCalTask(id) {
+  toggleDateStamp(tab4TaskKey(id));
+  renderCalCards();
+  dashRendered = false;
+}
+
+// ====== DASHBOARD ======
+var chartInstances = {};
+
+function destroyChart(key) {
+  if (chartInstances[key]) { chartInstances[key].destroy(); chartInstances[key] = null; }
+}
+
+function getAllDatesFromLog() {
+  var log = getCheckinLog();
+  var dateSet = {};
+  for (var k in log) {
+    if (!log.hasOwnProperty(k)) continue;
+    log[k].forEach(function(d) { dateSet[d] = true; });
+  }
+  return Object.keys(dateSet).sort();
+}
+
+function countTasksOnDate(d) {
+  var log = getCheckinLog();
+  var cnt = 0;
+  for (var k in log) {
+    if (!log.hasOwnProperty(k)) continue;
+    if (log[k].indexOf(d) >= 0) cnt++;
+  }
+  return cnt;
+}
+
+function countTab1TasksOnDate(d) {
+  var log = getCheckinLog();
+  var cnt = 0;
+  if ((log['tab1_task1']||[]).indexOf(d)>=0) cnt++;
+  if ((log['tab1_task2']||[]).indexOf(d)>=0) cnt++;
+  if ((log['tab1_task3']||[]).indexOf(d)>=0) cnt++;
+  return cnt;
+}
+
+function countTab4TasksOnDate(d) {
+  var log = getCheckinLog();
+  var cnt = 0;
+  for (var k in log) {
+    if (!log.hasOwnProperty(k) || k.indexOf('tab4_') !== 0) continue;
+    if (log[k].indexOf(d) >= 0) cnt++;
+  }
+  return cnt;
+}
+
+function countTab4TasksForMonth(log, m) {
+  var prefix = 'tab4_m' + m + '_task';
+  var total = 0, done = 0;
+  for (var k in log) {
+    if (!log.hasOwnProperty(k) || k.indexOf(prefix) !== 0) continue;
+    total++;
+    if (log[k].length > 0) done++;
+  }
+  return {total: total, done: done};
+}
+
+// ---- Module 1: 连续打卡 + 本月打卡率 ----
+function renderModule1() {
+  var log = getCheckinLog();
+  var allDates = getAllDatesFromLog();
+  var today = getToday();
+  var todayObj = dateObj(today);
+
+  // Consecutive days
+  var consecutive = 0;
+  var d = new Date(todayObj);
+  while (true) {
+    var ds = fmtDate(d);
+    if (countTasksOnDate(ds) > 0) {
+      consecutive++;
+      d.setDate(d.getDate() - 1);
+    } else {
+      break;
+    }
+  }
+
+  // Monthly rate
+  var monthStart = new Date(todayObj.getFullYear(), todayObj.getMonth(), 1);
+  var daysElapsed = 0, daysWithCheckin = 0;
+  var cursor = new Date(monthStart);
+  while (cursor <= todayObj) {
+    daysElapsed++;
+    if (countTasksOnDate(fmtDate(cursor)) > 0) daysWithCheckin++;
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  var monthRate = daysElapsed > 0 ? Math.round(daysWithCheckin / daysElapsed * 100) : 0;
+
+  // All done today?
+  var allDoneToday = ((log['tab1_task1']||[]).indexOf(today)>=0 && (log['tab1_task2']||[]).indexOf(today)>=0 && (log['tab1_task3']||[]).indexOf(today)>=0);
+
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">🔥</span><span class="ket-card-title">打卡统计</span></div>';
+  html += '<div class="dash-stat-row">';
+  html += '<div class="dash-big-num"><div class="dash-big-num-val">' + consecutive + '</div><div class="dash-big-num-label">连续打卡天数</div></div>';
+  html += '<div class="dash-big-num"><div class="dash-big-num-val">' + monthRate + '%</div><div class="dash-big-num-label">本月打卡率</div><div class="dash-big-num-sub">' + daysWithCheckin + '/' + daysElapsed + ' 天</div></div>';
+  html += '<div class="dash-big-num">';
+  if (allDoneToday) {
+    html += '<div class="dash-big-num-val" style="font-size:32px">✅</div><div class="dash-big-num-label">今日全完成</div>';
+  } else {
+    html += '<div class="dash-big-num-val" style="font-size:32px;background:linear-gradient(135deg,var(--primary),var(--danger));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">⚠️</div><div class="dash-big-num-label">今日有未完成</div>';
+  }
+  html += '</div></div>';
+  document.getElementById('dashModule1').innerHTML = html;
+}
+
+// ---- Module 2: 30天热力图 ----
+function renderHeatmap() {
+  var today = new Date(); today.setHours(0,0,0,0);
+  var days = [];
+  for (var i = 29; i >= 0; i--) {
+    var d = new Date(today);
+    d.setDate(d.getDate() - i);
+    days.push({date: fmtDate(d), dow: d.getDay(), count: countTasksOnDate(fmtDate(d))});
+  }
+  // Group into columns (weeks), each column is Sun-Sat
+  // Find the Sunday of the first week
+  var firstDate = dateObj(days[0].date);
+  var firstSunday = new Date(firstDate);
+  firstSunday.setDate(firstSunday.getDate() - firstSunday.getDay());
+
+  var cols = [];
+  var currentCol = [];
+  var colSunday = new Date(firstSunday);
+  for (var w = 0; w < 5; w++) {
+    currentCol = [];
+    for (var dow = 0; dow < 7; dow++) {
+      var cellDate = new Date(colSunday);
+      cellDate.setDate(cellDate.getDate() + dow);
+      var ds = fmtDate(cellDate);
+      if (cellDate > today) { currentCol.push(null); continue; }
+      if (cellDate < firstDate && w === 0) { currentCol.push(null); continue; }
+      currentCol.push({date: ds, count: countTasksOnDate(ds)});
+    }
+    cols.push(currentCol);
+    colSunday.setDate(colSunday.getDate() + 7);
+  }
+
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">🗓️</span><span class="ket-card-title">30天打卡热力图</span></div>';
+  html += '<div class="heatmap-wrap">';
+  for (var ci = 0; ci < cols.length; ci++) {
+    html += '<div class="heatmap-col">';
+    for (var ri = 0; ri < cols[ci].length; ri++) {
+      var cell = cols[ci][ri];
+      if (!cell) {
+        html += '<div class="heatmap-cell empty"></div>';
+      } else {
+        var lv = cell.count >= 3 ? 'lv3' : (cell.count >= 2 ? 'lv2' : (cell.count >= 1 ? 'lv1' : 'lv0'));
+        html += '<div class="heatmap-cell '+lv+'"><span class="cell-tip">'+cell.date+' 完成 '+cell.count+' 项</span></div>';
+      }
+    }
+    html += '</div>';
+  }
+  html += '</div>';
+  html += '<div class="heatmap-legend"><span>少</span><span class="heatmap-legend-cell lg0"></span><span class="heatmap-legend-cell lg1"></span><span class="heatmap-legend-cell lg2"></span><span class="heatmap-legend-cell lg3"></span><span>多</span></div>';
+  document.getElementById('dashModule2').innerHTML = html;
+}
+
+// ---- Module 3: 听力时长累计 ----
+function renderListeningChart() {
+  destroyChart('listen');
+  var log = getCheckinLog();
+  var listenDates = (log['tab1_task1'] || []).slice().sort();
+  if (listenDates.length === 0) {
+    // Create a start point for June 1
+    var startDate = '2026-06-01';
+  }
+
+  // Compute cumulative minutes
+  var dataPoints = [];
+  var cumMin = 0;
+  // Start from June 1 or first checkin date
+  var startD = '2026-06-01';
+  if (listenDates.length > 0 && listenDates[0] < startD) startD = listenDates[0];
+  var startObj = dateObj(startD);
+  var endObj = listenDates.length > 0 ? dateObj(listenDates[listenDates.length - 1]) : new Date();
+  if (endObj < startObj) endObj = new Date(startObj);
+
+  // Group by week
+  var weekLabels = [];
+  var weekValues = [];
+  var currentWeek = 0;
+  var weekStart = new Date(startObj);
+  // Align to Monday
+  var dow = weekStart.getDay();
+  if (dow === 0) dow = 7;
+  weekStart.setDate(weekStart.getDate() - (dow - 1));
+
+  var cursor = new Date(startObj);
+  var lastWeekEnd = new Date(weekStart);
+  lastWeekEnd.setDate(lastWeekEnd.getDate() + 6);
+
+  var weekMin = 0;
+  var listenSet = {};
+  listenDates.forEach(function(d) { listenSet[d] = true; });
+
+  while (cursor <= endObj) {
+    var ds = fmtDate(cursor);
+    if (listenSet[ds]) {
+      var m = cursor.getMonth() + 1;
+      weekMin += (listenMinMap[m] || 15);
+    }
+    if (cursor.getTime() >= lastWeekEnd.getTime() || cursor.getTime() === endObj.getTime()) {
+      cumMin += weekMin;
+      currentWeek++;
+      weekLabels.push('W' + currentWeek);
+      weekValues.push(cumMin);
+      weekMin = 0;
+      lastWeekEnd.setDate(lastWeekEnd.getDate() + 7);
+    }
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  // Flush last partial week
+  if (weekMin > 0 || weekLabels.length === 0) {
+    cumMin += weekMin;
+    currentWeek++;
+    weekLabels.push('W' + currentWeek);
+    weekValues.push(cumMin);
+  }
+
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">🎧</span><span class="ket-card-title">听力时长累计</span><span class="ket-card-subtitle">总计时长 ' + cumMin + ' 分钟</span></div>';
+  html += '<div class="chart-wrap"><canvas id="listenChart"></canvas></div>';
+  document.getElementById('dashModule3').innerHTML = html;
+
+  if (weekLabels.length === 0 || weekValues.length === 0) {
+    weekLabels = ['W1']; weekValues = [0];
+  }
+
+  var ctx = document.getElementById('listenChart');
+  if (!ctx) return;
+  chartInstances['listen'] = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: weekLabels,
+      datasets: [{
+        label: '累计听力 (分钟)',
+        data: weekValues,
+        borderColor: '#A29BFE',
+        backgroundColor: 'rgba(162,155,254,0.1)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 2,
+        pointBackgroundColor: '#A29BFE'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { color: '#8892B0' } } },
+      scales: {
+        x: { ticks: { color: '#5A6480', maxTicksLimit: 13 }, grid: { color: 'rgba(255,255,255,0.04)' } },
+        y: { ticks: { color: '#5A6480' }, grid: { color: 'rgba(255,255,255,0.04)' } }
+      }
+    }
+  });
+}
+
+// ---- Module 4: 词汇进度 ----
+function renderVocabProgress() {
+  var v = parseInt(localStorage.getItem('ket_vocab_progress')) || 0;
+  if (v < 0) v = 0; if (v > 1500) v = 1500;
+  var pct = Math.round(v / 1500 * 100);
+  var circ = 2 * Math.PI * 54; // ≈ 339.292
+  var offset = circ * (1 - v / 1500);
+
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">📝</span><span class="ket-card-title">KET词汇学习进度</span></div>';
+  html += '<div style="display:flex;align-items:center;gap:20px;justify-content:center;flex-wrap:wrap">';
+  html += '<svg viewBox="0 0 120 120" width="140" height="140">';
+  html += '<defs><linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#A29BFE"/><stop offset="100%" stop-color="#00d4ff"/></linearGradient></defs>';
+  html += '<circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="8"/>';
+  html += '<circle cx="60" cy="60" r="54" fill="none" stroke="url(#ringGrad)" stroke-width="8" stroke-dasharray="'+circ.toFixed(2)+'" stroke-dashoffset="'+offset.toFixed(2)+'" stroke-linecap="round" transform="rotate(-90 60 60)" style="transition:stroke-dashoffset 0.6s"/>';
+  html += '<text x="60" y="56" text-anchor="middle" fill="white" font-size="22" font-weight="900">'+pct+'%</text>';
+  html += '<text x="60" y="74" text-anchor="middle" fill="#8892B0" font-size="11">'+v+'/1500</text>';
+  html += '</svg>';
+  html += '<div style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--cyan)">'+v+'</div><div style="font-size:13px;color:var(--text-dim)">已学单词</div><div style="font-size:28px;font-weight:900;color:var(--text-secondary);margin-top:10px">'+(1500-v)+'</div><div style="font-size:13px;color:var(--text-dim)">剩余单词</div></div>';
+  html += '</div>';
+  html += '<div style="text-align:center;font-size:11px;color:var(--text-dim);margin-top:12px">💡 在「武器库→词汇表」中更新已背单词数</div>';
+  document.getElementById('dashModule4').innerHTML = html;
+}
+
+// ---- Module 5: 家长日历完成率 ----
+function renderCalendarChart() {
+  destroyChart('cal');
+  var log = getCheckinLog();
+  var months = [7,8,9,10,11,12];
+  var labels = months.map(function(m) { return m+'月'; });
+  var rates = months.map(function(m) {
+    var r = countTab4TasksForMonth(log, m);
+    // Also count from calendarData for total
+    var cm = calendarData[m];
+    var total = cm ? cm.tasks.length : 0;
+    if (total === 0) return 0;
+    // Count how many tasks have at least one checkin
+    var prefix = 'tab4_m'+m+'_task';
+    var doneCnt = 0;
+    for (var k in log) {
+      if (!log.hasOwnProperty(k) || k.indexOf(prefix) !== 0) continue;
+      if (log[k].length > 0) doneCnt++;
+    }
+    return Math.round(doneCnt / total * 100);
+  });
+
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">📅</span><span class="ket-card-title">家长日历完成率</span></div>';
+  html += '<div class="chart-wrap"><canvas id="calChart"></canvas></div>';
+  document.getElementById('dashModule5').innerHTML = html;
+
+  var ctx = document.getElementById('calChart');
+  if (!ctx) return;
+  chartInstances['cal'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: '完成率 (%)',
+        data: rates,
+        backgroundColor: rates.map(function(r) { return r >= 80 ? 'rgba(0,184,148,0.5)' : (r >= 50 ? 'rgba(255,230,109,0.5)' : 'rgba(255,107,53,0.5)'); }),
+        borderColor: rates.map(function(r) { return r >= 80 ? '#00B894' : (r >= 50 ? '#FFE66D' : '#FF6B35'); }),
+        borderWidth: 1,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: { color: '#8892B0' } } },
+      scales: {
+        x: { ticks: { color: '#5A6480' }, grid: { color: 'rgba(255,255,255,0.04)' } },
+        y: { ticks: { color: '#5A6480', callback: function(v){return v+'%';} }, grid: { color: 'rgba(255,255,255,0.04)' }, max: 100 }
+      }
+    }
+  });
+}
+
+// ---- Module 6: 最近7天明细表 ----
+function renderWeekTable() {
+  var today = getToday();
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">📋</span><span class="ket-card-title">最近7天打卡明细</span></div>';
+  html += '<div style="overflow-x:auto"><table class="dash-table"><thead><tr><th>日期</th><th>星期</th><th>🎧 听力</th><th>📱 咔咔背</th><th>📋 检查</th><th>📅 家长任务</th></tr></thead><tbody>';
+
+  var weekDays = ['日','一','二','三','四','五','六'];
+  var log = getCheckinLog();
+
+  for (var i = 6; i >= 0; i--) {
+    var d = new Date(); d.setDate(d.getDate() - i);
+    var ds = fmtDate(d);
+    var dow = weekDays[d.getDay()];
+    var t1o = (log['tab1_task1']||[]).indexOf(ds)>=0;
+    var t2o = (log['tab1_task2']||[]).indexOf(ds)>=0;
+    var t3o = (log['tab1_task3']||[]).indexOf(ds)>=0;
+    var t4c = countTab4TasksOnDate(ds);
+
+    html += '<tr><td><b>' + ds + '</b></td><td>' + dow + '</td>';
+    html += '<td class="' + (t1o ? 'check-ok' : 'check-no') + '">' + (t1o ? '✓' : '✗') + '</td>';
+    html += '<td class="' + (t2o ? 'check-ok' : 'check-no') + '">' + (t2o ? '✓' : '✗') + '</td>';
+    html += '<td class="' + (t3o ? 'check-ok' : 'check-no') + '">' + (t3o ? '✓' : '✗') + '</td>';
+    html += '<td>' + (t4c > 0 ? '<span class="check-ok">'+t4c+'项</span>' : '<span class="check-no">0</span>') + '</td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table></div>';
+  document.getElementById('dashModule6').innerHTML = html;
+}
+
+function renderAllDashboard() {
+  renderModule1();
+  renderHeatmap();
+  renderListeningChart();
+  renderVocabProgress();
+  renderCalendarChart();
+  renderWeekTable();
+}
+
+function refreshDashboard() {
+  destroyChart('listen');
+  destroyChart('cal');
+  renderAllDashboard();
+}
+
+// ====== DATA EXPORT ======
+function exportData() {
+  var log = getCheckinLog();
+  // Collect all unique dates
+  var dateSet = {};
+  for (var k in log) {
+    if (!log.hasOwnProperty(k)) continue;
+    log[k].forEach(function(d) { dateSet[d] = true; });
+  }
+  var dates = Object.keys(dateSet).sort();
+
+  if (dates.length === 0) {
+    alert('暂无打卡数据可导出');
+    return;
+  }
+
+  // Build task name map
+  var taskNameMap = {};
+  taskNameMap['tab1_task1'] = 'K5倾听者下载真题+定时播放';
+  taskNameMap['tab1_task2'] = '咔咔背-KET打卡';
+  taskNameMap['tab1_task3'] = '家长检查打卡情况';
+  for (var m = 7; m <= 12; m++) {
+    var cm = calendarData[m];
+    if (!cm) continue;
+    cm.tasks.forEach(function(t) {
+      taskNameMap[tab4TaskKey(t.id)] = m+'月: '+t.text;
+    });
+  }
+
+  var csvHead = '\uFEFF日期,任务名称,状态\n';
+  var csvBody = '';
+  for (var k in log) {
+    if (!log.hasOwnProperty(k)) continue;
+    var name = taskNameMap[k] || k;
+    log[k].forEach(function(d) {
+      csvBody += d + ',' + name + ',完成\n';
+    });
+  }
+
+  if (!csvBody) {
+    alert('暂无打卡数据可导出');
+    return;
+  }
+
+  var csv = csvHead + csvBody;
+  var blob = new Blob([csv], {type: 'text/csv;charset=utf-8'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'KET打卡记录_' + getToday() + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ====== FOOTER ======
+function printTodayTasks() { switchTab('tab1'); setTimeout(function(){window.print();},200); }
+function copyBaiduLinks() {
+  var msg = document.getElementById('copyMsg');
+  msg.textContent = '百度网盘资源需手动保存链接。请在「武器库→百度网盘」中查看资源列表，手动访问百度网盘下载。';
+  msg.style.color = 'var(--accent)';
+  setTimeout(function(){msg.textContent='';},5000);
+}
+</script>
+</body>
+</html>
