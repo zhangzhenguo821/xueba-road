@@ -247,8 +247,89 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
 .vocab-speak{display:inline-block;cursor:pointer;font-size:14px;margin-left:2px;opacity:0.6;transition:var(--transition);vertical-align:middle}
 .vocab-speak:hover{opacity:1;transform:scale(1.2)}
 
-/* Responsive */
+/* Quiz Module */
+.quiz-mode-toggle{display:flex;gap:8px;justify-content:center;margin-bottom:18px}
+.quiz-mode-btn{padding:8px 20px;border-radius:20px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,0.12);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-dim)}
+.quiz-mode-btn:hover{border-color:var(--purple);color:var(--purple)}
+.quiz-mode-btn.active{background:var(--purple-bg);border-color:var(--purple);color:var(--purple)}
+.quiz-progress-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.quiz-progress-bar-wrap{flex:1;height:6px;border-radius:3px;background:rgba(255,255,255,0.06);overflow:hidden}
+.quiz-progress-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--purple),var(--cyan));transition:width .3s}
+.quiz-q-num{font-size:13px;font-weight:700;color:var(--text-secondary);white-space:nowrap}
+.quiz-prompt{text-align:center;padding:30px 20px;font-size:28px;font-weight:900;color:white;min-height:90px;display:flex;align-items:center;justify-content:center;word-break:break-word}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:500px;margin:0 auto 16px}
+.quiz-opt-btn{padding:14px 16px;border-radius:10px;font-size:15px;font-weight:600;border:2px solid rgba(255,255,255,0.08);cursor:pointer;transition:all .2s;background:rgba(255,255,255,0.03);color:var(--text);text-align:center;word-break:break-word}
+.quiz-opt-btn:hover{border-color:rgba(162,155,254,0.4);background:rgba(162,155,254,0.08)}
+.quiz-opt-btn.correct{border-color:var(--success)!important;background:rgba(0,184,148,0.15)!important;color:var(--success)!important;animation:pulse .4s}
+.quiz-opt-btn.wrong{border-color:var(--danger)!important;background:rgba(255,107,107,0.15)!important;color:var(--danger)!important}
+.quiz-opt-btn:disabled{pointer-events:none;opacity:0.8}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.quiz-score-row{display:flex;justify-content:center;gap:20px;font-size:14px;color:var(--text-secondary)}
+.quiz-score-row span{font-weight:700}
+.quiz-result{text-align:center;padding:30px 20px}
+.quiz-result-icon{font-size:48px;margin-bottom:10px}
+.quiz-result-title{font-size:22px;font-weight:800;color:white;margin-bottom:8px}
+.quiz-result-stats{font-size:14px;color:var(--text-secondary);margin-bottom:16px}
+.quiz-result-stars{font-size:32px;margin-bottom:12px;letter-spacing:4px}
+.quiz-restart-btn{padding:10px 28px;border-radius:10px;font-size:14px;font-weight:700;background:var(--purple);color:white;border:none;cursor:pointer;transition:var(--transition)}
+.quiz-restart-btn:hover{opacity:0.85;transform:translateY(-1px)}
+
+/* Dictation Module */
+.dict-play-btn{width:72px;height:72px;border-radius:50%;background:var(--purple-bg);border:3px solid var(--purple-border);color:var(--purple);font-size:28px;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;margin:0 auto}
+.dict-play-btn:hover{background:rgba(108,92,231,0.25);transform:scale(1.06)}
+.dict-play-btn.playing{background:var(--primary);border-color:var(--primary);color:white;animation:dictPulse 1s infinite}
+@keyframes dictPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,0.4)}50%{box-shadow:0 0 0 14px rgba(255,107,53,0)}}
+.dict-input{width:100%;min-height:70px;padding:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;color:white;font-size:15px;resize:vertical;font-family:inherit}
+.dict-input:focus{outline:none;border-color:var(--purple)}
+.dict-result-area{min-height:50px;padding:12px;border-radius:8px;font-size:14px;line-height:1.8;background:rgba(255,255,255,0.02)}
+.dict-word-correct{color:var(--success);font-weight:600}
+.dict-word-wrong{color:var(--danger);text-decoration:line-through;font-weight:600}
+.dict-word-missing{color:var(--text-dim)}
+.dict-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+
+/* Reading Module */
+.reading-passage{background:rgba(255,255,255,0.02);border-radius:10px;padding:18px;font-size:14px;line-height:1.9;color:var(--text-secondary);max-height:320px;overflow-y:auto;margin-bottom:16px;border:1px solid rgba(255,255,255,0.04)}
+.reading-passage h4{color:var(--purple);margin-bottom:10px;font-size:16px}
+.reading-selector{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.reading-sel-btn{padding:6px 14px;border-radius:16px;font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,0.1);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-dim)}
+.reading-sel-btn:hover{border-color:var(--purple);color:var(--purple)}
+.reading-sel-btn.active{background:var(--purple-bg);border-color:var(--purple);color:var(--purple)}
+.reading-q-block{margin-bottom:16px;padding:14px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04)}
+.reading-q-title{font-size:14px;font-weight:700;color:white;margin-bottom:10px}
+.reading-q-opts{display:flex;gap:8px;flex-wrap:wrap}
+.reading-q-opt{padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;border:1px solid rgba(255,255,255,0.12);cursor:pointer;transition:all .15s;background:rgba(255,255,255,0.03);color:var(--text)}
+.reading-q-opt:hover{border-color:rgba(162,155,254,0.4)}
+.reading-q-opt.selected-correct{border-color:var(--success)!important;background:rgba(0,184,148,0.15)!important;color:var(--success)!important}
+.reading-q-opt.selected-wrong{border-color:var(--danger)!important;background:rgba(255,107,107,0.15)!important;color:var(--danger)!important}
+.reading-result{text-align:center;padding:14px;font-size:14px;font-weight:700}
+
+/* Grammar Module */
+.grammar-item{padding:14px;margin-bottom:10px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04)}
+.grammar-item.correct{border-color:rgba(0,184,148,0.3);background:rgba(0,184,148,0.06)}
+.grammar-item.wrong{border-color:rgba(255,107,107,0.3);background:rgba(255,107,107,0.06)}
+.grammar-prompt{font-size:15px;color:var(--text);margin-bottom:8px;line-height:1.8}
+.grammar-prompt .blank-input{display:inline-block;width:130px;padding:4px 10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:white;font-size:14px;text-align:center;margin:0 4px;vertical-align:middle}
+.grammar-prompt .blank-input:focus{outline:none;border-color:var(--purple)}
+.grammar-hint{font-size:11px;color:var(--text-dim);margin-bottom:8px}
+.grammar-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.grammar-check-btn{padding:6px 16px;border-radius:8px;font-size:12px;font-weight:600;background:var(--purple);color:white;border:none;cursor:pointer}
+.grammar-check-btn:hover{opacity:0.85}
+.grammar-feedback{font-size:13px;font-weight:600;margin-left:4px}
+.grammar-total{text-align:center;font-size:16px;font-weight:800;color:var(--accent);margin-top:16px}
+
+/* Collapse panel headers for Tab3 */
+.t3-collapse{margin-bottom:16px}
+.t3-collapse .ket-collapse-header{font-size:15px;font-weight:700}
+
+/* Responsive overrides for quiz */
 @media(max-width:768px){
+  .quiz-options{grid-template-columns:1fr;max-width:100%}
+  .quiz-prompt{font-size:22px;padding:20px 12px;min-height:70px}
+  .quiz-opt-btn{font-size:14px;padding:12px}
+  .quiz-mode-btn{font-size:12px;padding:6px 14px}
+  .reading-q-opts{flex-direction:column}
+}
+</style>
   .ket-content{padding:16px}
   .ket-tabs{padding:12px 12px 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .ket-tab{padding:8px 14px;font-size:12px}
@@ -358,116 +439,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
 <!-- TAB 3: 在线练习 -->
 <div class="ket-tab-panel" id="tab3">
 
-  <!-- Module 1: Cambridge iframe -->
-  <div class="ket-card">
-    <div class="ket-card-header">
-      <span class="ket-card-icon">🌐</span>
-      <span class="ket-card-title">剑桥官方 A2 Key 免费在线练习</span>
+  <!-- Module 1: 词汇闯关 -->
+  <div class="t3-collapse ket-collapse open" id="quizCollapse">
+    <div class="ket-collapse-header" onclick="document.getElementById('quizCollapse').classList.toggle('open');initQuizIfNeeded()">
+      <span class="ket-collapse-arrow">▶</span>
+      <span>📝</span>
+      <span>词汇闯关</span>
+      <span style="font-size:11px;color:var(--text-dim);margin-left:auto">词汇选择题·中英双向</span>
     </div>
-    <div style="background:rgba(0,212,255,0.06);padding:14px;border-radius:10px;margin-bottom:14px;font-size:13px;color:var(--text-secondary);line-height:1.7">
-      以下是剑桥英语官网提供的免费 A2 Key 级别在线练习，涵盖阅读、写作、听力、语法、发音和词汇。直接在下方窗口操作即可，无需注册。
-    </div>
-    <div style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden">
-      <iframe src="https://www.cambridgeenglish.org/learning-english/activities-for-learners/?level=basic&rows=12"
-        style="width:100%;height:600px;border:none" 
-        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-        loading="lazy"
-        title="剑桥官方 A2 Key 在线练习">
-      </iframe>
-    </div>
-    <div style="font-size:11px;color:var(--text-dim);margin-top:10px;text-align:center">
-      ⚠️ 如上方窗口无法加载（部分网站禁止iframe嵌入），请直接访问：
-      <a href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/?level=basic&rows=12" target="_blank" style="color:var(--cyan)">剑桥英语官方学习活动页面</a>
-    </div>
+    <div class="ket-collapse-body" id="quizBody"></div>
   </div>
 
-  <!-- Module 2: Quick Entry Cards -->
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:20px">
-
-    <!-- Card 1: 听力样题 -->
-    <div class="ket-card" style="text-align:center">
-      <div style="font-size:36px;margin-bottom:8px">🎧</div>
-      <div style="font-size:16px;font-weight:700;margin-bottom:6px">听力样题</div>
-      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">
-        剑桥官方在线听力真题，约30分钟，真实考试界面
-      </div>
-      <a href="https://www.cambridgeenglish.org/exams-and-tests/key-for-schools/preparation/" target="_blank" 
-         style="display:inline-block;padding:10px 20px;background:var(--purple);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
-        打开听力样题（需 Firefox 浏览器）
-      </a>
+  <!-- Module 2: 听力听写 -->
+  <div class="t3-collapse ket-collapse" id="dictCollapse">
+    <div class="ket-collapse-header" onclick="document.getElementById('dictCollapse').classList.toggle('open');initDictIfNeeded()">
+      <span class="ket-collapse-arrow">▶</span>
+      <span>🎧</span>
+      <span>听力听写</span>
+      <span style="font-size:11px;color:var(--text-dim);margin-left:auto">TTS朗读·听写练习</span>
     </div>
-
-    <!-- Card 2: 读写样题 -->
-    <div class="ket-card" style="text-align:center">
-      <div style="font-size:36px;margin-bottom:8px">📝</div>
-      <div style="font-size:16px;font-weight:700;margin-bottom:6px">读写样题</div>
-      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">
-        剑桥官方在线阅读写作真题，约60分钟，含自动判分
-      </div>
-      <a href="https://www.cambridgeenglish.org/exams-and-tests/key-for-schools/preparation/" target="_blank" 
-         style="display:inline-block;padding:10px 20px;background:var(--purple);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
-        打开读写样题（需 Firefox 浏览器）
-      </a>
-    </div>
-
-    <!-- Card 3: 真题下载 -->
-    <div class="ket-card" style="text-align:center">
-      <div style="font-size:36px;margin-bottom:8px">📄</div>
-      <div style="font-size:16px;font-weight:700;margin-bottom:6px">真题下载</div>
-      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">
-        可打印的完整样题，含听力音频下载和答案
-      </div>
-      <a href="https://www.cambridgeenglish.org/exams-and-tests/key-for-schools/preparation/" target="_blank" 
-         style="display:inline-block;padding:10px 20px;background:var(--primary);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
-        下载PDF真题
-      </a>
-    </div>
-
+    <div class="ket-collapse-body" id="dictBody"></div>
   </div>
 
-  <!-- Module 3: KET 备考视频资源 -->
-  <div class="ket-card">
-    <div class="ket-card-header">
-      <span class="ket-card-icon">▶️</span>
-      <span class="ket-card-title">KET 备考视频资源</span>
+  <!-- Module 3: 阅读理解 -->
+  <div class="t3-collapse ket-collapse" id="readingCollapse">
+    <div class="ket-collapse-header" onclick="document.getElementById('readingCollapse').classList.toggle('open');initReadingIfNeeded()">
+      <span class="ket-collapse-arrow">▶</span>
+      <span>📖</span>
+      <span>阅读理解</span>
+      <span style="font-size:11px;color:var(--text-dim);margin-left:auto">KET短文·选择题</span>
     </div>
-    
-    <div style="background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.15);border-radius:10px;padding:16px;margin-bottom:16px">
-      <div style="font-size:14px;font-weight:700;color:var(--primary);margin-bottom:8px">📺 B站搜索 KET备考</div>
-      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;line-height:1.6">
-        在B站搜索KET备考，有大量剑桥官方讲解视频和名师公开课，涵盖听力、口语、阅读、写作全模块。
-      </div>
-      <a href="https://search.bilibili.com/all?keyword=KET%E5%A4%87%E8%80%83" target="_blank" 
-         style="display:inline-block;padding:8px 18px;background:var(--primary);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
-        🔍 在B站搜索 KET备考
-      </a>
-    </div>
+    <div class="ket-collapse-body" id="readingBody"></div>
+  </div>
 
-    <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">推荐视频列表（需在B站/YouTube搜索观看）</div>
-    
-    <div style="display:flex;flex-direction:column;gap:10px">
-      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
-        <span style="font-size:22px">🎤</span>
-        <div>
-          <div style="font-size:13px;font-weight:600">剑桥官方：KET口语考试实录</div>
-          <div style="font-size:11px;color:var(--text-dim)">搜索关键词：Cambridge KET Speaking Test</div>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
-        <span style="font-size:22px">📖</span>
-        <div>
-          <div style="font-size:13px;font-weight:600">名师讲解：KET阅读技巧</div>
-          <div style="font-size:11px;color:var(--text-dim)">搜索关键词：KET Reading Tips / KET阅读解题技巧</div>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
-        <span style="font-size:22px">✍️</span>
-        <div>
-          <div style="font-size:13px;font-weight:600">名师讲解：KET写作模板</div>
-          <div style="font-size:11px;color:var(--text-dim)">搜索关键词：KET Writing Template / KET写作模板</div>
-        </div>
-      </div>
+  <!-- Module 4: 语法诊所 -->
+  <div class="t3-collapse ket-collapse" id="grammarCollapse">
+    <div class="ket-collapse-header" onclick="document.getElementById('grammarCollapse').classList.toggle('open');initGrammarIfNeeded()">
+      <span class="ket-collapse-arrow">▶</span>
+      <span>🔧</span>
+      <span>语法诊所</span>
+      <span style="font-size:11px;color:var(--text-dim);margin-left:auto">填空练习·时态介词代词</span>
     </div>
+    <div class="ket-collapse-body" id="grammarBody"></div>
   </div>
 
 </div>
@@ -1740,8 +1753,482 @@ function exportData() {
   URL.revokeObjectURL(url);
 }
 
-// ====== FOOTER ======
+// ====== TAB3 MODULE 1: VOCABULARY QUIZ ======
+var quizMode = 'en2zh'; // 'en2zh' or 'zh2en'
+var quizWords = [];
+var quizIndex = 0;
+var quizScore = 0;
+var quizCorrect = 0;
+var quizLocked = false;
+var quizTimer = null;
+
+function getQuizScores() {
+  try { return JSON.parse(localStorage.getItem('ket_quiz_scores') || '[]'); } catch(e) { return []; }
+}
+function saveQuizScore(s) {
+  var scores = getQuizScores();
+  scores.push(s);
+  if (scores.length > 50) scores = scores.slice(-50);
+  localStorage.setItem('ket_quiz_scores', JSON.stringify(scores));
+}
+
+function initQuizIfNeeded() {
+  var body = document.getElementById('quizBody');
+  if (!body || body.innerHTML.trim()) return;
+  startQuizRound();
+}
+
+function shuffleArray(arr) {
+  var a = arr.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+function pickQuizWords() {
+  var pool = flashcardWords.slice();
+  var shuffled = shuffleArray(pool);
+  return shuffled.slice(0, 10);
+}
+
+function startQuizRound() {
+  quizWords = pickQuizWords();
+  quizIndex = 0;
+  quizScore = 0;
+  quizCorrect = 0;
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  if (quizIndex >= 10) { showQuizResult(); return; }
+  var w = quizWords[quizIndex];
+  var body = document.getElementById('quizBody');
+  if (!body) return;
+
+  // Generate distractors (3 from different categories if possible)
+  var otherWords = flashcardWords.filter(function(x) { return x.en !== w.en; });
+  var distractors = shuffleArray(otherWords).slice(0, 3);
+
+  var allOpts = shuffleArray([w].concat(distractors));
+
+  var progressPct = (quizIndex / 10 * 100).toFixed(0);
+
+  var html = '';
+
+  // Mode toggle
+  html += '<div class="quiz-mode-toggle">';
+  html += '<button class="quiz-mode-btn'+(quizMode==='zh2en'?' active':'')+'" onclick="setQuizMode(\'zh2en\')">中 → 英</button>';
+  html += '<button class="quiz-mode-btn'+(quizMode==='en2zh'?' active':'')+'" onclick="setQuizMode(\'en2zh\')">英 → 中</button>';
+  html += '</div>';
+
+  // Progress
+  html += '<div class="quiz-progress-row">';
+  html += '<div class="quiz-progress-bar-wrap"><div class="quiz-progress-fill" style="width:'+progressPct+'%"></div></div>';
+  html += '<span class="quiz-q-num">'+(quizIndex+1)+'/10</span>';
+  html += '</div>';
+
+  // Prompt
+  var promptText = quizMode === 'zh2en' ? w.zh : w.en;
+  var speakBtn = quizMode === 'en2zh' ? ' <span class="vocab-speak" onclick="event.stopPropagation();speakWord(\''+w.en+'\')" title="听发音" style="font-size:22px;margin-left:8px">🔊</span>' : '';
+  html += '<div class="quiz-prompt">'+promptText+speakBtn+'</div>';
+
+  // Options
+  html += '<div class="quiz-options">';
+  for (var i = 0; i < allOpts.length; i++) {
+    var opt = allOpts[i];
+    var label = quizMode === 'zh2en' ? opt.en : opt.zh;
+    html += '<button class="quiz-opt-btn" onclick="answerQuiz(\''+opt.en+'\',this)">'+label+'</button>';
+  }
+  html += '</div>';
+
+  // Score
+  html += '<div class="quiz-score-row">';
+  html += '<span>得分：<span style="color:var(--accent)">'+quizScore+'</span></span>';
+  html += '<span>正确率：<span style="color:var(--success)">'+(quizIndex>0?Math.round(quizCorrect/quizIndex*100):0)+'%</span></span>';
+  html += '</div>';
+
+  body.innerHTML = html;
+  quizLocked = false;
+}
+
+function setQuizMode(mode) {
+  quizMode = mode;
+  startQuizRound();
+}
+
+function answerQuiz(correctEn, btnEl) {
+  if (quizLocked) return;
+  quizLocked = true;
+  var w = quizWords[quizIndex];
+  var isCorrect = (correctEn === w.en);
+
+  // Highlight
+  var allBtns = document.querySelectorAll('.quiz-opt-btn');
+  allBtns.forEach(function(b) { b.disabled = true; });
+  btnEl.classList.add(isCorrect ? 'correct' : 'wrong');
+
+  if (isCorrect) {
+    quizScore += 10;
+    quizCorrect++;
+  } else {
+    // Highlight the correct one
+    allBtns.forEach(function(b) {
+      if (b.textContent === (quizMode === 'zh2en' ? w.en : w.zh)) b.classList.add('correct');
+    });
+  }
+
+  // Auto advance
+  quizTimer = setTimeout(function() {
+    quizIndex++;
+    renderQuizQuestion();
+  }, 1500);
+}
+
+function showQuizResult() {
+  var body = document.getElementById('quizBody');
+  if (!body) return;
+  var stars = quizCorrect >= 9 ? '⭐⭐⭐' : (quizCorrect >= 7 ? '⭐⭐' : (quizCorrect >= 5 ? '⭐' : ''));
+  var starLabel = quizCorrect >= 9 ? '太棒了！' : (quizCorrect >= 7 ? '做得不错！' : (quizCorrect >= 5 ? '继续加油！' : '多多练习！'));
+
+  saveQuizScore({date: getToday(), mode: quizMode, score: quizScore, correct: quizCorrect, total: 10});
+
+  var html = '<div class="quiz-result">';
+  html += '<div class="quiz-result-icon">🏆</div>';
+  html += '<div class="quiz-result-title">'+starLabel+'</div>';
+  html += '<div class="quiz-result-stars">'+stars+'</div>';
+  html += '<div class="quiz-result-stats">✅ 正确：'+quizCorrect+' 题 &nbsp; ❌ 错误：'+(10-quizCorrect)+' 题 &nbsp; 💯 得分：'+quizScore+'</div>';
+  html += '<button class="quiz-restart-btn" onclick="startQuizRound()">🔄 再来一轮</button>';
+  html += '</div>';
+  body.innerHTML = html;
+}
+
+// Auto-init quiz if already open on load
+setTimeout(function() {
+  var body = document.getElementById('quizBody');
+  if (body && !body.innerHTML.trim() && document.getElementById('quizCollapse').classList.contains('open')) {
+    startQuizRound();
+  }
+}, 200);
+
+
+// ====== TAB3 MODULE 2: DICTATION ======
+var dictSentences = [
+  "I like reading books in the library.",
+  "My father works in a big hospital.",
+  "Can I have a glass of water, please?",
+  "She goes to school by bus every day.",
+  "There is a beautiful church near the bridge.",
+  "We had chicken and rice for dinner.",
+  "The supermarket is next to the train station.",
+  "He bought a new notebook and a pencil.",
+  "I want to visit the museum this weekend.",
+  "My grandmother makes the best chocolate cake.",
+  "How much are these bananas?",
+  "The children are swimming in the pool."
+];
+var dictIndex = 0;
+var dictPlaying = false;
+
+function initDictIfNeeded() {
+  var body = document.getElementById('dictBody');
+  if (!body || body.innerHTML.trim()) return;
+  dictIndex = 0;
+  renderDictQuestion();
+}
+
+function renderDictQuestion() {
+  if (dictIndex >= dictSentences.length) {
+    showDictResult();
+    return;
+  }
+  var body = document.getElementById('dictBody');
+  if (!body) return;
+  var progressPct = (dictIndex / dictSentences.length * 100).toFixed(0);
+
+  var html = '';
+  html += '<div class="quiz-progress-row">';
+  html += '<div class="quiz-progress-bar-wrap"><div class="quiz-progress-fill" style="width:'+progressPct+'%"></div></div>';
+  html += '<span class="quiz-q-num">第 '+(dictIndex+1)+'/12 句</span>';
+  html += '</div>';
+
+  html += '<div style="text-align:center;margin:16px 0">';
+  html += '<button class="dict-play-btn" id="dictPlayBtn" onclick="playDictSentence()">🔊</button>';
+  html += '</div>';
+
+  html += '<textarea class="dict-input" id="dictInput" placeholder="在这里输入你听到的内容..." rows="3"></textarea>';
+
+  html += '<div class="dict-actions">';
+  html += '<button class="quiz-restart-btn" style="background:var(--success)" onclick="submitDictation()">✅ 提交</button>';
+  html += '<button class="quiz-restart-btn" style="background:rgba(255,107,53,0.2);color:var(--primary);border:1px solid rgba(255,107,53,0.3)" onclick="playDictSentence()">🔄 重听</button>';
+  html += '<button class="quiz-restart-btn" style="background:var(--purple-bg);color:var(--purple);border:1px solid var(--purple-border)" onclick="skipDictSentence()">⏭ 下一句</button>';
+  html += '</div>';
+
+  html += '<div class="dict-result-area" id="dictResult" style="margin-top:12px"></div>';
+
+  body.innerHTML = html;
+  dictPlaying = false;
+}
+
+function playDictSentence() {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(dictSentences[dictIndex]);
+  u.lang = 'en-GB';
+  u.rate = 0.75;
+  var btn = document.getElementById('dictPlayBtn');
+  if (btn) btn.classList.add('playing');
+  u.onend = function() { if (btn) btn.classList.remove('playing'); };
+  u.onerror = function() { if (btn) btn.classList.remove('playing'); };
+  window.speechSynthesis.speak(u);
+  dictPlaying = true;
+}
+
+function submitDictation() {
+  var input = document.getElementById('dictInput');
+  var resultArea = document.getElementById('dictResult');
+  if (!input || !resultArea) return;
+
+  var userText = input.value.trim();
+  if (!userText) { resultArea.innerHTML = '<span style="color:var(--danger)">请先输入内容再提交。</span>'; return; }
+
+  var correctText = dictSentences[dictIndex];
+  var correctWords = correctText.replace(/[.,!?;:]/g, '').split(/\s+/);
+  var userWords = userText.replace(/[.,!?;:]/g, '').split(/\s+/);
+
+  var html = '';
+  // Align words
+  var maxLen = Math.max(correctWords.length, userWords.length);
+  var totalCorrect = 0;
+
+  for (var i = 0; i < maxLen; i++) {
+    var cw = correctWords[i] || '';
+    var uw = userWords[i] || '';
+    if (i > 0) html += ' ';
+    if (cw && uw && cw.toLowerCase() === uw.toLowerCase()) {
+      html += '<span class="dict-word-correct">'+cw+'</span>';
+      totalCorrect++;
+    } else if (cw && !uw) {
+      html += '<span class="dict-word-missing">'+cw+'</span>';
+    } else if (cw && uw) {
+      html += '<span class="dict-word-wrong">'+uw+'</span>';
+    }
+  }
+
+  html += '<div style="margin-top:8px;font-size:12px;color:var(--text-secondary)">';
+  html += '正确词数：<b style="color:var(--success)">'+totalCorrect+'</b> / '+correctWords.length;
+  html += ' &nbsp; 正确答案：<span style="color:var(--accent)">'+correctText+'</span>';
+  html += '</div>';
+
+  resultArea.innerHTML = html;
+}
+
+function skipDictSentence() {
+  dictIndex++;
+  renderDictQuestion();
+}
+
+function showDictResult() {
+  var body = document.getElementById('dictBody');
+  if (!body) return;
+  var html = '<div class="quiz-result">';
+  html += '<div class="quiz-result-icon">🎉</div>';
+  html += '<div class="quiz-result-title">听写完成！</div>';
+  html += '<div class="quiz-result-stats">已完成全部 12 句听写练习</div>';
+  html += '<button class="quiz-restart-btn" onclick="dictIndex=0;renderDictQuestion()">🔄 重新开始</button>';
+  html += '</div>';
+  body.innerHTML = html;
+}
+
+
+// ====== TAB3 MODULE 3: READING COMPREHENSION ======
+var readingPassages = [
+  {
+    title: '短文 1：A Day at the Zoo',
+    text: 'Last Saturday, Tom and his sister Lucy went to the zoo with their parents. They saw many animals. Tom liked the elephants best because they were very big and friendly. Lucy\'s favourite animals were the monkeys. She watched them playing and jumping for a long time. They had lunch at the zoo café. Tom ate a cheese sandwich and Lucy had chicken and chips. They went home at four o\'clock. Tom said it was the best day ever.',
+    questions: [
+      {q:'1. Who went to the zoo?', opts:['A) Tom and his mum','B) Tom, Lucy and their parents','C) Tom and Lucy','D) Tom and his friends'], ans:1},
+      {q:'2. What was Lucy\'s favourite animal?', opts:['A) Elephants','B) Lions','C) Monkeys','D) Birds'], ans:2},
+      {q:'3. What did Tom eat for lunch?', opts:['A) Chicken and chips','B) A banana','C) A cheese sandwich','D) An apple'], ans:2}
+    ]
+  },
+  {
+    title: '短文 2：The Lost Cat',
+    text: 'Mrs Brown has a cat called Snowy. Snowy is white with blue eyes. Last Monday, Snowy went out of the house and did not come back. Mrs Brown was very worried. She looked everywhere — in the garden, on the street, and near the park. She asked her neighbours, but nobody had seen Snowy. On Wednesday morning, Mrs Brown heard a noise under her car. It was Snowy! The cat was hungry but not hurt. Mrs Brown was so happy that she gave Snowy a big bowl of fish.',
+    questions: [
+      {q:'1. What colour is Snowy?', opts:['A) Black','B) Brown','C) White','D) Grey'], ans:2},
+      {q:'2. When did Snowy come back?', opts:['A) Monday','B) Tuesday','C) Wednesday','D) Thursday'], ans:2},
+      {q:'3. What did Mrs Brown give Snowy?', opts:['A) Milk','B) Fish','C) Chicken','D) Cake'], ans:1}
+    ]
+  },
+  {
+    title: '短文 3：Sara\'s New Hobby',
+    text: 'Sara is twelve years old. She lives in London with her family. Two months ago, her friend Anna showed her some beautiful photos. Anna took them with her new camera. Sara thought the photos were amazing. She asked her parents if she could have a camera too. On her birthday, her parents gave her a small blue camera. Now Sara takes her camera everywhere. She takes photos of flowers, buildings, and her dog Max. She wants to be a photographer when she grows up.',
+    questions: [
+      {q:'1. How old is Sara?', opts:['A) Ten','B) Eleven','C) Twelve','D) Thirteen'], ans:2},
+      {q:'2. Who showed Sara some photos first?', opts:['A) Her parents','B) Anna','C) Her brother','D) Max'], ans:1},
+      {q:'3. What colour is Sara\'s camera?', opts:['A) Black','B) Red','C) Blue','D) White'], ans:2}
+    ]
+  }
+];
+var readingCurrent = 0;
+var readingAnswers = [];
+var readingStartTime = 0;
+
+function initReadingIfNeeded() {
+  var body = document.getElementById('readingBody');
+  if (!body || body.innerHTML.trim()) return;
+  readingCurrent = 0;
+  readingAnswers = [-1, -1, -1];
+  readingStartTime = Date.now();
+  renderReading();
+}
+
+function renderReading() {
+  var body = document.getElementById('readingBody');
+  if (!body) return;
+  var passage = readingPassages[readingCurrent];
+
+  var html = '';
+
+  // Passage selector
+  html += '<div class="reading-selector">';
+  for (var i = 0; i < readingPassages.length; i++) {
+    html += '<button class="reading-sel-btn'+(i===readingCurrent?' active':'')+'" onclick="switchReading('+i+')">'+(i+1)+'. '+readingPassages[i].title.substring(4)+'</button>';
+  }
+  html += '</div>';
+
+  // Passage text
+  html += '<div class="reading-passage"><h4>'+passage.title+'</h4>'+passage.text+'</div>';
+
+  // Questions
+  var allAnswered = readingAnswers.every(function(a) { return a >= 0; });
+  for (var q = 0; q < passage.questions.length; q++) {
+    var qd = passage.questions[q];
+    var selected = readingAnswers[q];
+    html += '<div class="reading-q-block">';
+    html += '<div class="reading-q-title">'+qd.q+'</div>';
+    html += '<div class="reading-q-opts">';
+    for (var o = 0; o < qd.opts.length; o++) {
+      var cls = '';
+      if (selected === o) cls = selected === qd.ans ? ' selected-correct' : ' selected-wrong';
+      html += '<button class="reading-q-opt'+cls+'" onclick="answerReading('+q+','+o+',this)"'+(selected>=0?' disabled':'')+'>'+qd.opts[o]+'</button>';
+    }
+    html += '</div></div>';
+  }
+
+  // Result
+  if (allAnswered) {
+    var correctCount = 0;
+    for (var k = 0; k < 3; k++) { if (readingAnswers[k] === passage.questions[k].ans) correctCount++; }
+    var elapsed = Math.round((Date.now() - readingStartTime) / 1000);
+    var min = Math.floor(elapsed / 60);
+    var sec = elapsed % 60;
+    html += '<div class="reading-result">';
+    html += '总分：<span style="color:var(--accent);font-size:20px">'+correctCount+'/3</span>';
+    html += ' &nbsp; 用时：<span style="color:var(--cyan)">'+min+'分'+sec+'秒</span>';
+    html += '</div>';
+  }
+
+  body.innerHTML = html;
+}
+
+function switchReading(idx) {
+  readingCurrent = idx;
+  readingAnswers = [-1, -1, -1];
+  readingStartTime = Date.now();
+  renderReading();
+}
+
+function answerReading(qIdx, optIdx, btnEl) {
+  readingAnswers[qIdx] = optIdx;
+  // Small delay to show feedback
+  setTimeout(function() { renderReading(); }, 400);
+}
+
+
+// ====== TAB3 MODULE 4: GRAMMAR CLINIC ======
+var grammarItems = [
+  {prompt:'She ___ (go) to school every day.', hint:'go → 一般现在时，第三人称单数', answer:'goes'},
+  {prompt:'Yesterday, we ___ (play) football in the park.', hint:'play → 一般过去时', answer:'played'},
+  {prompt:'This book is ___ (big) than that one.', hint:'big → 比较级', answer:'bigger'},
+  {prompt:'I usually get up ___ seven o\'clock.', hint:'介词·具体时间点', answer:'at'},
+  {prompt:'Tom is ___ (tall) boy in his class.', hint:'tall → 最高级', answer:'the tallest'},
+  {prompt:'My mother gave ___ (I) a present.', hint:'I → 宾格代词', answer:'me'},
+  {prompt:'Next week, they ___ (visit) their grandparents.', hint:'visit → 一般将来时', answer:'will visit'},
+  {prompt:'The cat is sleeping ___ the table.', hint:'介词·位置', answer:'under'},
+  {prompt:'Sarah is ___ (happy) than her sister.', hint:'happy → 比较级（y→ier）', answer:'happier'},
+  {prompt:'Can you give this book to ___ (he)?', hint:'he → 宾格代词', answer:'him'}
+];
+var grammarResults = [];
+
+function initGrammarIfNeeded() {
+  var body = document.getElementById('grammarBody');
+  if (!body || body.innerHTML.trim()) return;
+  grammarResults = new Array(grammarItems.length).fill(null);
+  renderGrammar();
+}
+
+function renderGrammar() {
+  var body = document.getElementById('grammarBody');
+  if (!body) return;
+
+  var allDone = grammarResults.every(function(r) { return r !== null; });
+  var html = '';
+
+  for (var i = 0; i < grammarItems.length; i++) {
+    var item = grammarItems[i];
+    var result = grammarResults[i];
+    var cls = result === true ? ' correct' : (result === false ? ' wrong' : '');
+
+    // Split prompt at ___
+    var parts = item.prompt.split('___');
+    html += '<div class="grammar-item'+cls+'">';
+    html += '<div class="grammar-prompt">';
+    html += parts[0];
+    if (result === null) {
+      html += '<input class="blank-input" id="grammarInput'+i+'" type="text" placeholder="填入答案">';
+    } else {
+      var userVal = result === true ? item.answer : (document.getElementById('grammarInput'+i) ? document.getElementById('grammarInput'+i).value : '');
+      html += '<b style="color:'+(result===true?'var(--success)':'var(--danger)')+'">'+item.answer+'</b>';
+    }
+    html += parts[1];
+    html += '</div>';
+    html += '<div class="grammar-hint">💡 提示：'+item.hint+'</div>';
+    html += '<div class="grammar-row">';
+    if (result === null) {
+      html += '<button class="grammar-check-btn" onclick="checkGrammar('+i+')">✅ 检查</button>';
+    } else {
+      html += '<span class="grammar-feedback" style="color:'+(result===true?'var(--success)':'var(--danger)')+'">'+(result===true?'✅ 正确！':'❌ 错误，正确答案：'+item.answer)+'</span>';
+      html += '<button class="grammar-check-btn" style="background:rgba(255,255,255,0.06);color:var(--text-dim)" onclick="retryGrammar('+i+')">🔄 重做</button>';
+    }
+    html += '</div></div>';
+  }
+
+  if (allDone) {
+    var correctCount = grammarResults.filter(function(r) { return r === true; }).length;
+    html += '<div class="grammar-total">🎯 总分：'+correctCount+'/'+grammarItems.length+' 题正确</div>';
+  }
+
+  body.innerHTML = html;
+}
+
+function checkGrammar(i) {
+  var input = document.getElementById('grammarInput'+i);
+  if (!input) return;
+  var userAnswer = input.value.trim();
+  var correct = grammarItems[i].answer;
+  grammarResults[i] = (userAnswer.toLowerCase() === correct.toLowerCase());
+  renderGrammar();
+}
+
+function retryGrammar(i) {
+  grammarResults[i] = null;
+  renderGrammar();
+}
 function printTodayTasks() { switchTab('tab1'); setTimeout(function(){window.print();},200); }
+// ====== FOOTER ======
 function copyBaiduLinks() {
   var msg = document.getElementById('copyMsg');
   msg.textContent = '百度网盘资源需手动保存链接。请在「武器库→百度网盘」中查看资源列表，手动访问百度网盘下载。';
