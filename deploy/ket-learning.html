@@ -131,6 +131,29 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
 .ket-modal-body li{margin-bottom:6px}
 .ket-modal-body .step-num{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--purple);color:white;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-right:8px;flex-shrink:0}
 
+/* Collapsible cards */
+.ket-collapse{border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden;margin-bottom:20px;transition:var(--transition)}
+.ket-collapse-header{display:flex;align-items:center;gap:10px;padding:16px 20px;background:rgba(255,255,255,0.02);cursor:pointer;user-select:none;transition:var(--transition)}
+.ket-collapse-header:hover{background:rgba(255,255,255,0.04)}
+.ket-collapse-arrow{font-size:12px;transition:transform 0.25s;color:var(--text-dim);flex-shrink:0}
+.ket-collapse.open .ket-collapse-arrow{transform:rotate(90deg)}
+.ket-collapse-body{display:none;padding:0 20px 20px;font-size:13px;color:var(--text-secondary);line-height:1.8}
+.ket-collapse.open .ket-collapse-body{display:block}
+.ket-collapse-body .step-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+.ket-collapse-body .step-item:last-child{border-bottom:none}
+.ket-collapse-body .step-num-sm{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--purple);color:white;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px}
+.ket-collapse-body .step-tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:10px;font-weight:600;background:var(--cyan-bg);color:var(--cyan);margin-left:6px}
+
+/* Listening content card */
+.listen-card{padding:16px;border-radius:var(--radius-sm);background:rgba(108,92,231,0.06);border:1px solid rgba(108,92,231,0.15)}
+.listen-card h4{font-size:14px;color:var(--purple);margin-bottom:8px}
+.listen-card .listen-item{display:flex;gap:10px;padding:6px 0;font-size:12px;color:var(--text-secondary);border-bottom:1px solid rgba(255,255,255,0.03)}
+.listen-card .listen-item:last-child{border-bottom:none}
+.listen-card .listen-tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600;flex-shrink:0}
+.listen-card .listen-tag.anim{background:rgba(255,107,53,0.15);color:var(--primary)}
+.listen-card .listen-tag.raz{background:rgba(0,184,148,0.15);color:var(--success)}
+.listen-card .listen-tag.yt{background:rgba(255,230,109,0.12);color:var(--accent)}
+
 /* Footer */
 .ket-footer{position:sticky;bottom:0;background:var(--bg-panel);padding:12px 24px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.06);z-index:100;box-shadow:0 -2px 20px rgba(0,0,0,0.4)}
 .ket-footer-btn{padding:8px 18px;border-radius:var(--radius-xs);font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,0.12);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-secondary);text-decoration:none}
@@ -242,6 +265,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
     </div>
     <div id="dailyTasks"></div>
   </div>
+
+  <!-- K5 倾听者每日操作指南 -->
+  <div class="ket-collapse" id="k5GuideCollapse">
+    <div class="ket-collapse-header" onclick="document.getElementById('k5GuideCollapse').classList.toggle('open')">
+      <span class="ket-collapse-arrow">▶</span>
+      <span class="ket-card-icon">🎧</span>
+      <span class="ket-card-title" style="font-size:15px">K5 倾听者每日操作指南</span>
+      <span style="font-size:11px;color:var(--text-dim);margin-left:auto">点击展开</span>
+    </div>
+    <div class="ket-collapse-body">
+      <div class="step-item"><span class="step-num-sm">1</span><div>开机 → 文件管理 → 百度网盘下载区 → 找到真题音频</div></div>
+      <div class="step-item"><span class="step-num-sm">2</span><div>按"复读模式" → 设定间隔3秒 → 语速调至对应月份档位<span class="step-tag">6-7月 0.8x</span><span class="step-tag">8月 0.75x</span><span class="step-tag">9月 1.0x</span><span class="step-tag">10-11月 1.0x+AB</span><span class="step-tag">12月 1.2x</span></div></div>
+      <div class="step-item"><span class="step-num-sm">3</span><div>定时播放 → 设定时长（15-35分钟，对应月份）→ 开始</div></div>
+      <div class="step-item"><span class="step-num-sm">4</span><div>睡前/起床后自动播放（建议利用碎片时间）</div></div>
+    </div>
+  </div>
+
   <div class="ket-card">
     <div class="ket-card-header">
       <span class="ket-card-icon">🎧</span>
@@ -250,6 +290,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
     </div>
     <div class="ket-timeline" id="timeline"></div>
   </div>
+
+  <!-- 今日听力内容推荐 -->
+  <div class="ket-card" id="listenRecCard"></div>
 </div>
 
 <!-- TAB 2 -->
@@ -258,6 +301,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
     <button class="ket-cat-tab active" data-cat="pan">☁️ 百度网盘</button>
     <button class="ket-cat-tab" data-cat="app">📱 App工具</button>
     <button class="ket-cat-tab" data-cat="book">📚 教材推荐</button>
+    <button class="ket-cat-tab" data-cat="listen">🎬 听力资源</button>
     <button class="ket-cat-tab" data-cat="vocab">📝 词汇表</button>
     <button class="ket-cat-tab" data-cat="exam">📋 报名信息</button>
   </div>
@@ -338,24 +382,33 @@ var listenMinMap = {6:15,7:15,8:20,9:25,10:30,11:30,12:35};
 
 var resources = {
   pan: [
-    {icon:'📦', name:'KET真题合集', desc:'剑桥KET官方真题集 1-7 + 青少版真题，含听力音频和答案', tag:'核心资源', tip:'⚠️ 需手动从百度网盘下载'},
-    {icon:'📦', name:'三级合集（剑少→KET→PET）', desc:'剑桥少儿英语三级 + KET + PET 全套过渡资源', tag:'7月启用', tip:'⚠️ 需手动从百度网盘下载'},
-    {icon:'📦', name:'Power Up 教材全套', desc:'剑桥Power Up 1-6级 学生书+练习册+音频+白板软件', tag:'基础教材', tip:'⚠️ 需手动从百度网盘下载'},
-    {icon:'📦', name:'Think 教材全套', desc:'剑桥Think Starter-5级 学生书+练习册+音频+视频', tag:'进阶教材', tip:'⚠️ 需手动从百度网盘下载'},
-    {icon:'📦', name:'COMPLETE KET 全套', desc:'官方备考主教材 学生书+教师书+练习册+音频', tag:'主教材', tip:'⚠️ 需手动从百度网盘下载'}
+    {icon:'📦', name:'真题合集', desc:'含2020-2025年KET校园版/标准版真题约15套，听力音频+答案+听力原文。位置：网盘>KET备考>真题合集', tag:'核心资源', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'三级合集', desc:'含剑桥少儿英语三级（Flyers）真题约10套，作为KET前的基础过渡。位置：网盘>KET备考>三级合集', tag:'7月启用', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'Power Up', desc:'剑桥官方教材，Level 5-6对应KET难度，含学生书+练习册+音频。位置：网盘>KET备考>Power Up', tag:'基础教材', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'Think', desc:'剑桥官方教材，Level 1-2对应KET/A2，含学生书+教师书+音频+视频。位置：网盘>KET备考>Think', tag:'进阶教材', tip:'⚠️ 需手动从百度网盘下载'},
+    {icon:'📦', name:'COMPLETE', desc:'KET官方备考教材，含14个单元覆盖全部考点，学生书+练习册+教师书。位置：网盘>KET备考>COMPLETE', tag:'主教材', tip:'⚠️ 需手动从百度网盘下载'}
   ],
   app: [
-    {icon:'📱', name:'咔咔背-KET', desc:'艾宾浩斯遗忘曲线背单词App，内置KET核心1500词库，自动安排每日复习', tag:'每日必用'},
-    {icon:'📱', name:'可可英语', desc:'海量英语听力资源 + 口语跟读打分，KET真题听力专区，支持倍速调节', tag:'听力+口语'},
-    {icon:'📱', name:'英语趣配音', desc:'通过给动画/电影片段配音练口语，趣味性强，适合保持学习兴趣', tag:'口语趣味'},
-    {icon:'🎧', name:'K5倾听者（硬件）', desc:'复读机硬件设备，下载MP3后离线播放，支持AB复读、变速播放，核心听力训练工具', tag:'必备硬件'}
+    {icon:'📱', name:'咔咔背-KET', desc:'下载后在App内搜索"KET核心词汇"，选择"KET 1500词"词书，开启艾宾浩斯记忆模式。每日新学15-20词，系统自动安排复习。免费使用。', tag:'每日必用'},
+    {icon:'📱', name:'可可英语', desc:'下载后搜索"KET听力真题"，可调速播放(0.5x-2.0x)、AB复读、单句循环。口语板块可跟读评测。免费+部分付费。', tag:'听力+口语'},
+    {icon:'📱', name:'英语趣配音', desc:'下载后搜索"KET口语"或"剑桥少儿"，选择1-2分钟片段进行配音练习，系统会评分发音准确度。免费+部分付费。', tag:'口语趣味'},
+    {icon:'🎧', name:'K5倾听者（硬件）', desc:'物理硬件设备，需购买（约300-400元）。核心功能：百度网盘直连下载、变速播放(0.5x-2.0x，支持0.05x微调)、AB复读、定时播放、智能断句。购买渠道：淘宝/京东搜索"K5倾听者"。到手后连接WiFi → 绑定百度网盘账号 → 即可下载网盘内所有音频。', tag:'必备硬件'}
   ],
   book: [
-    {icon:'📚', name:'COMPLETE KET', desc:'剑桥官方KET备考主教材，14个单元覆盖全部考点，适合系统学习', tag:'主教材 · 核心'},
-    {icon:'📚', name:'KET Trainer', desc:'精讲精练，6套完整模拟题 + 详细解析，适合刷题提分', tag:'刷题必备'},
-    {icon:'📚', name:'Compact KET', desc:'紧凑型备考教材，适合时间紧张时快速过一遍考点', tag:'快速备考'},
-    {icon:'📚', name:'Power Up', desc:'剑桥少儿到KET的过渡教材，适合基础薄弱的孩子打基础', tag:'基础入门'},
-    {icon:'📚', name:'Think', desc:'剑桥青少英语教材，高于KET难度，适合学有余力时拓展', tag:'进阶拓展'}
+    {icon:'📚', name:'COMPLETE（主教材）', desc:'9月启用，每天1个单元，14个单元约3个月完成。系统覆盖听说读写+语法词汇。', tag:'主教材 · 核心 · 9月启动'},
+    {icon:'📚', name:'Trainer（精讲精练）', desc:'10月启用，做完COMPLETE后使用，6套完整模拟题+详细解析。', tag:'刷题必备 · 10月启动'},
+    {icon:'📚', name:'Compact（速成教材）', desc:'适合时间紧张时使用（11-12月），12个单元快速过考点。', tag:'快速备考 · 11月启用'},
+    {icon:'📚', name:'Power Up（基础教材）', desc:'7-8月启用，Level 5作为KET的基础过渡。', tag:'基础入门 · 7月启动'},
+    {icon:'📚', name:'Think（进阶教材）', desc:'KET通过后（140分以上），可接Think Level 2向PET过渡。', tag:'进阶拓展 · KET后'}
+  ],
+  listen: [
+    {icon:'🎬', name:'Peppa Pig 第3-4季', desc:'英音动画，词汇量适中，适合6-8月启蒙阶段。语速约120词/分钟，每集5分钟。', tag:'动画'},
+    {icon:'🎬', name:"Ben and Holly's Little Kingdom", desc:'英音动画，同Peppa Pig制作团队，词汇量适中，奇幻主题吸引孩子。', tag:'动画'},
+    {icon:'🎬', name:'Little Fox Level 3-4', desc:'分级动画：South Street School、Rocket Girl等，每集5-8分钟，对应KET难度。', tag:'分级动画'},
+    {icon:'📖', name:'RAZ分级阅读 Level F-J', desc:'约对应KET难度，含音频+quiz，建议每天1-2本。可在K5倾听者播放音频。', tag:'分级阅读'},
+    {icon:'▶️', name:'BBC Learning English', desc:'YouTube频道，含6 Minute English、The English We Speak等栏目，适合碎片时间。', tag:'YouTube'},
+    {icon:'▶️', name:'English with Lucy', desc:'YouTube频道，英国老师讲解文法+发音，清晰易懂，适合家长陪同学习。', tag:'YouTube'},
+    {icon:'🎙️', name:'BBC 6 Minute English', desc:'播客，每期6分钟讨论一个话题，含词汇讲解，适合10-12月碎片时间泛听。', tag:'播客'}
   ],
   vocab: [
     {icon:'📝', name:'KET核心词汇表', desc:'约1500个高频词汇，按18个主题分类：家庭、学校、食物、交通、天气、运动、购物、健康、工作、娱乐、自然、科技、节日、服装、城市、动物、时间、情感', tag:'必背'},
@@ -381,42 +434,41 @@ var printItems = [
 
 var calendarData = {
   7: {tasks:[
-    {id:'c71', text:'购买K5倾听者复读机（京东/淘宝，约200-300元）'},
-    {id:'c72', text:'注册咔咔背-KET账号，导入KET1500词库'},
-    {id:'c73', text:'从百度网盘下载KET真题合集+音频到K5倾听者'},
-    {id:'c74', text:'下载可可英语App，收藏KET真题听力频道'},
-    {id:'c75', text:'和孩子一起制定每日15分钟听力时间（固定时段）'}
-  ], reminder:'🔑 关键提醒：7月重点是"建立习惯"而非"追求效果"。让孩子先适应每天听英语的节奏，0.8倍速起步，不要一上来就正常速度。购买K5倾听者时注意选支持AB复读的型号。'},
+    {id:'c71', text:'购买K5倾听者（淘宝/京东，约300-400元）→ 到手后连接WiFi绑定百度网盘'},
+    {id:'c72', text:'下载并注册咔咔背App → 搜索"KET核心词汇"词书 → 设置每日15词'},
+    {id:'c73', text:'下载可可英语App → 收藏KET真题听力频道'},
+    {id:'c74', text:'把K5连接到孩子书包/床头，设定每天早晨7:30自动播放15分钟'}
+  ], reminder:'🔑 关键提醒：先不急着做真题，本月重点是建立每日听的习惯。购买K5倾听者时注意选支持AB复读的型号。'},
   8: {tasks:[
-    {id:'c81', text:'升级每日听力到20分钟，引入RAZ分级阅读音频'},
-    {id:'c82', text:'下载Little Fox动画资源，每天看1集（约5分钟）'},
-    {id:'c83', text:'咔咔背每日打卡保持，复习+新词各占一半'},
-    {id:'c84', text:'检查孩子对0.8倍速的适应情况，准备过渡到正常速度'}
-  ], reminder:'🔑 关键提醒：8月是承上启下的过渡月。RAZ建议从Level D-E开始，Little Fox选Level 3-4。此时不要急于做真题，重点是积累听力词汇量。'},
+    {id:'c81', text:'检查K5每天播放记录（K5有播放历史功能）→ 确保每天≥20分钟'},
+    {id:'c82', text:'咔咔背检查本周学习报告 → 确认艾宾浩斯复习自动推送正常'},
+    {id:'c83', text:'从百度网盘下载RAZ Level F-J音频到K5 → 替换部分动画内容'},
+    {id:'c84', text:'打印「词汇速记检查清单」贴书桌旁 → 每周和孩子一起打勾已背单词'}
+  ], reminder:'🔑 关键提醒：8月底做一次KET真题听力Part1摸底，不要求得分，只感受难度。RAZ建议从Level F开始，Little Fox选Level 3-4。'},
   9: {tasks:[
-    {id:'c91', text:'开始KET真题听力训练，25分钟/天，0.75倍速起步'},
-    {id:'c92', text:'完成COMPLETE教材Unit 1-4（第一遍系统学习）'},
-    {id:'c93', text:'关注剑桥英语官网，设置报名通知提醒'},
-    {id:'c94', text:'咔咔背打卡升级到每天15个单词'}
-  ], reminder:'🔑 关键提醒：9月正式进入KET备考。⚠️ 重要：关注KET报名官网通知（约10月开放报名），提前准备好考生照片（白底证件照电子版）。'},
+    {id:'c91', text:'打印COMPLETE教材（如买纸质版更好）→ 制定每天1单元的学习计划'},
+    {id:'c92', text:'进入KET报名官网关注报名通知（通常考前3个月开放报名）'},
+    {id:'c93', text:'检查咔咔背累计词汇量 → 目标600词'},
+    {id:'c94', text:'下载英语趣配音App → 让孩子每周配1-2个短片练口语'}
+  ], reminder:'🔑 关键提醒：9-10月密切关注剑桥英语官网报名信息，KET名额抢得很快。提前准备好考生白底证件照电子版。'},
   10: {tasks:[
-    {id:'c101', text:'听力升级到30分钟/天，正常1.0x速度'},
-    {id:'c102', text:'完成COMPLETE教材Unit 5-10'},
-    {id:'c103', text:'开始做Trainer模拟题第一套，记录分数'},
-    {id:'c104', text:'KET报名！准备好照片和身份证信息'}
-  ], reminder:'🔑 关键提醒：10月是报名月 + 真题突破月！一旦开放报名立即抢位（热门城市名额紧张）。听力开始用正常速度，孩子可能会觉得快，坚持1-2周就能适应。'},
+    {id:'c101', text:'每周做1套KET真题（听力+阅读+写作）→ 用分数记录表登记'},
+    {id:'c102', text:'分析错题 → 标记弱项（听力Part几？阅读哪种题型？）'},
+    {id:'c103', text:'咔咔背累计词汇量目标900词 → 如果落后需加速（每日25词）'},
+    {id:'c104', text:'针对弱项做专项练习（听力弱→加强精听；阅读弱→多练同义替换）'}
+  ], reminder:'🔑 关键提醒：这个月开始要有模考意识，计时做真题，模拟考试环境。KET报名一旦开放立即抢位（热门城市名额紧张）。'},
   11: {tasks:[
-    {id:'c111', text:'听力30分钟/天，AB复读精听错题段落'},
-    {id:'c112', text:'完成Trainer模拟题第2-4套，对比分数变化'},
-    {id:'c113', text:'口语开始模拟练习：英语趣配音 + 家长模拟考官'},
-    {id:'c114', text:'梳理KET写作模板：邮件格式 + 看图写话框架'}
-  ], reminder:'🔑 关键提醒：11月是强化月，重点攻克弱项。如果听力分数停滞不前，回到0.75倍速做精听。口语不要忽略，考试占比25%。家长可以扮演口语考官，用网上可查的KET口语真题练习。'},
+    {id:'c111', text:'每周做2套真题或模拟题 → 严格计时 → 用分数记录表追踪趋势'},
+    {id:'c112', text:'开始口语练习 → 用可可英语跟读+英语趣配音积累口语素材'},
+    {id:'c113', text:'咔咔背累计词汇量目标1200词'},
+    {id:'c114', text:'准备口语Part1标准答案（name/age/hometown/hobbies/family）→ 让孩子背熟'}
+  ], reminder:'🔑 关键提醒：如果分数稳定在130分以上（Merit），说明备考状态良好。口语不要忽略，考试占比25%。家长可以扮演口语考官练习。'},
   12: {tasks:[
-    {id:'c121', text:'听力升级到35分钟/天，1.2倍速冲刺训练'},
-    {id:'c122', text:'完成Trainer最后2套模拟题，目标稳定在130分以上'},
-    {id:'c123', text:'打印准考证（通常考前2周官网下载）'},
-    {id:'c124', text:'踩点考场：确认交通路线、考场位置、周边环境'}
-  ], reminder:'🔑 关键提醒：12月是冲刺月！打印准考证、踩点考场是硬任务不能忘。最后一周降低强度，不再刷新题，回顾错题本和技巧卡。考试当天带齐：准考证+身份证+2B铅笔+橡皮+黑色签字笔。'}
+    {id:'c121', text:'考前2周做3套全真模拟（包括口语模拟）→ 整套计时、涂答题卡'},
+    {id:'c122', text:'1.2x变速听力训练 → 适应考场听力（考场听力通常感觉比平时慢一些）'},
+    {id:'c123', text:'咔咔背完成1500词 → 集中复习错词本中的易错词'},
+    {id:'c124', text:'打印准考证 → 提前踩点考场 → 准备考试用品（2B铅笔、橡皮、准考证、身份证/户口本）'}
+  ], reminder:'🔑 关键提醒：考前3天只做轻松回顾，不刷新题，保证充足睡眠。考试当天带齐：准考证+身份证+2B铅笔+橡皮+黑色签字笔。'}
 };
 
 // ====== UTILS ======
@@ -573,6 +625,7 @@ function toggleDateStamp(key) {
     tlHtml += '</div>';
   });
   document.getElementById('timeline').innerHTML = tlHtml;
+  renderListenRec();
 })();
 
 function toggleTask1(id) {
@@ -593,8 +646,55 @@ function toggleTask1(id) {
     });
     document.getElementById('dailyTasks').innerHTML = html;
   })();
+  renderListenRec();
   // Invalidate dashboard cache
   dashRendered = false;
+}
+
+// ====== TAB 1 Listening Recommendation ======
+var listenRecData = {
+  6: {title:'6月推荐：英语启蒙动画 + 儿歌', items:[
+    {tag:'anim',label:'动画',text:'Peppa Pig 第3-4季（英音，每集5分钟，语速约120词/分钟）'},
+    {tag:'anim',label:'儿歌',text:'Super Simple Songs（旋律简单、重复率高，适合建立语感）'}
+  ]},
+  7: {title:'7月推荐：英语动画 + 儿歌循环', items:[
+    {tag:'anim',label:'动画',text:'Peppa Pig 第3-4季 + Ben and Holly（尝试1.0x常速）'},
+    {tag:'anim',label:'儿歌',text:'Super Simple Songs 循环播放（鼓励跟唱，培养语音语调）'}
+  ]},
+  8: {title:'8月推荐：RAZ分级阅读 + Little Fox', items:[
+    {tag:'raz',label:'RAZ',text:'RAZ Level F-J（约对应KET难度，含音频+quiz，每天1-2本）'},
+    {tag:'anim',label:'动画',text:'Little Fox Level 3-4（South Street School、Rocket Girl等）'}
+  ]},
+  9: {title:'9月推荐：KET真题听力 Part 1 & 2', items:[
+    {tag:'raz',label:'真题',text:'KET真题听力 Part 1 & Part 2（0.75x慢速起步，每段听3遍）'},
+    {tag:'raz',label:'精听',text:'用三遍精听法逐句攻克，配合可可英语逐句播放功能'}
+  ]},
+  10: {title:'10-11月推荐：KET真题听力全5个Part', items:[
+    {tag:'raz',label:'真题',text:'KET真题听力全5个Part（正常语速1.0x，每周2套完整听力）'},
+    {tag:'raz',label:'AB复读',text:'错题段落用K5 AB复读模式精听，直到完全听懂为止'}
+  ]},
+  11: {title:'10-11月推荐：KET真题听力全5个Part', items:[
+    {tag:'raz',label:'真题',text:'KET真题听力全5个Part（正常语速1.0x，每周2套完整听力）'},
+    {tag:'raz',label:'AB复读',text:'错题段落用K5 AB复读模式精听，直到完全听懂为止'}
+  ]},
+  12: {title:'12月推荐：KET模拟题全真听力 + 变速训练', items:[
+    {tag:'raz',label:'模考',text:'KET模拟题全真听力（完整模拟考试环境，计时25分钟）'},
+    {tag:'anim',label:'变速',text:'1.2x变速训练（适应快速听力，考场听力会感觉比平时慢）'}
+  ]}
+};
+
+function renderListenRec() {
+  var m = getNowMonth();
+  if (m < 6) m = 6; if (m > 12) m = 7;
+  var rec = listenRecData[m];
+  if (!rec) { document.getElementById('listenRecCard').innerHTML = ''; return; }
+  var html = '<div class="ket-card-header"><span class="ket-card-icon">📡</span><span class="ket-card-title">今日听力内容推荐</span><span class="ket-card-subtitle">根据当前月份自动匹配</span></div>';
+  html += '<div class="listen-card"><h4>'+rec.title+'</h4>';
+  rec.items.forEach(function(item){
+    html += '<div class="listen-item"><span class="listen-tag '+item.tag+'">'+item.label+'</span><span>'+item.text+'</span></div>';
+  });
+  html += '</div>';
+  document.getElementById('listenRecCard').innerHTML = html;
 }
 
 // ====== TAB 2 ======
@@ -664,38 +764,51 @@ function saveVocabProgress() {
 
 function renderVocabTable() {
   var topics = [
-    ['家庭','father, mother, brother, sister, uncle, aunt, cousin, grandson, granddaughter, husband, wife, parent, child, relative'],
-    ['学校','classroom, blackboard, textbook, notebook, pencil, ruler, eraser, homework, exam, subject, teacher, student, playground, library'],
-    ['食物','bread, rice, noodle, egg, milk, cheese, chicken, fish, vegetable, fruit, apple, banana, orange, cake, sandwich, soup'],
-    ['交通','bus, train, taxi, bicycle, car, plane, airport, station, ticket, passenger, driver, traffic, journey, map, road'],
-    ['天气','sunny, rainy, cloudy, windy, snowy, hot, cold, warm, cool, temperature, umbrella, weather, forecast, storm, fog'],
-    ['运动','football, basketball, tennis, swimming, running, cycling, gym, match, player, team, winner, exercise, healthy, competition'],
-    ['购物','supermarket, shop, price, cheap, expensive, money, pound, pence, receipt, customer, buy, sell, size, color, discount'],
-    ['健康','hospital, doctor, nurse, medicine, headache, toothache, fever, appointment, patient, healthy, exercise, rest, sleep, ill']
+    ['食物饮料','apple 苹果, banana 香蕉, bread 面包, butter 黄油, cake 蛋糕, cheese 奶酪, chicken 鸡肉, chocolate 巧克力, coffee 咖啡, cream 奶油'],
+    ['家庭朋友','aunt 阿姨/姑姑, brother 兄弟, cousin 表/堂兄弟姐妹, daughter 女儿, father 父亲, grandmother 祖母, husband 丈夫, parents 父母, sister 姐妹, uncle 叔叔/舅舅'],
+    ['学校用品','backpack 书包, blackboard 黑板, book 书, calculator 计算器, classroom 教室, dictionary 词典, eraser 橡皮, notebook 笔记本, pencil 铅笔, ruler 尺子'],
+    ['日常活动','cook 烹饪, dance 跳舞, draw 画画, drive 开车, eat 吃, listen 听, read 阅读, run 跑步, sing 唱歌, swim 游泳'],
+    ['地点建筑','airport 机场, bank 银行, bridge 桥, castle 城堡, church 教堂, hospital 医院, hotel 酒店, library 图书馆, museum 博物馆, station 车站']
   ];
-  var html = '<table class="ket-print-table"><thead><tr><th>主题</th><th>核心词汇</th></tr></thead><tbody>';
-  topics.forEach(function(t) { html += '<tr><td><b>'+t[0]+'</b></td><td>'+t[1]+'</td></tr>'; });
-  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">共8大主题，完整1500词请参考咔咔背-KET App词库</div>';
+  var html = '<table class="ket-print-table"><thead><tr><th>主题</th><th>核心词汇（含中文释义）</th></tr></thead><tbody>';
+  topics.forEach(function(t) { html += '<tr><td><b>'+t[0]+'</b></td><td style="font-size:11px;line-height:1.8">'+t[1]+'</td></tr>'; });
+  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">以上50词为高频核心词，完整1500词请参考咔咔背-KET App词库，按18个主题分类学习</div>';
   document.getElementById('printContent-p1').innerHTML = html;
 }
 
 function renderScoreTable() {
-  var html = '<table class="ket-print-table"><thead><tr><th>日期</th><th>试卷</th><th>阅读写作(50%)</th><th>听力(25%)</th><th>口语(25%)</th><th>总分</th><th>备注</th></tr></thead><tbody>';
-  for (var i = 0; i < 8; i++) { html += '<tr><td>____/____</td><td>Trainer '+(i+1)+'</td><td></td><td></td><td></td><td></td><td></td></tr>'; }
-  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">及格线120分，优秀线133分，卓越线140分（满分150）</div>';
+  var html = '<table class="ket-print-table"><thead><tr><th>序号</th><th>日期</th><th>模块</th><th>得分</th><th>换算KET分</th><th>备注</th></tr></thead><tbody>';
+  var modules = ['听力','阅读','写作','口语','听力','阅读','写作','口语'];
+  for (var i = 0; i < 8; i++) {
+    html += '<tr><td>'+(i+1)+'</td><td>__/__</td><td>'+modules[i]+'</td><td></td><td></td><td></td></tr>';
+  }
+  html += '</tbody></table>';
+  html += '<div style="font-size:11px;color:var(--text-secondary);margin-top:8px;line-height:1.7;background:rgba(108,92,231,0.06);padding:10px;border-radius:8px">';
+  html += '<b>KET评分标准：</b><br>';
+  html += '听力 25题 × 1分 = 满分25 → 换算KET分150<br>';
+  html += '阅读 30题 × 1分 = 满分30 → 换算KET分150<br>';
+  html += '写作 2题 = 满分30 → 换算KET分150<br>';
+  html += '口语 = 满分45 → 换算KET分150<br>';
+  html += '总分150分：120分通过(Pass) | 133分优秀(Merit) | 140分卓越(Distinction)';
+  html += '</div>';
   document.getElementById('printContent-p2').innerHTML = html;
 }
 
 function renderScheduleTable() {
   var days = ['周一','周二','周三','周四','周五','周六','周日'];
   var html = '<table class="ket-print-table"><thead><tr><th>时段</th>'+days.map(function(d){return '<th>'+d+'</th>';}).join('')+'</tr></thead><tbody>';
-  var rows = [['早晨 (7:00-7:30)'],['放学后 (16:30-17:00)'],['晚饭后 (19:00-19:30)'],['睡前 (20:30-21:00)']];
-  rows.forEach(function(r) {
-    html += '<tr><td><b>'+r[0]+'</b></td>';
-    for (var i = 0; i < 7; i++) html += '<td></td>';
+  var slots = [
+    ['早晨<br>(7:30-8:00)', ['K5听力15min', 'K5听力15min', 'K5听力15min', 'K5听力15min', 'K5听力15min', 'K5听力20min', '休息']],
+    ['放学后<br>(16:30-17:00)', ['咔咔背单词', '咔咔背单词', 'RAZ阅读1本', '咔咔背单词', 'RAZ阅读1本', '真题听力1Part', '动画20min']],
+    ['晚饭后<br>(19:00-19:30)', ['COMPLETE教材', '听力精听', 'COMPLETE教材', '听力精听', 'COMPLETE教材', '真题模考', '口语练习']],
+    ['睡前<br>(20:30-21:00)', ['英语动画', 'K5听力回顾', '英语动画', 'K5听力回顾', '动画/趣配音', '可可跟读', '自由阅读']]
+  ];
+  slots.forEach(function(s) {
+    html += '<tr><td><b>'+s[0]+'</b></td>';
+    s[1].forEach(function(a) { html += '<td style="font-size:11px">'+a+'</td>'; });
     html += '</tr>';
   });
-  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">建议：周一至周五每天2个时段，周末每天3个时段，每周合计约12-14小时</div>';
+  html += '</tbody></table><div style="font-size:10px;color:var(--text-dim);margin-top:6px">建议：周一至周五每天2个时段，周末每天3个时段，每周合计约12-14小时。可根据实际情况灵活调整。</div>';
   document.getElementById('printContent-p3').innerHTML = html;
 }
 
@@ -710,34 +823,39 @@ function openPrintModal(id) {
   var content = '';
   if (id === 'p4') {
     content = '<h3>🎯 三遍精听法操作卡</h3>'+
-      '<div style="background:rgba(108,92,231,0.08);padding:14px;border-radius:10px;margin:10px 0">'+
-      '<p><span class="step-num">1</span><b>第一遍：盲听（不暂停）</b></p><p style="margin-left:32px;color:var(--text-dim)">完整听一遍，不按暂停。目标：抓住大意，知道在讲什么。听完后用一句话概括内容。</p>'+
-      '<p style="margin-top:12px"><span class="step-num">2</span><b>第二遍：逐句精听（逐句暂停）</b></p><p style="margin-left:32px;color:var(--text-dim)">每句话暂停一次，尝试复述或写下关键词。听不懂的标记出来，不要回退。这一遍的目标是抓细节。</p>'+
-      '<p style="margin-top:12px"><span class="step-num">3</span><b>第三遍：对照原文（看着文本听）</b></p><p style="margin-left:32px;color:var(--text-dim)">打开听力原文，边看边听。重点关注第二遍没听懂的地方。标记生词加入咔咔背复习队列。</p>'+
+      '<div style="background:rgba(108,92,231,0.08);padding:14px;border-radius:10px;margin:10px 0;line-height:1.9">'+
+      '<p><span class="step-num">1</span><b>第一遍：泛听（不停顿）</b></p>'+
+      '<p style="margin-left:32px;color:var(--text-dim)">目标：抓住大意、场景、人物数量。用铅笔快速记关键词。这一遍通常只能听懂30-40%。</p>'+
+      '<p style="margin-top:12px"><span class="step-num">2</span><b>第二遍：逐句精听（每句暂停）</b></p>'+
+      '<p style="margin-left:32px;color:var(--text-dim)">目标：把每个词写下来。听不懂的倒回去再听，最多3次。用黑色笔补全。这一遍通常能听懂60-80%。</p>'+
+      '<p style="margin-top:12px"><span class="step-num">3</span><b>第三遍：核对（不停顿）</b></p>'+
+      '<p style="margin-left:32px;color:var(--text-dim)">目标：检查拼写、补漏词。用红笔修改，对照听力原文订正。这一遍应达到90%+。</p>'+
       '</div>'+
+      '<p style="margin-top:10px"><b>每遍之后标注"听懂比例"：</b>第一遍通常30-40%，第二遍60-80%，第三遍90%+</p>'+
       '<p><b>适用场景：</b>KET Part 3-5 长对话/独白</p><p><b>工具配合：</b>K5倾听者AB复读模式 + 可可英语逐句播放</p><p><b>耗时：</b>约15-20分钟/篇</p>';
   } else if (id === 'p5') {
     content = '<h3>🚑 考场救命技巧卡（10条）</h3><ol style="line-height:2">'+
-      '<li><b>听力前快速浏览题目：</b>利用Direction时间把题目关键词划出来，预测对话场景。</li>'+
-      '<li><b>听力第二遍查漏补缺：</b>KET听力放两遍，第一遍不确定的，第二遍重点听。</li>'+
-      '<li><b>阅读先看问题再读文章：</b>带着问题找答案，不要逐字读完全文。</li>'+
-      '<li><b>遇到生词不要慌：</b>根据上下文猜意思，KET不需要认识所有单词。</li>'+
-      '<li><b>写作邮件格式分白送：</b>Dear + 开头问候 + 正文 + Best wishes + 署名，这5部分不漏就能拿格式分。</li>'+
-      '<li><b>看图写话用5W1H：</b>Who/What/Where/When/Why/How，每张图写2-3句话。</li>'+
-      '<li><b>口语回答要完整句：</b>不要只蹦单词，考官问"Do you like music?"要回答"Yes, I like music because..."。</li>'+
-      '<li><b>口语不会说别停：</b>想不起来用"Well, let me think..."或"I\'m not sure but I think..."争取时间。</li>'+
-      '<li><b>答题卡填涂要清晰：</b>用2B铅笔，修改要擦干净，不要折答题卡。</li>'+
-      '<li><b>最后5分钟检查：</b>优先检查答题卡是否填完，再回看标记的不确定题目。</li></ol>';
+      '<li><b>听力：题干关键词先圈出来</b>，听时盯住关键词出现的位置</li>'+
+      '<li><b>听力：数字题（时间/价格/电话）</b>一定会在录音中出现两个数字，只有一个是正确答案</li>'+
+      '<li><b>阅读Part 1：先看选项再看短文</b>，匹配关键词（同义替换）</li>'+
+      '<li><b>阅读Part 2：先读题干找定位词</b>，再回原文扫读</li>'+
+      '<li><b>阅读Part 4：完形填空先通读全文</b>掌握大意，再逐空选择</li>'+
+      '<li><b>写作：邮件写作记住4要素</b> — 问候、正文、结尾敬语、签名</li>'+
+      '<li><b>写作：看图写话用"Who+Where+What+How"四步法</b>，每图写2-3句</li>'+
+      '<li><b>口语Part 1：个人信息问答</b>，提前准备好name/age/hometown/hobbies/family的标准回答</li>'+
+      '<li><b>口语Part 2：图片讨论</b>，用"I can see..."开头，"I think...because..."表达观点</li>'+
+      '<li><b>时间管理：</b>听力25分钟+阅读写作60分钟+口语8-10分钟。阅读写作先做擅长的部分</li></ol>';
   } else if (id === 'p6') {
-    content = '<h3>🗺️ 7-12月 KET学习路线图</h3>'+
-      '<div style="background:rgba(0,212,255,0.06);padding:16px;border-radius:10px;line-height:2.2">'+
-      '<p><b>7月 🔧 准备期</b> — 购买设备(K5) · 注册App(咔咔背+可可英语) · 收集资源</p>'+
-      '<p><b>8月 🌱 习惯期</b> — 20min/天 听力 · RAZ+Little Fox · 培养每日英语习惯</p>'+
-      '<p><b>9月 🚀 KET入门</b> — 25min/天 真题听力 · COMPLETE U1-4 · 关注报名</p>'+
-      '<p><b>10月 📈 真题突破</b> — 30min/天 正常速度 · COMPLETE U5-10 · 报名+KET Trainer</p>'+
-      '<p><b>11月 💪 强化训练</b> — 30min/天 AB精听 · Trainer模考 · 口语+写作专项</p>'+
-      '<p><b>12月 🏁 冲刺</b> — 35min/天 1.2x速 · 打印准考证 · 踩点考场 · 回顾错题</p></div>'+
-      '<p style="margin-top:12px"><b>🎯 目标分数：</b>130+（优秀线，对应CEFR A2水平）</p>'+
+    content = '<h3>🗺️ 7-12月 KET学习路线图（A4一页纸全景）</h3>'+
+      '<div style="background:rgba(0,212,255,0.06);padding:16px;border-radius:10px;line-height:2.2;font-size:13px">'+
+      '<p><b>7月 🔧 习惯建立期</b> — 每日15分钟听力 · 咔咔背单词启动 · Power Up Level 5开始</p>'+
+      '<p><b>8月 🌱 过渡期</b> — 每日20分钟听力 · RAZ/动画切换 · 词汇300词积累</p>'+
+      '<p><b>9月 🚀 KET入门</b> — 每日25分钟听力(KET真题) · COMPLETE教材启动 · 单词600词</p>'+
+      '<p><b>10月 📈 真题突破</b> — 每日30分钟听力(正常速) · Trainer模考 · 单词900词</p>'+
+      '<p><b>11月 💪 真题强化</b> — 每日30分钟听力(AB复读) · Compact速过 · 单词1200词</p>'+
+      '<p><b>12月 🏁 冲刺</b> — 每日35分钟听力(1.2x) · 全真模拟 · 单词1500词完成 · 报名确认</p></div>'+
+      '<p style="margin-top:12px"><b>📊 数据追踪：</b>在「数据看板」中查看听力时长累计、词汇进度、打卡热力图</p>'+
+      '<p><b>🎯 目标分数：</b>130+（优秀线/Merit，对应CEFR A2水平）</p>'+
       '<p><b>⏱️ 总规划时长：</b>每周12-15小时 × 24周 ≈ 288-360小时</p>';
   }
   document.getElementById('modalContent').innerHTML =
