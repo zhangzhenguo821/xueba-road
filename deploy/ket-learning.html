@@ -212,6 +212,41 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
 .vocab-progress-panel button:hover{opacity:0.85}
 .vocab-progress-panel .vocab-label{font-size:13px;color:var(--text-secondary)}
 
+
+/* Flashcard styles */
+.flashcard-wrap{background:var(--bg-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.04);margin-top:16px}
+.flashcard-progress{margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.flashcard-progress-bar{flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,0.06);overflow:hidden}
+.flashcard-progress-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--success),var(--cyan));transition:width .4s ease}
+.flashcard-progress-text{font-size:13px;font-weight:700;color:var(--cyan);white-space:nowrap}
+.flashcard-cat-tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;justify-content:center}
+.flashcard-cat-tab{padding:5px 12px;border-radius:16px;font-size:11px;font-weight:600;border:1px solid rgba(255,255,255,0.1);cursor:pointer;transition:var(--transition);background:transparent;color:var(--text-dim)}
+.flashcard-cat-tab:hover{border-color:var(--purple);color:var(--purple)}
+.flashcard-cat-tab.active{background:var(--purple-bg);border-color:var(--purple);color:var(--purple)}
+.flashcard-card{perspective:800px;width:100%;max-width:360px;height:220px;margin:0 auto 16px;cursor:pointer}
+.flashcard-inner{position:relative;width:100%;height:100%;transition:transform 0.5s cubic-bezier(0.4,0,0.2,1);transform-style:preserve-3d}
+.flashcard-inner.flipped{transform:rotateY(180deg)}
+.flashcard-front,.flashcard-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:var(--radius);display:flex;flex-direction:column;align-items:center;justify-content:center;border:2px solid rgba(162,155,254,0.3);background:linear-gradient(135deg,rgba(162,155,254,0.08),rgba(0,212,255,0.05))}
+.flashcard-back{transform:rotateY(180deg);background:linear-gradient(135deg,rgba(0,184,148,0.08),rgba(162,155,254,0.05));border-color:rgba(0,184,148,0.3)}
+.flashcard-word{font-size:42px;font-weight:900;color:white;margin-bottom:8px;letter-spacing:2px}
+.flashcard-pos{font-size:13px;color:var(--purple);font-weight:600;margin-bottom:4px}
+.flashcard-zh{font-size:28px;font-weight:800;color:var(--accent);margin-bottom:4px}
+.flashcard-speak-btn{display:inline-flex;align-items:center;gap:4px;padding:6px 14px;border-radius:20px;background:rgba(0,212,255,0.12);border:1px solid rgba(0,212,255,0.25);color:var(--cyan);cursor:pointer;font-size:13px;transition:var(--transition);margin-top:8px}
+.flashcard-speak-btn:hover{background:rgba(0,212,255,0.22)}
+.flashcard-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.flashcard-btn{padding:10px 22px;border-radius:10px;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:var(--transition)}
+.flashcard-btn.known{background:var(--success);color:white}
+.flashcard-btn.known:hover{opacity:0.85;transform:translateY(-1px)}
+.flashcard-btn.again{background:rgba(255,107,53,0.2);color:var(--primary);border:1px solid rgba(255,107,53,0.3)}
+.flashcard-btn.again:hover{background:rgba(255,107,53,0.3)}
+.flashcard-btn.review{background:var(--purple-bg);color:var(--purple);border:1px solid var(--purple-border)}
+.flashcard-btn.review:hover{background:rgba(108,92,231,0.25)}
+.flashcard-empty{text-align:center;padding:40px;color:var(--text-dim);font-size:15px}
+.flashcard-counter{text-align:center;font-size:12px;color:var(--text-dim);margin-top:8px}
+/* Vocab speak icon in print table */
+.vocab-speak{display:inline-block;cursor:pointer;font-size:14px;margin-left:2px;opacity:0.6;transition:var(--transition);vertical-align:middle}
+.vocab-speak:hover{opacity:1;transform:scale(1.2)}
+
 /* Responsive */
 @media(max-width:768px){
   .ket-content{padding:16px}
@@ -226,6 +261,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
   .dash-stat-row{flex-direction:column}
   .dash-big-num-val{font-size:36px}
   .heatmap-cell{width:22px;height:22px}
+  .flashcard-card{max-width:100%;height:200px}
+  .flashcard-word{font-size:32px}
+  .flashcard-zh{font-size:24px}
+  .flashcard-actions{flex-direction:column;align-items:center}
+  .flashcard-btn{width:100%;max-width:240px}
 }
 @media print{
   .ket-header,.ket-tabs,.ket-footer,.print-btn,.ket-modal-overlay{display:none!important}
@@ -249,9 +289,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
 <nav class="ket-tabs" id="ketTabs">
   <button class="ket-tab active" data-tab="tab1">📋 今日任务</button>
   <button class="ket-tab" data-tab="tab2">🗡️ 武器库</button>
-  <button class="ket-tab" data-tab="tab3">🖨️ 打印中心</button>
-  <button class="ket-tab" data-tab="tab4">📅 家长日历</button>
-  <button class="ket-tab" data-tab="tab5">📊 数据看板</button>
+  <button class="ket-tab" data-tab="tab3">🎮 在线练习</button>
+  <button class="ket-tab" data-tab="tab4">🖨️ 打印中心</button>
+  <button class="ket-tab" data-tab="tab5">📅 家长日历</button>
+  <button class="ket-tab" data-tab="tab6">📊 数据看板</button>
 </nav>
 
 <div class="ket-content">
@@ -314,13 +355,130 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
   </div>
 </div>
 
-<!-- TAB 3 -->
+<!-- TAB 3: 在线练习 -->
 <div class="ket-tab-panel" id="tab3">
+
+  <!-- Module 1: Cambridge iframe -->
+  <div class="ket-card">
+    <div class="ket-card-header">
+      <span class="ket-card-icon">🌐</span>
+      <span class="ket-card-title">剑桥官方 A2 Key 免费在线练习</span>
+    </div>
+    <div style="background:rgba(0,212,255,0.06);padding:14px;border-radius:10px;margin-bottom:14px;font-size:13px;color:var(--text-secondary);line-height:1.7">
+      以下是剑桥英语官网提供的免费 A2 Key 级别在线练习，涵盖阅读、写作、听力、语法、发音和词汇。直接在下方窗口操作即可，无需注册。
+    </div>
+    <div style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden">
+      <iframe src="https://www.cambridgeenglish.org/learning-english/activities-for-learners/?level=basic&rows=12"
+        style="width:100%;height:600px;border:none" 
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+        loading="lazy"
+        title="剑桥官方 A2 Key 在线练习">
+      </iframe>
+    </div>
+    <div style="font-size:11px;color:var(--text-dim);margin-top:10px;text-align:center">
+      ⚠️ 如上方窗口无法加载（部分网站禁止iframe嵌入），请直接访问：
+      <a href="https://www.cambridgeenglish.org/learning-english/activities-for-learners/?level=basic&rows=12" target="_blank" style="color:var(--cyan)">剑桥英语官方学习活动页面</a>
+    </div>
+  </div>
+
+  <!-- Module 2: Quick Entry Cards -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:20px">
+
+    <!-- Card 1: 听力样题 -->
+    <div class="ket-card" style="text-align:center">
+      <div style="font-size:36px;margin-bottom:8px">🎧</div>
+      <div style="font-size:16px;font-weight:700;margin-bottom:6px">听力样题</div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">
+        剑桥官方在线听力真题，约30分钟，真实考试界面
+      </div>
+      <a href="https://www.cambridgeenglish.org/exams-and-tests/key-for-schools/preparation/" target="_blank" 
+         style="display:inline-block;padding:10px 20px;background:var(--purple);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
+        打开听力样题（需 Firefox 浏览器）
+      </a>
+    </div>
+
+    <!-- Card 2: 读写样题 -->
+    <div class="ket-card" style="text-align:center">
+      <div style="font-size:36px;margin-bottom:8px">📝</div>
+      <div style="font-size:16px;font-weight:700;margin-bottom:6px">读写样题</div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">
+        剑桥官方在线阅读写作真题，约60分钟，含自动判分
+      </div>
+      <a href="https://www.cambridgeenglish.org/exams-and-tests/key-for-schools/preparation/" target="_blank" 
+         style="display:inline-block;padding:10px 20px;background:var(--purple);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
+        打开读写样题（需 Firefox 浏览器）
+      </a>
+    </div>
+
+    <!-- Card 3: 真题下载 -->
+    <div class="ket-card" style="text-align:center">
+      <div style="font-size:36px;margin-bottom:8px">📄</div>
+      <div style="font-size:16px;font-weight:700;margin-bottom:6px">真题下载</div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:14px;line-height:1.6">
+        可打印的完整样题，含听力音频下载和答案
+      </div>
+      <a href="https://www.cambridgeenglish.org/exams-and-tests/key-for-schools/preparation/" target="_blank" 
+         style="display:inline-block;padding:10px 20px;background:var(--primary);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
+        下载PDF真题
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Module 3: KET 备考视频资源 -->
+  <div class="ket-card">
+    <div class="ket-card-header">
+      <span class="ket-card-icon">▶️</span>
+      <span class="ket-card-title">KET 备考视频资源</span>
+    </div>
+    
+    <div style="background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.15);border-radius:10px;padding:16px;margin-bottom:16px">
+      <div style="font-size:14px;font-weight:700;color:var(--primary);margin-bottom:8px">📺 B站搜索 KET备考</div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;line-height:1.6">
+        在B站搜索KET备考，有大量剑桥官方讲解视频和名师公开课，涵盖听力、口语、阅读、写作全模块。
+      </div>
+      <a href="https://search.bilibili.com/all?keyword=KET%E5%A4%87%E8%80%83" target="_blank" 
+         style="display:inline-block;padding:8px 18px;background:var(--primary);color:white;border-radius:8px;text-decoration:none;font-size:13px;font-weight:600">
+        🔍 在B站搜索 KET备考
+      </a>
+    </div>
+
+    <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">推荐视频列表（需在B站/YouTube搜索观看）</div>
+    
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
+        <span style="font-size:22px">🎤</span>
+        <div>
+          <div style="font-size:13px;font-weight:600">剑桥官方：KET口语考试实录</div>
+          <div style="font-size:11px;color:var(--text-dim)">搜索关键词：Cambridge KET Speaking Test</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
+        <span style="font-size:22px">📖</span>
+        <div>
+          <div style="font-size:13px;font-weight:600">名师讲解：KET阅读技巧</div>
+          <div style="font-size:11px;color:var(--text-dim)">搜索关键词：KET Reading Tips / KET阅读解题技巧</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.04)">
+        <span style="font-size:22px">✍️</span>
+        <div>
+          <div style="font-size:13px;font-weight:600">名师讲解：KET写作模板</div>
+          <div style="font-size:11px;color:var(--text-dim)">搜索关键词：KET Writing Template / KET写作模板</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TAB 4: 打印中心 -->
+<div class="ket-tab-panel" id="tab4">
   <div class="ket-print-grid" id="printGrid"></div>
 </div>
 
-<!-- TAB 4 -->
-<div class="ket-tab-panel" id="tab4">
+<!-- TAB 5: 家长日历 -->
+<div class="ket-tab-panel" id="tab5">
   <div class="ket-cal-top">
     <div class="ket-month-selector" id="monthSelector"></div>
     <div class="ket-progress-wrap">
@@ -331,8 +489,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hira
   <div class="ket-cal-grid" id="calGrid"></div>
 </div>
 
-<!-- TAB 5: 数据看板 -->
-<div class="ket-tab-panel" id="tab5">
+<!-- TAB 6: 数据看板 -->
+<div class="ket-tab-panel" id="tab6">
   <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
     <button class="ket-footer-btn export-btn" onclick="exportData()">📥 导出数据 (CSV)</button>
   </div>
@@ -537,12 +695,12 @@ function switchTab(name) {
   currentTab = name;
   document.querySelectorAll('.ket-tab').forEach(function(t) { t.classList.toggle('active', t.dataset.tab === name); });
   document.querySelectorAll('.ket-tab-panel').forEach(function(p) { p.classList.toggle('active', p.id === name); });
-  if (name === 'tab5' && !dashRendered) {
+  if (name === 'tab6' && !dashRendered) {
     setTimeout(function() {
       renderAllDashboard();
       dashRendered = true;
     }, 120);
-  } else if (name === 'tab5' && dashRendered) {
+  } else if (name === 'tab6' && dashRendered) {
     setTimeout(refreshDashboard, 80);
   }
 }
@@ -565,7 +723,7 @@ document.querySelectorAll('.ket-tab').forEach(function(t) {
   var t3 = (log['tab1_task3'] || []).indexOf(today) >= 0;
   if (t1 && t2 && t3) {
     // All done → Tab5
-    switchTab('tab5');
+    switchTab('tab6');
     return;
   }
 
@@ -708,7 +866,212 @@ document.getElementById('resCatTabs').addEventListener('click', function(e) {
   }
 });
 
+
+// ====== FLASHCARD DATA ======
+var flashcardWords = [
+  // 食物饮料
+  {en:'apple', zh:'苹果', pos:'n.', cat:'food'},
+  {en:'banana', zh:'香蕉', pos:'n.', cat:'food'},
+  {en:'bread', zh:'面包', pos:'n.', cat:'food'},
+  {en:'butter', zh:'黄油', pos:'n.', cat:'food'},
+  {en:'cake', zh:'蛋糕', pos:'n.', cat:'food'},
+  {en:'cheese', zh:'奶酪', pos:'n.', cat:'food'},
+  {en:'chicken', zh:'鸡肉', pos:'n.', cat:'food'},
+  {en:'chocolate', zh:'巧克力', pos:'n.', cat:'food'},
+  {en:'coffee', zh:'咖啡', pos:'n.', cat:'food'},
+  {en:'cream', zh:'奶油', pos:'n.', cat:'food'},
+  // 家庭朋友
+  {en:'aunt', zh:'阿姨/姑姑', pos:'n.', cat:'family'},
+  {en:'brother', zh:'兄弟', pos:'n.', cat:'family'},
+  {en:'cousin', zh:'表/堂兄弟姐妹', pos:'n.', cat:'family'},
+  {en:'daughter', zh:'女儿', pos:'n.', cat:'family'},
+  {en:'father', zh:'父亲', pos:'n.', cat:'family'},
+  {en:'grandmother', zh:'祖母', pos:'n.', cat:'family'},
+  {en:'husband', zh:'丈夫', pos:'n.', cat:'family'},
+  {en:'parents', zh:'父母', pos:'n.', cat:'family'},
+  {en:'sister', zh:'姐妹', pos:'n.', cat:'family'},
+  {en:'uncle', zh:'叔叔/舅舅', pos:'n.', cat:'family'},
+  // 学校用品
+  {en:'backpack', zh:'书包', pos:'n.', cat:'school'},
+  {en:'blackboard', zh:'黑板', pos:'n.', cat:'school'},
+  {en:'book', zh:'书', pos:'n.', cat:'school'},
+  {en:'calculator', zh:'计算器', pos:'n.', cat:'school'},
+  {en:'classroom', zh:'教室', pos:'n.', cat:'school'},
+  {en:'dictionary', zh:'字典', pos:'n.', cat:'school'},
+  {en:'eraser', zh:'橡皮', pos:'n.', cat:'school'},
+  {en:'notebook', zh:'笔记本', pos:'n.', cat:'school'},
+  {en:'pencil', zh:'铅笔', pos:'n.', cat:'school'},
+  {en:'ruler', zh:'尺子', pos:'n.', cat:'school'},
+  // 日常活动
+  {en:'cook', zh:'做饭', pos:'v.', cat:'activity'},
+  {en:'dance', zh:'跳舞', pos:'v.', cat:'activity'},
+  {en:'draw', zh:'画画', pos:'v.', cat:'activity'},
+  {en:'drive', zh:'开车', pos:'v.', cat:'activity'},
+  {en:'eat', zh:'吃', pos:'v.', cat:'activity'},
+  {en:'listen', zh:'听', pos:'v.', cat:'activity'},
+  {en:'read', zh:'读', pos:'v.', cat:'activity'},
+  {en:'run', zh:'跑', pos:'v.', cat:'activity'},
+  {en:'sing', zh:'唱歌', pos:'v.', cat:'activity'},
+  {en:'swim', zh:'游泳', pos:'v.', cat:'activity'},
+  // 地点建筑
+  {en:'airport', zh:'机场', pos:'n.', cat:'place'},
+  {en:'bank', zh:'银行', pos:'n.', cat:'place'},
+  {en:'bridge', zh:'桥', pos:'n.', cat:'place'},
+  {en:'castle', zh:'城堡', pos:'n.', cat:'place'},
+  {en:'church', zh:'教堂', pos:'n.', cat:'place'},
+  {en:'hospital', zh:'医院', pos:'n.', cat:'place'},
+  {en:'hotel', zh:'酒店', pos:'n.', cat:'place'},
+  {en:'library', zh:'图书馆', pos:'n.', cat:'place'},
+  {en:'museum', zh:'博物馆', pos:'n.', cat:'place'},
+  {en:'station', zh:'车站', pos:'n.', cat:'place'}
+];
+
+var flashcardCurrentCat = 'all';
+var flashcardCurrentIndex = 0;
+var flashcardFilteredWords = [];
+
+function getKnownWords() {
+  try { return JSON.parse(localStorage.getItem('ket_known_words') || '[]'); } catch(e) { return []; }
+}
+function setKnownWords(arr) { localStorage.setItem('ket_known_words', JSON.stringify(arr)); }
+
+function initFlashcards() {
+  var known = getKnownWords();
+  flashcardFilteredWords = flashcardWords.filter(function(w) {
+    if (flashcardCurrentCat !== 'all' && w.cat !== flashcardCurrentCat) return false;
+    return true;
+  });
+  flashcardCurrentIndex = 0;
+  renderFlashcard();
+}
+
+function renderFlashcard() {
+  if (flashcardFilteredWords.length === 0) {
+    document.getElementById('resourceGrid').innerHTML = '<div class="flashcard-empty">🎉 该分类下没有单词</div>';
+    return;
+  }
+  if (flashcardCurrentIndex >= flashcardFilteredWords.length) {
+    flashcardCurrentIndex = 0;
+  }
+
+  var known = getKnownWords();
+  var totalKnown = flashcardWords.filter(function(w) { return known.indexOf(w.en) >= 0; }).length;
+  var totalWords = flashcardWords.length;
+  var pct = Math.round(totalKnown / totalWords * 100);
+
+  var currentWord = flashcardFilteredWords[flashcardCurrentIndex];
+  var isKnown = known.indexOf(currentWord.en) >= 0;
+
+  var catNames = {food:'🍎 食物饮料', family:'👨‍👩‍👧 家庭朋友', school:'🎒 学校用品', activity:'🏃 日常活动', place:'🏛️ 地点建筑'};
+
+  var html = '<div class="flashcard-wrap">';
+
+  // Progress bar
+  html += '<div class="flashcard-progress">';
+  html += '<span style="font-size:14px">📝</span>';
+  html += '<div class="flashcard-progress-bar"><div class="flashcard-progress-fill" style="width:'+pct+'%"></div></div>';
+  html += '<span class="flashcard-progress-text">已掌握 '+totalKnown+'/'+totalWords+' 词</span>';
+  html += '</div>';
+
+  // Category filter tabs
+  html += '<div class="flashcard-cat-tabs">';
+  html += '<button class="flashcard-cat-tab'+(flashcardCurrentCat==='all'?' active':'')+'" onclick="filterFlashcard('all')">全部</button>';
+  for (var c in catNames) {
+    html += '<button class="flashcard-cat-tab'+(flashcardCurrentCat===c?' active':'')+'" onclick="filterFlashcard(''+c+'')">'+catNames[c]+'</button>';
+  }
+  html += '</div>';
+
+  // Flashcard
+  html += '<div class="flashcard-card" onclick="flipCard()" id="flashcardEl">';
+  html += '<div class="flashcard-inner'+(isKnown?' flipped':'')+'" id="flashcardInner">';
+  html += '<div class="flashcard-front">';
+  html += '<div class="flashcard-word">'+currentWord.en+'</div>';
+  html += '<div class="flashcard-pos">'+currentWord.pos+'</div>';
+  html += '<button class="flashcard-speak-btn" onclick="event.stopPropagation();speakWordFlashcard(''+currentWord.en+'')">🔊 听发音</button>';
+  html += '</div>';
+  html += '<div class="flashcard-back">';
+  html += '<div class="flashcard-zh">'+currentWord.zh+'</div>';
+  html += '<div class="flashcard-pos">'+currentWord.pos+'</div>';
+  html += '<div style="font-size:20px;color:var(--text-secondary);margin-top:4px">'+currentWord.en+'</div>';
+  html += '</div>';
+  html += '</div></div>';
+
+  // Counter
+  html += '<div class="flashcard-counter">'+(flashcardCurrentIndex+1)+' / '+flashcardFilteredWords.length+'</div>';
+
+  // Action buttons
+  html += '<div class="flashcard-actions">';
+  html += '<button class="flashcard-btn known" onclick="markKnown()">✅ 记住了</button>';
+  html += '<button class="flashcard-btn again" onclick="nextFlashcard()">🔄 再练一次</button>';
+  html += '<button class="flashcard-btn review" onclick="reviewAll()">📚 全部复习</button>';
+  html += '</div>';
+
+  html += '</div>';
+  document.getElementById('resourceGrid').innerHTML = html;
+}
+
+function filterFlashcard(cat) {
+  flashcardCurrentCat = cat;
+  initFlashcards();
+}
+
+function flipCard() {
+  var inner = document.getElementById('flashcardInner');
+  if (inner) inner.classList.toggle('flipped');
+}
+
+function markKnown() {
+  if (flashcardFilteredWords.length === 0) return;
+  var word = flashcardFilteredWords[flashcardCurrentIndex].en;
+  var known = getKnownWords();
+  if (known.indexOf(word) < 0) {
+    known.push(word);
+    setKnownWords(known);
+  }
+  nextFlashcard();
+}
+
+function nextFlashcard() {
+  flashcardCurrentIndex++;
+  if (flashcardCurrentIndex >= flashcardFilteredWords.length) {
+    flashcardCurrentIndex = 0;
+  }
+  renderFlashcard();
+}
+
+function reviewAll() {
+  flashcardCurrentCat = 'all';
+  var known = getKnownWords();
+  flashcardFilteredWords = flashcardWords.filter(function(w) {
+    return known.indexOf(w.en) < 0;
+  });
+  if (flashcardFilteredWords.length === 0) {
+    flashcardFilteredWords = flashcardWords.slice();
+  }
+  flashcardCurrentIndex = 0;
+  // Update cat tab UI
+  document.querySelectorAll('.flashcard-cat-tab').forEach(function(b) { b.classList.remove('active'); });
+  var allBtn = document.querySelector('.flashcard-cat-tab');
+  if (allBtn) allBtn.classList.add('active');
+  renderFlashcard();
+}
+
+function speakWordFlashcard(word) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(word);
+  u.lang = 'en-GB';
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
+}
+
 function renderResources() {
+  if (currentResCat === 'vocab') {
+    document.getElementById('vocabProgressPanel').style.display = 'none';
+    flashcardCurrentCat = 'all';
+    initFlashcards();
+    return;
+  }
   var items = resources[currentResCat] || [];
   var html = '';
   items.forEach(function(r) {
@@ -722,15 +1085,9 @@ function renderResources() {
   });
   document.getElementById('resourceGrid').innerHTML = html;
 
-  // Show vocab progress panel only for vocab category
+  // Show vocab progress panel only for non-vocab categories that might need it
   var panel = document.getElementById('vocabProgressPanel');
-  if (currentResCat === 'vocab') {
-    panel.style.display = 'flex';
-    var v = parseInt(localStorage.getItem('ket_vocab_progress')) || 0;
-    document.getElementById('vocabInput').value = v;
-  } else {
-    panel.style.display = 'none';
-  }
+  panel.style.display = 'none';
 }
 renderResources();
 
@@ -764,11 +1121,11 @@ function saveVocabProgress() {
 
 function renderVocabTable() {
   var topics = [
-    ['食物饮料','apple 苹果, banana 香蕉, bread 面包, butter 黄油, cake 蛋糕, cheese 奶酪, chicken 鸡肉, chocolate 巧克力, coffee 咖啡, cream 奶油'],
-    ['家庭朋友','aunt 阿姨/姑姑, brother 兄弟, cousin 表/堂兄弟姐妹, daughter 女儿, father 父亲, grandmother 祖母, husband 丈夫, parents 父母, sister 姐妹, uncle 叔叔/舅舅'],
-    ['学校用品','backpack 书包, blackboard 黑板, book 书, calculator 计算器, classroom 教室, dictionary 词典, eraser 橡皮, notebook 笔记本, pencil 铅笔, ruler 尺子'],
-    ['日常活动','cook 烹饪, dance 跳舞, draw 画画, drive 开车, eat 吃, listen 听, read 阅读, run 跑步, sing 唱歌, swim 游泳'],
-    ['地点建筑','airport 机场, bank 银行, bridge 桥, castle 城堡, church 教堂, hospital 医院, hotel 酒店, library 图书馆, museum 博物馆, station 车站']
+    ['食物饮料','apple 苹果 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('apple')" title="听发音">🔊</span>, banana 香蕉 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('banana')" title="听发音">🔊</span>, bread 面包 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('bread')" title="听发音">🔊</span>, butter 黄油 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('butter')" title="听发音">🔊</span>, cake 蛋糕 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('cake')" title="听发音">🔊</span>, cheese 奶酪 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('cheese')" title="听发音">🔊</span>, chicken 鸡肉 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('chicken')" title="听发音">🔊</span>, chocolate 巧克力 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('chocolate')" title="听发音">🔊</span>, coffee 咖啡 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('coffee')" title="听发音">🔊</span>, cream 奶油 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('cream')" title="听发音">🔊</span>'],
+    ['家庭朋友','aunt 阿姨/姑姑 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('aunt')" title="听发音">🔊</span>, brother 兄弟 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('brother')" title="听发音">🔊</span>, cousin 表/堂兄弟姐妹 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('cousin')" title="听发音">🔊</span>, daughter 女儿 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('daughter')" title="听发音">🔊</span>, father 父亲 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('father')" title="听发音">🔊</span>, grandmother 祖母 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('grandmother')" title="听发音">🔊</span>, husband 丈夫 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('husband')" title="听发音">🔊</span>, parents 父母 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('parents')" title="听发音">🔊</span>, sister 姐妹 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('sister')" title="听发音">🔊</span>, uncle 叔叔/舅舅 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('uncle')" title="听发音">🔊</span>'],
+    ['学校用品','backpack 书包 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('backpack')" title="听发音">🔊</span>, blackboard 黑板 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('blackboard')" title="听发音">🔊</span>, book 书 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('book')" title="听发音">🔊</span>, calculator 计算器 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('calculator')" title="听发音">🔊</span>, classroom 教室 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('classroom')" title="听发音">🔊</span>, dictionary 词典 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('dictionary')" title="听发音">🔊</span>, eraser 橡皮 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('eraser')" title="听发音">🔊</span>, notebook 笔记本 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('notebook')" title="听发音">🔊</span>, pencil 铅笔 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('pencil')" title="听发音">🔊</span>, ruler 尺子 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('ruler')" title="听发音">🔊</span>'],
+    ['日常活动','cook 烹饪 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('cook')" title="听发音">🔊</span>, dance 跳舞 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('dance')" title="听发音">🔊</span>, draw 画画 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('draw')" title="听发音">🔊</span>, drive 开车 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('drive')" title="听发音">🔊</span>, eat 吃 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('eat')" title="听发音">🔊</span>, listen 听 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('listen')" title="听发音">🔊</span>, read 阅读 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('read')" title="听发音">🔊</span>, run 跑步 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('run')" title="听发音">🔊</span>, sing 唱歌 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('sing')" title="听发音">🔊</span>, swim 游泳 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('swim')" title="听发音">🔊</span>'],
+    ['地点建筑','airport 机场 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('airport')" title="听发音">🔊</span>, bank 银行 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('bank')" title="听发音">🔊</span>, bridge 桥 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('bridge')" title="听发音">🔊</span>, castle 城堡 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('castle')" title="听发音">🔊</span>, church 教堂 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('church')" title="听发音">🔊</span>, hospital 医院 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('hospital')" title="听发音">🔊</span>, hotel 酒店 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('hotel')" title="听发音">🔊</span>, library 图书馆 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('library')" title="听发音">🔊</span>, museum 博物馆 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('museum')" title="听发音">🔊</span>, station 车站 <span class="vocab-speak" onclick="event.stopPropagation();speakWord('station')" title="听发音">🔊</span>']
   ];
   var html = '<table class="ket-print-table"><thead><tr><th>主题</th><th>核心词汇（含中文释义）</th></tr></thead><tbody>';
   topics.forEach(function(t) { html += '<tr><td><b>'+t[0]+'</b></td><td style="font-size:11px;line-height:1.8">'+t[1]+'</td></tr>'; });
@@ -1314,6 +1671,17 @@ function refreshDashboard() {
   destroyChart('listen');
   destroyChart('cal');
   renderAllDashboard();
+}
+
+
+// ====== GLOBAL SPEAK WORD (Web Speech API) ======
+function speakWord(word) {
+  if (!window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  var u = new SpeechSynthesisUtterance(word);
+  u.lang = 'en-GB';
+  u.rate = 0.85;
+  window.speechSynthesis.speak(u);
 }
 
 // ====== DATA EXPORT ======
